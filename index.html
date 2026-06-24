@@ -1,133 +1,112 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Green Garden | Jardinerie moderne</title>
-  <meta name="description" content="Green Garden - jardinerie moderne pour plantes, engrais et gazon." />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Garden</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-container">
-      <a href="#accueil" class="brand" aria-label="Accueil Green Garden">
-        <span>Green Garden</span>
-      </a>
-      <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
-      <nav class="main-nav" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#plantes">Nos plantes</a></li>
-          <li><a href="#engrais">Engrais</a></li>
-          <li><a href="#gazon">Gazon</a></li>
-          <li><a href="#apropos">A propos</a></li>
-        </ul>
-      </nav>
-      <div class="lang-selector">
-        <button class="is-active" data-lang="fr">FR</button>
-        <button data-lang="en">EN</button>
-        <button data-lang="ar">AR</button>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <section id="accueil" class="hero-section">
-      <div class="hero-container">
-        <div class="hero-copy-block">
-          <span class="eyebrow">Jardinerie naturelle & minimaliste</span>
-          <h1>Green Garden</h1>
-          <p class="hero-copy">Plantes d'interieur, engrais et gazon pour composer des espaces plus frais, plus vivants et faciles a entretenir.</p>
-          <a href="#plantes" class="pill-button">Decouvrir le catalogue</a>
+    <header>
+        <div class="logo">Green Garden</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#accueil" class="active">ACCUEIL</a></li>
+                <li><a href="#plantes">NOS PLANTES</a></li>
+                <li><a href="#engrais">ENGRAIS</a></li>
+                <li><a href="#gazon">GAZON</a></li>
+                <li><a href="#apropos">A PROPOS</a></li>
+            </ul>
+        </nav>
+        <div class="languages">
+            <button class="lang-btn active" data-lang="fr">FR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
         </div>
-        <div class="hero-image-block">
-          <img src="Image/123699.jpeg" alt="Jardinerie Green Garden" loading="lazy" />
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
-      </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <p class="subtitle">JARDINERIE NATURELLE & MINIMALISTE</p>
+            <h1>Green Garden</h1>
+            <p class="description">Plantes d'intérieur, engrais et gazon pour composer des espaces plus frais, plus vivants et faciles à entretenir.</p>
+            <a href="#plantes" class="btn">DÉCOUVRIR LE CATALOGUE</a>
+        </div>
+        <div class="hero-image">
+            <img src="Image/123699.jpeg" alt="Green Garden Hero">
+        </div>
     </section>
 
-    <section id="nouveautes" class="features-split">
-      <div class="collection-card">
-        <div class="card-content">
-          <span class="eyebrow">Collections</span>
-          <h2>Jungles d'interieur</h2>
-          <p>Une selection de plantes graphiques, robustes et faciles a vivre pour creer un coin vegetal apaisant.</p>
+    <section class="cards-section">
+        <div class="card card-dark">
+            <p class="card-subtitle">COLLECTIONS</p>
+            <h2>Jungles d'intérieur</h2>
+            <p class="card-desc">Une sélection de plantes graphiques, robustes et faciles à vivre pour créer un coin végétal apaisant.</p>
         </div>
-      </div>
-      <div class="care-card">
-        <div class="card-content">
-          <span class="eyebrow">Entretien des plantes</span>
-          <h2>Des gestes simples, des plantes heureuses.</h2>
-          <ul class="care-list">
-            <li><span class="dot"></span> <span>Lumiere douce</span></li>
-            <li><span class="dot"></span> <span>Arrosage maitrise</span></li>
-          </ul>
+        <div class="card card-light">
+            <p class="card-subtitle">ENTRETIEN DES PLANTES</p>
+            <h2>Des gestes simples, des plantes heureuses.</h2>
+            <ul class="maintenance-list">
+                <li><span class="bullet"></span> Lumière douce</li>
+                <li><span class="bullet"></span> Arrosage maîtrisé</li>
+            </ul>
         </div>
-      </div>
     </section>
 
-    <section id="plantes" class="catalog-section">
-      <div class="section-heading">
-        <span class="eyebrow">Nos plantes</span>
+    <section id="plantes" class="catalogue">
+        <p class="section-subtitle">NOS PLANTES</p>
         <h2>Catalogue Green Garden</h2>
-        <p>Parcourez les articles disponibles et demandez le prix directement via WhatsApp.</p>
-      </div>
-      <div class="search-container">
-        <label class="search-field">
-          <span>Recherche</span>
-          <input type="search" id="searchInput" placeholder="Ex: palmier, cactus, yucca..." />
-        </label>
-      </div>
-      <div id="productGrid" class="product-grid"></div>
-      <div id="emptyState" class="empty-state" hidden>Aucun article ne correspond a cette recherche pour le moment.</div>
+        <p class="section-desc">Parcourez les articles disponibles et demandez le prix directement via WhatsApp.</p>
+        
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Recherche">
+        </div>
+
+        <div class="products-grid" id="productGrid">
+            </div>
+        <div id="emptyState" class="empty-state" style="display: none; text-align: center; margin: 20px; color: #666;"></div>
     </section>
 
-    <section id="engrais" class="feature-block text-left">
-      <div class="feature-container">
-        <div class="feature-copy">
-          <span class="eyebrow">Nutrition vegetale</span>
-          <h2>Engrais</h2>
-          <p>Des solutions pour renforcer vos plantes et soutenir une croissance saine.</p>
-          <a class="pill-button" href="https://wa.me/21698226502?text=Bonjour%2C%20je%20souhaite%20commander%20de%20l%27engrais" target="_blank" rel="noreferrer">Commander sur WhatsApp</a>
+    <section id="engrais" class="info-section">
+        <div class="info-content">
+            <p class="info-subtitle">NUTRITION VÉGÉTALE</p>
+            <h2>Engrais</h2>
+            <p class="info-desc">Des solutions pour renforcer vos plantes et soutenir une croissance saine.</p>
+            <a href="https://wa.me/21698226502?text=Bonjour,%20je%20souhaite%20commander%20de%20l'engrais" target="_blank" class="btn-whatsapp">COMMANDER SUR WHATSAPP</a>
         </div>
-        <div class="feature-image">
-          <img src="Image/engrais bio-organique.jpeg" alt="Engrais Green Garden" loading="lazy" />
+        <div class="info-image">
+            <img src="Image/engrais bio-organique.jpeg" alt="Engrais">
         </div>
-      </div>
     </section>
 
-    <section id="gazon" class="feature-block text-right">
-      <div class="feature-container">
-        <div class="feature-image">
-          <img src="Image/gazon.jpeg" alt="Gazon Green Garden" loading="lazy" />
+    <section id="gazon" class="info-section reverse">
+        <div class="info-content">
+            <p class="info-subtitle">EXTÉRIEUR</p>
+            <h2>Gazon</h2>
+            <p class="info-desc">Commandez votre gazon et discutez avec nous du chantier d'installation.</p>
+            <a href="https://wa.me/21698226502?text=Bonjour,%20je%20souhaite%20des%20informations%20pour%20du%20gazon" target="_blank" class="btn-whatsapp">COMMANDER LE GAZON</a>
         </div>
-        <div class="feature-copy">
-          <span class="eyebrow">Exterieur</span>
-          <h2>Gazon</h2>
-          <p>Commandez votre gazon et discutez avec nous du chantier d'installation.</p>
-          <a class="pill-button" href="https://wa.me/21698226502?text=Bonjour%2C%20je%20souhaite%20des%20informations%20pour%20du%20gazon" target="_blank" rel="noreferrer">Commander le gazon</a>
+        <div class="info-image">
+            <img src="Image/gazon.jpeg" alt="Gazon">
         </div>
-      </div>
     </section>
 
-    <section id="apropos" class="about-section">
-      <div class="about-container">
-        <span class="eyebrow">A propos</span>
-        <h2>Green Garden cultive le vegetal accessible.</h2>
-        <p>Notre boutique accompagne les amoureux des plantes avec des varietes decoratives, des conseils simples et une reservation rapide via WhatsApp.</p>
-      </div>
+    <section id="apropos" class="about">
+        <p class="about-subtitle">A PROPOS</p>
+        <h2>Green Garden cultive le végétal accessible.</h2>
+        <p class="about-desc">Notre boutique accompagne les amoureux des plantes avec des variétés décoratives, des conseils simples et une réservation rapide via WhatsApp.</p>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <span>Green Garden</span>
-      </div>
-      <p>Tunisie - Jardinerie & plantes decoratives</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="footer-logo">Green Garden</div>
+        <p class="footer-location">Tunisie - Jardinerie & plantes décoratives</p>
+    </footer>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
