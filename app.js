@@ -1,28 +1,28 @@
 const WHATSAPP_NUMBER = "21698226502";
-const IMAGE_DIR = "Image"; // Dossier exact à la racine
+const IMAGE_DIR = "Image"; // Cible votre dossier racine "Image"
 
 const products = [
-  { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: `${IMAGE_DIR}/Arbre du voyageur.JPG`, width: 1200, height: 1600 },
-  { id: "cactus-oursin", labels: { fr: "Cactus oursin", en: "Sea urchin cactus", ar: "صبار القنفذ البحري" }, image: `${IMAGE_DIR}/Cactus oursin.JPG`, width: 739, height: 1600 },
-  { id: "cactus-vieillard", labels: { fr: "Cactus vieillard du Pérou", en: "Old man cactus of Peru", ar: "صبار عجوز بيرو" }, image: `${IMAGE_DIR}/Cactus vieillard du Pérou.JPG`, width: 739, height: 1600 },
-  { id: "chataignier-guyane", labels: { fr: "Châtaignier de la Guyane", en: "Guyana chestnut", ar: "كستناء غيانا" }, image: `${IMAGE_DIR}/Châtaignier de la Guyane.JPG`, width: 739, height: 1600 },
-  { id: "cintha", labels: { fr: "Cintha", en: "Cinta", ar: "سينثا" }, image: `${IMAGE_DIR}/Cintha.JPG`, width: 739, height: 1600 },
-  { id: "dragonnier-madagascar", labels: { fr: "Dragonnier de Madagascar", en: "Madagascar dragon tree", ar: "شجرة تنين مدغشقر" }, image: `${IMAGE_DIR}/Dragonnier de Madagascar.JPG`, width: 739, height: 1600 },
-  { id: "dragonnier-massange", labels: { fr: "Dragonnier de Massange", en: "Massange dragon tree", ar: "شجرة تنين ماسانج" }, image: `${IMAGE_DIR}/Dragonnier de Massange.JPG`, width: 739, height: 1600 },
-  { id: "echeveria-dionysos", labels: { fr: "Echeveria 'Dionysos'", en: "Echeveria 'Dionysos'", ar: "إشفيرية ديونيسوس" }, image: `${IMAGE_DIR}/Echeveria 'Dionysos'.JPG`, width: 739, height: 1600 },
-  { id: "faux-philodendron", labels: { fr: "Faux philodendron", en: "False philodendron", ar: "فيلوديندرون مزيف" }, image: `${IMAGE_DIR}/Faux philodendron.JPG`, width: 739, height: 1600 },
-  { id: "figuier-caoutchouc", labels: { fr: "Figuier caoutchouc", en: "Rubber fig", ar: "فيكس مطاطي" }, image: `${IMAGE_DIR}/Figuier caoutchouc.JPG`, width: 739, height: 1600 },
-  { id: "figuier-pleureur", labels: { fr: "Figuier pleureur", en: "Weeping fig", ar: "فيكس باكي" }, image: `${IMAGE_DIR}/Figuier pleureur.JPG`, width: 739, height: 1600 },
-  { id: "fleur-lune", labels: { fr: "Fleur de lune", en: "Peace lily", ar: "زنبق السلام" }, image: `${IMAGE_DIR}/Fleur de lune.JPG`, width: 739, height: 1600 },
-  { id: "gymnocalycium", labels: { fr: "Gymnocalycium baldianum", en: "Gymnocalycium baldianum", ar: "جمنوكاليسيوم بالدينوم" }, image: `${IMAGE_DIR}/Gymnocalycium baldianum.JPG`, width: 739, height: 1600 },
-  { id: "palmier-nain", labels: { fr: "Palmier nain", en: "Dwarf palm", ar: "نخيل قزم" }, image: `${IMAGE_DIR}/Palmier nain.JPG`, width: 600, height: 600 },
-  { id: "palmier-eventail", labels: { fr: "Palmier éventail", en: "Fan palm", ar: "نخيل مروحي" }, image: `${IMAGE_DIR}/Palmier éventail.JPG`, width: 739, height: 1600 },
-  { id: "plante-mais", labels: { fr: "Plante maïs", en: "Corn plant", ar: "نبات الذرة" }, image: `${IMAGE_DIR}/Plante mais.JPG`, width: 739, height: 1600 },
-  { id: "plante-mosaique", labels: { fr: "Plante mosaïque", en: "Mosaic plant", ar: "نبات الفسيفساء" }, image: `${IMAGE_DIR}/Plante mosaïque.JPG`, width: 739, height: 1600 },
-  { id: "plante-zebre", labels: { fr: "Plante zèbre", en: "Zebra plant", ar: "نبات الحمار الوحشي" }, image: `${IMAGE_DIR}/Plante zèbre.JPG`, width: 739, height: 1600 },
-  { id: "scindapsus-dore", labels: { fr: "Scindapsus doré", en: "Golden pothos", ar: "بوتس ذهبي" }, image: `${IMAGE_DIR}/Scindapsus doré.JPG`, width: 739, height: 1600 },
-  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف ثلاثي الألوان" }, image: `${IMAGE_DIR}/variété 'Tricolor'.JPG`, width: 739, height: 1600 },
-  { id: "yucca-interieur", labels: { fr: "Yucca d'intérieur", en: "Indoor yucca", ar: "يوكا داخلية" }, image: `${IMAGE_DIR}/Yucca d'intérieur.JPG`, width: 739, height: 1600 },
+  { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: `${IMAGE_DIR}/Arbre du voyageur.jpeg`, width: 1200, height: 1600 },
+  { id: "cactus-oursin", labels: { fr: "Cactus oursin", en: "Sea urchin cactus", ar: "صبار القنفذ البحري" }, image: `${IMAGE_DIR}/Cactus oursin.jpeg`, width: 739, height: 1600 },
+  { id: "cactus-vieillard", labels: { fr: "Cactus vieillard du Pérou", en: "Old man cactus of Peru", ar: "صبار عجوز بيرو" }, image: `${IMAGE_DIR}/Cactus vieillard du Pérou.jpeg`, width: 739, height: 1600 },
+  { id: "chataignier-guyane", labels: { fr: "Châtaignier de la Guyane", en: "Guyana chestnut", ar: "كستناء غيانا" }, image: `${IMAGE_DIR}/Châtaignier de la Guyane.jpeg`, width: 739, height: 1600 },
+  { id: "cintha", labels: { fr: "Cintha", en: "Cinta", ar: "سينثا" }, image: `${IMAGE_DIR}/Cintha.jpeg`, width: 739, height: 1600 },
+  { id: "dragonnier-madagascar", labels: { fr: "Dragonnier de Madagascar", en: "Madagascar dragon tree", ar: "شجرة تنين مدغشقر" }, image: `${IMAGE_DIR}/Dragonnier de Madagascar.jpeg`, width: 739, height: 1600 },
+  { id: "dragonnier-massange", labels: { fr: "Dragonnier de Massange", en: "Massange dragon tree", ar: "شجرة تنين ماسانج" }, image: `${IMAGE_DIR}/Dragonnier de Massange.jpeg`, width: 739, height: 1600 },
+  { id: "echeveria-dionysos", labels: { fr: "Echeveria 'Dionysos'", en: "Echeveria 'Dionysos'", ar: "إشفيرية ديونيسوس" }, image: `${IMAGE_DIR}/Echeveria 'Dionysos'.jpeg`, width: 739, height: 1600 },
+  { id: "faux-philodendron", labels: { fr: "Faux philodendron", en: "False philodendron", ar: "فيلوديندرون مزيف" }, image: `${IMAGE_DIR}/Faux philodendron.jpeg`, width: 739, height: 1600 },
+  { id: "figuier-caoutchouc", labels: { fr: "Figuier caoutchouc", en: "Rubber fig", ar: "فيكس مطاطي" }, image: `${IMAGE_DIR}/Figuier caoutchouc.jpeg`, width: 739, height: 1600 },
+  { id: "figuier-pleureur", labels: { fr: "Figuier pleureur", en: "Weeping fig", ar: "فيكس باكي" }, image: `${IMAGE_DIR}/Figuier pleureur.jpeg`, width: 739, height: 1600 },
+  { id: "fleur-lune", labels: { fr: "Fleur de lune", en: "Peace lily", ar: "زنبق السلام" }, image: `${IMAGE_DIR}/Fleur de lune.jpeg`, width: 739, height: 1600 },
+  { id: "gymnocalycium", labels: { fr: "Gymnocalycium baldianum", en: "Gymnocalycium baldianum", ar: "جمنوكاليسيوم بالدينوم" }, image: `${IMAGE_DIR}/Gymnocalycium baldianum.jpeg`, width: 739, height: 1600 },
+  { id: "palmier-nain", labels: { fr: "Palmier nain", en: "Dwarf palm", ar: "نخيل قزم" }, image: `${IMAGE_DIR}/Palmier nain.jpeg`, width: 600, height: 600 },
+  { id: "palmier-eventail", labels: { fr: "Palmier éventail", en: "Fan palm", ar: "نخيل مروحي" }, image: `${IMAGE_DIR}/Palmier éventail.jpeg`, width: 739, height: 1600 },
+  { id: "plante-mais", labels: { fr: "Plante maïs", en: "Corn plant", ar: "نبات الذرة" }, image: `${IMAGE_DIR}/Plante maïs.jpeg`, width: 739, height: 1600 }, // Avec le "ï" comme sur GitHub
+  { id: "plante-mosaique", labels: { fr: "Plante mosaïque", en: "Mosaic plant", ar: "نبات الفسيفساء" }, image: `${IMAGE_DIR}/Plante mosaïque.jpeg`, width: 739, height: 1600 },
+  { id: "plante-zebre", labels: { fr: "Plante zèbre", en: "Zebra plant", ar: "نبات الحمار الوحشي" }, image: `${IMAGE_DIR}/Plante zèbre.jpeg`, width: 739, height: 1600 },
+  { id: "scindapsus-dore", labels: { fr: "Scindapsus doré", en: "Golden pothos", ar: "بوتس ذهبي" }, image: `${IMAGE_DIR}/Scindapsus doré.jpeg`, width: 739, height: 1600 },
+  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف trois couleurs" }, image: `${IMAGE_DIR}/variété 'Tricolor'.jpeg`, width: 739, height: 1600 },
+  { id: "yucca-interieur", labels: { fr: "Yucca d'intérieur", en: "Indoor yucca", ar: "يوكا داخلية" }, image: `${IMAGE_DIR}/Yucca d'intérieur.jpeg`, width: 739, height: 1600 },
 ];
 
 const translations = {
@@ -154,13 +154,7 @@ function renderProducts() {
       const localizedName = getLocalizedProductName(product);
       return `
         <article class="product-card">
-          <img 
-            class="product-image" 
-            src="${product.image}" 
-            alt="${localizedName}" 
-            loading="lazy"
-            onerror="let ext = this.src.split('.').pop(); if(ext === 'JPG'){ this.src = this.src.replace('.JPG', '.jpg'); } else if(ext === 'jpg'){ this.src = this.src.replace('.jpg', '.jpeg'); } else if(ext === 'jpeg'){ this.src = this.src.replace('.jpeg', '.png'); }" 
-          />
+          <img class="product-image" src="${product.image}" alt="${localizedName}" loading="lazy" />
           <div class="product-content">
             <h3>${localizedName}</h3>
             <a class="whatsapp-link" href="${buildWhatsAppUrl(t.productMessage(localizedName))}" target="_blank" rel="noreferrer">
