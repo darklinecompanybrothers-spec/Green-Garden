@@ -1,0 +1,13 @@
+{
+  "name": "green-garden-1",
+  "version": "1.0.0",
+  "description": "Site vitrine e-commerce minimaliste en HTML/CSS/JavaScript pur.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
