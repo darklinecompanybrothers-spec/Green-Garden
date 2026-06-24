@@ -17,11 +17,11 @@ const products = [
   { id: "gymnocalycium", labels: { fr: "Gymnocalycium baldianum", en: "Gymnocalycium baldianum", ar: "جمنوكاليسيوم بالدينوم" }, image: `${IMAGE_DIR}/Gymnocalycium baldianum.jpeg`, width: 739, height: 1600 },
   { id: "palmier-nain", labels: { fr: "Palmier nain", en: "Dwarf palm", ar: "نخيل قزم" }, image: `${IMAGE_DIR}/Palmier nain.jpeg`, width: 600, height: 600 },
   { id: "palmier-eventail", labels: { fr: "Palmier éventail", en: "Fan palm", ar: "نخيل مروحي" }, image: `${IMAGE_DIR}/Palmier éventail.jpeg`, width: 739, height: 1600 },
-  { id: "plante-mais", labels: { fr: "Plante maïs", en: "Corn plant", ar: "نبات الذرة" }, image: `${IMAGE_DIR}/Plante maïs.jpeg`, width: 739, height: 1600 }, // Avec le "ï" comme sur GitHub
+  { id: "plante-mais", labels: { fr: "Plante maïs", en: "Corn plant", ar: "نبات الذرة" }, image: `${IMAGE_DIR}/Plante maïs.jpeg`, width: 739, height: 1600 },
   { id: "plante-mosaique", labels: { fr: "Plante mosaïque", en: "Mosaic plant", ar: "نبات الفسيفساء" }, image: `${IMAGE_DIR}/Plante mosaïque.jpeg`, width: 739, height: 1600 },
   { id: "plante-zebre", labels: { fr: "Plante zèbre", en: "Zebra plant", ar: "نبات الحمار الوحشي" }, image: `${IMAGE_DIR}/Plante zèbre.jpeg`, width: 739, height: 1600 },
   { id: "scindapsus-dore", labels: { fr: "Scindapsus doré", en: "Golden pothos", ar: "بوتس ذهبي" }, image: `${IMAGE_DIR}/Scindapsus doré.jpeg`, width: 739, height: 1600 },
-  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف trois couleurs" }, image: `${IMAGE_DIR}/variété 'Tricolor'.jpeg`, width: 739, height: 1600 },
+  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف ثلاثي الألوان" }, image: `${IMAGE_DIR}/variété 'Tricolor'.jpeg`, width: 739, height: 1600 },
   { id: "yucca-interieur", labels: { fr: "Yucca d'intérieur", en: "Indoor yucca", ar: "يوكا داخلية" }, image: `${IMAGE_DIR}/Yucca d'intérieur.jpeg`, width: 739, height: 1600 },
 ];
 
@@ -66,7 +66,8 @@ const translations = {
     aboutCopy: "Our shop helps plant lovers with decorative varieties, simple advice and quick WhatsApp ordering.",
     footerLocation: "Tunisia - Garden center & decorative plants", productButton: "Ask for price",
     productMessage: (name) => `Hello, I would like more information and the price for this item: ${name}`,
-    brandAria: "Green Garden home", footerBrand: "Green Garden"
+    brandAria: "Green Garden home", footerBrand: "Green Garden", pageTitle: "Green Garden | Modern Garden Center",
+    metaDescription: "Green Garden - modern garden center for plants, fertilizers and lawns."
   },
   ar: {
     htmlLang: "ar", dir: "rtl", brand: "جرين جاردن", navAria: "التنقل الرئيسي",
@@ -76,16 +77,17 @@ const translations = {
     collectionsCopy: "مجموعة من النباتات الجميلة والقوية وسهلة العناية لصنع زاوية خضراء هادئة.",
     careKicker: "العناية بالنباتات", careTitle: "خطوات بسيطة ونباتات سعيدة.", careLight: "إضاءة ناعمة",
     careWater: "ري متوازن", catalogKicker: "نباتاتنا", catalogTitle: "كتالوج Green Garden",
-    catalogCopy: "تصفح العناصر المتاحة واطلب السعر مباشرة عبر واتساب.", searchLabel: "بحث",
+    catalogCopy: "تصفح العناصر المتاحة واطلب السعر directement عبر واتساب.", searchLabel: "بحث",
     searchPlaceholder: "مثال: نخلة، صبار، يوكا...", emptyState: "لا توجد عناصر مطابقة لهذا البحث حاليا.",
     engraisKicker: "تغذية النباتات", engraisTitle: "الأسمدة", engraisCopy: "حلول لتقوية نباتاتك ودعم نمو صحي.",
     engraisCta: "اطلب عبر واتساب", gazonKicker: "خارجي", gazonTitle: "العشب",
     gazonCopy: "اطلب العشب وتحدث معنا حول مشروع التركيب.", gazonCta: "اطلب العشب",
     aboutKicker: "من نحن", aboutTitle: "Green Garden تجعل النبات أقرب وأسهل.",
     aboutCopy: "متجرنا يساعد محبي النباتات على اختيار الأصناف الزخرفية مع نصائح بسيطة وطلب سريع عبر واتساب.",
-    footerLocation: "قربة، تونس · مشتل ونباتات زينة", productButton: "اطلب السعر",
+    footerLocation: "تونس · مشتل ونباتات زينة", productButton: "اطلب السعر",
     productMessage: (name) => `مرحباً، أود معرفة المزيد والسعر الخاص بهذا المنتج: ${name}`,
-    brandAria: "الصفحة الرئيسية لـ Green Garden", footerBrand: "جرين جاردن"
+    brandAria: "الصفحة الرئيسية لـ Green Garden", footerBrand: "جرين جاردن", pageTitle: "جرين جاردن | مشتل حديث",
+    metaDescription: "جرين جاردن - مشتل حديث للنباتات والأسمدة والعشب الطبيعي."
   }
 };
 
@@ -98,8 +100,6 @@ const mainNav = document.querySelector(".main-nav");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const brandSpans = document.querySelectorAll(".brand span");
 const footerBrandSpans = document.querySelectorAll(".footer-brand span");
-const pageTitle = document.querySelector("title");
-const descriptionMeta = document.querySelector('meta[name="description"]');
 
 const i18nNodes = {
   navLinks: [...document.querySelectorAll(".main-nav a")],
@@ -112,7 +112,7 @@ const i18nNodes = {
   collectionsCopy: document.querySelector("#nouveautes .collection-card p"),
   careKicker: document.querySelector("#nouveautes .care-card .eyebrow"),
   careTitle: document.querySelector("#nouveautes .care-card h2"),
-  careLabels: [...document.querySelectorAll("#nouveautes .care-list span")],
+  careLabels: [...document.querySelectorAll("#nouveautes .care-list span:not(.dot)")],
   catalogKicker: document.querySelector("#plantes .section-heading .eyebrow"),
   catalogTitle: document.querySelector("#plantes .section-heading h2"),
   catalogCopy: document.querySelector("#plantes .section-heading p"),
@@ -143,6 +143,7 @@ function getLocalizedProductName(product) {
 }
 
 function renderProducts() {
+  if (!productGrid) return;
   const search = searchInput.value.trim().toLowerCase();
   const t = getLanguage();
   const filteredProducts = products.filter((product) =>
@@ -166,8 +167,10 @@ function renderProducts() {
     })
     .join("");
 
-  emptyState.textContent = t.emptyState;
-  emptyState.hidden = filteredProducts.length > 0;
+  if (emptyState) {
+    emptyState.textContent = t.emptyState;
+    emptyState.hidden = filteredProducts.length > 0;
+  }
 }
 
 function applyLanguage(lang) {
@@ -177,46 +180,52 @@ function applyLanguage(lang) {
   document.documentElement.dir = t.dir;
   document.body.classList.toggle("rtl", t.dir === "rtl");
   document.title = t.pageTitle;
+  
+  const descriptionMeta = document.querySelector('meta[name="description"]');
   if (descriptionMeta) { descriptionMeta.content = t.metaDescription; }
-  mainNav.setAttribute("aria-label", t.navAria);
+  
+  if (mainNav) mainNav.setAttribute("aria-label", t.navAria);
   brandSpans.forEach(s => s.textContent = t.brand);
   footerBrandSpans.forEach(s => s.textContent = t.footerBrand);
-  i18nNodes.navLinks.forEach((l, i) => l.textContent = t.nav[i] || l.textContent);
-  i18nNodes.heroKicker.textContent = t.heroKicker;
-  i18nNodes.heroTitle.textContent = t.heroTitle;
-  i18nNodes.heroCopy.textContent = t.heroCopy;
-  i18nNodes.heroCta.textContent = t.heroCta;
-  i18nNodes.collectionsKicker.textContent = t.collectionsKicker;
-  i18nNodes.collectionsTitle.textContent = t.collectionsTitle;
-  i18nNodes.collectionsCopy.textContent = t.collectionsCopy;
-  i18nNodes.careKicker.textContent = t.careKicker;
-  i18nNodes.careTitle.textContent = t.careTitle;
-  i18nNodes.careLabels[0].textContent = t.careLight;
-  i18nNodes.careLabels[1].textContent = t.careWater;
-  i18nNodes.catalogKicker.textContent = t.catalogKicker;
-  i18nNodes.catalogTitle.textContent = t.catalogTitle;
-  i18nNodes.catalogCopy.textContent = t.catalogCopy;
-  i18nNodes.searchLabel.textContent = t.searchLabel;
-  i18nNodes.searchInput.placeholder = t.searchPlaceholder;
-  i18nNodes.emptyState.textContent = t.emptyState;
-  i18nNodes.engraisKicker.textContent = t.engraisKicker;
-  i18nNodes.engraisTitle.textContent = t.engraisTitle;
-  i18nNodes.engraisCopy.textContent = t.engraisCopy;
-  i18nNodes.engraisCta.textContent = t.engraisCta;
-  i18nNodes.gazonKicker.textContent = t.gazonKicker;
-  i18nNodes.gazonTitle.textContent = t.gazonTitle;
-  i18nNodes.gazonCopy.textContent = t.gazonCopy;
-  i18nNodes.gazonCta.textContent = t.gazonCta;
-  i18nNodes.aboutKicker.textContent = t.aboutKicker;
-  i18nNodes.aboutTitle.textContent = t.aboutTitle;
-  i18nNodes.aboutCopy.textContent = t.aboutCopy;
-  i18nNodes.footerLocation.textContent = t.footerLocation;
+  
+  if (i18nNodes.navLinks.length) i18nNodes.navLinks.forEach((l, i) => { if(t.nav[i]) l.textContent = t.nav[i]; });
+  if (i18nNodes.heroKicker) i18nNodes.heroKicker.textContent = t.heroKicker;
+  if (i18nNodes.heroTitle) i18nNodes.heroTitle.textContent = t.heroTitle;
+  if (i18nNodes.heroCopy) i18nNodes.heroCopy.textContent = t.heroCopy;
+  if (i18nNodes.heroCta) i18nNodes.heroCta.textContent = t.heroCta;
+  if (i18nNodes.collectionsKicker) i18nNodes.collectionsKicker.textContent = t.collectionsKicker;
+  if (i18nNodes.collectionsTitle) i18nNodes.collectionsTitle.textContent = t.collectionsTitle;
+  if (i18nNodes.collectionsCopy) i18nNodes.collectionsCopy.textContent = t.collectionsCopy;
+  if (i18nNodes.careKicker) i18nNodes.careKicker.textContent = t.careKicker;
+  if (i18nNodes.careTitle) i18nNodes.careTitle.textContent = t.careTitle;
+  if (i18nNodes.careLabels[0]) i18nNodes.careLabels[0].textContent = t.careLight;
+  if (i18nNodes.careLabels[1]) i18nNodes.careLabels[1].textContent = t.careWater;
+  if (i18nNodes.catalogKicker) i18nNodes.catalogKicker.textContent = t.catalogKicker;
+  if (i18nNodes.catalogTitle) i18nNodes.catalogTitle.textContent = t.catalogTitle;
+  if (i18nNodes.catalogCopy) i18nNodes.catalogCopy.textContent = t.catalogCopy;
+  if (i18nNodes.searchLabel) i18nNodes.searchLabel.textContent = t.searchLabel;
+  if (i18nNodes.searchInput) i18nNodes.searchInput.placeholder = t.searchPlaceholder;
+  if (i18nNodes.emptyState) i18nNodes.emptyState.textContent = t.emptyState;
+  if (i18nNodes.engraisKicker) i18nNodes.engraisKicker.textContent = t.engraisKicker;
+  if (i18nNodes.engraisTitle) i18nNodes.engraisTitle.textContent = t.engraisTitle;
+  if (i18nNodes.engraisCopy) i18nNodes.engraisCopy.textContent = t.engraisCopy;
+  if (i18nNodes.engraisCta) i18nNodes.engraisCta.textContent = t.engraisCta;
+  if (i18nNodes.gazonKicker) i18nNodes.gazonKicker.textContent = t.gazonKicker;
+  if (i18nNodes.gazonTitle) i18nNodes.gazonTitle.textContent = t.gazonTitle;
+  if (i18nNodes.gazonCopy) i18nNodes.gazonCopy.textContent = t.gazonCopy;
+  if (i18nNodes.gazonCta) i18nNodes.gazonCta.textContent = t.gazonCta;
+  if (i18nNodes.aboutKicker) i18nNodes.aboutKicker.textContent = t.aboutKicker;
+  if (i18nNodes.aboutTitle) i18nNodes.aboutTitle.textContent = t.aboutTitle;
+  if (i18nNodes.aboutCopy) i18nNodes.aboutCopy.textContent = t.aboutCopy;
+  if (i18nNodes.footerLocation) i18nNodes.footerLocation.textContent = t.footerLocation;
+  
   languageButtons.forEach(b => b.classList.toggle("is-active", b.dataset.lang === state.lang));
   renderProducts();
 }
 
-searchInput.addEventListener("input", renderProducts);
-navToggle.addEventListener("click", () => mainNav.classList.toggle("is-open"));
-mainNav.addEventListener("click", (e) => { if (e.target.matches("a")) mainNav.classList.remove("is-open"); });
+if (searchInput) searchInput.addEventListener("input", renderProducts);
+if (navToggle && mainNav) navToggle.addEventListener("click", () => mainNav.classList.toggle("is-open"));
+if (mainNav) mainNav.addEventListener("click", (e) => { if (e.target.matches("a")) mainNav.classList.remove("is-open"); });
 languageButtons.forEach(b => b.addEventListener("click", () => applyLanguage(b.dataset.lang)));
+
 applyLanguage("fr");
