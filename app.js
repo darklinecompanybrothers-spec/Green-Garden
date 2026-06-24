@@ -1,5 +1,5 @@
 const WHATSAPP_NUMBER = "21698226502";
-const IMAGE_DIR = "Image"; // Cible exactement votre dossier "Image" (I majuscule, sans s)
+const IMAGE_DIR = "Image"; // Dossier exact à la racine
 
 const products = [
   { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: `${IMAGE_DIR}/Arbre du voyageur.JPG`, width: 1200, height: 1600 },
@@ -12,7 +12,7 @@ const products = [
   { id: "echeveria-dionysos", labels: { fr: "Echeveria 'Dionysos'", en: "Echeveria 'Dionysos'", ar: "إشفيرية ديونيسوس" }, image: `${IMAGE_DIR}/Echeveria 'Dionysos'.JPG`, width: 739, height: 1600 },
   { id: "faux-philodendron", labels: { fr: "Faux philodendron", en: "False philodendron", ar: "فيلوديندرون مزيف" }, image: `${IMAGE_DIR}/Faux philodendron.JPG`, width: 739, height: 1600 },
   { id: "figuier-caoutchouc", labels: { fr: "Figuier caoutchouc", en: "Rubber fig", ar: "فيكس مطاطي" }, image: `${IMAGE_DIR}/Figuier caoutchouc.JPG`, width: 739, height: 1600 },
-  { id: "figuier-pleureur", labels: { fr: "Figuier pleureur", en: "Weeping fig", ar: "فics باكي" }, image: `${IMAGE_DIR}/Figuier pleureur.JPG`, width: 739, height: 1600 },
+  { id: "figuier-pleureur", labels: { fr: "Figuier pleureur", en: "Weeping fig", ar: "فيكس باكي" }, image: `${IMAGE_DIR}/Figuier pleureur.JPG`, width: 739, height: 1600 },
   { id: "fleur-lune", labels: { fr: "Fleur de lune", en: "Peace lily", ar: "زنبق السلام" }, image: `${IMAGE_DIR}/Fleur de lune.JPG`, width: 739, height: 1600 },
   { id: "gymnocalycium", labels: { fr: "Gymnocalycium baldianum", en: "Gymnocalycium baldianum", ar: "جمنوكاليسيوم بالدينوم" }, image: `${IMAGE_DIR}/Gymnocalycium baldianum.JPG`, width: 739, height: 1600 },
   { id: "palmier-nain", labels: { fr: "Palmier nain", en: "Dwarf palm", ar: "نخيل قزم" }, image: `${IMAGE_DIR}/Palmier nain.JPG`, width: 600, height: 600 },
@@ -27,142 +27,69 @@ const products = [
 
 const translations = {
   fr: {
-    htmlLang: "fr",
-    dir: "ltr",
-    brand: "Green Garden",
-    navAria: "Navigation principale",
+    htmlLang: "fr", dir: "ltr", brand: "Green Garden", navAria: "Navigation principale",
     nav: ["Accueil", "Nos plantes", "Engrais", "Gazon", "A propos"],
-    heroKicker: "Jardinerie naturelle & minimaliste",
-    heroTitle: "Green Garden",
-    heroCopy:
-      "Plantes d'interieur, engrais et gazon pour composer des espaces plus frais, plus vivants et faciles a entretenir.",
-    heroCta: "Decouvrir le catalogue",
-    collectionsKicker: "Collections",
-    collectionsTitle: "Jungles d'interieur",
-    collectionsCopy:
-      "Une selection de plantes graphiques, robustes et faciles a vivre pour creer un coin vegetal apaisant.",
-    careKicker: "Entretien des plantes",
-    careTitle: "Des gestes simples, des plantes heureuses.",
-    careLight: "Lumiere douce",
-    careWater: "Arrosage maitrise",
-    catalogKicker: "Nos plantes",
-    catalogTitle: "Catalogue Green Garden",
-    catalogCopy: "Parcourez les articles disponibles et demandez le prix directement via WhatsApp.",
-    searchLabel: "Recherche",
-    searchPlaceholder: "Ex: palmier, cactus, yucca...",
+    heroKicker: "Jardinerie naturelle & minimaliste", heroTitle: "Green Garden",
+    heroCopy: "Plantes d'interieur, engrais et gazon pour composer des espaces plus frais, plus vivants et faciles a entretenir.",
+    heroCta: "Decouvrir le catalogue", collectionsKicker: "Collections", collectionsTitle: "Jungles d'interieur",
+    collectionsCopy: "Une selection de plantes graphiques, robustes et faciles a vivre pour creer un coin vegetal apaisant.",
+    careKicker: "Entretien des plantes", careTitle: "Des gestes simples, des plantes heureuses.",
+    careLight: "Lumiere douce", careWater: "Arrosage maitrise", catalogKicker: "Nos plantes",
+    catalogTitle: "Catalogue Green Garden", catalogCopy: "Parcourez les articles disponibles et demandez le prix directement via WhatsApp.",
+    searchLabel: "Recherche", searchPlaceholder: "Ex: palmier, cactus, yucca...",
     emptyState: "Aucun article ne correspond a cette recherche pour le moment.",
-    engraisKicker: "Nutrition vegetale",
-    engraisTitle: "Engrais",
-    engraisCopy: "Des solutions pour renforcer vos plantes et soutenir une croissance saine.",
-    engraisCta: "Commander sur WhatsApp",
-    gazonKicker: "Exterieur",
-    gazonTitle: "Gazon",
-    gazonCopy: "Commandez votre gazon et discutez avec nous du chantier d'installation.",
-    gazonCta: "Commander le gazon",
-    aboutKicker: "A propos",
-    aboutTitle: "Green Garden cultive le vegetal accessible.",
-    aboutCopy:
-      "Notre boutique accompagne les amoureux des plantes avec des varietes decoratives, des conseils simples et une reservation rapide via WhatsApp.",
-    footerLocation: "Tunisie - Jardinerie & plantes decoratives",
-    productButton: "Demander le prix",
+    engraisKicker: "Nutrition vegetale", engraisTitle: "Engrais", engraisCopy: "Des solutions pour renforcer vos plantes et soutenir une croissance saine.",
+    engraisCta: "Commander sur WhatsApp", gazonKicker: "Exterieur", gazonTitle: "Gazon",
+    gazonCopy: "Commandez votre gazon et discutez avec nous du chantier d'installation.", gazonCta: "Commander le gazon",
+    aboutKicker: "A propos", aboutTitle: "Green Garden cultive le vegetal accessible.",
+    aboutCopy: "Notre boutique accompagne les amoureux des plantes avec des varietes decoratives, des conseils simples et une reservation rapide via WhatsApp.",
+    footerLocation: "Tunisie - Jardinerie & plantes decoratives", productButton: "Demander le prix",
     productMessage: (name) => `Bonjour, je souhaite avoir plus d'informations et connaitre le prix pour l'article : ${name}`,
-    brandAria: "Accueil Green Garden",
-    footerBrand: "Green Garden",
-    pageTitle: "Green Garden | Jardinerie moderne",
-    metaDescription: "Green Garden - jardinerie moderne pour plantes, engrais et gazon.",
+    brandAria: "Accueil Green Garden", footerBrand: "Green Garden", pageTitle: "Green Garden | Jardinerie moderne",
+    metaDescription: "Green Garden - jardinerie moderne pour plantes, engrais et gazon."
   },
   en: {
-    htmlLang: "en",
-    dir: "ltr",
-    brand: "Green Garden",
-    navAria: "Primary navigation",
+    htmlLang: "en", dir: "ltr", brand: "Green Garden", navAria: "Primary navigation",
     nav: ["Home", "Plants", "Fertilizer", "Lawn", "About"],
-    heroKicker: "Natural & minimalist gardening",
-    heroTitle: "Green Garden",
-    heroCopy:
-      "Indoor plants, fertilizer and lawn solutions to shape cooler, livelier spaces that are easy to maintain.",
-    heroCta: "Explore the catalog",
-    collectionsKicker: "Collections",
-    collectionsTitle: "Indoor jungles",
-    collectionsCopy:
-      "A selection of graphic, resilient and easy-care plants to build a calming green corner.",
-    careKicker: "Plant care",
-    careTitle: "Simple gestures, happy plants.",
-    careLight: "Soft light",
-    careWater: "Balanced watering",
-    catalogKicker: "Our plants",
-    catalogTitle: "Green Garden Catalog",
+    heroKicker: "Natural & minimalist gardening", heroTitle: "Green Garden",
+    heroCopy: "Indoor plants, fertilizer and lawn solutions to shape cooler, livelier spaces that are easy to maintain.",
+    heroCta: "Explore the catalog", collectionsKicker: "Collections", collectionsTitle: "Indoor jungles",
+    collectionsCopy: "A selection of graphic, resilient and easy-care plants to build a calming green corner.",
+    careKicker: "Plant care", careTitle: "Simple gestures, happy plants.", careLight: "Soft light",
+    careWater: "Balanced watering", catalogKicker: "Our plants", catalogTitle: "Green Garden Catalog",
     catalogCopy: "Browse available items and ask for the price directly on WhatsApp.",
-    searchLabel: "Search",
-    searchPlaceholder: "Ex: palm, cactus, yucca...",
-    emptyState: "No items match this search yet.",
-    engraisKicker: "Plant nutrition",
-    engraisTitle: "Fertilizer",
-    engraisCopy: "Solutions to strengthen your plants and support healthy growth.",
-    engraisCta: "Order on WhatsApp",
-    gazonKicker: "Outdoor",
-    gazonTitle: "Lawn",
-    gazonCopy: "Order your lawn and discuss the installation project with us.",
-    gazonCta: "Order lawn",
-    aboutKicker: "About",
-    aboutTitle: "Green Garden makes plants feel accessible.",
-    aboutCopy:
-      "Our shop helps plant lovers with decorative varieties, simple advice and quick WhatsApp ordering.",
-    footerLocation: "Tunisia - Garden center & decorative plants",
-    productButton: "Ask for price",
+    searchLabel: "Search", searchPlaceholder: "Ex: palm, cactus, yucca...", emptyState: "No items match this search yet.",
+    engraisKicker: "Plant nutrition", engraisTitle: "Fertilizer", engraisCopy: "Solutions to strengthen your plants and support healthy growth.",
+    engraisCta: "Order on WhatsApp", gazonKicker: "Outdoor", gazonTitle: "Lawn",
+    gazonCopy: "Order your lawn and discuss the installation project with us.", gazonCta: "Order lawn",
+    aboutKicker: "About", aboutTitle: "Green Garden makes plants feel accessible.",
+    aboutCopy: "Our shop helps plant lovers with decorative varieties, simple advice and quick WhatsApp ordering.",
+    footerLocation: "Tunisia - Garden center & decorative plants", productButton: "Ask for price",
     productMessage: (name) => `Hello, I would like more information and the price for this item: ${name}`,
-    brandAria: "Green Garden home",
-    footerBrand: "Green Garden",
+    brandAria: "Green Garden home", footerBrand: "Green Garden"
   },
   ar: {
-    htmlLang: "ar",
-    dir: "rtl",
-    brand: "جرين جاردن",
-    navAria: "التنقل الرئيسي",
-    nav: ["الرئيسية", "النباتات", "الأسمدة", "العشب", "من نحن"],
-    heroKicker: "بستنة طبيعية وبسيطة",
-    heroTitle: "جرين جاردن",
-    heroCopy:
-      "نباتات داخلية وأسمدة وحلول للعشب لتكوين مساحات أكثر انتعاشا وحيوية وأسهل في العناية.",
-    heroCta: "استكشف الكتالوج",
-    collectionsKicker: "المجموعات",
-    collectionsTitle: "غابات داخلية",
-    collectionsCopy:
-      "مجموعة من النباتات الجميلة والقوية وسهلة العناية لصنع زاوية خضراء هادئة.",
-    careKicker: "العناية بالنباتات",
-    careTitle: "خطوات بسيطة ونباتات سعيدة.",
-    careLight: "إضاءة ناعمة",
-    careWater: "ري متوازن",
-    catalogKicker: "نباتاتنا",
-    catalogTitle: "كتالوج Green Garden",
-    catalogCopy: "تصفح العناصر المتاحة واطلب السعر مباشرة عبر واتساب.",
-    searchLabel: "بحث",
-    searchPlaceholder: "مثال: نخلة، صبار، يوكا...",
-    emptyState: "لا توجد عناصر مطابقة لهذا البحث حاليا.",
-    engraisKicker: "تغذية النباتات",
-    engraisTitle: "الأسمدة",
-    engraisCopy: "حلول لتقوية نباتاتك ودعم نمو صحي.",
-    engraisCta: "اطلب عبر واتساب",
-    gazonKicker: "خارجي",
-    gazonTitle: "العشب",
-    gazonCopy: "اطلب العشب وتحدث معنا حول مشروع التركيب.",
-    gazonCta: "اطلب العشب",
-    aboutKicker: "من نحن",
-    aboutTitle: "Green Garden تجعل النبات أقرب وأسهل.",
-    aboutCopy:
-      "متجرنا يساعد محبي النباتات على اختيار الأصناف الزخرفية مع نصائح بسيطة وطلب سريع عبر واتساب.",
-    footerLocation: "قربة، تونس · مشتل ونباتات زينة",
-    productButton: "اطلب السعر",
+    htmlLang: "ar", dir: "rtl", brand: "جرين جاردن", navAria: "التنقل الرئيسي",
+    nav: ["الرئيسية", "النباتات", "الأسمدة", "العشب", "من نحن"], heroKicker: "بستنة طبيعية وبسيطة", heroTitle: "جرين جاردن",
+    heroCopy: "نباتات داخلية وأسمدة وحلول للعشب لتكوين مساحات أكثر انتعاشا وحيوية وأسهل في العناية.",
+    heroCta: "استكشف الكتالوج", collectionsKicker: "المجموعات", collectionsTitle: "غابات داخلية",
+    collectionsCopy: "مجموعة من النباتات الجميلة والقوية وسهلة العناية لصنع زاوية خضراء هادئة.",
+    careKicker: "العناية بالنباتات", careTitle: "خطوات بسيطة ونباتات سعيدة.", careLight: "إضاءة ناعمة",
+    careWater: "ري متوازن", catalogKicker: "نباتاتنا", catalogTitle: "كتالوج Green Garden",
+    catalogCopy: "تصفح العناصر المتاحة واطلب السعر مباشرة عبر واتساب.", searchLabel: "بحث",
+    searchPlaceholder: "مثال: نخلة، صبار، يوكا...", emptyState: "لا توجد عناصر مطابقة لهذا البحث حاليا.",
+    engraisKicker: "تغذية النباتات", engraisTitle: "الأسمدة", engraisCopy: "حلول لتقوية نباتاتك ودعم نمو صحي.",
+    engraisCta: "اطلب عبر واتساب", gazonKicker: "خارجي", gazonTitle: "العشب",
+    gazonCopy: "اطلب العشب وتحدث معنا حول مشروع التركيب.", gazonCta: "اطلب العشب",
+    aboutKicker: "من نحن", aboutTitle: "Green Garden تجعل النبات أقرب وأسهل.",
+    aboutCopy: "متجرنا يساعد محبي النباتات على اختيار الأصناف الزخرفية مع نصائح بسيطة وطلب سريع عبر واتساب.",
+    footerLocation: "قربة، تونس · مشتل ونباتات زينة", productButton: "اطلب السعر",
     productMessage: (name) => `مرحباً، أود معرفة المزيد والسعر الخاص بهذا المنتج: ${name}`,
-    brandAria: "الصفحة الرئيسية لـ Green Garden",
-    footerBrand: "جرين جاردن",
-  },
+    brandAria: "الصفحة الرئيسية لـ Green Garden", footerBrand: "جرين جاردن"
+  }
 };
 
-const state = {
-  lang: "fr",
-};
-
+const state = { lang: "fr" };
 const productGrid = document.querySelector("#productGrid");
 const emptyState = document.querySelector("#emptyState");
 const searchInput = document.querySelector("#searchInput");
@@ -171,7 +98,6 @@ const mainNav = document.querySelector(".main-nav");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const brandSpans = document.querySelectorAll(".brand span");
 const footerBrandSpans = document.querySelectorAll(".footer-brand span");
-
 const pageTitle = document.querySelector("title");
 const descriptionMeta = document.querySelector('meta[name="description"]');
 
@@ -191,8 +117,7 @@ const i18nNodes = {
   catalogTitle: document.querySelector("#plantes .section-heading h2"),
   catalogCopy: document.querySelector("#plantes .section-heading p"),
   searchLabel: document.querySelector(".search-field span"),
-  searchInput,
-  emptyState,
+  searchInput, emptyState,
   engraisKicker: document.querySelector("#engrais .feature-copy .eyebrow"),
   engraisTitle: document.querySelector("#engrais .feature-copy h2"),
   engraisCopy: document.querySelector("#engrais .feature-copy p"),
@@ -204,17 +129,14 @@ const i18nNodes = {
   aboutKicker: document.querySelector("#apropos .eyebrow"),
   aboutTitle: document.querySelector("#apropos h2"),
   aboutCopy: document.querySelector("#apropos p"),
-  footerLocation: document.querySelector(".site-footer p"),
+  footerLocation: document.querySelector(".site-footer p")
 };
 
 function buildWhatsAppUrl(message) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-function getLanguage() {
-  return translations[state.lang] || translations.fr;
-}
-
+function getLanguage() { return translations[state.lang] || translations.fr; }
 function getLocalizedProductName(product) {
   const t = getLanguage();
   return product.labels[t.htmlLang] || product.labels.fr;
@@ -228,27 +150,26 @@ function renderProducts() {
   );
 
   productGrid.innerHTML = filteredProducts
-    .map(
-      (product) => {
-        const localizedName = getLocalizedProductName(product);
-        return `
-          <article class="product-card">
-            <img class="product-image" src="${product.image}" alt="${localizedName}" loading="lazy" />
-            <div class="product-content">
-              <h3>${localizedName}</h3>
-              <a
-                class="whatsapp-link"
-                href="${buildWhatsAppUrl(t.productMessage(localizedName))}"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ${t.productButton}
-              </a>
-            </div>
-          </article>
-        `;
-      }
-    )
+    .map((product) => {
+      const localizedName = getLocalizedProductName(product);
+      return `
+        <article class="product-card">
+          <img 
+            class="product-image" 
+            src="${product.image}" 
+            alt="${localizedName}" 
+            loading="lazy"
+            onerror="let ext = this.src.split('.').pop(); if(ext === 'JPG'){ this.src = this.src.replace('.JPG', '.jpg'); } else if(ext === 'jpg'){ this.src = this.src.replace('.jpg', '.jpeg'); } else if(ext === 'jpeg'){ this.src = this.src.replace('.jpeg', '.png'); }" 
+          />
+          <div class="product-content">
+            <h3>${localizedName}</h3>
+            <a class="whatsapp-link" href="${buildWhatsAppUrl(t.productMessage(localizedName))}" target="_blank" rel="noreferrer">
+              ${t.productButton}
+            </a>
+          </div>
+        </article>
+      `;
+    })
     .join("");
 
   emptyState.textContent = t.emptyState;
@@ -258,28 +179,15 @@ function renderProducts() {
 function applyLanguage(lang) {
   state.lang = translations[lang] ? lang : "fr";
   const t = getLanguage();
-
   document.documentElement.lang = t.htmlLang;
   document.documentElement.dir = t.dir;
   document.body.classList.toggle("rtl", t.dir === "rtl");
   document.title = t.pageTitle;
-  if (descriptionMeta) {
-    descriptionMeta.content = t.metaDescription;
-  }
+  if (descriptionMeta) { descriptionMeta.content = t.metaDescription; }
   mainNav.setAttribute("aria-label", t.navAria);
-
-  brandSpans.forEach((span) => {
-    span.textContent = t.brand;
-  });
-
-  footerBrandSpans.forEach((span) => {
-    span.textContent = t.footerBrand;
-  });
-
-  i18nNodes.navLinks.forEach((link, index) => {
-    link.textContent = t.nav[index] || link.textContent;
-  });
-
+  brandSpans.forEach(s => s.textContent = t.brand);
+  footerBrandSpans.forEach(s => s.textContent = t.footerBrand);
+  i18nNodes.navLinks.forEach((l, i) => l.textContent = t.nav[i] || l.textContent);
   i18nNodes.heroKicker.textContent = t.heroKicker;
   i18nNodes.heroTitle.textContent = t.heroTitle;
   i18nNodes.heroCopy.textContent = t.heroCopy;
@@ -309,28 +217,12 @@ function applyLanguage(lang) {
   i18nNodes.aboutTitle.textContent = t.aboutTitle;
   i18nNodes.aboutCopy.textContent = t.aboutCopy;
   i18nNodes.footerLocation.textContent = t.footerLocation;
-
-  languageButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.lang === state.lang);
-  });
-
+  languageButtons.forEach(b => b.classList.toggle("is-active", b.dataset.lang === state.lang));
   renderProducts();
 }
 
 searchInput.addEventListener("input", renderProducts);
-
-navToggle.addEventListener("click", () => {
-  mainNav.classList.toggle("is-open");
-});
-
-mainNav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    mainNav.classList.remove("is-open");
-  }
-});
-
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => applyLanguage(button.dataset.lang));
-});
-
+navToggle.addEventListener("click", () => mainNav.classList.toggle("is-open"));
+mainNav.addEventListener("click", (e) => { if (e.target.matches("a")) mainNav.classList.remove("is-open"); });
+languageButtons.forEach(b => b.addEventListener("click", () => applyLanguage(b.dataset.lang)));
 applyLanguage("fr");
