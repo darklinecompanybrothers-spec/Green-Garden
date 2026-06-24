@@ -2,7 +2,7 @@
 const IMAGE_DIR = "Image pour green garden";
 
 const products = [
-  { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: `${IMAGE_DIR}/Arbre du voyageur.jpeg`, width: 1200, height: 1600 },
+  { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: `${IMAGE_DIR}/Image/Arbre du voyageur.jpeg`, width: 1200, height: 1600 },
   { id: "cactus-oursin", labels: { fr: "Cactus oursin", en: "Sea urchin cactus", ar: "صبار القنفذ البحري" }, image: `${IMAGE_DIR}/Cactus oursin.jpeg`, width: 739, height: 1600 },
   { id: "cactus-vieillard", labels: { fr: "Cactus vieillard du Pérou", en: "Old man cactus of Peru", ar: "صبار عجوز بيرو" }, image: `${IMAGE_DIR}/Cactus vieillard du Pérou.jpeg`, width: 739, height: 1600 },
   { id: "chataignier-guyane", labels: { fr: "Châtaignier de la Guyane", en: "Guyana chestnut", ar: "كستناء غيانا" }, image: `${IMAGE_DIR}/Châtaignier de la Guyane.jpeg`, width: 739, height: 1600 },
