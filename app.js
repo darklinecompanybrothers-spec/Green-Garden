@@ -1,336 +1,251 @@
-const WHATSAPP_NUMBER = "21698226502";
-const IMAGE_DIR = "Image pour green garden";
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Green Garden - jardinerie moderne pour plantes, engrais et gazon."
+    />
+    <title>Green Garden | Jardinerie moderne</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-left" aria-hidden="true"></div>
+    <div class="page-glow page-glow-right" aria-hidden="true"></div>
 
-const products = [
-  { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: `${IMAGE_DIR}/Arbre du voyageur.jpeg`, width: 1200, height: 1600 },
-  { id: "cactus-oursin", labels: { fr: "Cactus oursin", en: "Sea urchin cactus", ar: "صبار القنفذ البحري" }, image: `${IMAGE_DIR}/Cactus oursin.jpeg`, width: 739, height: 1600 },
-  { id: "cactus-vieillard", labels: { fr: "Cactus vieillard du Pérou", en: "Old man cactus of Peru", ar: "صبار عجوز بيرو" }, image: `${IMAGE_DIR}/Cactus vieillard du Pérou.jpeg`, width: 739, height: 1600 },
-  { id: "chataignier-guyane", labels: { fr: "Châtaignier de la Guyane", en: "Guyana chestnut", ar: "كستناء غيانا" }, image: `${IMAGE_DIR}/Châtaignier de la Guyane.jpeg`, width: 739, height: 1600 },
-  { id: "cintha", labels: { fr: "Cintha", en: "Cinta", ar: "سينثا" }, image: `${IMAGE_DIR}/Cintha.jpeg`, width: 739, height: 1600 },
-  { id: "dragonnier-madagascar", labels: { fr: "Dragonnier de Madagascar", en: "Madagascar dragon tree", ar: "شجرة تنين مدغشقر" }, image: `${IMAGE_DIR}/Dragonnier de Madagascar.jpeg`, width: 739, height: 1600 },
-  { id: "dragonnier-massange", labels: { fr: "Dragonnier de Massange", en: "Massange dragon tree", ar: "شجرة تنين ماسانج" }, image: `${IMAGE_DIR}/Dragonnier de Massange.jpeg`, width: 739, height: 1600 },
-  { id: "echeveria-dionysos", labels: { fr: "Echeveria 'Dionysos'", en: "Echeveria 'Dionysos'", ar: "إشفيرية ديونيسوس" }, image: `${IMAGE_DIR}/Echeveria 'Dionysos'.jpeg`, width: 739, height: 1600 },
-  { id: "faux-philodendron", labels: { fr: "Faux philodendron", en: "False philodendron", ar: "فيلوديندرون مزيف" }, image: `${IMAGE_DIR}/Faux philodendron.jpeg`, width: 739, height: 1600 },
-  { id: "figuier-caoutchouc", labels: { fr: "Figuier caoutchouc", en: "Rubber fig", ar: "فيكس مطاطي" }, image: `${IMAGE_DIR}/Figuier caoutchouc.jpeg`, width: 739, height: 1600 },
-  { id: "figuier-pleureur", labels: { fr: "Figuier pleureur", en: "Weeping fig", ar: "فيكس باكي" }, image: `${IMAGE_DIR}/Figuier pleureur.jpeg`, width: 739, height: 1600 },
-  { id: "fleur-lune", labels: { fr: "Fleur de lune", en: "Peace lily", ar: "زنبق السلام" }, image: `${IMAGE_DIR}/Fleur de lune.jpeg`, width: 739, height: 1600 },
-  { id: "gymnocalycium", labels: { fr: "Gymnocalycium baldianum", en: "Gymnocalycium baldianum", ar: "جمنوكاليسيوم بالدينوم" }, image: `${IMAGE_DIR}/Gymnocalycium baldianum.jpeg`, width: 739, height: 1600 },
-  { id: "palmier-nain", labels: { fr: "Palmier nain", en: "Dwarf palm", ar: "نخيل قزم" }, image: `${IMAGE_DIR}/Palmier nain.jpeg`, width: 600, height: 600 },
-  { id: "palmier-eventail", labels: { fr: "Palmier éventail", en: "Fan palm", ar: "نخيل مروحي" }, image: `${IMAGE_DIR}/Palmier éventail.jpeg`, width: 739, height: 1600 },
-  { id: "plante-mais", labels: { fr: "Plante maïs", en: "Corn plant", ar: "نبات الذرة" }, image: `${IMAGE_DIR}/Plante maïs.jpeg`, width: 739, height: 1600 },
-  { id: "plante-mosaique", labels: { fr: "Plante mosaïque", en: "Mosaic plant", ar: "نبات الفسيفساء" }, image: `${IMAGE_DIR}/Plante mosaïque.jpeg`, width: 739, height: 1600 },
-  { id: "plante-zebre", labels: { fr: "Plante zèbre", en: "Zebra plant", ar: "نبات الحمار الوحشي" }, image: `${IMAGE_DIR}/Plante zèbre.jpeg`, width: 739, height: 1600 },
-  { id: "scindapsus-dore", labels: { fr: "Scindapsus doré", en: "Golden pothos", ar: "بوتس ذهبي" }, image: `${IMAGE_DIR}/Scindapsus doré.jpeg`, width: 739, height: 1600 },
-  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف trois الألوان" }, image: `${IMAGE_DIR}/variété 'Tricolor'.jpeg`, width: 739, height: 1600 },
-  { id: "yucca-interieur", labels: { fr: "Yucca d'intérieur", en: "Indoor yucca", ar: "يوكا داخلية" }, image: `${IMAGE_DIR}/Yucca d'intérieur.jpeg`, width: 739, height: 1600 },
-];
+    <header class="site-header">
+      <a class="brand" href="#accueil" aria-label="Accueil Green Garden">
+        <img src="logo.png" alt="" class="brand-mark" loading="lazy" />
+        <span>Green Garden</span>
+      </a>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" class="lang-button is-active" data-lang="fr" aria-label="Francais">FR</button>
+        <button type="button" class="lang-button" data-lang="en" aria-label="English">EN</button>
+        <button type="button" class="lang-button" data-lang="ar" aria-label="العربية">AR</button>
+      </div>
 
-const translations = {
-  fr: {
-    htmlLang: "fr",
-    dir: "ltr",
-    brand: "Green Garden",
-    navAria: "Navigation principale",
-    nav: ["Accueil", "Nos plantes", "Engrais", "Gazon", "A propos"],
-    heroKicker: "Jardinerie naturelle & minimaliste",
-    heroTitle: "Green Garden",
-    heroCopy:
-      "Plantes d'interieur, engrais et gazon pour composer des espaces plus frais, plus vivants et faciles a entretenir.",
-    heroCta: "Decouvrir le catalogue",
-    collectionsKicker: "Collections",
-    collectionsTitle: "Jungles d'interieur",
-    collectionsCopy:
-      "Une selection de plantes graphiques, robustes et faciles a vivre pour creer un coin vegetal apaisant.",
-    careKicker: "Entretien des plantes",
-    careTitle: "Des gestes simples, des plantes heureuses.",
-    careLight: "Lumiere douce",
-    careWater: "Arrosage maitrise",
-    catalogKicker: "Nos plantes",
-    catalogTitle: "Catalogue Green Garden",
-    catalogCopy: "Parcourez les articles disponibles et demandez le prix directement via WhatsApp.",
-    searchLabel: "Recherche",
-    searchPlaceholder: "Ex: palmier, cactus, yucca...",
-    emptyState: "Aucun article ne correspond a cette recherche pour le moment.",
-    engraisKicker: "Nutrition vegetale",
-    engraisTitle: "Engrais",
-    engraisCopy: "Des solutions pour renforcer vos plantes et soutenir une croissance saine.",
-    engraisCta: "Commander sur WhatsApp",
-    gazonKicker: "Exterieur",
-    gazonTitle: "Gazon",
-    gazonCopy: "Commandez votre gazon et discutez avec nous du chantier d'installation.",
-    gazonCta: "Commander le gazon",
-    aboutKicker: "A propos",
-    aboutTitle: "Green Garden cultive le vegetal accessible.",
-    aboutCopy:
-      "Notre boutique accompagne les amoureux des plantes avec des varietes decoratives, des conseils simples et une reservation rapide via WhatsApp.",
-    footerLocation: "Tunisie - Jardinerie & plantes decoratives",
-    productButton: "Demander le prix",
-    productMessage: (name) => `Bonjour, je souhaite avoir plus d'informations et connaitre le prix pour l'article : ${name}`,
-    brandAria: "Accueil Green Garden",
-    footerBrand: "Green Garden",
-    pageTitle: "Green Garden | Jardinerie moderne",
-    metaDescription: "Green Garden - jardinerie moderne pour plantes, engrais et gazon.",
-  },
-  en: {
-    htmlLang: "en",
-    dir: "ltr",
-    brand: "Green Garden",
-    navAria: "Primary navigation",
-    nav: ["Home", "Plants", "Fertilizer", "Lawn", "About"],
-    heroKicker: "Natural & minimalist gardening",
-    heroTitle: "Green Garden",
-    heroCopy:
-      "Indoor plants, fertilizer and lawn solutions to shape cooler, livelier spaces that are easy to maintain.",
-    heroCta: "Explore the catalog",
-    collectionsKicker: "Collections",
-    collectionsTitle: "Indoor jungles",
-    collectionsCopy:
-      "A selection of graphic, resilient and easy-care plants to build a calming green corner.",
-    careKicker: "Plant care",
-    careTitle: "Simple gestures, happy plants.",
-    careLight: "Soft light",
-    careWater: "Balanced watering",
-    catalogKicker: "Our plants",
-    catalogTitle: "Green Garden Catalog",
-    catalogCopy: "Browse available items and ask for the price directly on WhatsApp.",
-    searchLabel: "Search",
-    searchPlaceholder: "Ex: palm, cactus, yucca...",
-    emptyState: "No items match this search yet.",
-    engraisKicker: "Plant nutrition",
-    engraisTitle: "Fertilizer",
-    engraisCopy: "Solutions to strengthen your plants and support healthy growth.",
-    engraisCta: "Order on WhatsApp",
-    gazonKicker: "Outdoor",
-    gazonTitle: "Lawn",
-    gazonCopy: "Order your lawn and discuss the installation project with us.",
-    gazonCta: "Order lawn",
-    aboutKicker: "About",
-    aboutTitle: "Green Garden makes plants feel accessible.",
-    aboutCopy:
-      "Our shop helps plant lovers with decorative varieties, simple advice and quick WhatsApp ordering.",
-    footerLocation: "Tunisia - Garden center & decorative plants",
-    productButton: "Ask for price",
-    productMessage: (name) => `Hello, I would like more information and the price for this item: ${name}`,
-    brandAria: "Green Garden home",
-    footerBrand: "Green Garden",
-  },
-  ar: {
-    htmlLang: "ar",
-    dir: "rtl",
-    brand: "جرين جاردن",
-    navAria: "التنقل الرئيسي",
-    nav: ["الرئيسية", "النباتات", "الأسمدة", "العشب", "من نحن"],
-    heroKicker: "بستنة طبيعية وبسيطة",
-    heroTitle: "جرين جاردن",
-    heroCopy:
-      "نباتات داخلية وأسمدة وحلول للعشب لتكوين مساحات أكثر انتعاشا وحيوية وأسهل في العناية.",
-    heroCta: "استكشف الكتالوج",
-    collectionsKicker: "المجموعات",
-    collectionsTitle: "غابات داخلية",
-    collectionsCopy:
-      "مجموعة من النباتات الجميلة والقوية وسهلة العناية لصنع زاوية خضراء هادئة.",
-    careKicker: "العناية بالنباتات",
-    careTitle: "خطوات بسيطة ونباتات سعيدة.",
-    careLight: "إضاءة ناعمة",
-    careWater: "ري متوازن",
-    catalogKicker: "نباتاتنا",
-    catalogTitle: "كتالوج Green Garden",
-    catalogCopy: "تصفح العناصر المتاحة واطلب السعر مباشرة عبر واتساب.",
-    searchLabel: "بحث",
-    searchPlaceholder: "مثال: نخلة، صبار، يوكا...",
-    emptyState: "لا توجد عناصر مطابقة لهذا البحث حاليا.",
-    engraisKicker: "تغذية النباتات",
-    engraisTitle: "الأسمدة",
-    engraisCopy: "حلول لتقوية نباتاتك ودعم نمو صحي.",
-    engraisCta: "اطلب عبر واتساب",
-    gazonKicker: "خارجي",
-    gazonTitle: "العشب",
-    gazonCopy: "اطلب العشب وتحدث معنا حول مشروع التركيب.",
-    gazonCta: "اطلب العشب",
-    aboutKicker: "من نحن",
-    aboutTitle: "Green Garden تجعل النبات أقرب وأسهل.",
-    aboutCopy:
-      "متجرنا يساعد محبي النباتات على اختيار الأصناف الزخرفية مع نصائح بسيطة وطلب سريع عبر واتساب.",
-    footerLocation: "قربة، تونس · مشتل ونباتات زينة",
-    productButton: "اطلب السعر",
-    productMessage: (name) => `مرحباً، أود معرفة المزيد والسعر الخاص بهذا المنتج: ${name}`,
-    brandAria: "الصفحة الرئيسية لـ Green Garden",
-    footerBrand: "جرين جاردن",
-  },
-};
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+      </button>
 
-const state = {
-  lang: "fr",
-};
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#plantes">Nos plantes</a>
+        <a href="#engrais">Engrais</a>
+        <a href="#gazon">Gazon</a>
+        <a href="#apropos">A propos</a>
+      </nav>
+    </header>
 
-const productGrid = document.querySelector("#productGrid");
-const emptyState = document.querySelector("#emptyState");
-const searchInput = document.querySelector("#searchInput");
-const navToggle = document.querySelector(".nav-toggle");
-const mainNav = document.querySelector(".main-nav");
-const languageButtons = document.querySelectorAll("[data-lang]");
-const brandSpans = document.querySelectorAll(".brand span");
-const footerBrandSpans = document.querySelectorAll(".footer-brand span");
+    <main>
+      <section id="accueil" class="hero hero-with-image section-shell">
+        <div class="hero-content">
+          <p class="eyebrow">Jardinerie naturelle & minimaliste</p>
+          <h1>Green Garden</h1>
+          <p class="hero-copy">
+            Plantes d'interieur, engrais et gazon pour composer des espaces plus frais,
+            plus vivants et faciles a entretenir.
+          </p>
+          <a class="pill-button" href="#plantes">Decouvrir le catalogue</a>
+        </div>
+        <div class="hero-media">
+          <img
+            src="123699.jpeg"
+            alt="Jardinerie Green Garden"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
-const pageTitle = document.querySelector("title");
-const descriptionMeta = document.querySelector('meta[name="description"]');
+      <section id="nouveautes" class="organic-grid section-shell">
+        <article class="collection-card">
+          <span class="eyebrow">Collections</span>
+          <h2>Jungles d'interieur</h2>
+          <p>
+            Une selection de plantes graphiques, robustes et faciles a vivre
+            pour creer un coin vegetal apaisant.
+          </p>
+          <div class="petal-stack" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </article>
 
-const i18nNodes = {
-  navLinks: [...document.querySelectorAll(".main-nav a")],
-  heroKicker: document.querySelector("#accueil .eyebrow"),
-  heroTitle: document.querySelector("#accueil h1"),
-  heroCopy: document.querySelector("#accueil .hero-copy"),
-  heroCta: document.querySelector("#accueil .pill-button"),
-  collectionsKicker: document.querySelector("#nouveautes .collection-card .eyebrow"),
-  collectionsTitle: document.querySelector("#nouveautes .collection-card h2"),
-  collectionsCopy: document.querySelector("#nouveautes .collection-card p"),
-  careKicker: document.querySelector("#nouveautes .care-card .eyebrow"),
-  careTitle: document.querySelector("#nouveautes .care-card h2"),
-  careLabels: [...document.querySelectorAll("#nouveautes .care-list span")],
-  catalogKicker: document.querySelector("#plantes .section-heading .eyebrow"),
-  catalogTitle: document.querySelector("#plantes .section-heading h2"),
-  catalogCopy: document.querySelector("#plantes .section-heading p"),
-  searchLabel: document.querySelector(".search-field span"),
-  searchInput,
-  emptyState,
-  engraisKicker: document.querySelector("#engrais .feature-copy .eyebrow"),
-  engraisTitle: document.querySelector("#engrais .feature-copy h2"),
-  engraisCopy: document.querySelector("#engrais .feature-copy p"),
-  engraisCta: document.querySelector("#engrais .feature-copy a"),
-  gazonKicker: document.querySelector("#gazon .feature-copy .eyebrow"),
-  gazonTitle: document.querySelector("#gazon .feature-copy h2"),
-  gazonCopy: document.querySelector("#gazon .feature-copy p"),
-  gazonCta: document.querySelector("#gazon .feature-copy a"),
-  aboutKicker: document.querySelector("#apropos .eyebrow"),
-  aboutTitle: document.querySelector("#apropos h2"),
-  aboutCopy: document.querySelector("#apropos p"),
-  footerLocation: document.querySelector(".site-footer p"),
-};
+        <div class="floating-leaf" aria-hidden="true">
+          <svg viewBox="0 0 120 160" role="img">
+            <path d="M103 8C49 18 13 55 15 103c1 28 22 48 47 45 38-4 56-50 41-140Z" />
+            <path d="M62 143C63 88 75 48 103 8" />
+          </svg>
+        </div>
 
-function buildWhatsAppUrl(message) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-
-function getLanguage() {
-  return translations[state.lang] || translations.fr;
-}
-
-function getLocalizedProductName(product) {
-  const t = getLanguage();
-  return product.labels[t.htmlLang] || product.labels.fr;
-}
-
-function renderProducts() {
-  const search = searchInput.value.trim().toLowerCase();
-  const t = getLanguage();
-  const filteredProducts = products.filter((product) =>
-    Object.values(product.labels).some((label) => label.toLowerCase().includes(search))
-  );
-
-  productGrid.innerHTML = filteredProducts
-    .map(
-      (product) => {
-        const localizedName = getLocalizedProductName(product);
-        return `
-          <article class="product-card">
-            <img class="product-image" src="${product.image}" alt="${localizedName}" loading="lazy" />
-            <div class="product-content">
-              <h3>${localizedName}</h3>
-              <a
-                class="whatsapp-link"
-                href="${buildWhatsAppUrl(t.productMessage(localizedName))}"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ${t.productButton}
-              </a>
+        <article class="care-card">
+          <span class="eyebrow">Entretien des plantes</span>
+          <h2>Des gestes simples, des plantes heureuses.</h2>
+          <div class="care-list">
+            <div>
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M22 25h20l-4 28H26L22 25Z" />
+                <path d="M18 25h28" />
+                <path d="M32 25c-9-5-10-13-4-18 6 5 8 12 4 18Z" />
+                <path d="M34 24c3-9 10-12 17-9-2 8-8 12-17 9Z" />
+              </svg>
+              <span>Lumiere douce</span>
             </div>
-          </article>
-        `;
-      }
-    )
-    .join("");
+            <div>
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M14 31c9-10 20-14 32-12l4 8c-12-1-22 2-31 11l-5-7Z" />
+                <path d="M48 27c5 2 8 5 9 10" />
+                <path d="M15 38c4 0 7 3 7 7a7 7 0 1 1-14 0c0-4 3-7 7-7Z" />
+              </svg>
+              <span>Arrosage maitrise</span>
+            </div>
+          </div>
+        </article>
+      </section>
 
-  emptyState.textContent = t.emptyState;
-  emptyState.hidden = filteredProducts.length > 0;
-}
+      <section id="plantes" class="catalog-section section-shell">
+        <div class="section-heading">
+          <span class="eyebrow">Nos plantes</span>
+          <h2>Catalogue Green Garden</h2>
+          <p>
+            Parcourez les articles disponibles et demandez le prix directement
+            via WhatsApp.
+          </p>
+        </div>
 
-function applyLanguage(lang) {
-  state.lang = translations[lang] ? lang : "fr";
-  const t = getLanguage();
+        <div class="filters" aria-label="Filtres du catalogue">
+          <label class="search-field">
+            <span>Recherche</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Ex: palmier, cactus, yucca..."
+              autocomplete="off"
+            />
+          </label>
+        </div>
 
-  document.documentElement.lang = t.htmlLang;
-  document.documentElement.dir = t.dir;
-  document.body.classList.toggle("rtl", t.dir === "rtl");
-  document.title = t.pageTitle;
-  if (descriptionMeta) {
-    descriptionMeta.content = t.metaDescription;
-  }
-  mainNav.setAttribute("aria-label", t.navAria);
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty-state" hidden>
+          Aucun article ne correspond a cette recherche pour le moment.
+        </p>
+      </section>
 
-  brandSpans.forEach((span) => {
-    span.textContent = t.brand;
-  });
+      <section id="engrais" class="feature-section section-shell">
+        <div class="feature-copy">
+          <span class="eyebrow">Nutrition vegetale</span>
+          <h2>Engrais</h2>
+          <p>
+            Des solutions pour renforcer vos plantes et soutenir une croissance saine.
+          </p>
+          <a
+            class="pill-button"
+            href="https://wa.me/21698226502?text=Commander%20de%20l%27engrais"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Commander sur WhatsApp
+          </a>
+        </div>
+        <img
+          src="engrais bio-organique.jpeg"
+          alt="Engrais Green Garden"
+          loading="lazy"
+        />
+      </section>
 
-  footerBrandSpans.forEach((span) => {
-    span.textContent = t.footerBrand;
-  });
+      <section id="gazon" class="feature-section feature-section-reverse section-shell">
+        <div class="feature-copy">
+          <span class="eyebrow">Exterieur</span>
+          <h2>Gazon</h2>
+          <p>
+            Commandez votre gazon et discutez avec nous du chantier d'installation.
+          </p>
+          <a
+            class="pill-button"
+            href="https://wa.me/21698226502?text=Bonjour%2C%20je%20souhaite%20commander%20du%20gazon%20et%20discuter%20d%27un%20chantier%20d%27installation"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Commander le gazon
+          </a>
+        </div>
+        <img
+          src="gazon.jpg"
+          alt="Gazon Green Garden"
+          loading="lazy"
+        />
+      </section>
 
-  i18nNodes.navLinks.forEach((link, index) => {
-    link.textContent = t.nav[index] || link.textContent;
-  });
+      <section id="apropos" class="about-section section-shell">
+        <div>
+          <span class="eyebrow">A propos</span>
+          <h2>Green Garden cultive le vegetal accessible.</h2>
+        </div>
+        <p>
+          Notre boutique accompagne les amoureux des plantes avec des varietes
+          decoratives, des conseils simples et une reservation rapide via WhatsApp.
+        </p>
+      </section>
+    </main>
 
-  i18nNodes.heroKicker.textContent = t.heroKicker;
-  i18nNodes.heroTitle.textContent = t.heroTitle;
-  i18nNodes.heroCopy.textContent = t.heroCopy;
-  i18nNodes.heroCta.textContent = t.heroCta;
-  i18nNodes.collectionsKicker.textContent = t.collectionsKicker;
-  i18nNodes.collectionsTitle.textContent = t.collectionsTitle;
-  i18nNodes.collectionsCopy.textContent = t.collectionsCopy;
-  i18nNodes.careKicker.textContent = t.careKicker;
-  i18nNodes.careTitle.textContent = t.careTitle;
-  i18nNodes.careLabels[0].textContent = t.careLight;
-  i18nNodes.careLabels[1].textContent = t.careWater;
-  i18nNodes.catalogKicker.textContent = t.catalogKicker;
-  i18nNodes.catalogTitle.textContent = t.catalogTitle;
-  i18nNodes.catalogCopy.textContent = t.catalogCopy;
-  i18nNodes.searchLabel.textContent = t.searchLabel;
-  i18nNodes.searchInput.placeholder = t.searchPlaceholder;
-  i18nNodes.emptyState.textContent = t.emptyState;
-  i18nNodes.engraisKicker.textContent = t.engraisKicker;
-  i18nNodes.engraisTitle.textContent = t.engraisTitle;
-  i18nNodes.engraisCopy.textContent = t.engraisCopy;
-  i18nNodes.engraisCta.textContent = t.engraisCta;
-  i18nNodes.gazonKicker.textContent = t.gazonKicker;
-  i18nNodes.gazonTitle.textContent = t.gazonTitle;
-  i18nNodes.gazonCopy.textContent = t.gazonCopy;
-  i18nNodes.gazonCta.textContent = t.gazonCta;
-  i18nNodes.aboutKicker.textContent = t.aboutKicker;
-  i18nNodes.aboutTitle.textContent = t.aboutTitle;
-  i18nNodes.aboutCopy.textContent = t.aboutCopy;
-  i18nNodes.footerLocation.textContent = t.footerLocation;
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div>
+          <a class="brand footer-brand" href="#accueil">
+            <img src="logo.png" alt="" class="brand-mark" loading="lazy" />
+            <span>Green Garden</span>
+          </a>
+          <p>Tunisie - Jardinerie & plantes decoratives</p>
+        </div>
 
-  languageButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.lang === state.lang);
-  });
+        <div class="footer-actions">
+          <a class="footer-location" href="https://www.google.com/maps/place/Green+Garden/data=!4m2!3m1!1s0x0:0xbcffd81209e52333?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener noreferrer" aria-label="Localisation Green Garden">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
+            </svg>
+          </a>
+          <div class="social-links" aria-label="Reseaux sociaux">
+            <a href="https://www.instagram.com/greengarden.quba/" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-.7a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3V3h-3c-4 0-6 2.4-6 6v3H5v5h3v5h5v-5h4l1-5h-5V9c0-.7.4-1 1-1Z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/21698226502" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.4 1.3-2 1.4-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6l1 2.4c.1.3.1.5 0 .7l-.5.8c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.5-.3.8-.2l2.4 1.1c.3.2.6.3.7.5.1.1.1.8-.1 1.3Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
-  renderProducts();
-}
+      <div class="footer-credits">
+        <p>© 2026 Green Garden – Tous Droits Réservés</p>
+        <p>
+          Site web développé par:
+          <a href="https://dcbag.net/" target="_blank" rel="noopener noreferrer">DCB Authority Group</a>
+        </p>
+      </div>
+    </footer>
 
-searchInput.addEventListener("input", renderProducts);
-
-navToggle.addEventListener("click", () => {
-  mainNav.classList.toggle("is-open");
-});
-
-mainNav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    mainNav.classList.remove("is-open");
-  }
-});
-
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => applyLanguage(button.dataset.lang));
-});
-
-applyLanguage("fr");
+    <script src="app.js"></script>
+  </body>
+</html>
