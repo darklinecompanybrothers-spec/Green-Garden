@@ -21,7 +21,7 @@ const products = [
   { id: "plante-mosaique", labels: { fr: "Plante mosaïque", en: "Mosaic plant", ar: "نبات الفسيفساء" }, image: `${IMAGE_DIR}/Plante mosaïque.jpeg`, width: 739, height: 1600 },
   { id: "plante-zebre", labels: { fr: "Plante zèbre", en: "Zebra plant", ar: "نبات الحمار الوحشي" }, image: `${IMAGE_DIR}/Plante zèbre.jpeg`, width: 739, height: 1600 },
   { id: "scindapsus-dore", labels: { fr: "Scindapsus doré", en: "Golden pothos", ar: "بوتس ذهبي" }, image: `${IMAGE_DIR}/Scindapsus doré.jpeg`, width: 739, height: 1600 },
-  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف ثلاثي الألوان" }, image: `${IMAGE_DIR}/variété 'Tricolor'.jpeg`, width: 739, height: 1600 },
+  { id: "tricolor", labels: { fr: "Variété 'Tricolor'", en: "'Tricolor' variety", ar: "صنف trois الألوان" }, image: `${IMAGE_DIR}/variété 'Tricolor'.jpeg`, width: 739, height: 1600 },
   { id: "yucca-interieur", labels: { fr: "Yucca d'intérieur", en: "Indoor yucca", ar: "يوكا داخلية" }, image: `${IMAGE_DIR}/Yucca d'intérieur.jpeg`, width: 739, height: 1600 },
 ];
 
@@ -334,5 +334,3 @@ languageButtons.forEach((button) => {
 });
 
 applyLanguage("fr");
-
-
