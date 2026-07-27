@@ -1,10 +1,46 @@
 # Green Garden
 
-Site vitrine e-commerce minimaliste en HTML/CSS/JavaScript pur.
+Site vitrine e-commerce minimaliste en HTML/CSS/JavaScript pur, avec une
+architecture SEO multi-pages (gazon, palmier, villes, blog) générée par un
+petit script Node.js.
 
 ## Lancer le site
 
 Ouvrez `index.html` dans un navigateur, ou servez le dossier avec un petit serveur local.
+
+## Architecture SEO & build des pages
+
+Le site compte ~50 pages statiques réelles (pages piliers gazon/palmier,
+pages villes, catégories, blog...), générées depuis `src/data/` et
+`src/templates/` par `scripts/build.js`. Le catalogue de plantes d'intérieur
+sur la page d'accueil (recherche, langues FR/EN/AR, commande WhatsApp) reste
+géré par `app.js`, non affecté par le générateur.
+
+```
+src/
+  data/          # site.js (NAP, prix, réseaux), villes.js, produits.js, blog.js
+  templates/     # layout, breadcrumb, schema.org (JSON-LD), composants de contenu
+  pages/         # un module par type de page (gazon, palmier, livraison, blog...)
+scripts/
+  build.js       # régénère toutes les pages HTML + sitemap.xml + robots.txt
+  verify.js      # contrôle qualité : liens internes, H1 unique, JSON-LD valide
+docs/seo/        # checklist Google Business Profile (à appliquer manuellement)
+```
+
+### Régénérer le site après une modification de contenu
+
+```
+npm run build     # régénère toutes les pages HTML, sitemap.xml et robots.txt
+npm run verify    # vérifie liens internes cassés, balises H1/canonical/JSON-LD
+npm test          # build + verify
+```
+
+Pour ajouter une ville de livraison, un article de blog ou une page produit,
+il suffit d'ajouter une entrée dans le fichier `src/data/` correspondant puis
+de relancer `npm run build` — aucune page n'a besoin d'être écrite à la main.
+
+Le site reste 100% statique : les fichiers générés sont commités normalement
+et servis tels quels par GitHub Pages, sans étape de build côté serveur.
 
 ## Configurer Google Sheets
 

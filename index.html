@@ -3,235 +3,406 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Green Garden - jardinerie moderne pour plantes, engrais et gazon."
-    />
-    <title>Green Garden | Jardinerie moderne</title>
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link rel="shortcut icon" type="image/png" href="logo.png" />
-    <link rel="apple-touch-icon" href="logo.png" />
+    <title>Green Garden | Gazon naturel & Palmiers en Tunisie</title>
+    <meta name="description" content="Gazon naturel 9 DT/m² (livraison gratuite Grand Tunis & Nabeul) et palmiers décoratifs 275 DT en Tunisie. Plantes d'intérieur et engrais." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://greengardentn.shop/" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Green Garden" />
+    <meta property="og:title" content="Green Garden | Gazon naturel & Palmiers en Tunisie" />
+    <meta property="og:description" content="Gazon naturel 9 DT/m² (livraison gratuite Grand Tunis & Nabeul) et palmiers décoratifs 275 DT en Tunisie. Plantes d'intérieur et engrais." />
+    <meta property="og:url" content="https://greengardentn.shop/" />
+    <meta property="og:image" content="https://greengardentn.shop/123699.jpeg" />
+    <meta property="og:locale" content="fr_TN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Green Garden | Gazon naturel & Palmiers en Tunisie" />
+    <meta name="twitter:description" content="Gazon naturel 9 DT/m² (livraison gratuite Grand Tunis & Nabeul) et palmiers décoratifs 275 DT en Tunisie. Plantes d'intérieur et engrais." />
+    <meta name="twitter:image" content="https://greengardentn.shop/123699.jpeg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://greengardentn.shop/#organization","name":"Green Garden","url":"https://greengardentn.shop","logo":"https://greengardentn.shop/logo.png","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21698226502","email":"contact@greengardentn.shop","sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21698226502"]},{"@context":"https://schema.org","@type":"GardenStore","@id":"https://greengardentn.shop/#localbusiness","name":"Green Garden","url":"https://greengardentn.shop","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21698226502","priceRange":"9 DT - 275 DT","address":{"@type":"PostalAddress","addressLocality":"Nabeul","addressRegion":"Nabeul","addressCountry":"TN"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"19:00"},"areaServed":[{"@type":"AdministrativeArea","name":"Grand Tunis"},{"@type":"AdministrativeArea","name":"Nabeul"},{"@type":"AdministrativeArea","name":"Tunisie"}],"sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21698226502"]},{"@context":"https://schema.org","@type":"WebSite","@id":"https://greengardentn.shop/#website","url":"https://greengardentn.shop","name":"Green Garden","inLanguage":"fr-TN","publisher":{"@id":"https://greengardentn.shop/#organization"}}]</script>
   </head>
   <body>
     <div class="page-glow page-glow-left" aria-hidden="true"></div>
     <div class="page-glow page-glow-right" aria-hidden="true"></div>
 
+    
     <header class="site-header">
-      <a class="brand" href="#accueil" aria-label="Accueil Green Garden">
-        <img src="logo.png" alt="" class="brand-mark" loading="lazy" />
+      <a class="brand" href="/" aria-label="Accueil Green Garden">
+        <img src="/logo.png" alt="" class="brand-mark" loading="lazy" width="40" height="40" />
         <span>Green Garden</span>
       </a>
+
       <div class="lang-switch" aria-label="Language switcher">
         <button type="button" class="lang-button is-active" data-lang="fr" aria-label="Francais">FR</button>
         <button type="button" class="lang-button" data-lang="en" aria-label="English">EN</button>
         <button type="button" class="lang-button" data-lang="ar" aria-label="العربية">AR</button>
       </div>
 
-      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu">
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
 
       <nav class="main-nav" aria-label="Navigation principale">
-        <a href="#accueil">Accueil</a>
-        <a href="#plantes">Nos plantes</a>
-        <a href="#engrais">Engrais</a>
-        <a href="#gazon">Gazon</a>
-        <a href="#apropos">A propos</a>
+        <div class="nav-item"><a href="/" class="nav-link">Accueil</a></div>
+      <div class="nav-item has-dropdown">
+        <a href="/produits/" class="nav-link">Produits</a>
+        <ul class="dropdown-menu">
+          <li><a href="/gazon-tunisie/">Gazon naturel</a></li><li><a href="/palmier-tunisie/">Palmiers décoratifs</a></li><li><a href="/produits/plantes-interieur/">Plantes d'intérieur</a></li><li><a href="/produits/engrais/">Engrais</a></li><li><a href="/produits/">Tous nos produits</a></li>
+        </ul>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="/livraison/" class="nav-link">Livraison</a>
+        <ul class="dropdown-menu">
+          <li><a href="/livraison/grand-tunis/">Grand Tunis</a></li><li><a href="/livraison/nabeul/">Nabeul</a></li><li><a href="/livraison/sousse/">Sousse</a></li><li><a href="/livraison/monastir/">Monastir</a></li><li><a href="/livraison/sfax/">Sfax</a></li><li><a href="/livraison/bizerte/">Bizerte</a></li><li><a href="/livraison/gabes/">Gabès</a></li><li><a href="/livraison/hammamet/">Hammamet</a></li><li><a href="/livraison/">Toutes les zones desservies</a></li>
+        </ul>
+      </div><div class="nav-item"><a href="/blog/" class="nav-link">Blog</a></div><div class="nav-item"><a href="/pourquoi-choisir-green-garden/" class="nav-link">Pourquoi nous choisir</a></div><div class="nav-item"><a href="/contact/" class="nav-link">Contact</a></div>
       </nav>
     </header>
 
     <main>
-      <section id="accueil" class="hero hero-with-image section-shell">
-        <div class="hero-content">
-          <p class="eyebrow">Jardinerie naturelle & minimaliste</p>
-          <h1>Green Garden</h1>
-          <p class="hero-copy">
-            Plantes d'interieur, engrais et gazon pour composer des espaces plus frais,
-            plus vivants et faciles a entretenir.
-          </p>
-          <a class="pill-button" href="#plantes">Decouvrir le catalogue</a>
-        </div>
-        <div class="hero-media">
-          <img
-            src="123699.jpeg"
-            alt="Jardinerie Green Garden"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
-      <section id="nouveautes" class="organic-grid section-shell">
-        <article class="collection-card">
-          <span class="eyebrow">Collections</span>
-          <h2>Jungles d'interieur</h2>
-          <p>
-            Une selection de plantes graphiques, robustes et faciles a vivre
-            pour creer un coin vegetal apaisant.
-          </p>
-          <div class="petal-stack" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </article>
-
-        <div class="floating-leaf" aria-hidden="true">
-          <svg viewBox="0 0 120 160" role="img">
-            <path d="M103 8C49 18 13 55 15 103c1 28 22 48 47 45 38-4 56-50 41-140Z" />
-            <path d="M62 143C63 88 75 48 103 8" />
-          </svg>
-        </div>
-
-        <article class="care-card">
-          <span class="eyebrow">Entretien des plantes</span>
-          <h2>Des gestes simples, des plantes heureuses.</h2>
-          <div class="care-list">
-            <div>
-              <svg viewBox="0 0 64 64" aria-hidden="true">
-                <path d="M22 25h20l-4 28H26L22 25Z" />
-                <path d="M18 25h28" />
-                <path d="M32 25c-9-5-10-13-4-18 6 5 8 12 4 18Z" />
-                <path d="M34 24c3-9 10-12 17-9-2 8-8 12-17 9Z" />
-              </svg>
-              <span>Lumiere douce</span>
-            </div>
-            <div>
-              <svg viewBox="0 0 64 64" aria-hidden="true">
-                <path d="M14 31c9-10 20-14 32-12l4 8c-12-1-22 2-31 11l-5-7Z" />
-                <path d="M48 27c5 2 8 5 9 10" />
-                <path d="M15 38c4 0 7 3 7 7a7 7 0 1 1-14 0c0-4 3-7 7-7Z" />
-              </svg>
-              <span>Arrosage maitrise</span>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="plantes" class="catalog-section section-shell">
-        <div class="section-heading">
-          <span class="eyebrow">Nos plantes</span>
-          <h2>Catalogue Green Garden</h2>
-          <p>
-            Parcourez les articles disponibles et demandez le prix directement
-            via WhatsApp.
-          </p>
-        </div>
-
-        <div class="filters" aria-label="Filtres du catalogue">
-          <label class="search-field">
-            <span>Recherche</span>
-            <input
-              id="searchInput"
-              type="search"
-              placeholder="Ex: palmier, cactus, yucca..."
-              autocomplete="off"
-            />
-          </label>
-        </div>
-
-        <div id="productGrid" class="product-grid" aria-live="polite"></div>
-        <p id="emptyState" class="empty-state" hidden>
-          Aucun article ne correspond a cette recherche pour le moment.
+      
+    <section id="accueil" class="hero hero-with-image section-shell">
+      <div class="hero-content">
+        <p class="eyebrow">Jardinerie naturelle & minimaliste</p>
+        <h1>Green Garden — Gazon naturel et Palmiers en Tunisie</h1>
+        <p class="hero-copy">
+          Gazon naturel en rouleau à 9 DT/m² livré gratuitement dans le Grand Tunis et à Nabeul,
+          palmiers décoratifs à 275 DT livrés dans toute la Tunisie, plantes d'intérieur et
+          engrais pour composer des espaces plus frais, plus vivants et faciles à entretenir.
         </p>
-      </section>
+        <a class="pill-button" href="/gazon-tunisie/">Découvrir le gazon</a>
+      </div>
+      <div class="hero-media">
+        <img src="/123699.jpeg" alt="Jardinerie Green Garden en Tunisie" loading="lazy" width="1200" height="1500" />
+      </div>
+    </section>
 
-      <section id="engrais" class="feature-section section-shell">
-        <div class="feature-copy">
-          <span class="eyebrow">Nutrition vegetale</span>
-          <h2>Engrais</h2>
-          <p>
-            Des solutions pour renforcer vos plantes et soutenir une croissance saine.
-          </p>
-          <a
-            class="pill-button"
-            href="https://wa.me/21698226502?text=Commander%20de%20l%27engrais"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Commander sur WhatsApp
+    <section id="produits-phares" class="section-shell">
+      
+    <section class="content-block">
+      <h2>Nos deux produits phares</h2>
+      <p>Deux références conçues pour transformer un extérieur tunisien rapidement : le gazon naturel en rouleau et le palmier décoratif.</p>
+      <div class="card-grid">
+        
+          <a class="info-card" href="/gazon-tunisie/">
+            <img src="/gazon.jpg" alt="Gazon naturel — 9 DT / m²" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Gazon naturel — 9 DT / m²</h3>
+              <p>Livraison gratuite dans le Grand Tunis et à Nabeul. Pose rapide, rendu immédiat.</p>
+            </div>
           </a>
-        </div>
-        <img
-          src="engrais bio-organique.jpeg"
-          alt="Engrais Green Garden"
-          loading="lazy"
-        />
-      </section>
-
-      <section id="gazon" class="feature-section feature-section-reverse section-shell">
-        <div class="feature-copy">
-          <span class="eyebrow">Exterieur</span>
-          <h2>Gazon</h2>
-          <p>
-            Commandez votre gazon et discutez avec nous du chantier d'installation.
-          </p>
-          <a
-            class="pill-button"
-            href="https://wa.me/21698226502?text=Bonjour%2C%20je%20souhaite%20commander%20du%20gazon%20et%20discuter%20d%27un%20chantier%20d%27installation"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Commander le gazon
+          <a class="info-card" href="/palmier-tunisie/">
+            <img src="/Palmier éventail.jpeg" alt="Palmier décoratif — 275 DT" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Palmier décoratif — 275 DT</h3>
+              <p>Livrable dans toute la Tunisie, frais calculés selon votre région.</p>
+            </div>
           </a>
-        </div>
-        <img
-          src="gazon.jpg"
-          alt="Gazon Green Garden"
-          loading="lazy"
-        />
-      </section>
+          <a class="info-card" href="#plantes">
+            <img src="/Faux philodendron.jpeg" alt="Plantes d'intérieur" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Plantes d'intérieur</h3>
+              <p>Une sélection de plantes décoratives robustes et faciles à vivre.</p>
+            </div>
+          </a>
+          <a class="info-card" href="/produits/engrais/">
+            <img src="/engrais bio-organique.jpeg" alt="Engrais" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Engrais</h3>
+              <p>Des solutions pour renforcer vos plantes et soutenir une croissance saine.</p>
+            </div>
+          </a>
+      </div>
+    </section>
+    </section>
 
-      <section id="apropos" class="about-section section-shell">
-        <div>
-          <span class="eyebrow">A propos</span>
-          <h2>Green Garden cultive le vegetal accessible.</h2>
-        </div>
+    <section id="nouveautes" class="organic-grid section-shell">
+      <article class="collection-card">
+        <span class="eyebrow">Collections</span>
+        <h2>Jungles d'intérieur</h2>
         <p>
-          Notre boutique accompagne les amoureux des plantes avec des varietes
-          decoratives, des conseils simples et une reservation rapide via WhatsApp.
+          Une sélection de plantes graphiques, robustes et faciles à vivre
+          pour créer un coin végétal apaisant dans votre intérieur tunisien.
         </p>
-      </section>
+        <div class="petal-stack" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </article>
+
+      <div class="floating-leaf" aria-hidden="true">
+        <svg viewBox="0 0 120 160" role="img">
+          <path d="M103 8C49 18 13 55 15 103c1 28 22 48 47 45 38-4 56-50 41-140Z" />
+          <path d="M62 143C63 88 75 48 103 8" />
+        </svg>
+      </div>
+
+      <article class="care-card">
+        <span class="eyebrow">Entretien des plantes</span>
+        <h2>Des gestes simples, des plantes heureuses.</h2>
+        <div class="care-list">
+          <div>
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M22 25h20l-4 28H26L22 25Z" />
+              <path d="M18 25h28" />
+              <path d="M32 25c-9-5-10-13-4-18 6 5 8 12 4 18Z" />
+              <path d="M34 24c3-9 10-12 17-9-2 8-8 12-17 9Z" />
+            </svg>
+            <span>Lumière douce</span>
+          </div>
+          <div>
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M14 31c9-10 20-14 32-12l4 8c-12-1-22 2-31 11l-5-7Z" />
+              <path d="M48 27c5 2 8 5 9 10" />
+              <path d="M15 38c4 0 7 3 7 7a7 7 0 1 1-14 0c0-4 3-7 7-7Z" />
+            </svg>
+            <span>Arrosage maîtrisé</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="plantes" class="catalog-section section-shell">
+      <div class="section-heading">
+        <span class="eyebrow">Nos plantes</span>
+        <h2>Catalogue Green Garden</h2>
+        <p>
+          Parcourez les articles disponibles et demandez le prix directement
+          via WhatsApp.
+        </p>
+      </div>
+
+      <div class="filters" aria-label="Filtres du catalogue">
+        <label class="search-field">
+          <span>Recherche</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Ex: palmier, cactus, yucca..."
+            autocomplete="off"
+          />
+        </label>
+      </div>
+
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state" hidden>
+        Aucun article ne correspond a cette recherche pour le moment.
+      </p>
+    </section>
+
+    <section id="engrais" class="feature-section section-shell">
+      <div class="feature-copy">
+        <span class="eyebrow">Nutrition végétale</span>
+        <h2>Engrais</h2>
+        <p>
+          Des solutions pour renforcer vos plantes et soutenir une croissance saine.
+        </p>
+        <a
+          class="pill-button"
+          href="https://wa.me/21698226502?text=Commander%20de%20l'engrais"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Commander sur WhatsApp
+        </a>
+        <p><a href="/produits/engrais/">Voir la page engrais</a></p>
+      </div>
+      <img
+        src="/engrais bio-organique.jpeg"
+        alt="Engrais bio-organique Green Garden"
+        loading="lazy"
+        width="800"
+        height="600"
+      />
+    </section>
+
+    <section id="gazon" class="feature-section feature-section-reverse section-shell">
+      <div class="feature-copy">
+        <span class="eyebrow">Extérieur</span>
+        <h2>Gazon naturel Tunisie</h2>
+        <p>
+          Gazon naturel en rouleau à 9 DT/m², livraison gratuite dans le Grand Tunis et à Nabeul.
+        </p>
+        <a
+          class="pill-button"
+          href="/gazon-tunisie/"
+        >
+          Découvrir le gazon
+        </a>
+      </div>
+      <img
+        src="/gazon.jpg"
+        alt="Gazon naturel en rouleau Green Garden"
+        loading="lazy"
+        width="800"
+        height="600"
+      />
+    </section>
+
+    <section id="palmier" class="feature-section section-shell">
+      <div class="feature-copy">
+        <span class="eyebrow">Extérieur</span>
+        <h2>Palmier décoratif Tunisie</h2>
+        <p>
+          Palmier décoratif à 275 DT, livrable dans toute la Tunisie avec des frais de livraison
+          déterminés selon votre région.
+        </p>
+        <a class="pill-button" href="/palmier-tunisie/">Découvrir les palmiers</a>
+      </div>
+      <img
+        src="/Palmier éventail.jpeg"
+        alt="Palmier décoratif Green Garden"
+        loading="lazy"
+        width="800"
+        height="600"
+      />
+    </section>
+
+    <section class="section-shell">
+      
+    <section class="content-block">
+      <h2>Livraison partout en Tunisie</h2>
+      <p>Gazon livré gratuitement dans le Grand Tunis et à Nabeul, palmier livrable dans toute la Tunisie sur devis.</p>
+      <div class="card-grid">
+        
+          <a class="info-card" href="/livraison/grand-tunis/">
+            <img src="/123699.jpeg" alt="Grand Tunis" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Grand Tunis</h3>
+              <p>Gazon livré gratuitement.</p>
+            </div>
+          </a>
+          <a class="info-card" href="/livraison/nabeul/">
+            <img src="/gazon.jpg" alt="Nabeul" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Nabeul</h3>
+              <p>Gazon livré gratuitement.</p>
+            </div>
+          </a>
+          <a class="info-card" href="/livraison/">
+            <img src="/Palmier éventail.jpeg" alt="Sousse, Sfax, Monastir..." loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Sousse, Sfax, Monastir...</h3>
+              <p>Livraison sur devis dans toute la Tunisie.</p>
+            </div>
+          </a>
+      </div>
+    </section>
+    </section>
+
+    <section class="section-shell">
+      
+    <section class="content-block">
+      <h2>Conseils de jardinage</h2>
+      <p>Nos derniers articles pour réussir votre gazon, vos palmiers et votre jardin.</p>
+      <div class="card-grid">
+        
+          <a class="info-card" href="/blog/comment-poser-gazon-en-rouleau/">
+            <img src="/gazon.jpg" alt="Comment poser du gazon en rouleau" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Comment poser du gazon en rouleau</h3>
+              <p>Le guide étape par étape pour une pose réussie.</p>
+            </div>
+          </a>
+          <a class="info-card" href="/blog/quel-palmier-choisir-tunisie/">
+            <img src="/Palmier éventail.jpeg" alt="Quel palmier choisir en Tunisie" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Quel palmier choisir en Tunisie</h3>
+              <p>Les variétés les mieux adaptées au climat tunisien.</p>
+            </div>
+          </a>
+          <a class="info-card" href="/blog/prix-gazon-tunisie-m2/">
+            <img src="/123699.jpeg" alt="Prix du gazon en Tunisie" loading="lazy" width="400" height="300" />
+            <div class="info-card-body">
+              <h3>Prix du gazon en Tunisie</h3>
+              <p>Comment le prix au m² est calculé et à quoi s'attendre.</p>
+            </div>
+          </a>
+      </div>
+    </section>
+      <p style="text-align:center; margin-top: 12px;"><a href="/blog/">Voir tous les articles du blog</a></p>
+    </section>
+
+    <section id="apropos" class="about-section section-shell">
+      <div>
+        <span class="eyebrow">À propos</span>
+        <h2>Green Garden cultive le végétal accessible.</h2>
+        <p>
+          Notre boutique accompagne les amoureux des plantes avec des variétés
+          décoratives, des conseils simples et une réservation rapide via WhatsApp.
+        </p>
+      </div>
+      <p class="about-links">
+        <a href="/a-propos/">En savoir plus sur Green Garden</a> ·
+        <a href="/pourquoi-choisir-green-garden/">Pourquoi nous choisir</a>
+      </p>
+    </section>
+  
     </main>
 
+    
     <footer class="site-footer">
       <div class="footer-main">
-        <div>
-          <a class="brand footer-brand" href="#accueil">
-            <img src="logo.png" alt="" class="brand-mark" loading="lazy" />
+        <div class="footer-col footer-brand-col">
+          <a class="brand footer-brand" href="/">
+            <img src="/logo.png" alt="" class="brand-mark" loading="lazy" width="40" height="40" />
             <span>Green Garden</span>
           </a>
-          <p>Tunisie - Jardinerie & plantes decoratives</p>
+          <p>Nabeul, Tunisie — Vente de gazon naturel, palmiers et plantes décoratives</p>
+          <p><a href="tel:+21698226502">+216 98 226 502</a></p>
+          <p>Tous les jours, 8h - 19h</p>
         </div>
 
-        <div class="footer-actions">
-          <a class="footer-location" href="https://www.google.com/maps/place/Green+Garden/data=!4m2!3m1!1s0x0:0xbcffd81209e52333?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener noreferrer" aria-label="Localisation Green Garden">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2a7 7 0 0 0-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" />
-            </svg>
-          </a>
-          <div class="social-links" aria-label="Reseaux sociaux">
+        <div class="footer-col">
+          <h3>Produits</h3>
+          <ul class="footer-links">
+            <li><a href="/gazon-tunisie/">Gazon naturel Tunisie</a></li>
+            <li><a href="/palmier-tunisie/">Palmier décoratif Tunisie</a></li>
+            <li><a href="/produits/plantes-interieur/">Plantes d'intérieur</a></li>
+            <li><a href="/produits/engrais/">Engrais</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Livraison</h3>
+          <ul class="footer-links">
+            <li><a href="/livraison/grand-tunis/">Livraison Grand Tunis</a></li><li><a href="/livraison/nabeul/">Livraison Nabeul</a></li><li><a href="/livraison/sousse/">Livraison Sousse</a></li><li><a href="/livraison/monastir/">Livraison Monastir</a></li><li><a href="/livraison/sfax/">Livraison Sfax</a></li><li><a href="/livraison/bizerte/">Livraison Bizerte</a></li>
+            <li><a href="/livraison/">Toutes les zones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Ressources</h3>
+          <ul class="footer-links">
+            <li><a href="/blog/">Blog jardinage</a></li>
+            <li><a href="/faq/">Questions fréquentes</a></li>
+            <li><a href="/a-propos/">À propos</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/plan-du-site/">Plan du site</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-actions">
+          <h3>Suivez-nous</h3>
+          <div class="social-links" aria-label="Réseaux sociaux">
             <a href="https://www.instagram.com/greengardentnshop/" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-.7a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z" />
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-.7a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z" /></svg>
             </a>
             <a href="https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR" target="_blank" rel="noreferrer" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M14 8h3V3h-3c-4 0-6 2.4-6 6v3H5v5h3v5h5v-5h4l1-5h-5V9c0-.7.4-1 1-1Z" />
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V3h-3c-4 0-6 2.4-6 6v3H5v5h3v5h5v-5h4l1-5h-5V9c0-.7.4-1 1-1Z" /></svg>
             </a>
             <a href="https://wa.me/21698226502" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.4 1.3-2 1.4-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6l1 2.4c.1.3.1.5 0 .7l-.5.8c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.5-.3.8-.2l2.4 1.1c.3.2.6.3.7.5.1.1.1.8-.1 1.3Z" />
-              </svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.4 1.3-2 1.4-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6l1 2.4c.1.3.1.5 0 .7l-.5.8c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.5-.3.8-.2l2.4 1.1c.3.2.6.3.7.5.1.1.1.8-.1 1.3Z" /></svg>
             </a>
           </div>
         </div>
@@ -239,13 +410,16 @@
 
       <div class="footer-credits">
         <p>© 2026 Green Garden – Tous Droits Réservés</p>
-        <p>
-          Site web développé par:
-          <a href="https://dcbag.net/" target="_blank" rel="noopener noreferrer">DCB Authority Group</a>
-        </p>
+        <p>Site web développé par: <a href="https://dcbag.net/" target="_blank" rel="noopener noreferrer">DCB Authority Group</a></p>
       </div>
     </footer>
+    
+    <a class="sticky-whatsapp" href="https://wa.me/21698226502?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20vos%20produits%20Green%20Garden." target="_blank" rel="noreferrer" aria-label="Contacter Green Garden sur WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.4 1.3-2 1.4-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6l1 2.4c.1.3.1.5 0 .7l-.5.8c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.5-.3.8-.2l2.4 1.1c.3.2.6.3.7.5.1.1.1.8-.1 1.3Z" /></svg>
+      <span>WhatsApp</span>
+    </a>
 
-    <script src="app.js"></script>
+    <script src="/nav.js" defer></script>
+    <script src="/app.js" defer></script>
   </body>
 </html>
