@@ -32,11 +32,11 @@ const translations = {
     brand: "Green Garden",
     navAria: "Navigation principale",
     nav: ["Accueil", "Produits", "Livraison", "Blog", "Pourquoi nous choisir", "Contact"],
-    heroKicker: "Jardinerie naturelle & minimaliste",
-    heroTitle: "Green Garden — Gazon naturel et Palmiers en Tunisie",
+    heroKicker: "Votre jardinerie en Tunisie",
+    heroTitle: "Bienvenue chez Green Garden",
     heroCopy:
-      "Gazon naturel en rouleau à 9 DT/m² livré gratuitement dans le Grand Tunis et à Nabeul, palmiers décoratifs à 275 DT livrés dans toute la Tunisie, plantes d'intérieur et engrais pour composer des espaces plus frais, plus vivants et faciles à entretenir.",
-    heroCta: "Découvrir le gazon",
+      "Green Garden cultive des espaces extérieurs plus verts et plus vivants : gazon naturel en rouleau, palmiers décoratifs, plantes d'intérieur et engrais, livrés partout en Tunisie avec des conseils personnalisés à chaque commande.",
+    heroCta: "Découvrir nos produits",
     collectionsKicker: "Collections",
     collectionsTitle: "Jungles d'intérieur",
     collectionsCopy:
@@ -77,11 +77,11 @@ const translations = {
     brand: "Green Garden",
     navAria: "Primary navigation",
     nav: ["Home", "Products", "Delivery", "Blog", "Why choose us", "Contact"],
-    heroKicker: "Natural & minimalist gardening",
-    heroTitle: "Green Garden — Natural Lawn and Palm Trees in Tunisia",
+    heroKicker: "Your garden center in Tunisia",
+    heroTitle: "Welcome to Green Garden",
     heroCopy:
-      "Natural rolled lawn, decorative palm trees, indoor plants and fertilizer to shape cooler, livelier spaces that are easy to maintain.",
-    heroCta: "Discover our lawn",
+      "Green Garden grows greener, livelier outdoor spaces: natural rolled lawn, decorative palm trees, indoor plants and fertilizer, delivered across Tunisia with personal advice on every order.",
+    heroCta: "Discover our products",
     collectionsKicker: "Collections",
     collectionsTitle: "Indoor jungles",
     collectionsCopy:
@@ -122,11 +122,11 @@ const translations = {
     brand: "جرين جاردن",
     navAria: "التنقل الرئيسي",
     nav: ["الرئيسية", "منتجاتنا", "التوصيل", "المدونة", "لماذا نحن", "اتصل بنا"],
-    heroKicker: "بستنة طبيعية وبسيطة",
-    heroTitle: "جرين جاردن — عشب طبيعي ونخيل في تونس",
+    heroKicker: "مشتلك في تونس",
+    heroTitle: "مرحباً بكم في جرين جاردن",
     heroCopy:
-      "عشب طبيعي على شكل لفائف، نخيل زينة، نباتات داخلية وأسمدة لتكوين مساحات أكثر انتعاشا وحيوية وأسهل في العناية.",
-    heroCta: "اكتشف العشب",
+      "جرين جاردن تصنع مساحات خارجية أكثر خضرة وحيوية: عشب طبيعي على شكل لفائف، نخيل زينة، نباتات داخلية وأسمدة، توصيل في كل أنحاء تونس مع نصائح شخصية مع كل طلبية.",
+    heroCta: "اكتشف منتجاتنا",
     collectionsKicker: "المجموعات",
     collectionsTitle: "غابات داخلية",
     collectionsCopy:

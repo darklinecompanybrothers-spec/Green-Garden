@@ -6,14 +6,17 @@ function renderHome() {
   const bodyHtml = `
     <section id="accueil" class="hero hero-with-image section-shell">
       <div class="hero-content">
-        <p class="eyebrow">Jardinerie naturelle & minimaliste</p>
-        <h1>Green Garden — Gazon naturel et Palmiers en Tunisie</h1>
+        <p class="eyebrow">Votre jardinerie en Tunisie</p>
+        <h1>Bienvenue chez Green Garden</h1>
         <p class="hero-copy">
-          Gazon naturel en rouleau à 9 DT/m² livré gratuitement dans le Grand Tunis et à Nabeul,
-          palmiers décoratifs à 275 DT livrés dans toute la Tunisie, plantes d'intérieur et
-          engrais pour composer des espaces plus frais, plus vivants et faciles à entretenir.
+          Green Garden cultive des espaces extérieurs plus verts et plus vivants : gazon
+          naturel en rouleau, palmiers décoratifs, plantes d'intérieur et engrais, livrés
+          partout en Tunisie avec des conseils personnalisés à chaque commande.
         </p>
-        <a class="pill-button" href="/gazon-tunisie/">Découvrir le gazon</a>
+        <div class="hero-actions">
+          <a class="pill-button" href="/produits/">Découvrir nos produits</a>
+          <a class="pill-button pill-button-ghost" href="/contact/">Nous contacter</a>
+        </div>
       </div>
       <div class="hero-media">
         <img src="/123699.jpeg" alt="Jardinerie Green Garden en Tunisie" loading="lazy" />
