@@ -2,8 +2,14 @@
 // tarifs des produits phares et réseaux sociaux. Modifier ici se répercute
 // automatiquement sur tout le site généré (schema.org, footer, CTA...).
 
+// Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
+// contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
+// de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
+const ASSET_VERSION = "2";
+
 const SITE = {
   name: "Green Garden",
+  assetVersion: ASSET_VERSION,
   legalName: "Green Garden",
   domain: "https://greengardentn.shop",
   defaultLocale: "fr_TN",

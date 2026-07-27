@@ -226,7 +226,7 @@ function contactPage() {
     description: `Contactez Green Garden par téléphone (${SITE.phoneDisplay}), WhatsApp ou via notre formulaire de devis. Basé à ${SITE.address.locality}.`,
     bodyHtml,
     jsonLd: [breadcrumbJsonLd],
-    extraScripts: '<script src="/contact.js" defer></script>',
+    extraScripts: `<script src="/contact.js?v=${SITE.assetVersion}" defer></script>`,
   });
 }
 

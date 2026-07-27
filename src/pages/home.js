@@ -261,7 +261,7 @@ function renderHome() {
       "Gazon naturel 9 DT/m² (livraison gratuite Grand Tunis & Nabeul) et palmiers décoratifs 275 DT en Tunisie. Plantes d'intérieur et engrais.",
     bodyHtml,
     showLangSwitch: true,
-    extraScripts: '<script src="/app.js" defer></script>',
+    extraScripts: `<script src="/app.js?v=${SITE.assetVersion}" defer></script>`,
   });
 }
 
