@@ -16,7 +16,7 @@ function renderHome() {
         <a class="pill-button" href="/gazon-tunisie/">Découvrir le gazon</a>
       </div>
       <div class="hero-media">
-        <img src="/123699.jpeg" alt="Jardinerie Green Garden en Tunisie" loading="lazy" width="1200" height="1500" />
+        <img src="/123699.jpeg" alt="Jardinerie Green Garden en Tunisie" loading="lazy" />
       </div>
     </section>
 
@@ -150,8 +150,6 @@ function renderHome() {
         src="/engrais bio-organique.jpeg"
         alt="Engrais bio-organique Green Garden"
         loading="lazy"
-        width="800"
-        height="600"
       />
     </section>
 
@@ -173,8 +171,6 @@ function renderHome() {
         src="/gazon.jpg"
         alt="Gazon naturel en rouleau Green Garden"
         loading="lazy"
-        width="800"
-        height="600"
       />
     </section>
 
@@ -192,8 +188,6 @@ function renderHome() {
         src="/Palmier éventail.jpeg"
         alt="Palmier décoratif Green Garden"
         loading="lazy"
-        width="800"
-        height="600"
       />
     </section>
 

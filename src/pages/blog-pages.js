@@ -153,7 +153,7 @@ function articlePage(a) {
         <p class="hero-copy">${a.intro}</p>
       </div>
       <div class="page-hero-media">
-        <img src="${a.heroImage.src}" alt="${a.heroImage.alt}" loading="eager" width="800" height="600" />
+        <img src="${a.heroImage.src}" alt="${a.heroImage.alt}" loading="eager" />
       </div>
     </section>
     <div class="section-shell content-sections">

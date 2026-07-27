@@ -27,7 +27,7 @@ function renderContentPage(page) {
       </div>
       ${
         page.heroImage
-          ? `<div class="page-hero-media"><img src="${page.heroImage.src}" alt="${page.heroImage.alt}" loading="eager" width="${page.heroImage.width || 800}" height="${page.heroImage.height || 600}" /></div>`
+          ? `<div class="page-hero-media"><img src="${page.heroImage.src}" alt="${page.heroImage.alt}" loading="eager" /></div>`
           : ""
       }
     </section>
