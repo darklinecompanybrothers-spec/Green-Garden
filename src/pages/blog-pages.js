@@ -3,8 +3,65 @@ const { renderBreadcrumb } = require("../templates/breadcrumb");
 const { renderSections, renderCards } = require("../templates/components");
 const { faqPage, article: articleSchema } = require("../templates/schema");
 const { categories, articles } = require("../data/blog");
+const { localizedPath } = require("../data/i18n");
+const { UI } = require("../data/ui-strings");
 
-const BLOG_ROOT = { label: "Blog", path: "/blog/" };
+const MONTHS = {
+  fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+  en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  ar: ["جانفي", "فيفري", "مارس", "أفريل", "ماي", "جوان", "جويلية", "أوت", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
+};
+
+const BLOG_TEXT = {
+  fr: {
+    label: "Blog",
+    hubTitle: "Blog jardinage Green Garden | Gazon & Palmiers",
+    hubDescription: "Conseils pratiques sur le gazon naturel, les palmiers décoratifs et l'aménagement extérieur en Tunisie, par Green Garden.",
+    hubEyebrow: "Ressources",
+    hubH1: "Blog jardinage Green Garden",
+    hubIntro: "Conseils pratiques sur le gazon naturel, les palmiers et l'aménagement extérieur en Tunisie.",
+    categoriesH2: "Catégories",
+    allArticlesH2: "Tous les articles",
+    categoryEyebrow: "Blog",
+    otherCategoriesH2: "Autres catégories",
+    categoryDescSuffix: (name) => `Retrouvez tous nos articles sur ${name.toLowerCase()}.`,
+    publishedOn: "Publié le",
+    faqH2: "Questions fréquentes",
+    readAlsoH2: "À lire aussi",
+  },
+  en: {
+    label: "Blog",
+    hubTitle: "Green Garden Gardening Blog | Lawn & Palm Trees",
+    hubDescription: "Practical advice on natural lawn, decorative palm trees and outdoor design in Tunisia, by Green Garden.",
+    hubEyebrow: "Resources",
+    hubH1: "Green Garden gardening blog",
+    hubIntro: "Practical advice on natural lawn, palm trees and outdoor design in Tunisia.",
+    categoriesH2: "Categories",
+    allArticlesH2: "All articles",
+    categoryEyebrow: "Blog",
+    otherCategoriesH2: "Other categories",
+    categoryDescSuffix: (name) => `Find all our articles about ${name.toLowerCase()}.`,
+    publishedOn: "Published on",
+    faqH2: "Frequently asked questions",
+    readAlsoH2: "Read also",
+  },
+  ar: {
+    label: "المدونة",
+    hubTitle: "مدونة البستنة Green Garden | عشب ونخيل",
+    hubDescription: "نصائح عملية حول العشب الطبيعي ونخيل الزينة والتهيئة الخارجية في تونس، من Green Garden.",
+    hubEyebrow: "موارد",
+    hubH1: "مدونة البستنة من Green Garden",
+    hubIntro: "نصائح عملية حول العشب الطبيعي والنخيل والتهيئة الخارجية في تونس.",
+    categoriesH2: "الفئات",
+    allArticlesH2: "كل المقالات",
+    categoryEyebrow: "المدونة",
+    otherCategoriesH2: "فئات أخرى",
+    categoryDescSuffix: (name) => `اعثروا على كل مقالاتنا حول ${name}.`,
+    publishedOn: "نُشر في",
+    faqH2: "أسئلة شائعة",
+    readAlsoH2: "اقرؤوا أيضاً",
+  },
+};
 
 function findArticle(slug) {
   return articles.find((a) => a.slug === slug);
@@ -14,17 +71,18 @@ function findCategory(slug) {
   return categories.find((c) => c.slug === slug);
 }
 
-function formatDate(iso) {
+function formatDate(iso, lang) {
   const [year, month, day] = iso.split("-");
-  const months = [
-    "janvier", "février", "mars", "avril", "mai", "juin",
-    "juillet", "août", "septembre", "octobre", "novembre", "décembre",
-  ];
+  const months = MONTHS[lang];
   return `${parseInt(day, 10)} ${months[parseInt(month, 10) - 1]} ${year}`;
 }
 
-function hubPage() {
-  const breadcrumbItems = [{ label: "Accueil", path: "/" }, BLOG_ROOT];
+function hubPage(lang) {
+  const bt = BLOG_TEXT[lang];
+  const breadcrumbItems = [
+    { label: UI[lang].breadcrumbHome, path: localizedPath("/", lang) },
+    { label: bt.label, path: localizedPath("/blog/", lang) },
+  ];
   const { html: breadcrumbHtml, jsonLd } = renderBreadcrumb(breadcrumbItems);
 
   const sortedArticles = [...articles].sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1));
@@ -33,25 +91,29 @@ function hubPage() {
     ${breadcrumbHtml}
     <section class="page-hero section-shell">
       <div class="page-hero-content">
-        <p class="eyebrow">Ressources</p>
-        <h1>Blog jardinage Green Garden</h1>
-        <p class="hero-copy">Conseils pratiques sur le gazon naturel, les palmiers et l'aménagement extérieur en Tunisie.</p>
+        <p class="eyebrow">${bt.hubEyebrow}</p>
+        <h1>${bt.hubH1}</h1>
+        <p class="hero-copy">${bt.hubIntro}</p>
       </div>
     </section>
     <div class="section-shell content-sections">
       ${renderSections([
         {
           type: "related",
-          h2: "Catégories",
-          links: categories.map((c) => ({ label: c.name, path: `/blog/categorie/${c.slug}/`, description: c.description })),
+          h2: bt.categoriesH2,
+          links: categories.map((c) => ({
+            label: c.t[lang].name,
+            path: localizedPath(`/blog/categorie/${c.slug}/`, lang),
+            description: c.t[lang].description,
+          })),
         },
       ])}
       ${renderCards({
-        h2: "Tous les articles",
+        h2: bt.allArticlesH2,
         cards: sortedArticles.map((a) => ({
-          title: a.title,
-          text: findCategory(a.category).name,
-          path: `/blog/${a.slug}/`,
+          title: a.t[lang].title,
+          text: findCategory(a.category).t[lang].name,
+          path: localizedPath(`/blog/${a.slug}/`, lang),
           image: a.heroImage.src,
         })),
       })}
@@ -59,112 +121,144 @@ function hubPage() {
   `;
 
   return renderPage({
-    path: "/blog/",
-    title: "Blog jardinage Green Garden | Gazon & Palmiers",
-    description:
-      "Conseils pratiques sur le gazon naturel, les palmiers décoratifs et l'aménagement extérieur en Tunisie, par Green Garden.",
+    basePath: "/blog/",
+    lang,
+    title: bt.hubTitle,
+    description: bt.hubDescription,
     bodyHtml,
     jsonLd: [jsonLd],
   });
 }
 
-function categoryPage(category) {
+function categoryPage(category, lang) {
+  const bt = BLOG_TEXT[lang];
+  const catText = category.t[lang];
   const categoryArticles = articles.filter((a) => a.category === category.slug);
-  const breadcrumbItems = [{ label: "Accueil", path: "/" }, BLOG_ROOT, { label: category.name, path: `/blog/categorie/${category.slug}/` }];
+  const breadcrumbItems = [
+    { label: UI[lang].breadcrumbHome, path: localizedPath("/", lang) },
+    { label: bt.label, path: localizedPath("/blog/", lang) },
+    { label: catText.name, path: localizedPath(`/blog/categorie/${category.slug}/`, lang) },
+  ];
   const { html: breadcrumbHtml, jsonLd } = renderBreadcrumb(breadcrumbItems);
 
   const bodyHtml = `
     ${breadcrumbHtml}
     <section class="page-hero section-shell">
       <div class="page-hero-content">
-        <p class="eyebrow">Blog</p>
-        <h1>${category.name}</h1>
-        <p class="hero-copy">${category.description}</p>
+        <p class="eyebrow">${bt.categoryEyebrow}</p>
+        <h1>${catText.name}</h1>
+        <p class="hero-copy">${catText.description}</p>
       </div>
     </section>
     <div class="section-shell content-sections">
       ${renderCards({
         cards: categoryArticles.map((a) => ({
-          title: a.title,
-          text: formatDate(a.datePublished),
-          path: `/blog/${a.slug}/`,
+          title: a.t[lang].title,
+          text: formatDate(a.datePublished, lang),
+          path: localizedPath(`/blog/${a.slug}/`, lang),
           image: a.heroImage.src,
         })),
       })}
       ${renderSections([
         {
           type: "related",
-          h2: "Autres catégories",
-          links: categories.filter((c) => c.slug !== category.slug).map((c) => ({ label: c.name, path: `/blog/categorie/${c.slug}/`, description: c.description })),
+          h2: bt.otherCategoriesH2,
+          links: categories
+            .filter((c) => c.slug !== category.slug)
+            .map((c) => ({ label: c.t[lang].name, path: localizedPath(`/blog/categorie/${c.slug}/`, lang), description: c.t[lang].description })),
         },
       ])}
     </div>
   `;
 
   return renderPage({
-    path: `/blog/categorie/${category.slug}/`,
-    title: `${category.name} | Blog Green Garden`,
-    description: `${category.description} Retrouvez tous nos articles sur ${category.name.toLowerCase()}.`,
+    basePath: `/blog/categorie/${category.slug}/`,
+    lang,
+    title: `${catText.name} | Blog Green Garden`,
+    description: `${catText.description} ${bt.categoryDescSuffix(catText.name)}`,
     bodyHtml,
     jsonLd: [jsonLd],
   });
 }
 
-function articlePage(a) {
+function articlePage(a, lang) {
+  const bt = BLOG_TEXT[lang];
+  const at = a.t[lang];
   const category = findCategory(a.category);
+  const catText = category.t[lang];
   const breadcrumbItems = [
-    { label: "Accueil", path: "/" },
-    BLOG_ROOT,
-    { label: category.name, path: `/blog/categorie/${category.slug}/` },
-    { label: a.title, path: `/blog/${a.slug}/` },
+    { label: UI[lang].breadcrumbHome, path: localizedPath("/", lang) },
+    { label: bt.label, path: localizedPath("/blog/", lang) },
+    { label: catText.name, path: localizedPath(`/blog/categorie/${category.slug}/`, lang) },
+    { label: at.title, path: localizedPath(`/blog/${a.slug}/`, lang) },
   ];
   const { html: breadcrumbHtml, jsonLd: breadcrumbJsonLd } = renderBreadcrumb(breadcrumbItems);
 
+  const localizedBase = localizedPath(`/blog/${a.slug}/`, lang);
   const jsonLd = [
     breadcrumbJsonLd,
     articleSchema({
-      headline: a.title,
-      description: a.metaDescription,
+      headline: at.title,
+      description: at.metaDescription,
       datePublished: a.datePublished,
       image: a.heroImage.src,
-      path: `/blog/${a.slug}/`,
+      path: localizedBase,
     }),
   ];
 
-  const faqItems = a.faq || [];
+  const faqItems = (at.faq || []).map(([q, ans]) => ({ q, a: ans }));
   if (faqItems.length) jsonLd.push(faqPage(faqItems));
 
   const relatedArticles = (a.related || [])
     .map((slug) => findArticle(slug))
     .filter(Boolean)
-    .map((rel) => ({ label: rel.title, path: `/blog/${rel.slug}/`, description: formatDate(rel.datePublished) }));
+    .map((rel) => ({
+      label: rel.t[lang].title,
+      path: localizedPath(`/blog/${rel.slug}/`, lang),
+      description: formatDate(rel.datePublished, lang),
+    }));
 
-  const sections = [...a.sections];
-  if (faqItems.length) sections.push({ type: "faq", h2: "Questions fréquentes", items: faqItems });
-  if (relatedArticles.length) sections.push({ type: "related", h2: "À lire aussi", links: relatedArticles });
+  // La section CTA de chaque article est décrite séparément (ctaHeading/ctaText/...)
+  const ctaSection = at.ctaHeading
+    ? [
+        {
+          type: "cta",
+          heading: at.ctaHeading,
+          text: at.ctaText,
+          buttonLabel: at.ctaButton,
+          whatsappMessage: at.ctaMessage,
+          secondary: at.ctaSecondary ? { label: at.ctaSecondary, path: localizedPath(a.ctaSecondaryPath, lang) } : undefined,
+        },
+      ]
+    : [];
+
+  const allSections = [...at.sections, ...ctaSection];
+  if (faqItems.length) allSections.push({ type: "faq", h2: bt.faqH2, items: faqItems });
+  if (relatedArticles.length) allSections.push({ type: "related", h2: bt.readAlsoH2, links: relatedArticles });
 
   const bodyHtml = `
     ${breadcrumbHtml}
     <section class="page-hero section-shell">
       <div class="page-hero-content">
-        <p class="eyebrow">${category.name}</p>
-        <h1>${a.h1}</h1>
-        <p class="blog-meta">Publié le ${formatDate(a.datePublished)}</p>
-        <p class="hero-copy">${a.intro}</p>
+        <p class="eyebrow">${catText.name}</p>
+        <h1>${at.h1}</h1>
+        <p class="blog-meta">${bt.publishedOn} ${formatDate(a.datePublished, lang)}</p>
+        <p class="hero-copy">${at.intro}</p>
       </div>
       <div class="page-hero-media">
-        <img src="${a.heroImage.src}" alt="${a.heroImage.alt}" loading="eager" />
+        <img src="${a.heroImage.src}" alt="${at.heroAlt}" loading="eager" />
       </div>
     </section>
     <div class="section-shell content-sections">
-      ${renderSections(sections)}
+      ${renderSections(allSections)}
     </div>
   `;
 
   return renderPage({
-    path: `/blog/${a.slug}/`,
-    title: `${a.metaTitle || a.title} - Green Garden`,
-    description: a.metaDescription,
+    basePath: `/blog/${a.slug}/`,
+    lang,
+    title: `${at.metaTitle || at.title} - Green Garden`,
+    description: at.metaDescription,
     bodyHtml,
     jsonLd,
     ogImage: a.heroImage.src,
@@ -172,10 +266,10 @@ function articlePage(a) {
   });
 }
 
-function build(registerPage) {
-  registerPage("/blog/", hubPage());
-  categories.forEach((category) => registerPage(`/blog/categorie/${category.slug}/`, categoryPage(category)));
-  articles.forEach((a) => registerPage(`/blog/${a.slug}/`, articlePage(a)));
+function build(registerPage, lang) {
+  registerPage(localizedPath("/blog/", lang), hubPage(lang));
+  categories.forEach((category) => registerPage(localizedPath(`/blog/categorie/${category.slug}/`, lang), categoryPage(category, lang)));
+  articles.forEach((a) => registerPage(localizedPath(`/blog/${a.slug}/`, lang), articlePage(a, lang)));
 }
 
 module.exports = { build };

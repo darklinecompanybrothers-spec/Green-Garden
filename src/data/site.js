@@ -5,7 +5,7 @@
 // Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
 // contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
-const ASSET_VERSION = "5";
+const ASSET_VERSION = "6";
 
 const SITE = {
   name: "Green Garden",

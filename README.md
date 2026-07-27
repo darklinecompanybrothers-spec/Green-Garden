@@ -10,22 +10,34 @@ Ouvrez `index.html` dans un navigateur, ou servez le dossier avec un petit serve
 
 ## Architecture SEO & build des pages
 
-Le site compte ~50 pages statiques réelles (pages piliers gazon/palmier,
-pages villes, catégories, blog...), générées depuis `src/data/` et
-`src/templates/` par `scripts/build.js`. Le catalogue de plantes d'intérieur
-sur la page d'accueil (recherche, langues FR/EN/AR, commande WhatsApp) reste
-géré par `app.js`, non affecté par le générateur.
+Le site compte ~150 pages statiques réelles (50 pages x 3 langues : FR sans
+préfixe, `/en/`, `/ar/`), générées depuis `src/data/` et `src/templates/` par
+`scripts/build.js`. Chaque page existe dans les 3 langues avec balises
+hreflang et un sélecteur de langue (liens réels, pas de bascule JS). Le
+catalogue de plantes d'intérieur sur la page d'accueil (recherche, commande
+WhatsApp) reste géré par `app.js`, qui lit la langue de la page via
+`window.GG_LANG` (défini par un `<script>` inline propre à chaque variante
+`/`, `/en/`, `/ar/` de l'accueil).
 
 ```
 src/
-  data/          # site.js (NAP, prix, réseaux), villes.js, produits.js, blog.js
-  templates/     # layout, breadcrumb, schema.org (JSON-LD), composants de contenu
-  pages/         # un module par type de page (gazon, palmier, livraison, blog...)
+  data/
+    i18n.js        # config langues (fr/en/ar), prefixes URL, localizedPath()
+    ui-strings.js  # nav/footer/breadcrumb traduits + noms de villes
+    site.js        # NAP, prix, réseaux
+    villes.js, produits.js, blog.js   # contenu traduit (clé `t: {fr,en,ar}`)
+  templates/       # layout (hreflang, RTL, nav/footer), breadcrumb, schema.org, composants
+  pages/           # un module par type de page, `build(registerPage, lang)`
 scripts/
-  build.js       # régénère toutes les pages HTML + sitemap.xml + robots.txt
+  build.js       # génère les 150 pages (3x50) + sitemap.xml (avec hreflang) + robots.txt
   verify.js      # contrôle qualité : liens internes, H1 unique, JSON-LD valide
 docs/seo/        # checklist Google Business Profile (à appliquer manuellement)
 ```
+
+Pour ajouter une langue supplémentaire : l'ajouter dans `src/data/i18n.js`
+(`LANGUAGES`), puis compléter les dictionnaires `t: {...}` de chaque page.
+Pour ajouter du contenu dans une langue déjà traduite (ville, article...), il
+faut compléter les 3 variantes `fr`/`en`/`ar` de l'entrée concernée.
 
 ### Régénérer le site après une modification de contenu
 

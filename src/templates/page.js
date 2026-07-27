@@ -2,12 +2,23 @@ const { renderPage } = require("./layout");
 const { renderBreadcrumb } = require("./breadcrumb");
 const { renderSections, collectFaqItems } = require("./components");
 const { faqPage, product: productSchema } = require("./schema");
+const { localizedPath } = require("../data/i18n");
+const { UI } = require("../data/ui-strings");
 
 // Renderer générique utilisé par la quasi-totalité des pages de contenu
 // (piliers gazon/palmier, pages villes, catégories, pages confiance, FAQ).
 // `page.sections` suit le modèle défini dans components.js.
+// `page.basePath` est le chemin canonique FR (ex: "/gazon-tunisie/") ;
+// `page.lang` ("fr"/"en"/"ar") détermine le préfixe d'URL réel et les libellés.
+// `page.breadcrumb` contient déjà les segments traduits pour cette langue
+// (hors "Accueil", ajouté automatiquement ici).
 function renderContentPage(page) {
-  const breadcrumbItems = [{ label: "Accueil", path: "/" }, ...page.breadcrumb];
+  const lang = page.lang || "fr";
+  const localizedBase = localizedPath(page.basePath, lang);
+  const breadcrumbItems = [
+    { label: UI[lang].breadcrumbHome, path: localizedPath("/", lang) },
+    ...page.breadcrumb,
+  ];
   const { html: breadcrumbHtml, jsonLd: breadcrumbJsonLd } = renderBreadcrumb(breadcrumbItems);
 
   const jsonLd = [breadcrumbJsonLd];
@@ -15,7 +26,7 @@ function renderContentPage(page) {
   const faqItems = collectFaqItems(page.sections);
   if (faqItems.length) jsonLd.push(faqPage(faqItems));
 
-  if (page.product) jsonLd.push(productSchema({ ...page.product, path: page.path }));
+  if (page.product) jsonLd.push(productSchema({ ...page.product, path: localizedBase }));
 
   const bodyHtml = `
     ${breadcrumbHtml}
@@ -37,7 +48,8 @@ function renderContentPage(page) {
   `;
 
   return renderPage({
-    path: page.path,
+    basePath: page.basePath,
+    lang,
     title: page.title,
     description: page.metaDescription,
     bodyHtml,

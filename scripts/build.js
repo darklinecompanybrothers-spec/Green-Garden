@@ -1,9 +1,10 @@
-// Générateur de site statique Green Garden.
-// Régénère toutes les pages HTML + sitemap.xml + robots.txt depuis src/data + src/templates.
-// Usage : node scripts/build.js
+// Générateur de site statique Green Garden (FR/EN/AR).
+// Régénère toutes les pages HTML + sitemap.xml (avec hreflang) + robots.txt
+// depuis src/data + src/templates. Usage : node scripts/build.js
 const fs = require("fs");
 const path = require("path");
 const { SITE, absoluteUrl } = require("../src/data/site");
+const { LANGUAGE_LIST } = require("../src/data/i18n");
 
 const ROOT = path.join(__dirname, "..");
 const routes = [];
@@ -29,19 +30,50 @@ Sitemap: ${SITE.domain}/sitemap.xml
   writeRootFile("robots.txt", content);
 }
 
+// Retrouve le chemin canonique FR (sans prefixe /en ou /ar) à partir d'une
+// route localisée, pour regrouper les 3 versions d'une même page dans le
+// sitemap (balises hreflang).
+function toBasePath(routePath) {
+  for (const lang of LANGUAGE_LIST) {
+    if (lang.prefix && routePath.startsWith(`${lang.prefix}/`)) {
+      const rest = routePath.slice(lang.prefix.length);
+      return rest === "" ? "/" : rest;
+    }
+  }
+  return routePath;
+}
+
 function buildSitemap() {
   const today = new Date().toISOString().slice(0, 10);
+
+  const groups = new Map();
+  for (const route of routes) {
+    const base = toBasePath(route);
+    if (!groups.has(base)) groups.set(base, []);
+    groups.get(base).push(route);
+  }
+
   const urls = routes
-    .map(
-      (route) => `  <url>
+    .map((route) => {
+      const base = toBasePath(route);
+      const alternates = (groups.get(base) || [])
+        .map((altRoute) => {
+          const lang = LANGUAGE_LIST.find((l) => (l.prefix ? altRoute.startsWith(`${l.prefix}/`) : altRoute === base));
+          return lang ? `    <xhtml:link rel="alternate" hreflang="${lang.htmlLang}" href="${absoluteUrl(altRoute)}" />` : "";
+        })
+        .filter(Boolean)
+        .join("\n");
+
+      return `  <url>
     <loc>${absoluteUrl(route)}</loc>
     <lastmod>${today}</lastmod>
-  </url>`
-    )
+${alternates}
+  </url>`;
+    })
     .join("\n");
 
   const content = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls}
 </urlset>
 `;
@@ -53,18 +85,21 @@ function build404() {
   const bodyHtml = `
     <section class="page-hero section-shell">
       <div class="page-hero-content">
-        <p class="eyebrow">Erreur 404</p>
-        <h1>Page introuvable</h1>
+        <p class="eyebrow">404</p>
+        <h1>Page introuvable / Page not found / الصفحة غير موجودة</h1>
         <p class="hero-copy">
-          La page que vous cherchez n'existe pas ou a été déplacée. Retrouvez nos
-          produits phares ou revenez à l'accueil.
+          FR — La page que vous cherchez n'existe pas ou a été déplacée.<br />
+          EN — The page you are looking for does not exist or has been moved.<br />
+          AR — الصفحة التي تبحثون عنها غير موجودة أو تم نقلها.
         </p>
-        <a class="pill-button" href="/">Retour à l'accueil</a>
+        <div class="hero-actions">
+          <a class="pill-button" href="/">Accueil / Home / الرئيسية</a>
+        </div>
       </div>
     </section>
     <div class="section-shell content-sections">
       <section class="content-block related-links">
-        <h2>Pages populaires</h2>
+        <h2>Pages populaires / Popular pages / صفحات شائعة</h2>
         <div class="related-grid">
           <a class="related-card" href="/gazon-tunisie/"><span>Gazon Tunisie</span><small>9 DT/m², livraison gratuite Grand Tunis &amp; Nabeul</small></a>
           <a class="related-card" href="/palmier-tunisie/"><span>Palmier Tunisie</span><small>275 DT, livraison dans toute la Tunisie</small></a>
@@ -76,7 +111,8 @@ function build404() {
   `;
 
   const html = renderPage({
-    path: "/404.html",
+    basePath: "/404.html",
+    lang: "fr",
     title: "Page introuvable | Green Garden",
     description: "Cette page n'existe pas. Retrouvez le gazon naturel, les palmiers décoratifs et le blog jardinage Green Garden.",
     bodyHtml,
@@ -86,36 +122,27 @@ function build404() {
   writeRootFile("404.html", html);
 }
 
-function build() {
+function buildForLanguage(lang) {
   const { renderHome } = require("../src/pages/home");
-  registerPage("/", renderHome());
+  registerPage(require("../src/data/i18n").localizedPath("/", lang), renderHome(lang));
 
-  const { build: buildGazonCluster } = require("../src/pages/gazon-cluster");
-  buildGazonCluster(registerPage);
+  require("../src/pages/gazon-cluster").build(registerPage, lang);
+  require("../src/pages/palmier-cluster").build(registerPage, lang);
+  require("../src/pages/produits").build(registerPage, lang);
+  require("../src/pages/livraison").build(registerPage, lang);
+  require("../src/pages/trust").build(registerPage, lang);
+  require("../src/pages/blog-pages").build(registerPage, lang);
+  require("../src/pages/plan-du-site").build(registerPage, lang);
+}
 
-  const { build: buildPalmierCluster } = require("../src/pages/palmier-cluster");
-  buildPalmierCluster(registerPage);
-
-  const { build: buildProduits } = require("../src/pages/produits");
-  buildProduits(registerPage);
-
-  const { build: buildLivraison } = require("../src/pages/livraison");
-  buildLivraison(registerPage);
-
-  const { build: buildTrust } = require("../src/pages/trust");
-  buildTrust(registerPage);
-
-  const { build: buildBlog } = require("../src/pages/blog-pages");
-  buildBlog(registerPage);
-
-  const { build: buildSitemapHtml } = require("../src/pages/plan-du-site");
-  buildSitemapHtml(registerPage, routes);
+function build() {
+  LANGUAGE_LIST.forEach((lang) => buildForLanguage(lang.code));
 
   build404();
   buildRobotsTxt();
   buildSitemap();
 
-  console.log(`Build terminé : ${routes.length} pages générées.`);
+  console.log(`Build terminé : ${routes.length} pages générées (${LANGUAGE_LIST.length} langues).`);
 }
 
 build();

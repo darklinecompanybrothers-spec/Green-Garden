@@ -805,6 +805,16 @@ body.rtl .care-card {
   }
 }
 
+body.rtl .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+body.rtl .sticky-whatsapp {
+  right: auto;
+  left: 22px;
+}
+
 body.rtl .footer-credits {
   direction: rtl;
 }

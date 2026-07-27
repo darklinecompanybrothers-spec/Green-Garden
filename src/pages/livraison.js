@@ -1,12 +1,13 @@
 const { renderContentPage } = require("../templates/page");
 const { villes } = require("../data/villes");
 const { SITE } = require("../data/site");
+const { localizedPath } = require("../data/i18n");
+const { CITY_NAMES } = require("../data/ui-strings");
 
-const LIVRAISON_ROOT = { label: "Livraison", path: "/livraison/" };
+const HUB_BASE = "/livraison/";
 
-function hubPage() {
-  return renderContentPage({
-    path: "/livraison/",
+const HUB_TEXT = {
+  fr: {
     title: "Zones de livraison Green Garden | Gazon & Palmier en Tunisie",
     metaDescription:
       "Gazon naturel livré gratuitement dans le Grand Tunis et à Nabeul, palmier décoratif livrable dans toute la Tunisie. Découvrez nos zones de livraison.",
@@ -14,103 +15,214 @@ function hubPage() {
     h1: "Nos zones de livraison en Tunisie",
     intro:
       "Le gazon naturel est livré gratuitement dans le Grand Tunis et à Nabeul. Le palmier décoratif, comme le gazon dans les autres régions, est livrable partout en Tunisie avec des frais calculés selon la distance.",
-    breadcrumb: [{ label: "Livraison", path: "/livraison/" }],
+    label: "Livraison",
+    tableH2: "Récapitulatif par zone",
+    headers: ["Zone", "Gazon naturel", "Palmier décoratif"],
+    rowGrandTunis: ["Grand Tunis", "Livraison gratuite", "Sur devis"],
+    rowNabeul: ["Nabeul", "Livraison gratuite", "Sur devis"],
+    rowOtherCities: ["Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet", "Sur devis", "Sur devis"],
+    rowOtherGov: ["Autres gouvernorats", "Sur devis", "Sur devis"],
+    citiesH2: "Villes desservies",
+    freeLabel: "Gazon livré gratuitement",
+    quoteLabel: "Livraison sur devis",
+    tableFree: "Gratuite",
+    otherRegionsH2: "Autres régions",
+    otherRegionsLabel: "Toutes les autres régions de Tunisie",
+    otherRegionsDesc: "Livraison sur devis dans tout le pays",
+    gazonLabel: "Gazon Tunisie",
+    gazonDesc: "Prix et détails du gazon naturel",
+    palmierLabel: "Palmier Tunisie",
+    palmierDesc: "Prix et détails du palmier décoratif",
+    faqH2: "Questions fréquentes sur la livraison",
+    faq: [
+      { q: "Pourquoi la livraison du gazon est-elle gratuite seulement dans deux zones ?", a: "Le Grand Tunis et Nabeul sont les zones les plus proches de notre dépôt, ce qui nous permet d'offrir la livraison gratuite du gazon sans surcoût. Pour les autres régions, un tarif de transport est calculé selon la distance." },
+      { q: "Le palmier est-il livrable dans toute la Tunisie ?", a: "Oui, nous livrons le palmier décoratif dans tout le pays. Les frais de livraison sont déterminés selon votre région et communiqués avant confirmation de commande." },
+    ],
+  },
+  en: {
+    title: "Green Garden Delivery Zones | Lawn & Palm Tree in Tunisia",
+    metaDescription:
+      "Natural lawn delivered free in Greater Tunis and Nabeul, decorative palm tree deliverable across Tunisia. Discover our delivery zones.",
+    eyebrow: "Delivery",
+    h1: "Our delivery zones in Tunisia",
+    intro:
+      "Natural lawn is delivered free of charge in Greater Tunis and Nabeul. The decorative palm tree, like lawn in other regions, can be delivered anywhere in Tunisia with fees calculated based on distance.",
+    label: "Delivery",
+    tableH2: "Summary by zone",
+    headers: ["Zone", "Natural lawn", "Decorative palm tree"],
+    rowGrandTunis: ["Greater Tunis", "Free delivery", "On quote"],
+    rowNabeul: ["Nabeul", "Free delivery", "On quote"],
+    rowOtherCities: ["Sousse, Monastir, Sfax, Bizerte, Gabes, Hammamet", "On quote", "On quote"],
+    rowOtherGov: ["Other governorates", "On quote", "On quote"],
+    citiesH2: "Cities we serve",
+    freeLabel: "Lawn delivered free",
+    quoteLabel: "Delivery on quote",
+    tableFree: "Free",
+    otherRegionsH2: "Other regions",
+    otherRegionsLabel: "All other regions of Tunisia",
+    otherRegionsDesc: "Delivery on quote across the country",
+    gazonLabel: "Lawn Tunisia",
+    gazonDesc: "Price and details of natural lawn",
+    palmierLabel: "Palm Tree Tunisia",
+    palmierDesc: "Price and details of the decorative palm tree",
+    faqH2: "Frequently asked questions about delivery",
+    faq: [
+      { q: "Why is lawn delivery free in only two zones?", a: "Greater Tunis and Nabeul are the zones closest to our depot, which allows us to offer free lawn delivery at no extra cost. For other regions, a transport rate is calculated based on distance." },
+      { q: "Can the palm tree be delivered anywhere in Tunisia?", a: "Yes, we deliver the decorative palm tree across the whole country. Delivery fees are determined based on your region and communicated before order confirmation." },
+    ],
+  },
+  ar: {
+    title: "مناطق توصيل Green Garden | عشب ونخيل في تونس",
+    metaDescription:
+      "عشب طبيعي يُوصَّل مجاناً في تونس الكبرى ونابل، نخيل زينة قابل للتوصيل في كل تونس. اكتشفوا مناطق توصيلنا.",
+    eyebrow: "التوصيل",
+    h1: "مناطق التوصيل لدينا في تونس",
+    intro:
+      "يُوصَّل العشب الطبيعي مجاناً في تونس الكبرى ونابل. النخيل الزينة، مثل العشب في المناطق الأخرى، قابل للتوصيل في كل تونس بمصاريف تُحسب حسب المسافة.",
+    label: "التوصيل",
+    tableH2: "ملخص حسب المنطقة",
+    headers: ["المنطقة", "العشب الطبيعي", "النخيل الزينة"],
+    rowGrandTunis: ["تونس الكبرى", "توصيل مجاني", "حسب الطلب"],
+    rowNabeul: ["نابل", "توصيل مجاني", "حسب الطلب"],
+    rowOtherCities: ["سوسة، المنستير، صفاقس، بنزرت، قابس، الحمامات", "حسب الطلب", "حسب الطلب"],
+    rowOtherGov: ["ولايات أخرى", "حسب الطلب", "حسب الطلب"],
+    citiesH2: "المدن التي نخدمها",
+    freeLabel: "عشب يُوصَّل مجاناً",
+    quoteLabel: "توصيل حسب الطلب",
+    tableFree: "مجاني",
+    otherRegionsH2: "مناطق أخرى",
+    otherRegionsLabel: "كل المناطق الأخرى في تونس",
+    otherRegionsDesc: "توصيل حسب الطلب في كل البلاد",
+    gazonLabel: "عشب تونس",
+    gazonDesc: "سعر وتفاصيل العشب الطبيعي",
+    palmierLabel: "نخيل تونس",
+    palmierDesc: "سعر وتفاصيل النخيل الزينة",
+    faqH2: "أسئلة شائعة حول التوصيل",
+    faq: [
+      { q: "لماذا التوصيل المجاني للعشب في منطقتين فقط؟", a: "تونس الكبرى ونابل هما أقرب منطقتين من مستودعنا، مما يتيح لنا تقديم توصيل مجاني للعشب دون تكلفة إضافية. بالنسبة للمناطق الأخرى، تُحسب تعريفة نقل حسب المسافة." },
+      { q: "هل النخيل قابل للتوصيل في كل تونس؟", a: "نعم، نوصل النخيل الزينة في كل البلاد. تُحدَّد مصاريف التوصيل حسب جهتكم وتُبلَّغ قبل تأكيد الطلب." },
+    ],
+  },
+};
+
+function hubPage(lang) {
+  const t = HUB_TEXT[lang];
+  return renderContentPage({
+    basePath: HUB_BASE,
+    lang,
+    title: t.title,
+    metaDescription: t.metaDescription,
+    eyebrow: t.eyebrow,
+    h1: t.h1,
+    intro: t.intro,
+    breadcrumb: [{ label: t.label, path: localizedPath(HUB_BASE, lang) }],
     sections: [
       {
         type: "table",
-        h2: "Récapitulatif par zone",
-        headers: ["Zone", "Gazon naturel", "Palmier décoratif"],
-        rows: [
-          ["Grand Tunis", "Livraison gratuite", "Sur devis"],
-          ["Nabeul", "Livraison gratuite", "Sur devis"],
-          ["Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet", "Sur devis", "Sur devis"],
-          ["Autres gouvernorats", "Sur devis", "Sur devis"],
-        ],
+        h2: t.tableH2,
+        headers: t.headers,
+        rows: [t.rowGrandTunis, t.rowNabeul, t.rowOtherCities, t.rowOtherGov],
       },
       {
         type: "cards",
-        h2: "Villes desservies",
+        h2: t.citiesH2,
         cards: villes.map((v) => ({
-          title: v.name,
-          text: v.gazonStatus === "free" ? "Gazon livré gratuitement" : "Livraison sur devis",
-          path: `/livraison/${v.slug}/`,
+          title: CITY_NAMES[v.slug][lang],
+          text: v.gazonStatus === "free" ? t.freeLabel : t.quoteLabel,
+          path: localizedPath(`/livraison/${v.slug}/`, lang),
         })),
       },
       {
         type: "related",
-        h2: "Autres régions",
+        h2: t.otherRegionsH2,
         links: [
-          { label: "Toutes les autres régions de Tunisie", path: "/livraison/autres-regions/", description: "Livraison sur devis dans tout le pays" },
-          { label: "Gazon Tunisie", path: "/gazon-tunisie/", description: "Prix et détails du gazon naturel" },
-          { label: "Palmier Tunisie", path: "/palmier-tunisie/", description: "Prix et détails du palmier décoratif" },
+          { label: t.otherRegionsLabel, path: localizedPath("/livraison/autres-regions/", lang), description: t.otherRegionsDesc },
+          { label: t.gazonLabel, path: localizedPath("/gazon-tunisie/", lang), description: t.gazonDesc },
+          { label: t.palmierLabel, path: localizedPath("/palmier-tunisie/", lang), description: t.palmierDesc },
         ],
       },
-      {
-        type: "faq",
-        h2: "Questions fréquentes sur la livraison",
-        items: [
-          {
-            q: "Pourquoi la livraison du gazon est-elle gratuite seulement dans deux zones ?",
-            a: "Le Grand Tunis et Nabeul sont les zones les plus proches de notre dépôt, ce qui nous permet d'offrir la livraison gratuite du gazon sans surcoût. Pour les autres régions, un tarif de transport est calculé selon la distance.",
-          },
-          {
-            q: "Le palmier est-il livrable dans toute la Tunisie ?",
-            a: "Oui, nous livrons le palmier décoratif dans tout le pays. Les frais de livraison sont déterminés selon votre région et communiqués avant confirmation de commande.",
-          },
-        ],
-      },
+      { type: "faq", h2: t.faqH2, items: t.faq },
     ],
   });
 }
 
-function cityPage(ville) {
+function cityPage(ville, lang) {
+  const v = ville.t[lang];
+  const hubLabel = HUB_TEXT[lang].label;
+  const name = CITY_NAMES[ville.slug][lang];
   return renderContentPage({
-    path: `/livraison/${ville.slug}/`,
-    title: ville.metaTitle,
-    metaDescription: ville.metaDescription,
-    eyebrow: `Livraison ${ville.name}`,
-    h1: ville.h1,
-    intro: ville.intro,
-    breadcrumb: [LIVRAISON_ROOT, { label: ville.name, path: `/livraison/${ville.slug}/` }],
+    basePath: `/livraison/${ville.slug}/`,
+    lang,
+    title: v.metaTitle,
+    metaDescription: v.metaDescription,
+    eyebrow: `${hubLabel} ${name}`,
+    h1: v.h1,
+    intro: v.intro,
+    breadcrumb: [
+      { label: hubLabel, path: localizedPath("/livraison/", lang) },
+      { label: name, path: localizedPath(`/livraison/${ville.slug}/`, lang) },
+    ],
     sections: [
       {
         type: "text",
-        h2: `Livrer à ${ville.name}`,
-        paragraphs: [ville.useCase, `${ville.name} se trouve ${ville.distanceNote}.`],
+        h2: v.h1,
+        paragraphs: [v.useCase, `${name} — ${v.distanceNote}.`],
       },
       {
         type: "table",
-        h2: "Conditions de livraison",
-        headers: ["Produit", "Prix", "Livraison"],
+        h2: HUB_TEXT[lang].tableH2,
+        headers: [
+          lang === "fr" ? "Produit" : lang === "en" ? "Product" : "المنتج",
+          lang === "fr" ? "Prix" : lang === "en" ? "Price" : "السعر",
+          lang === "fr" ? "Livraison" : lang === "en" ? "Delivery" : "التوصيل",
+        ],
         rows: [
-          ["Gazon naturel", `${SITE.products.gazon.priceLabel}`, ville.gazonStatus === "free" ? "Gratuite" : "Sur devis"],
-          ["Palmier décoratif", `${SITE.products.palmier.priceLabel}`, "Sur devis, selon la région"],
+          [
+            lang === "fr" ? "Gazon naturel" : lang === "en" ? "Natural lawn" : "عشب طبيعي",
+            SITE.products.gazon.priceLabel,
+            ville.gazonStatus === "free" ? HUB_TEXT[lang].tableFree : HUB_TEXT[lang].quoteLabel,
+          ],
+          [
+            lang === "fr" ? "Palmier décoratif" : lang === "en" ? "Decorative palm tree" : "نخيل زينة",
+            SITE.products.palmier.priceLabel,
+            HUB_TEXT[lang].quoteLabel,
+          ],
         ],
       },
       {
         type: "cta",
-        heading: `Commandez à ${ville.name}`,
-        text: "Contactez-nous par WhatsApp avec votre adresse pour recevoir le détail de la livraison.",
-        buttonLabel: "Commander sur WhatsApp",
-        whatsappMessage: `Bonjour, je souhaite commander du gazon et/ou un palmier, livraison à ${ville.name}.`,
+        heading: lang === "fr" ? `Commandez à ${name}` : lang === "en" ? `Order in ${name}` : `اطلبوا في ${name}`,
+        text:
+          lang === "fr"
+            ? "Contactez-nous par WhatsApp avec votre adresse pour recevoir le détail de la livraison."
+            : lang === "en"
+            ? "Contact us on WhatsApp with your address to receive delivery details."
+            : "تواصلوا معنا عبر واتساب مع عنوانكم لتلقي تفاصيل التوصيل.",
+        buttonLabel:
+          lang === "fr" ? "Commander sur WhatsApp" : lang === "en" ? "Order on WhatsApp" : "اطلبوا عبر واتساب",
+        whatsappMessage:
+          lang === "fr"
+            ? `Bonjour, je souhaite commander du gazon et/ou un palmier, livraison à ${name}.`
+            : lang === "en"
+            ? `Hello, I would like to order lawn and/or a palm tree, delivery to ${name}.`
+            : `مرحباً، أود طلب عشب و/أو نخلة، التوصيل إلى ${name}.`,
       },
       {
         type: "related",
-        h2: "Voir aussi",
+        h2: lang === "fr" ? "Voir aussi" : lang === "en" ? "See also" : "شاهدوا أيضاً",
         links: [
-          { label: "Gazon Tunisie", path: "/gazon-tunisie/", description: "Prix et détails du gazon naturel" },
-          { label: "Palmier Tunisie", path: "/palmier-tunisie/", description: "Prix et détails du palmier décoratif" },
-          { label: "Toutes les zones de livraison", path: "/livraison/", description: "Vue d'ensemble de nos zones" },
+          { label: HUB_TEXT[lang].gazonLabel, path: localizedPath("/gazon-tunisie/", lang), description: HUB_TEXT[lang].gazonDesc },
+          { label: HUB_TEXT[lang].palmierLabel, path: localizedPath("/palmier-tunisie/", lang), description: HUB_TEXT[lang].palmierDesc },
+          { label: HUB_TEXT[lang].h1, path: localizedPath("/livraison/", lang), description: "" },
         ],
       },
-      { type: "faq", h2: `Questions fréquentes - Livraison ${ville.name}`, items: ville.faq },
+      { type: "faq", h2: `${lang === "fr" ? "Questions fréquentes -" : lang === "en" ? "Frequently asked questions -" : "أسئلة شائعة -"} ${name}`, items: v.faq },
     ],
   });
 }
 
-function autresRegionsPage() {
-  return renderContentPage({
-    path: "/livraison/autres-regions/",
+const AUTRES_REGIONS_TEXT = {
+  fr: {
     title: "Livraison gazon & palmier dans toute la Tunisie - Green Garden",
     metaDescription:
       "Green Garden livre le gazon naturel et le palmier décoratif dans tout le reste de la Tunisie, sur devis. Contactez-nous pour connaître le tarif de livraison.",
@@ -118,39 +230,85 @@ function autresRegionsPage() {
     h1: "Livraison dans le reste de la Tunisie",
     intro:
       "En dehors du Grand Tunis, de Nabeul, de Sousse, Monastir, Sfax, Bizerte, Gabès et Hammamet, nous livrons également le gazon naturel et le palmier décoratif dans le reste du pays, sur devis selon la distance.",
-    breadcrumb: [LIVRAISON_ROOT, { label: "Autres régions", path: "/livraison/autres-regions/" }],
+    textH2: "Une livraison sur devis, partout en Tunisie",
+    textBody:
+      "Que vous soyez à Kairouan, Kasserine, Gafsa, Médenine, Tozeur, Le Kef, Siliana, Zaghouan, Béja, Jendouba, Kébili, Tataouine, Sidi Bouzid ou Mahdia, contactez-nous avec votre adresse exacte pour recevoir un tarif de livraison transparent.",
+    ctaHeading: "Demandez votre devis de livraison",
+    ctaText: "Indiquez votre ville et le produit souhaité (gazon naturel ou palmier décoratif) pour recevoir un tarif rapide.",
+    ctaButton: "Demander un devis sur WhatsApp",
+    ctaMessage: "Bonjour, je souhaite un devis de livraison pour du gazon et/ou un palmier dans ma région.",
+    relatedH2: "Voir aussi",
+  },
+  en: {
+    title: "Lawn & Palm Tree Delivery Across Tunisia - Green Garden",
+    metaDescription:
+      "Green Garden delivers natural lawn and decorative palm trees across the rest of Tunisia, on quote. Contact us for a delivery rate.",
+    eyebrow: "Delivery",
+    h1: "Delivery across the rest of Tunisia",
+    intro:
+      "Beyond Greater Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabes and Hammamet, we also deliver natural lawn and decorative palm trees across the rest of the country, on quote depending on distance.",
+    textH2: "Delivery on quote, anywhere in Tunisia",
+    textBody:
+      "Whether you are in Kairouan, Kasserine, Gafsa, Medenine, Tozeur, Le Kef, Siliana, Zaghouan, Beja, Jendouba, Kebili, Tataouine, Sidi Bouzid or Mahdia, contact us with your exact address to receive a transparent delivery rate.",
+    ctaHeading: "Request your delivery quote",
+    ctaText: "Tell us your city and the desired product (natural lawn or decorative palm tree) to receive a quick rate.",
+    ctaButton: "Request a quote on WhatsApp",
+    ctaMessage: "Hello, I would like a delivery quote for lawn and/or a palm tree in my region.",
+    relatedH2: "See also",
+  },
+  ar: {
+    title: "توصيل العشب والنخيل في كل تونس - Green Garden",
+    metaDescription:
+      "توصل Green Garden العشب الطبيعي والنخيل الزينة في بقية تونس، حسب الطلب. تواصلوا معنا لمعرفة تعريفة التوصيل.",
+    eyebrow: "التوصيل",
+    h1: "التوصيل في بقية تونس",
+    intro:
+      "خارج تونس الكبرى ونابل وسوسة والمنستير وصفاقس وبنزرت وقابس والحمامات، نوصل أيضاً العشب الطبيعي والنخيل الزينة في بقية البلاد، حسب الطلب وحسب المسافة.",
+    textH2: "توصيل حسب الطلب، في كل تونس",
+    textBody:
+      "سواء كنتم في القيروان أو القصرين أو قفصة أو مدنين أو توزر أو الكاف أو سليانة أو زغوان أو باجة أو جندوبة أو قبلي أو تطاوين أو سيدي بوزيد أو المهدية، تواصلوا معنا مع عنوانكم الدقيق لتلقي تعريفة توصيل شفافة.",
+    ctaHeading: "اطلبوا عرض سعر التوصيل",
+    ctaText: "أذكروا مدينتكم والمنتج المرغوب (عشب طبيعي أو نخيل زينة) لتلقي تعريفة سريعة.",
+    ctaButton: "اطلبوا عرض سعر عبر واتساب",
+    ctaMessage: "مرحباً، أود عرض سعر توصيل لعشب و/أو نخلة في جهتي.",
+    relatedH2: "شاهدوا أيضاً",
+  },
+};
+
+function autresRegionsPage(lang) {
+  const t = AUTRES_REGIONS_TEXT[lang];
+  return renderContentPage({
+    basePath: "/livraison/autres-regions/",
+    lang,
+    title: t.title,
+    metaDescription: t.metaDescription,
+    eyebrow: t.eyebrow,
+    h1: t.h1,
+    intro: t.intro,
+    breadcrumb: [
+      { label: HUB_TEXT[lang].label, path: localizedPath("/livraison/", lang) },
+      { label: t.h1, path: localizedPath("/livraison/autres-regions/", lang) },
+    ],
     sections: [
-      {
-        type: "text",
-        h2: "Une livraison sur devis, partout en Tunisie",
-        paragraphs: [
-          "Que vous soyez à Kairouan, Kasserine, Gafsa, Médenine, Tozeur, Le Kef, Siliana, Zaghouan, Béja, Jendouba, Kébili, Tataouine, Sidi Bouzid ou Mahdia, contactez-nous avec votre adresse exacte pour recevoir un tarif de livraison transparent.",
-        ],
-      },
-      {
-        type: "cta",
-        heading: "Demandez votre devis de livraison",
-        text: "Indiquez votre ville et le produit souhaité (gazon naturel ou palmier décoratif) pour recevoir un tarif rapide.",
-        buttonLabel: "Demander un devis sur WhatsApp",
-        whatsappMessage: "Bonjour, je souhaite un devis de livraison pour du gazon et/ou un palmier dans ma région.",
-      },
+      { type: "text", h2: t.textH2, paragraphs: [t.textBody] },
+      { type: "cta", heading: t.ctaHeading, text: t.ctaText, buttonLabel: t.ctaButton, whatsappMessage: t.ctaMessage },
       {
         type: "related",
-        h2: "Voir aussi",
+        h2: t.relatedH2,
         links: [
-          { label: "Gazon Tunisie", path: "/gazon-tunisie/", description: "Prix et détails du gazon naturel" },
-          { label: "Palmier Tunisie", path: "/palmier-tunisie/", description: "Prix et détails du palmier décoratif" },
-          { label: "Toutes les zones de livraison", path: "/livraison/", description: "Vue d'ensemble de nos zones" },
+          { label: HUB_TEXT[lang].gazonLabel, path: localizedPath("/gazon-tunisie/", lang), description: HUB_TEXT[lang].gazonDesc },
+          { label: HUB_TEXT[lang].palmierLabel, path: localizedPath("/palmier-tunisie/", lang), description: HUB_TEXT[lang].palmierDesc },
+          { label: HUB_TEXT[lang].h1, path: localizedPath("/livraison/", lang), description: "" },
         ],
       },
     ],
   });
 }
 
-function build(registerPage) {
-  registerPage("/livraison/", hubPage());
-  villes.forEach((ville) => registerPage(`/livraison/${ville.slug}/`, cityPage(ville)));
-  registerPage("/livraison/autres-regions/", autresRegionsPage());
+function build(registerPage, lang) {
+  registerPage(localizedPath("/livraison/", lang), hubPage(lang));
+  villes.forEach((ville) => registerPage(localizedPath(`/livraison/${ville.slug}/`, lang), cityPage(ville, lang)));
+  registerPage(localizedPath("/livraison/autres-regions/", lang), autresRegionsPage(lang));
 }
 
 module.exports = { build };

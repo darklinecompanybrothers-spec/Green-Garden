@@ -1,32 +1,37 @@
 const { SITE, absoluteUrl } = require("../data/site");
 const { villes } = require("../data/villes");
+const { LANGUAGES, LANGUAGE_LIST, localizedPath } = require("../data/i18n");
+const { UI, CITY_NAMES } = require("../data/ui-strings");
 const { jsonLdScript, organization, localBusiness, website } = require("./schema");
 
-const NAV = [
-  { label: "Accueil", path: "/" },
-  {
-    label: "Produits",
-    path: "/produits/",
-    children: [
-      { label: "Gazon naturel", path: "/gazon-tunisie/" },
-      { label: "Palmiers décoratifs", path: "/palmier-tunisie/" },
-      { label: "Plantes d'intérieur", path: "/produits/plantes-interieur/" },
-      { label: "Engrais", path: "/produits/engrais/" },
-      { label: "Tous nos produits", path: "/produits/" },
-    ],
-  },
-  {
-    label: "Livraison",
-    path: "/livraison/",
-    children: [
-      ...villes.map((v) => ({ label: v.name, path: `/livraison/${v.slug}/` })),
-      { label: "Toutes les zones desservies", path: "/livraison/" },
-    ],
-  },
-  { label: "Blog", path: "/blog/" },
-  { label: "Pourquoi nous choisir", path: "/pourquoi-choisir-green-garden/" },
-  { label: "Contact", path: "/contact/" },
-];
+function getNav(lang) {
+  const t = UI[lang];
+  return [
+    { label: t.nav.home, path: localizedPath("/", lang) },
+    {
+      label: t.nav.products,
+      path: localizedPath("/produits/", lang),
+      children: [
+        { label: t.productsMenu.gazon, path: localizedPath("/gazon-tunisie/", lang) },
+        { label: t.productsMenu.palmiers, path: localizedPath("/palmier-tunisie/", lang) },
+        { label: t.productsMenu.plantes, path: localizedPath("/produits/plantes-interieur/", lang) },
+        { label: t.productsMenu.engrais, path: localizedPath("/produits/engrais/", lang) },
+        { label: t.productsMenu.all, path: localizedPath("/produits/", lang) },
+      ],
+    },
+    {
+      label: t.nav.delivery,
+      path: localizedPath("/livraison/", lang),
+      children: [
+        ...villes.map((v) => ({ label: CITY_NAMES[v.slug][lang], path: localizedPath(`/livraison/${v.slug}/`, lang) })),
+        { label: t.deliveryMenu.allZones, path: localizedPath("/livraison/", lang) },
+      ],
+    },
+    { label: t.nav.blog, path: localizedPath("/blog/", lang) },
+    { label: t.nav.why, path: localizedPath("/pourquoi-choisir-green-garden/", lang) },
+    { label: t.nav.contact, path: localizedPath("/contact/", lang) },
+  ];
+}
 
 function renderNavItem(item) {
   if (item.children) {
@@ -41,84 +46,93 @@ function renderNavItem(item) {
   return `<div class="nav-item"><a href="${item.path}" class="nav-link">${item.label}</a></div>`;
 }
 
-function renderHeader(showLangSwitch) {
+function renderLangSwitch(lang, basePath) {
+  const t = UI[lang];
+  // Pages hors routage multilingue (ex: 404.html) : le sélecteur renvoie vers
+  // l'accueil de chaque langue plutôt qu'un chemin qui n'existe pas.
+  const switchBase = basePath.endsWith(".html") ? "/" : basePath;
+  return `
+    <nav class="lang-switch" aria-label="${t.langSwitchLabel}">
+      ${LANGUAGE_LIST.map(
+        (l) =>
+          `<a href="${localizedPath(switchBase, l.code)}" class="lang-button${l.code === lang ? " is-active" : ""}" aria-label="${l.name}">${l.label}</a>`
+      ).join("")}
+    </nav>`;
+}
+
+function renderHeader(lang, basePath) {
+  const t = UI[lang];
   return `
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Accueil Green Garden">
+      <a class="brand" href="${localizedPath("/", lang)}" aria-label="${t.nav.home}">
         <img src="/logo.png" alt="" class="brand-mark" loading="lazy" width="40" height="40" />
         <span>Green Garden</span>
       </a>
 
-      ${
-        showLangSwitch
-          ? `<div class="lang-switch" aria-label="Language switcher">
-        <button type="button" class="lang-button is-active" data-lang="fr" aria-label="Francais">FR</button>
-        <button type="button" class="lang-button" data-lang="en" aria-label="English">EN</button>
-        <button type="button" class="lang-button" data-lang="ar" aria-label="العربية">AR</button>
-      </div>`
-          : ""
-      }
+      ${renderLangSwitch(lang, basePath)}
 
-      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-label="${t.navToggleLabel}" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
 
-      <nav class="main-nav" aria-label="Navigation principale">
-        ${NAV.map(renderNavItem).join("")}
+      <nav class="main-nav" aria-label="${t.nav.home}">
+        ${getNav(lang).map(renderNavItem).join("")}
       </nav>
     </header>`;
 }
 
-function renderFooter() {
+function renderFooter(lang) {
+  const t = UI[lang];
+  const f = t.footer;
   return `
     <footer class="site-footer">
       <div class="footer-main">
         <div class="footer-col footer-brand-col">
-          <a class="brand footer-brand" href="/">
+          <a class="brand footer-brand" href="${localizedPath("/", lang)}">
             <img src="/logo.png" alt="" class="brand-mark" loading="lazy" width="40" height="40" />
             <span>Green Garden</span>
           </a>
-          <p>${SITE.address.locality}, ${SITE.country} — Vente de gazon naturel, palmiers et plantes décoratives</p>
+          <p>${SITE.address.locality}, ${SITE.country} — ${f.tagline}</p>
           <p><a href="tel:${SITE.phoneE164}">${SITE.phoneDisplay}</a></p>
           <p>${SITE.hours.label}</p>
         </div>
 
         <div class="footer-col">
-          <h3>Produits</h3>
+          <h3>${f.productsHeading}</h3>
           <ul class="footer-links">
-            <li><a href="/gazon-tunisie/">Gazon naturel Tunisie</a></li>
-            <li><a href="/palmier-tunisie/">Palmier décoratif Tunisie</a></li>
-            <li><a href="/produits/plantes-interieur/">Plantes d'intérieur</a></li>
-            <li><a href="/produits/engrais/">Engrais</a></li>
+            <li><a href="${localizedPath("/gazon-tunisie/", lang)}">${f.gazonLink}</a></li>
+            <li><a href="${localizedPath("/palmier-tunisie/", lang)}">${f.palmierLink}</a></li>
+            <li><a href="${localizedPath("/produits/plantes-interieur/", lang)}">${f.plantesLink}</a></li>
+            <li><a href="${localizedPath("/produits/engrais/", lang)}">${f.engraisLink}</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>Livraison</h3>
+          <h3>${f.deliveryHeading}</h3>
           <ul class="footer-links">
             ${villes
               .slice(0, 6)
-              .map((v) => `<li><a href="/livraison/${v.slug}/">Livraison ${v.name}</a></li>`)
+              .map((v) => `<li><a href="${localizedPath(`/livraison/${v.slug}/`, lang)}">${CITY_NAMES[v.slug][lang]}</a></li>`)
               .join("")}
-            <li><a href="/livraison/">Toutes les zones</a></li>
+            <li><a href="${localizedPath("/livraison/", lang)}">${f.allZonesLink}</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>Ressources</h3>
+          <h3>${f.resourcesHeading}</h3>
           <ul class="footer-links">
-            <li><a href="/blog/">Blog jardinage</a></li>
-            <li><a href="/faq/">Questions fréquentes</a></li>
-            <li><a href="/a-propos/">À propos</a></li>
-            <li><a href="/contact/">Contact</a></li>
-            <li><a href="/plan-du-site/">Plan du site</a></li>
+            <li><a href="${localizedPath("/blog/", lang)}">${f.blogLink}</a></li>
+            <li><a href="${localizedPath("/faq/", lang)}">${f.faqLink}</a></li>
+            <li><a href="${localizedPath("/a-propos/", lang)}">${f.aboutLink}</a></li>
+            <li><a href="${localizedPath("/contact/", lang)}">${f.contactLink}</a></li>
+            <li><a href="${localizedPath("/plan-du-site/", lang)}">${f.sitemapLink}</a></li>
           </ul>
         </div>
 
         <div class="footer-col footer-actions">
-          <h3>Suivez-nous</h3>
-          <div class="social-links" aria-label="Réseaux sociaux">
+          <h3>${f.followHeading}</h3>
+          <div class="social-links" aria-label="${f.followHeading}">
             <a href="${SITE.social.instagram}" target="_blank" rel="noreferrer" aria-label="Instagram">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-.7a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z" /></svg>
             </a>
@@ -133,23 +147,36 @@ function renderFooter() {
       </div>
 
       <div class="footer-credits">
-        <p>© 2026 Green Garden – Tous Droits Réservés</p>
-        <p>Site web développé par: <a href="${SITE.credit.url}" target="_blank" rel="noopener noreferrer">${SITE.credit.label}</a></p>
+        <p>${f.copyright}</p>
+        <p>${f.credit} <a href="${SITE.credit.url}" target="_blank" rel="noopener noreferrer">${SITE.credit.label}</a></p>
       </div>
     </footer>`;
 }
 
-function renderStickyWhatsApp() {
-  const message = encodeURIComponent("Bonjour, je souhaite avoir plus d'informations sur vos produits Green Garden.");
+function renderStickyWhatsApp(lang) {
+  const t = UI[lang];
+  const message = encodeURIComponent(t.stickyWhatsappMessage);
   return `
-    <a class="sticky-whatsapp" href="https://wa.me/${SITE.whatsappNumber}?text=${message}" target="_blank" rel="noreferrer" aria-label="Contacter Green Garden sur WhatsApp">
+    <a class="sticky-whatsapp" href="https://wa.me/${SITE.whatsappNumber}?text=${message}" target="_blank" rel="noreferrer" aria-label="${t.stickyWhatsapp}">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.4 1.3-2 1.4-.6.1-1.4.2-4.1-.9-3.4-1.4-5.6-4.9-5.8-5.1-.2-.2-1.4-1.9-1.4-3.5s.9-2.5 1.2-2.8c.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .7.6l1 2.4c.1.3.1.5 0 .7l-.5.8c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.5-.3.8-.2l2.4 1.1c.3.2.6.3.7.5.1.1.1.8-.1 1.3Z" /></svg>
-      <span>WhatsApp</span>
+      <span>${t.stickyWhatsapp}</span>
     </a>`;
 }
 
+function renderHreflangTags(basePath) {
+  // Pas d'alternates pour les pages hors routage multilingue (ex: 404.html,
+  // qui n'a qu'une seule version servie quel que soit le chemin demandé).
+  if (basePath.endsWith(".html")) return "";
+  const tags = LANGUAGE_LIST.map(
+    (l) => `<link rel="alternate" hreflang="${l.htmlLang}" href="${absoluteUrl(localizedPath(basePath, l.code))}" />`
+  );
+  tags.push(`<link rel="alternate" hreflang="x-default" href="${absoluteUrl(basePath)}" />`);
+  return tags.join("\n    ");
+}
+
 function renderPage({
-  path,
+  basePath,
+  lang = "fr",
   title,
   description,
   bodyHtml,
@@ -157,15 +184,16 @@ function renderPage({
   ogImage,
   ogType = "website",
   robots = "index, follow",
-  showLangSwitch = false,
   extraScripts = "",
 }) {
+  const langConfig = LANGUAGES[lang];
+  const path = localizedPath(basePath, lang);
   const canonical = absoluteUrl(path);
   const image = absoluteUrl(ogImage || SITE.defaultOgImage);
   const schemas = [organization(), localBusiness(), website(), ...jsonLd];
 
   return `<!DOCTYPE html>
-<html lang="fr">
+<html lang="${langConfig.htmlLang}" dir="${langConfig.dir}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -176,6 +204,7 @@ function renderPage({
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="shortcut icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
+    ${renderHreflangTags(basePath)}
 
     <meta property="og:type" content="${ogType}" />
     <meta property="og:site_name" content="Green Garden" />
@@ -183,7 +212,7 @@ function renderPage({
     <meta property="og:description" content="${description}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:image" content="${image}" />
-    <meta property="og:locale" content="fr_TN" />
+    <meta property="og:locale" content="${langConfig.locale}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${description}" />
@@ -195,18 +224,18 @@ function renderPage({
     <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}" />
     ${jsonLdScript(schemas)}
   </head>
-  <body>
+  <body class="${langConfig.dir === "rtl" ? "rtl" : ""}">
     <div class="page-glow page-glow-left" aria-hidden="true"></div>
     <div class="page-glow page-glow-right" aria-hidden="true"></div>
 
-    ${renderHeader(showLangSwitch)}
+    ${renderHeader(lang, basePath)}
 
     <main>
       ${bodyHtml}
     </main>
 
-    ${renderFooter()}
-    ${renderStickyWhatsApp()}
+    ${renderFooter(lang)}
+    ${renderStickyWhatsApp(lang)}
 
     <script src="/nav.js?v=${SITE.assetVersion}" defer></script>
     ${extraScripts}
@@ -215,4 +244,4 @@ function renderPage({
 `;
 }
 
-module.exports = { renderPage, NAV };
+module.exports = { renderPage, getNav };
