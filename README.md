@@ -127,7 +127,7 @@ function doGet(e) {
       "Client Test",
       "Plante Test (Qté: 1)",
       "2x Fleur Test",
-      "+216 98 226 502",
+      "+216 58 233 020",
       "TEST URL APPS SCRIPT",
       99,
       new Date().toISOString(),

@@ -13,7 +13,7 @@ votre fiche avec le nouveau site.
 - **Adresse / zone de service** : Nabeul, Tunisie (activer « zone de service »
   si vous n'avez pas de vitrine ouverte au public, et ajouter le Grand Tunis,
   Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet comme zones desservies)
-- **Téléphone** : +216 98 226 502
+- **Téléphone** : +216 58 233 020
 - **Site web** : https://greengardentn.shop
 - **Horaires** : Tous les jours, 8h–19h
 
@@ -74,5 +74,5 @@ levier le plus efficace pour le SEO local.
 
 Vérifiez que le nom, l'adresse (ou zone de service) et le téléphone sont
 strictement identiques entre Google Business Profile, Facebook, Instagram et
-le site (`Nabeul, Tunisie` / `+216 98 226 502`). Toute incohérence dilue le
+le site (`Nabeul, Tunisie` / `+216 58 233 020`). Toute incohérence dilue le
 signal de confiance local pour Google.

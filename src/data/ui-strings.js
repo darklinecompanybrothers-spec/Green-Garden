@@ -30,6 +30,7 @@ const UI = {
     stickyWhatsappMessage: "Bonjour, je souhaite avoir plus d'informations sur vos produits Green Garden.",
     navToggleLabel: "Ouvrir le menu",
     langSwitchLabel: "Changer de langue",
+    locationLabel: "Localisation Green Garden",
   },
   en: {
     nav: { home: "Home", products: "Products", delivery: "Delivery", blog: "Blog", why: "Why choose us", contact: "Contact" },
@@ -59,6 +60,7 @@ const UI = {
     stickyWhatsappMessage: "Hello, I would like more information about your Green Garden products.",
     navToggleLabel: "Open menu",
     langSwitchLabel: "Change language",
+    locationLabel: "Green Garden location",
   },
   ar: {
     nav: { home: "الرئيسية", products: "منتجاتنا", delivery: "التوصيل", blog: "المدونة", why: "لماذا نحن", contact: "اتصل بنا" },
@@ -88,6 +90,7 @@ const UI = {
     stickyWhatsappMessage: "مرحباً، أود معرفة المزيد حول منتجات Green Garden.",
     navToggleLabel: "افتح القائمة",
     langSwitchLabel: "تغيير اللغة",
+    locationLabel: "موقع Green Garden",
   },
 };
 

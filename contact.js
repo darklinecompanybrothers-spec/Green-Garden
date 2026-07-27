@@ -22,7 +22,7 @@
       message ? "Message : " + message : "",
     ].filter(Boolean);
 
-    var url = "https://wa.me/21698226502?text=" + encodeURIComponent(lines.join("\n"));
+    var url = "https://wa.me/21658233020?text=" + encodeURIComponent(lines.join("\n"));
     window.open(url, "_blank", "noreferrer");
   });
 })();

@@ -2,7 +2,7 @@
 // La langue de la page est fixée côté serveur (voir window.GG_LANG, défini par
 // un <script> inline sur chaque variante /,/en/,/ar/ de la page d'accueil) :
 // tout le reste du contenu de la page est déjà traduit dans le HTML généré.
-const WHATSAPP_NUMBER = "21698226502";
+const WHATSAPP_NUMBER = "21658233020";
 
 const products = [
   { id: "arbre-voyageur", labels: { fr: "Arbre du voyageur", en: "Travelers Tree", ar: "شجرة المسافر" }, image: "Arbre du voyageur.jpeg" },
