@@ -206,6 +206,10 @@ h2 {
 }
 
 .hero-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 640px;
   overflow: hidden;
   border-radius: 42px 140px 42px 140px;
   background: var(--cream-deep);
@@ -213,9 +217,11 @@ h2 {
 }
 
 .hero-media img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -410,7 +416,6 @@ h2 {
 
 .product-card {
   display: flex;
-  min-height: 100%;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(26, 51, 30, 0.08);
@@ -426,11 +431,22 @@ h2 {
 }
 
 .product-image {
-  display: block;
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
+  max-height: 320px;
+  overflow: hidden;
   border-radius: 30px 30px 0 0;
   background: var(--cream-deep);
+  flex-shrink: 0;
+}
+
+.product-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -482,13 +498,23 @@ h2 {
   order: 2;
 }
 
-.feature-section img {
-  display: block;
+.feature-media {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 11;
+  max-height: 440px;
+  overflow: hidden;
   border-radius: 34px 100px 34px 100px;
-  object-fit: cover;
   box-shadow: var(--shadow);
+}
+
+.feature-media img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .feature-copy h2 {
@@ -920,13 +946,23 @@ body.rtl .footer-credits {
   align-items: center;
 }
 
-.page-hero-media img {
-  display: block;
+.page-hero-media {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
+  max-height: 420px;
+  overflow: hidden;
   border-radius: 34px 100px 34px 100px;
-  object-fit: cover;
   box-shadow: var(--shadow);
+}
+
+.page-hero-media img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Blocs de contenu génériques */
@@ -1100,10 +1136,21 @@ body.rtl .footer-credits {
   transform: translateY(-3px);
 }
 
-.info-card img {
-  display: block;
+.info-card-image {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
+  max-height: 260px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.info-card-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 

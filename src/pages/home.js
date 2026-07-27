@@ -146,11 +146,13 @@ function renderHome() {
         </a>
         <p><a href="/produits/engrais/">Voir la page engrais</a></p>
       </div>
-      <img
-        src="/engrais bio-organique.jpeg"
-        alt="Engrais bio-organique Green Garden"
-        loading="lazy"
-      />
+      <div class="feature-media">
+        <img
+          src="/engrais bio-organique.jpeg"
+          alt="Engrais bio-organique Green Garden"
+          loading="lazy"
+        />
+      </div>
     </section>
 
     <section id="gazon" class="feature-section feature-section-reverse section-shell">
@@ -167,11 +169,13 @@ function renderHome() {
           Découvrir le gazon
         </a>
       </div>
-      <img
-        src="/gazon.jpg"
-        alt="Gazon naturel en rouleau Green Garden"
-        loading="lazy"
-      />
+      <div class="feature-media">
+        <img
+          src="/gazon.jpg"
+          alt="Gazon naturel en rouleau Green Garden"
+          loading="lazy"
+        />
+      </div>
     </section>
 
     <section id="palmier" class="feature-section section-shell">
@@ -184,11 +188,13 @@ function renderHome() {
         </p>
         <a class="pill-button" href="/palmier-tunisie/">Découvrir les palmiers</a>
       </div>
-      <img
-        src="/Palmier éventail.jpeg"
-        alt="Palmier décoratif Green Garden"
-        loading="lazy"
-      />
+      <div class="feature-media">
+        <img
+          src="/Palmier éventail.jpeg"
+          alt="Palmier décoratif Green Garden"
+          loading="lazy"
+        />
+      </div>
     </section>
 
     <section class="section-shell">

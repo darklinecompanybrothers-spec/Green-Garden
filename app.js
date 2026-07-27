@@ -236,7 +236,9 @@ function renderProducts() {
         const localizedName = getLocalizedProductName(product);
         return `
           <article class="product-card">
-            <img class="product-image" src="${product.image}" alt="${localizedName}" loading="lazy" />
+            <div class="product-image">
+              <img src="${product.image}" alt="${localizedName}" loading="lazy" />
+            </div>
             <div class="product-content">
               <h3>${localizedName}</h3>
               <a

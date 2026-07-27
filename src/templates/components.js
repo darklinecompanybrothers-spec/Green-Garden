@@ -97,7 +97,9 @@ function renderImageText({ h2, paragraphs, image, reverse, cta }) {
             : ""
         }
       </div>
-      <img src="${image.src}" alt="${image.alt}" loading="lazy" />
+      <div class="feature-media">
+        <img src="${image.src}" alt="${image.alt}" loading="lazy" />
+      </div>
     </section>`;
 }
 
@@ -111,7 +113,7 @@ function renderCards({ h2, intro, cards }) {
           .map(
             (card) => `
           <a class="info-card" href="${card.path}">
-            ${card.image ? `<img src="${card.image}" alt="${card.title}" loading="lazy" />` : ""}
+            ${card.image ? `<div class="info-card-image"><img src="${card.image}" alt="${card.title}" loading="lazy" /></div>` : ""}
             <div class="info-card-body">
               <h3>${card.title}</h3>
               <p>${card.text}</p>
