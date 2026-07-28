@@ -179,6 +179,7 @@ function pillarPage(lang) {
       unit: SITE.products.gazon.unit,
       description: t.productDescription,
       image: SITE.products.gazon.image,
+      freeShippingRegions: ["Tunis", "Ariana", "Ben Arous", "Manouba", "Nabeul"],
     },
     sections: [
       { type: "text", h2: t.h2a, paragraphs: t.pa },

@@ -78,7 +78,44 @@ function breadcrumbList(items) {
   };
 }
 
-function product({ key, name, price, currency, unit, description, image, path }) {
+function product({ key, name, price, currency, unit, description, image, path, freeShippingRegions }) {
+  const offer = {
+    "@type": "Offer",
+    url: absoluteUrl(path),
+    priceCurrency: currency,
+    price: String(price),
+    availability: "https://schema.org/InStock",
+    priceValidUntil: "2026-12-31",
+    validFrom: "2026-01-01",
+    seller: { "@id": `${SITE.domain}/#organization` },
+    // Produits vivants / coupés sur mesure : pas de retour possible (confirmé par le client).
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+      applicableCountry: "TN",
+    },
+    ...(unit ? { eligibleQuantity: { "@type": "QuantitativeValue", unitText: unit } } : {}),
+  };
+
+  // Uniquement pour les zones où la livraison gratuite est réellement garantie
+  // (pas de montant inventé pour les zones facturées sur devis).
+  if (freeShippingRegions && freeShippingRegions.length) {
+    offer.shippingDetails = {
+      "@type": "OfferShippingDetails",
+      shippingRate: { "@type": "MonetaryAmount", value: "0", currency },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "TN",
+        addressRegion: freeShippingRegions,
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+        transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 2, unitCode: "DAY" },
+      },
+    };
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -88,16 +125,7 @@ function product({ key, name, price, currency, unit, description, image, path })
     image: absoluteUrl(image),
     brand: { "@type": "Brand", name: SITE.name },
     sku: key,
-    offers: {
-      "@type": "Offer",
-      url: absoluteUrl(path),
-      priceCurrency: currency,
-      price: String(price),
-      availability: "https://schema.org/InStock",
-      priceValidUntil: "2026-12-31",
-      seller: { "@id": `${SITE.domain}/#organization` },
-      ...(unit ? { eligibleQuantity: { "@type": "QuantitativeValue", unitText: unit } } : {}),
-    },
+    offers: offer,
   };
 }
 
