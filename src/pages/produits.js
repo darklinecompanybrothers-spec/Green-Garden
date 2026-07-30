@@ -12,7 +12,7 @@ const HUB_TEXT = {
     intro: "Green Garden propose une offre complète pour aménager un extérieur ou un intérieur tunisien : gazon naturel, palmiers décoratifs, plantes d'intérieur et engrais.",
     cards: [
       ["Gazon naturel — 9 DT/m²", "Livraison gratuite Grand Tunis et Nabeul.", "/produits/gazon/", "/gazon.jpg"],
-      ["Palmiers décoratifs — 275 DT", "Livraison dans toute la Tunisie.", "/produits/palmiers/", "/Palmier éventail.jpeg"],
+      ["Palmiers décoratifs — 275 DT", "Livraison gratuite Grand Tunis et Nabeul.", "/produits/palmiers/", "/Palmier éventail.jpeg"],
       ["Plantes d'intérieur", "Une vingtaine de variétés décoratives.", "/produits/plantes-interieur/", "/Faux philodendron.jpeg"],
       ["Engrais", "Pour renforcer vos plantes et votre jardin.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
     ],
@@ -33,7 +33,7 @@ const HUB_TEXT = {
     intro: "Green Garden offers a complete range to landscape a Tunisian outdoor or indoor space: natural lawn, decorative palm trees, indoor plants and fertilizer.",
     cards: [
       ["Natural lawn — 9 DT/sqm", "Free delivery in Greater Tunis and Nabeul.", "/produits/gazon/", "/gazon.jpg"],
-      ["Decorative palm trees — 275 DT", "Delivery across Tunisia.", "/produits/palmiers/", "/Palmier éventail.jpeg"],
+      ["Decorative palm trees — 275 DT", "Free delivery in Greater Tunis and Nabeul.", "/produits/palmiers/", "/Palmier éventail.jpeg"],
       ["Indoor plants", "About twenty decorative varieties.", "/produits/plantes-interieur/", "/Faux philodendron.jpeg"],
       ["Fertilizer", "To strengthen your plants and garden.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
     ],
@@ -54,7 +54,7 @@ const HUB_TEXT = {
     intro: "تقدم Green Garden عرضاً كاملاً لتهيئة مساحة خارجية أو داخلية تونسية: عشب طبيعي، نخيل زينة، نباتات داخلية وأسمدة.",
     cards: [
       ["عشب طبيعي — 9 دينار/م²", "توصيل مجاني في تونس الكبرى ونابل.", "/produits/gazon/", "/gazon.jpg"],
-      ["نخيل زينة — 275 دينار", "توصيل في كل تونس.", "/produits/palmiers/", "/Palmier éventail.jpeg"],
+      ["نخيل زينة — 275 دينار", "توصيل مجاني في تونس الكبرى ونابل.", "/produits/palmiers/", "/Palmier éventail.jpeg"],
       ["نباتات داخلية", "حوالي عشرين صنفاً زخرفياً.", "/produits/plantes-interieur/", "/Faux philodendron.jpeg"],
       ["أسمدة", "لتقوية نباتاتكم وحديقتكم.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
     ],
@@ -144,10 +144,10 @@ const CATEGORY_TEXT = {
   palmiers: {
     fr: {
       title: "Palmiers décoratifs | Catégorie produit - Green Garden",
-      metaDescription: "La catégorie palmiers décoratifs de Green Garden : palmier à 275 DT, livraison dans toute la Tunisie selon la région.",
+      metaDescription: "La catégorie palmiers décoratifs de Green Garden : palmier à 275 DT, livraison gratuite Grand Tunis et Nabeul, sur devis ailleurs.",
       eyebrow: "Catégorie",
       h1: "Palmiers décoratifs",
-      intro: "Notre catégorie palmiers regroupe le palmier décoratif d'ornement, vendu 275 DT et livrable dans toute la Tunisie, frais calculés selon votre région.",
+      intro: "Notre catégorie palmiers regroupe le palmier décoratif d'ornement, vendu 275 DT. La livraison est gratuite dans le Grand Tunis et à Nabeul, et organisée sur devis dans le reste de la Tunisie.",
       label: "Palmiers",
       relatedH2: "Voir aussi",
       related: [
@@ -159,10 +159,10 @@ const CATEGORY_TEXT = {
     },
     en: {
       title: "Decorative Palm Trees | Product Category - Green Garden",
-      metaDescription: "Green Garden's decorative palm tree category: palm tree at 275 DT, delivery across Tunisia based on region.",
+      metaDescription: "Green Garden's decorative palm tree category: palm tree at 275 DT, free delivery in Greater Tunis and Nabeul, on quote elsewhere.",
       eyebrow: "Category",
       h1: "Decorative palm trees",
-      intro: "Our palm tree category covers the ornamental decorative palm tree, sold at 275 DT and deliverable across Tunisia, fees calculated by region.",
+      intro: "Our palm tree category covers the ornamental decorative palm tree, sold at 275 DT. Delivery is free in Greater Tunis and Nabeul, and arranged on quote across the rest of Tunisia.",
       label: "Palm trees",
       relatedH2: "See also",
       related: [
@@ -174,10 +174,10 @@ const CATEGORY_TEXT = {
     },
     ar: {
       title: "نخيل زينة | فئة المنتج - Green Garden",
-      metaDescription: "فئة نخيل الزينة من Green Garden: نخلة بسعر 275 دينار، توصيل في كل تونس حسب الجهة.",
+      metaDescription: "فئة نخيل الزينة من Green Garden: نخلة بسعر 275 دينار، توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية الجهات.",
       eyebrow: "الفئة",
       h1: "نخيل زينة",
-      intro: "تضم فئة النخيل لدينا نخلة الزينة، تُباع بسعر 275 دينار وقابلة للتوصيل في كل تونس، مصاريف تُحسب حسب جهتكم.",
+      intro: "تضم فئة النخيل لدينا نخلة الزينة، تُباع بسعر 275 دينار. التوصيل مجاني في تونس الكبرى ونابل، ومُنظَّم حسب الطلب في بقية تونس.",
       label: "النخيل",
       relatedH2: "شاهدوا أيضاً",
       related: [

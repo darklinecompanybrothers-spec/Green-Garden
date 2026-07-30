@@ -10,16 +10,16 @@ const HUB_TEXT = {
   fr: {
     title: "Zones de livraison Green Garden | Gazon & Palmier en Tunisie",
     metaDescription:
-      "Gazon naturel livré gratuitement dans le Grand Tunis et à Nabeul, palmier décoratif livrable dans toute la Tunisie. Découvrez nos zones de livraison.",
+      "Gazon naturel et palmier décoratif livrés gratuitement dans le Grand Tunis et à Nabeul, livrables dans toute la Tunisie sur devis ailleurs. Découvrez nos zones de livraison.",
     eyebrow: "Livraison",
     h1: "Nos zones de livraison en Tunisie",
     intro:
-      "Le gazon naturel est livré gratuitement dans le Grand Tunis et à Nabeul. Le palmier décoratif, comme le gazon dans les autres régions, est livrable partout en Tunisie avec des frais calculés selon la distance.",
+      "Le gazon naturel et le palmier décoratif sont livrés gratuitement dans le Grand Tunis et à Nabeul. Ailleurs en Tunisie, les deux produits restent livrables, avec des frais calculés selon la distance.",
     label: "Livraison",
     tableH2: "Récapitulatif par zone",
     headers: ["Zone", "Gazon naturel", "Palmier décoratif"],
-    rowGrandTunis: ["Grand Tunis", "Livraison gratuite", "Sur devis"],
-    rowNabeul: ["Nabeul", "Livraison gratuite", "Sur devis"],
+    rowGrandTunis: ["Grand Tunis", "Livraison gratuite", "Livraison gratuite"],
+    rowNabeul: ["Nabeul", "Livraison gratuite", "Livraison gratuite"],
     rowOtherCities: ["Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet", "Sur devis", "Sur devis"],
     rowOtherGov: ["Autres gouvernorats", "Sur devis", "Sur devis"],
     citiesH2: "Villes desservies",
@@ -36,22 +36,22 @@ const HUB_TEXT = {
     faqH2: "Questions fréquentes sur la livraison",
     faq: [
       { q: "Pourquoi la livraison du gazon est-elle gratuite seulement dans deux zones ?", a: "Le Grand Tunis et Nabeul sont les zones les plus proches de notre dépôt, ce qui nous permet d'offrir la livraison gratuite du gazon sans surcoût. Pour les autres régions, un tarif de transport est calculé selon la distance." },
-      { q: "Le palmier est-il livrable dans toute la Tunisie ?", a: "Oui, nous livrons le palmier décoratif dans tout le pays. Les frais de livraison sont déterminés selon votre région et communiqués avant confirmation de commande." },
+      { q: "Le palmier est-il livrable dans toute la Tunisie ?", a: "Oui, nous livrons le palmier décoratif dans tout le pays. La livraison est gratuite dans le Grand Tunis et à Nabeul ; ailleurs, les frais sont déterminés selon votre région et communiqués avant confirmation de commande." },
     ],
   },
   en: {
     title: "Green Garden Delivery Zones | Lawn & Palm Tree in Tunisia",
     metaDescription:
-      "Natural lawn delivered free in Greater Tunis and Nabeul, decorative palm tree deliverable across Tunisia. Discover our delivery zones.",
+      "Natural lawn and decorative palm tree delivered free in Greater Tunis and Nabeul, deliverable across Tunisia on quote elsewhere. Discover our delivery zones.",
     eyebrow: "Delivery",
     h1: "Our delivery zones in Tunisia",
     intro:
-      "Natural lawn is delivered free of charge in Greater Tunis and Nabeul. The decorative palm tree, like lawn in other regions, can be delivered anywhere in Tunisia with fees calculated based on distance.",
+      "Natural lawn and the decorative palm tree are delivered free of charge in Greater Tunis and Nabeul. Elsewhere in Tunisia, both products remain deliverable, with fees calculated based on distance.",
     label: "Delivery",
     tableH2: "Summary by zone",
     headers: ["Zone", "Natural lawn", "Decorative palm tree"],
-    rowGrandTunis: ["Greater Tunis", "Free delivery", "On quote"],
-    rowNabeul: ["Nabeul", "Free delivery", "On quote"],
+    rowGrandTunis: ["Greater Tunis", "Free delivery", "Free delivery"],
+    rowNabeul: ["Nabeul", "Free delivery", "Free delivery"],
     rowOtherCities: ["Sousse, Monastir, Sfax, Bizerte, Gabes, Hammamet", "On quote", "On quote"],
     rowOtherGov: ["Other governorates", "On quote", "On quote"],
     citiesH2: "Cities we serve",
@@ -68,22 +68,22 @@ const HUB_TEXT = {
     faqH2: "Frequently asked questions about delivery",
     faq: [
       { q: "Why is lawn delivery free in only two zones?", a: "Greater Tunis and Nabeul are the zones closest to our depot, which allows us to offer free lawn delivery at no extra cost. For other regions, a transport rate is calculated based on distance." },
-      { q: "Can the palm tree be delivered anywhere in Tunisia?", a: "Yes, we deliver the decorative palm tree across the whole country. Delivery fees are determined based on your region and communicated before order confirmation." },
+      { q: "Can the palm tree be delivered anywhere in Tunisia?", a: "Yes, we deliver the decorative palm tree across the whole country. Delivery is free in Greater Tunis and Nabeul; elsewhere, fees are determined based on your region and communicated before order confirmation." },
     ],
   },
   ar: {
     title: "مناطق توصيل Green Garden | عشب ونخيل في تونس",
     metaDescription:
-      "عشب طبيعي يُوصَّل مجاناً في تونس الكبرى ونابل، نخيل زينة قابل للتوصيل في كل تونس. اكتشفوا مناطق توصيلنا.",
+      "عشب طبيعي ونخيل زينة يُوصَّلان مجاناً في تونس الكبرى ونابل، وقابلان للتوصيل في كل تونس حسب الطلب في بقية الجهات. اكتشفوا مناطق توصيلنا.",
     eyebrow: "التوصيل",
     h1: "مناطق التوصيل لدينا في تونس",
     intro:
-      "يُوصَّل العشب الطبيعي مجاناً في تونس الكبرى ونابل. النخيل الزينة، مثل العشب في المناطق الأخرى، قابل للتوصيل في كل تونس بمصاريف تُحسب حسب المسافة.",
+      "يُوصَّل العشب الطبيعي ونخيل الزينة مجاناً في تونس الكبرى ونابل. في بقية تونس، يبقى المنتجان قابلين للتوصيل بمصاريف تُحسب حسب المسافة.",
     label: "التوصيل",
     tableH2: "ملخص حسب المنطقة",
     headers: ["المنطقة", "العشب الطبيعي", "النخيل الزينة"],
-    rowGrandTunis: ["تونس الكبرى", "توصيل مجاني", "حسب الطلب"],
-    rowNabeul: ["نابل", "توصيل مجاني", "حسب الطلب"],
+    rowGrandTunis: ["تونس الكبرى", "توصيل مجاني", "توصيل مجاني"],
+    rowNabeul: ["نابل", "توصيل مجاني", "توصيل مجاني"],
     rowOtherCities: ["سوسة، المنستير، صفاقس، بنزرت، قابس، الحمامات", "حسب الطلب", "حسب الطلب"],
     rowOtherGov: ["ولايات أخرى", "حسب الطلب", "حسب الطلب"],
     citiesH2: "المدن التي نخدمها",
@@ -100,7 +100,7 @@ const HUB_TEXT = {
     faqH2: "أسئلة شائعة حول التوصيل",
     faq: [
       { q: "لماذا التوصيل المجاني للعشب في منطقتين فقط؟", a: "تونس الكبرى ونابل هما أقرب منطقتين من مستودعنا، مما يتيح لنا تقديم توصيل مجاني للعشب دون تكلفة إضافية. بالنسبة للمناطق الأخرى، تُحسب تعريفة نقل حسب المسافة." },
-      { q: "هل النخيل قابل للتوصيل في كل تونس؟", a: "نعم، نوصل النخيل الزينة في كل البلاد. تُحدَّد مصاريف التوصيل حسب جهتكم وتُبلَّغ قبل تأكيد الطلب." },
+      { q: "هل النخيل قابل للتوصيل في كل تونس؟", a: "نعم، نوصل النخيل الزينة في كل البلاد. التوصيل مجاني في تونس الكبرى ونابل؛ في بقية الجهات، تُحدَّد المصاريف حسب جهتكم وتُبلَّغ قبل تأكيد الطلب." },
     ],
   },
 };
@@ -185,7 +185,7 @@ function cityPage(ville, lang) {
           [
             lang === "fr" ? "Palmier décoratif" : lang === "en" ? "Decorative palm tree" : "نخيل زينة",
             SITE.products.palmier.priceLabel,
-            HUB_TEXT[lang].quoteLabel,
+            ville.gazonStatus === "free" ? HUB_TEXT[lang].tableFree : HUB_TEXT[lang].quoteLabel,
           ],
         ],
       },

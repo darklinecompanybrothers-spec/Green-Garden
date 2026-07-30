@@ -5,7 +5,8 @@
 //
 // Statut gazon : "free" (Grand Tunis + Nabeul, conforme à l'offre réelle),
 // "quote" (livraison disponible mais sur devis, pas de fausse promesse de gratuité).
-// Le palmier est livrable partout, frais déterminés selon la région (offre réelle).
+// Le palmier suit désormais le même statut que le gazon : livraison gratuite
+// au Grand Tunis et à Nabeul, sur devis ailleurs (offre réelle mise à jour).
 
 const villes = [
   {
@@ -16,7 +17,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Grand Tunis - Green Garden",
         metaDescription:
-          "Gazon naturel livré gratuitement dans tout le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba) à 9 DT/m². Palmiers décoratifs livrables sur devis.",
+          "Gazon naturel et palmiers décoratifs livrés gratuitement dans tout le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba). Gazon à 9 DT/m², palmier à 275 DT.",
         h1: "Gazon et palmier dans le Grand Tunis",
         intro:
           "Le Grand Tunis (Tunis, Ariana, Ben Arous et Manouba) est l'une de nos deux zones de livraison gratuite pour le gazon naturel en rouleau. Que vous aménagiez un jardin de villa à La Marsa, un espace vert à Ariana ou les abords d'un local professionnel à Ben Arous, notre équipe organise la livraison et peut vous conseiller sur la pose.",
@@ -25,14 +26,14 @@ const villes = [
         distanceNote: "à environ 65 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
           { q: "La livraison de gazon est-elle vraiment gratuite dans tout le Grand Tunis ?", a: "Oui. Le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba) fait partie de nos deux zones de livraison gratuite pour le gazon naturel, au prix de 9 DT/m², sans minimum de commande caché." },
-          { q: "Peut-on commander un palmier pour une adresse dans le Grand Tunis ?", a: "Oui, le palmier décoratif à 275 DT est livrable dans tout le Grand Tunis. Les frais de livraison sont calculés selon votre adresse exacte et vous sont communiqués avant confirmation." },
+          { q: "Peut-on commander un palmier pour une adresse dans le Grand Tunis ?", a: "Oui, et la livraison du palmier décoratif à 275 DT est gratuite dans tout le Grand Tunis, comme pour le gazon naturel." },
           { q: "Sous quel délai la livraison est-elle effectuée ?", a: "En général sous 24 à 72h ouvrées selon la disponibilité du stock et votre secteur précis dans le Grand Tunis. Le délai exact est confirmé par WhatsApp lors de la prise de commande." },
         ],
       },
       en: {
         metaTitle: "Lawn & Palm Tree Greater Tunis - Green Garden",
         metaDescription:
-          "Natural lawn delivered free of charge across Greater Tunis (Tunis, Ariana, Ben Arous, Manouba) at 9 DT/sqm. Decorative palm trees available on quote.",
+          "Natural lawn and decorative palm trees delivered free of charge across Greater Tunis (Tunis, Ariana, Ben Arous, Manouba). Lawn at 9 DT/sqm, palm tree at 275 DT.",
         h1: "Lawn and palm tree in Greater Tunis",
         intro:
           "Greater Tunis (Tunis, Ariana, Ben Arous and Manouba) is one of our two free-delivery zones for natural rolled lawn. Whether you are landscaping a villa garden in La Marsa, a green space in Ariana, or the surroundings of a business premises in Ben Arous, our team organises delivery and can advise you on installation.",
@@ -41,14 +42,14 @@ const villes = [
         distanceNote: "about 65 km north-west of our Nabeul depot",
         faq: [
           { q: "Is lawn delivery really free across all of Greater Tunis?", a: "Yes. Greater Tunis (Tunis, Ariana, Ben Arous, Manouba) is one of our two free-delivery zones for natural lawn, priced at 9 DT/sqm, with no hidden minimum order." },
-          { q: "Can I order a palm tree for an address in Greater Tunis?", a: "Yes, the decorative palm tree at 275 DT can be delivered anywhere in Greater Tunis. Delivery fees are calculated based on your exact address and communicated before confirmation." },
+          { q: "Can I order a palm tree for an address in Greater Tunis?", a: "Yes, and delivery of the decorative palm tree at 275 DT is free anywhere in Greater Tunis, just like natural lawn." },
           { q: "What is the delivery timeframe?", a: "Generally within 24 to 72 business hours depending on stock availability and your specific area in Greater Tunis. The exact timeframe is confirmed via WhatsApp when you place your order." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل تونس الكبرى - Green Garden",
         metaDescription:
-          "عشب طبيعي يُوصَّل مجاناً في كامل تونس الكبرى (تونس، أريانة، بن عروس، منوبة) بسعر 9 دينار/م². نخيل زينة متوفر حسب الطلب.",
+          "عشب طبيعي ونخيل زينة يُوصَّلان مجاناً في كامل تونس الكبرى (تونس، أريانة، بن عروس، منوبة). عشب بسعر 9 دينار/م²، نخلة بسعر 275 دينار.",
         h1: "عشب ونخيل في تونس الكبرى",
         intro:
           "تُعد تونس الكبرى (تونس، أريانة، بن عروس ومنوبة) إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي على شكل لفائف. سواء كنتم تُهيّئون حديقة فيلا بالمرسى أو مساحة خضراء بأريانة أو محيط مقر مهني ببن عروس، يتكفل فريقنا بتنظيم التوصيل ويمكنه إرشادكم حول التركيب.",
@@ -57,7 +58,7 @@ const villes = [
         distanceNote: "على بعد حوالي 65 كم شمال غرب مستودعنا بنابل",
         faq: [
           { q: "هل التوصيل مجاني فعلاً في كل تونس الكبرى؟", a: "نعم، تونس الكبرى (تونس، أريانة، بن عروس، منوبة) هي إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي بسعر 9 دينار/م²، دون أي حد أدنى مخفي للطلب." },
-          { q: "هل يمكن طلب نخلة لعنوان في تونس الكبرى؟", a: "نعم، النخلة الزينة بسعر 275 دينار قابلة للتوصيل في كل تونس الكبرى. تُحسب مصاريف التوصيل حسب عنوانكم الدقيق وتُبلَّغ لكم قبل تأكيد الطلب." },
+          { q: "هل يمكن طلب نخلة لعنوان في تونس الكبرى؟", a: "نعم، وتوصيل نخلة الزينة بسعر 275 دينار مجاني في كل تونس الكبرى، تماماً مثل العشب الطبيعي." },
           { q: "ما هي مدة التوصيل؟", a: "عادة بين 24 و72 ساعة عمل حسب توفر المخزون ومنطقتكم الدقيقة في تونس الكبرى. تُؤكَّد المدة الدقيقة عبر واتساب عند تأكيد الطلب." },
         ],
       },
@@ -69,50 +70,50 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Nabeul | Livraison gratuite gazon - Green Garden",
+        metaTitle: "Gazon & Palmier Nabeul | Livraison gratuite - Green Garden",
         metaDescription:
-          "Green Garden est basé à Nabeul : gazon naturel à 9 DT/m² livré gratuitement, palmiers décoratifs à 275 DT, retrait ou livraison rapide dans toute la région.",
+          "Green Garden est basé à Nabeul : gazon naturel à 9 DT/m² et palmiers décoratifs à 275 DT livrés gratuitement dans toute la région.",
         h1: "Gazon et palmier à Nabeul",
         intro:
-          "Nabeul est la région où se trouve notre dépôt Green Garden. C'est ici que nous préparons chaque commande de gazon en rouleau et de palmiers avant expédition, ce qui nous permet d'offrir la livraison gratuite du gazon sur toute la région et les délais les plus courts de tout notre réseau.",
+          "Nabeul est la région où se trouve notre dépôt Green Garden. C'est ici que nous préparons chaque commande de gazon en rouleau et de palmiers avant expédition, ce qui nous permet d'offrir la livraison gratuite du gazon et du palmier sur toute la région et les délais les plus courts de tout notre réseau.",
         useCase:
           "Nous accompagnons de nombreux projets de jardins de villas, de riads et d'espaces verts hôteliers dans la région de Nabeul, Hammamet, Dar Chaabane et Béni Khiar.",
         distanceNote: "notre région de base",
         faq: [
           { q: "Livrez-vous le gazon gratuitement à Nabeul ?", a: "Oui, Nabeul est notre région de base : la livraison du gazon naturel y est gratuite, quel que soit le volume commandé, au prix de 9 DT/m²." },
-          { q: "Peut-on venir chercher un palmier directement ?", a: "Selon la disponibilité, un retrait sur notre dépôt à Nabeul peut être organisé pour éviter les frais de livraison du palmier. Contactez-nous par WhatsApp pour vérifier la disponibilité." },
+          { q: "Le palmier est-il aussi livré gratuitement à Nabeul ?", a: "Oui, comme le gazon, le palmier décoratif à 275 DT est livré gratuitement partout dans la région de Nabeul." },
           { q: "Quel délai pour une commande à Nabeul ?", a: "Étant notre région de base, les commandes à Nabeul sont généralement livrées sous 24 à 48h ouvrées." },
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Nabeul | Free Lawn Delivery - Green Garden",
+        metaTitle: "Lawn & Palm Tree Nabeul | Free Delivery - Green Garden",
         metaDescription:
-          "Green Garden is based in Nabeul: natural lawn at 9 DT/sqm delivered free, decorative palm trees at 275 DT, fast pickup or delivery across the region.",
+          "Green Garden is based in Nabeul: natural lawn at 9 DT/sqm and decorative palm trees at 275 DT delivered free across the region.",
         h1: "Lawn and palm tree in Nabeul",
         intro:
-          "Nabeul is home to our Green Garden depot. This is where every order of rolled lawn and palm trees is prepared before shipping, which is why we can offer free lawn delivery across the whole region and the shortest lead times in our entire network.",
+          "Nabeul is home to our Green Garden depot. This is where every order of rolled lawn and palm trees is prepared before shipping, which is why we can offer free delivery of both lawn and palm trees across the whole region and the shortest lead times in our entire network.",
         useCase:
           "We support many villa garden projects, riads and hotel green spaces in the Nabeul, Hammamet, Dar Chaabane and Béni Khiar area.",
         distanceNote: "our home base",
         faq: [
           { q: "Do you deliver lawn for free in Nabeul?", a: "Yes, Nabeul is our home base: natural lawn delivery there is free regardless of the volume ordered, at 9 DT/sqm." },
-          { q: "Can I pick up a palm tree directly?", a: "Depending on availability, pickup at our Nabeul depot can be arranged to avoid palm tree delivery fees. Contact us on WhatsApp to check availability." },
+          { q: "Is the palm tree also delivered free in Nabeul?", a: "Yes, like lawn, the decorative palm tree at 275 DT is delivered free anywhere in the Nabeul region." },
           { q: "What is the delivery timeframe in Nabeul?", a: "As our home base, orders in Nabeul are generally delivered within 24 to 48 business hours." },
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل نابل | توصيل مجاني للعشب - Green Garden",
+        metaTitle: "عشب ونخيل نابل | توصيل مجاني - Green Garden",
         metaDescription:
-          "Green Garden مقرها نابل: عشب طبيعي بسعر 9 دينار/م² يُوصَّل مجاناً، نخيل زينة بسعر 275 دينار، استلام أو توصيل سريع في كل الجهة.",
+          "Green Garden مقرها نابل: عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 275 دينار يُوصَّلان مجاناً في كل الجهة.",
         h1: "عشب ونخيل في نابل",
         intro:
-          "نابل هي المنطقة التي يوجد بها مستودع Green Garden. هنا نُحضّر كل طلبية من العشب الطبيعي والنخيل قبل الشحن، مما يتيح لنا تقديم توصيل مجاني للعشب في كامل الجهة وأقصر الآجال في كل شبكتنا.",
+          "نابل هي المنطقة التي يوجد بها مستودع Green Garden. هنا نُحضّر كل طلبية من العشب الطبيعي والنخيل قبل الشحن، مما يتيح لنا تقديم توصيل مجاني للعشب والنخيل في كامل الجهة وأقصر الآجال في كل شبكتنا.",
         useCase:
           "نرافق العديد من مشاريع حدائق الفيلات والرياضات والمساحات الخضراء الفندقية في جهة نابل، الحمامات، دار شعبان وبني خيار.",
         distanceNote: "جهتنا الأساسية",
         faq: [
           { q: "هل توصلون العشب مجاناً في نابل؟", a: "نعم، نابل هي جهتنا الأساسية: توصيل العشب الطبيعي مجاني مهما كانت كمية الطلب، بسعر 9 دينار/م²." },
-          { q: "هل يمكن استلام نخلة مباشرة؟", a: "حسب التوفر، يمكن تنظيم استلام من مستودعنا بنابل لتجنب مصاريف توصيل النخلة. تواصلوا معنا عبر واتساب للتحقق من التوفر." },
+          { q: "هل تُوصَّل النخلة أيضاً مجاناً في نابل؟", a: "نعم، مثل العشب، تُوصَّل نخلة الزينة بسعر 275 دينار مجاناً في كل أنحاء جهة نابل." },
           { q: "ما هي مدة التوصيل في نابل؟", a: "بما أنها جهتنا الأساسية، تُوصَّل الطلبيات في نابل عادة خلال 24 إلى 48 ساعة عمل." },
         ],
       },
@@ -386,46 +387,46 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Hammamet - Green Garden",
         metaDescription:
-          "Gazon naturel à 9 DT/m² livré gratuitement à Hammamet et palmiers décoratifs à 275 DT, idéal pour villas et hôtels. Commandez via Green Garden.",
+          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 275 DT livrés gratuitement à Hammamet, idéal pour villas et hôtels. Commandez via Green Garden.",
         h1: "Gazon et palmier à Hammamet",
         intro:
-          "Hammamet fait partie du gouvernorat de Nabeul, l'une de nos deux zones de livraison gratuite pour le gazon naturel. Ville touristique par excellence, Hammamet compte de nombreuses villas, résidences et complexes hôteliers pour lesquels le gazon en rouleau et le palmier décoratif sont des choix d'aménagement très demandés.",
+          "Hammamet fait partie du gouvernorat de Nabeul, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif. Ville touristique par excellence, Hammamet compte de nombreuses villas, résidences et complexes hôteliers pour lesquels le gazon en rouleau et le palmier décoratif sont des choix d'aménagement très demandés.",
         useCase:
           "Nous livrons régulièrement à Hammamet Nord, Hammamet Sud et Yasmine Hammamet pour des projets de jardins de villas et d'espaces verts hôteliers, où le palmier décoratif est particulièrement recherché pour son effet visuel.",
         distanceNote: "à environ 15 km au sud de notre dépôt de Nabeul",
         faq: [
           { q: "La livraison de gazon est-elle gratuite à Hammamet ?", a: "Oui, Hammamet fait partie du gouvernorat de Nabeul, l'une de nos deux zones de livraison gratuite pour le gazon naturel à 9 DT/m²." },
-          { q: "Proposez-vous des palmiers adaptés aux hôtels et complexes touristiques ?", a: "Oui, le palmier décoratif Green Garden à 275 DT est un choix courant pour les allées, piscines et jardins de complexes touristiques à Hammamet. Les frais de livraison pour les commandes en volume sont établis sur devis." },
+          { q: "Proposez-vous des palmiers adaptés aux hôtels et complexes touristiques ?", a: "Oui, le palmier décoratif Green Garden à 275 DT est un choix courant pour les allées, piscines et jardins de complexes touristiques à Hammamet, et sa livraison y est gratuite, y compris pour les commandes en volume." },
         ],
       },
       en: {
         metaTitle: "Lawn & Palm Tree Hammamet - Green Garden",
         metaDescription:
-          "Natural lawn at 9 DT/sqm delivered free to Hammamet, and decorative palm trees at 275 DT, ideal for villas and hotels. Order with Green Garden.",
+          "Natural lawn at 9 DT/sqm and decorative palm trees at 275 DT delivered free to Hammamet, ideal for villas and hotels. Order with Green Garden.",
         h1: "Lawn and palm tree in Hammamet",
         intro:
-          "Hammamet is part of Nabeul governorate, one of our two free-delivery zones for natural lawn. A quintessential tourist town, Hammamet has many villas, residences and hotel complexes for which rolled lawn and decorative palm trees are highly sought-after landscaping choices.",
+          "Hammamet is part of Nabeul governorate, one of our two free-delivery zones for natural lawn and the decorative palm tree. A quintessential tourist town, Hammamet has many villas, residences and hotel complexes for which rolled lawn and decorative palm trees are highly sought-after landscaping choices.",
         useCase:
           "We regularly deliver to Hammamet North, Hammamet South and Yasmine Hammamet for villa garden projects and hotel green spaces, where the decorative palm tree is especially popular for its visual impact.",
         distanceNote: "about 15 km south of our Nabeul depot",
         faq: [
           { q: "Is lawn delivery free in Hammamet?", a: "Yes, Hammamet is part of Nabeul governorate, one of our two free-delivery zones for natural lawn at 9 DT/sqm." },
-          { q: "Do you offer palm trees suited to hotels and tourist complexes?", a: "Yes, the Green Garden decorative palm tree at 275 DT is a common choice for driveways, pools and gardens of tourist complexes in Hammamet. Delivery fees for bulk orders are set on quote." },
+          { q: "Do you offer palm trees suited to hotels and tourist complexes?", a: "Yes, the Green Garden decorative palm tree at 275 DT is a common choice for driveways, pools and gardens of tourist complexes in Hammamet, and delivery there is free, including for bulk orders." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل الحمامات - Green Garden",
         metaDescription:
-          "عشب طبيعي بسعر 9 دينار/م² يُوصَّل مجاناً إلى الحمامات ونخيل زينة بسعر 275 دينار، مثالي للفيلات والفنادق. اطلبوا عبر Green Garden.",
+          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 275 دينار يُوصَّلان مجاناً إلى الحمامات، مثالي للفيلات والفنادق. اطلبوا عبر Green Garden.",
         h1: "عشب ونخيل في الحمامات",
         intro:
-          "تنتمي الحمامات إلى ولاية نابل، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي. مدينة سياحية بامتياز، تضم الحمامات العديد من الفيلات والمساكن والمجمعات الفندقية التي يُعد فيها العشب على شكل لفائف والنخيل الزينة خيارات تهيئة مطلوبة جداً.",
+          "تنتمي الحمامات إلى ولاية نابل، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة. مدينة سياحية بامتياز، تضم الحمامات العديد من الفيلات والمساكن والمجمعات الفندقية التي يُعد فيها العشب على شكل لفائف والنخيل الزينة خيارات تهيئة مطلوبة جداً.",
         useCase:
           "نوصل بانتظام إلى الحمامات الشمالية والحمامات الجنوبية وياسمين الحمامات لمشاريع حدائق الفيلات والمساحات الخضراء الفندقية، حيث يُطلب النخيل الزينة بشكل خاص لتأثيره البصري.",
         distanceNote: "على بعد حوالي 15 كم جنوب مستودعنا بنابل",
         faq: [
           { q: "هل التوصيل مجاني في الحمامات؟", a: "نعم، تنتمي الحمامات إلى ولاية نابل، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي بسعر 9 دينار/م²." },
-          { q: "هل تقدمون نخيلاً مناسباً للفنادق والمجمعات السياحية؟", a: "نعم، نخيل الزينة من Green Garden بسعر 275 دينار خيار شائع للممرات والمسابح وحدائق المجمعات السياحية بالحمامات. تُحدَّد مصاريف التوصيل للطلبيات الكبيرة حسب الطلب." },
+          { q: "هل تقدمون نخيلاً مناسباً للفنادق والمجمعات السياحية؟", a: "نعم، نخيل الزينة من Green Garden بسعر 275 دينار خيار شائع للممرات والمسابح وحدائق المجمعات السياحية بالحمامات، وتوصيله مجاني هناك، حتى للطلبيات الكبيرة." },
         ],
       },
     },
