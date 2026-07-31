@@ -3,8 +3,9 @@
 
 const UI = {
   fr: {
-    nav: { home: "Accueil", products: "Produits", delivery: "Livraison", blog: "Blog", why: "Pourquoi nous choisir", contact: "Contact" },
+    nav: { home: "Accueil", products: "Produits", services: "Services", delivery: "Livraison", blog: "Blog", why: "Pourquoi nous choisir", contact: "Contact" },
     productsMenu: { gazon: "Gazon naturel", palmiers: "Palmiers décoratifs", plantes: "Plantes d'intérieur", engrais: "Engrais", all: "Tous nos produits" },
+    servicesMenu: { poseGazon: "Pose de gazon", plantationPalmier: "Plantation de palmier", all: "Tous nos services" },
     deliveryMenu: { allZones: "Toutes les zones desservies" },
     footer: {
       productsHeading: "Produits",
@@ -15,6 +16,7 @@ const UI = {
       palmierLink: "Palmier décoratif Tunisie",
       plantesLink: "Plantes d'intérieur",
       engraisLink: "Engrais",
+      servicesLink: "Nos services",
       blogLink: "Blog jardinage",
       faqLink: "Questions fréquentes",
       aboutLink: "À propos",
@@ -33,8 +35,9 @@ const UI = {
     locationLabel: "Localisation Green Garden",
   },
   en: {
-    nav: { home: "Home", products: "Products", delivery: "Delivery", blog: "Blog", why: "Why choose us", contact: "Contact" },
+    nav: { home: "Home", products: "Products", services: "Services", delivery: "Delivery", blog: "Blog", why: "Why choose us", contact: "Contact" },
     productsMenu: { gazon: "Natural lawn", palmiers: "Decorative palm trees", plantes: "Indoor plants", engrais: "Fertilizer", all: "All products" },
+    servicesMenu: { poseGazon: "Lawn laying", plantationPalmier: "Palm tree planting", all: "All our services" },
     deliveryMenu: { allZones: "All delivery zones" },
     footer: {
       productsHeading: "Products",
@@ -45,6 +48,7 @@ const UI = {
       palmierLink: "Decorative palm tree Tunisia",
       plantesLink: "Indoor plants",
       engraisLink: "Fertilizer",
+      servicesLink: "Our services",
       blogLink: "Gardening blog",
       faqLink: "Frequently asked questions",
       aboutLink: "About",
@@ -63,8 +67,9 @@ const UI = {
     locationLabel: "Green Garden location",
   },
   ar: {
-    nav: { home: "الرئيسية", products: "منتجاتنا", delivery: "التوصيل", blog: "المدونة", why: "لماذا نحن", contact: "اتصل بنا" },
+    nav: { home: "الرئيسية", products: "منتجاتنا", services: "خدماتنا", delivery: "التوصيل", blog: "المدونة", why: "لماذا نحن", contact: "اتصل بنا" },
     productsMenu: { gazon: "عشب طبيعي", palmiers: "نخيل زينة", plantes: "نباتات داخلية", engrais: "أسمدة", all: "كل المنتجات" },
+    servicesMenu: { poseGazon: "تركيب العشب", plantationPalmier: "غرس النخيل", all: "كل خدماتنا" },
     deliveryMenu: { allZones: "كل مناطق التوصيل" },
     footer: {
       productsHeading: "المنتجات",
@@ -75,6 +80,7 @@ const UI = {
       palmierLink: "نخيل زينة تونس",
       plantesLink: "نباتات داخلية",
       engraisLink: "أسمدة",
+      servicesLink: "خدماتنا",
       blogLink: "مدونة البستنة",
       faqLink: "الأسئلة الشائعة",
       aboutLink: "من نحن",
@@ -104,6 +110,9 @@ const CITY_NAMES = {
   bizerte: { fr: "Bizerte", en: "Bizerte", ar: "بنزرت" },
   gabes: { fr: "Gabès", en: "Gabes", ar: "قابس" },
   hammamet: { fr: "Hammamet", en: "Hammamet", ar: "الحمامات" },
+  tunis: { fr: "Tunis", en: "Tunis", ar: "تونس" },
+  ariana: { fr: "Ariana", en: "Ariana", ar: "أريانة" },
+  "la-marsa": { fr: "La Marsa", en: "La Marsa", ar: "المرسى" },
 };
 
 module.exports = { UI, CITY_NAMES };

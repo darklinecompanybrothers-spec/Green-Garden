@@ -129,6 +129,23 @@ function product({ key, name, price, currency, unit, description, image, path, f
   };
 }
 
+function service({ name, description, path, areaServed }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE.domain}${path}#service`,
+    serviceType: name,
+    name,
+    description,
+    url: absoluteUrl(path),
+    provider: { "@id": `${SITE.domain}/#organization` },
+    areaServed: (areaServed || ["Grand Tunis", "Nabeul"]).map((areaName) => ({
+      "@type": "AdministrativeArea",
+      name: areaName,
+    })),
+  };
+}
+
 function faqPage(items) {
   return {
     "@context": "https://schema.org",
@@ -163,6 +180,7 @@ module.exports = {
   website,
   breadcrumbList,
   product,
+  service,
   faqPage,
   article,
 };

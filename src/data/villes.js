@@ -431,6 +431,162 @@ const villes = [
       },
     },
   },
+  {
+    slug: "tunis",
+    name: "Tunis",
+    gazonStatus: "free",
+    t: {
+      fr: {
+        metaTitle: "Gazon & Palmier Tunis | Livraison gratuite - Green Garden",
+        metaDescription:
+          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 275 DT livrés gratuitement à Tunis ville. Devis rapide par WhatsApp avec Green Garden.",
+        h1: "Gazon et palmier à Tunis",
+        intro:
+          "Tunis ville fait partie du Grand Tunis, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif. Entre appartements avec terrasse et villas avec jardin, la capitale a des besoins d'aménagement très variés que nous accompagnons au quotidien.",
+        useCase:
+          "Nous livrons régulièrement le centre-ville, Le Bardo, Le Belvédère, Le Menzah, El Manar et Ennasr, aussi bien pour des jardins de villas que pour des palmiers en pot sur des terrasses et balcons.",
+        distanceNote: "à environ 65 km au nord-ouest de notre dépôt de Nabeul",
+        faq: [
+          { q: "La livraison est-elle gratuite partout à Tunis ville ?", a: "Oui, Tunis ville fait partie du Grand Tunis, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif, sans minimum de commande." },
+          { q: "Proposez-vous des palmiers adaptés aux petites terrasses en centre-ville ?", a: "Oui, certaines variétés compactes de notre palmier décoratif conviennent très bien à une terrasse ou un balcon urbain. Contactez-nous pour un conseil adapté à votre espace." },
+        ],
+      },
+      en: {
+        metaTitle: "Lawn & Palm Tree Tunis | Free Delivery - Green Garden",
+        metaDescription:
+          "Natural lawn at 9 DT/sqm and decorative palm trees at 275 DT delivered free to Tunis city. Fast quote on WhatsApp with Green Garden.",
+        h1: "Lawn and palm tree in Tunis",
+        intro:
+          "Tunis city is part of Greater Tunis, one of our two free-delivery zones for natural lawn and the decorative palm tree. Between apartments with a terrace and villas with a garden, the capital has very varied landscaping needs that we support daily.",
+        useCase:
+          "We regularly deliver to the city centre, Le Bardo, Le Belvédère, Le Menzah, El Manar and Ennasr, for both villa gardens and potted palm trees on terraces and balconies.",
+        distanceNote: "about 65 km north-west of our Nabeul depot",
+        faq: [
+          { q: "Is delivery free everywhere in Tunis city?", a: "Yes, Tunis city is part of Greater Tunis, one of our two free-delivery zones for natural lawn and the decorative palm tree, with no minimum order." },
+          { q: "Do you offer palm trees suited to small city-centre terraces?", a: "Yes, some compact varieties of our decorative palm tree suit an urban terrace or balcony very well. Contact us for advice suited to your space." },
+        ],
+      },
+      ar: {
+        metaTitle: "عشب ونخيل تونس | توصيل مجاني - Green Garden",
+        metaDescription:
+          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 275 دينار يُوصَّلان مجاناً إلى مدينة تونس. عرض سعر سريع عبر واتساب مع Green Garden.",
+        h1: "عشب ونخيل في تونس",
+        intro:
+          "تنتمي مدينة تونس إلى تونس الكبرى، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة. بين شقق ذات تراس وفيلات ذات حديقة، تتنوع احتياجات تهيئة العاصمة كثيراً ونرافقها يومياً.",
+        useCase:
+          "نوصل بانتظام إلى وسط المدينة والباردو والبلفيدير والمنزه والمنار والنصر، سواء لحدائق الفيلات أو لنخيل في أصص على التراسات والشرفات.",
+        distanceNote: "على بعد حوالي 65 كم شمال غرب مستودعنا بنابل",
+        faq: [
+          { q: "هل التوصيل مجاني في كل مدينة تونس؟", a: "نعم، تنتمي مدينة تونس إلى تونس الكبرى، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة، دون حد أدنى للطلب." },
+          { q: "هل تقدمون نخيلاً مناسباً للتراسات الصغيرة في وسط المدينة؟", a: "نعم، بعض الأصناف المدمجة من نخيل الزينة لدينا تناسب جيداً تراساً حضرياً أو شرفة. تواصلوا معنا لنصيحة مناسبة لمساحتكم." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ariana",
+    name: "Ariana",
+    gazonStatus: "free",
+    t: {
+      fr: {
+        metaTitle: "Gazon & Palmier Ariana | Livraison gratuite - Green Garden",
+        metaDescription:
+          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 275 DT livrés gratuitement à Ariana. Ville verte du Grand Tunis, devis rapide par WhatsApp.",
+        h1: "Gazon et palmier à Ariana",
+        intro:
+          "Ariana fait partie du Grand Tunis, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif. Surnommée historiquement la ville des jardins, Ariana compte de nombreuses villas avec espaces verts pour lesquelles le gazon et le palmier sont des choix d'aménagement naturels.",
+        useCase:
+          "Nous livrons régulièrement Ariana ville, La Soukra et Raoued pour des jardins de villas, ainsi que des espaces verts résidentiels et de petits commerces le long des grands axes.",
+        distanceNote: "à environ 60 km au nord-ouest de notre dépôt de Nabeul",
+        faq: [
+          { q: "La livraison de gazon est-elle gratuite à Ariana ?", a: "Oui, Ariana fait partie du Grand Tunis, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif." },
+          { q: "Le palmier convient-il aux jardins d'Ariana ?", a: "Tout à fait, Ariana étant historiquement une ville de jardins, le climat et les sols y sont favorables au palmier décoratif comme au gazon naturel." },
+        ],
+      },
+      en: {
+        metaTitle: "Lawn & Palm Tree Ariana | Free Delivery - Green Garden",
+        metaDescription:
+          "Natural lawn at 9 DT/sqm and decorative palm trees at 275 DT delivered free to Ariana. Greater Tunis' garden city, fast quote on WhatsApp.",
+        h1: "Lawn and palm tree in Ariana",
+        intro:
+          "Ariana is part of Greater Tunis, one of our two free-delivery zones for natural lawn and the decorative palm tree. Historically known as the city of gardens, Ariana has many villas with green spaces for which lawn and palm trees are natural landscaping choices.",
+        useCase:
+          "We regularly deliver to Ariana city, La Soukra and Raoued for villa gardens, as well as residential green spaces and small businesses along the main roads.",
+        distanceNote: "about 60 km north-west of our Nabeul depot",
+        faq: [
+          { q: "Is lawn delivery free in Ariana?", a: "Yes, Ariana is part of Greater Tunis, one of our two free-delivery zones for natural lawn and the decorative palm tree." },
+          { q: "Does the palm tree suit gardens in Ariana?", a: "Absolutely, as Ariana is historically a city of gardens, the climate and soil there are favourable to both the decorative palm tree and natural lawn." },
+        ],
+      },
+      ar: {
+        metaTitle: "عشب ونخيل أريانة | توصيل مجاني - Green Garden",
+        metaDescription:
+          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 275 دينار يُوصَّلان مجاناً إلى أريانة. مدينة الحدائق في تونس الكبرى، عرض سعر سريع عبر واتساب.",
+        h1: "عشب ونخيل في أريانة",
+        intro:
+          "تنتمي أريانة إلى تونس الكبرى، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة. المعروفة تاريخياً بمدينة الحدائق، تضم أريانة العديد من الفيلات ذات المساحات الخضراء التي يُعد فيها العشب والنخيل خيارات تهيئة طبيعية.",
+        useCase:
+          "نوصل بانتظام إلى مدينة أريانة والسوقرة ورواد لحدائق الفيلات، وكذلك المساحات الخضراء السكنية والمحلات التجارية الصغيرة على طول الطرق الرئيسية.",
+        distanceNote: "على بعد حوالي 60 كم شمال غرب مستودعنا بنابل",
+        faq: [
+          { q: "هل توصيل العشب مجاني في أريانة؟", a: "نعم، تنتمي أريانة إلى تونس الكبرى، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة." },
+          { q: "هل يناسب النخيل حدائق أريانة؟", a: "بالتأكيد، بما أن أريانة تاريخياً مدينة الحدائق، فإن المناخ والتربة هناك مناسبان لنخيل الزينة والعشب الطبيعي." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "la-marsa",
+    name: "La Marsa",
+    gazonStatus: "free",
+    t: {
+      fr: {
+        metaTitle: "Gazon & Palmier La Marsa | Livraison gratuite - Green Garden",
+        metaDescription:
+          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 275 DT livrés gratuitement à La Marsa. Idéal pour les villas en bord de mer, devis via WhatsApp.",
+        h1: "Gazon et palmier à La Marsa",
+        intro:
+          "La Marsa fait partie du Grand Tunis, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif. Cette banlieue balnéaire prisée compte de nombreuses villas avec jardins en bord de mer, où le palmier décoratif est un choix d'aménagement particulièrement recherché.",
+        useCase:
+          "Nous livrons régulièrement La Marsa Corniche, La Marsa Ville et les quartiers résidentiels proches de Carthage et Sidi Bou Said, pour des jardins de villas exposés aux embruns marins.",
+        distanceNote: "à environ 70 km au nord-ouest de notre dépôt de Nabeul",
+        faq: [
+          { q: "La livraison de gazon et de palmier est-elle gratuite à La Marsa ?", a: "Oui, La Marsa fait partie du Grand Tunis, l'une de nos deux zones de livraison gratuite pour le gazon naturel et le palmier décoratif." },
+          { q: "Le palmier résiste-t-il à l'air marin de La Marsa ?", a: "Oui, nos variétés de palmier décoratif tolèrent bien l'exposition aux embruns typique du littoral de La Marsa. Nous vous conseillons sur l'entretien adapté à un jardin en bord de mer." },
+        ],
+      },
+      en: {
+        metaTitle: "Lawn & Palm Tree La Marsa | Free Delivery - Green Garden",
+        metaDescription:
+          "Natural lawn at 9 DT/sqm and decorative palm trees at 275 DT delivered free to La Marsa. Ideal for seaside villas, quote via WhatsApp.",
+        h1: "Lawn and palm tree in La Marsa",
+        intro:
+          "La Marsa is part of Greater Tunis, one of our two free-delivery zones for natural lawn and the decorative palm tree. This sought-after seaside suburb has many villas with gardens by the sea, where the decorative palm tree is a particularly popular landscaping choice.",
+        useCase:
+          "We regularly deliver to La Marsa Corniche, La Marsa town and the residential areas near Carthage and Sidi Bou Said, for villa gardens exposed to sea spray.",
+        distanceNote: "about 70 km north-west of our Nabeul depot",
+        faq: [
+          { q: "Is lawn and palm tree delivery free in La Marsa?", a: "Yes, La Marsa is part of Greater Tunis, one of our two free-delivery zones for natural lawn and the decorative palm tree." },
+          { q: "Does the palm tree withstand the sea air in La Marsa?", a: "Yes, our decorative palm tree varieties tolerate the sea spray exposure typical of the La Marsa coastline well. We advise you on care suited to a seaside garden." },
+        ],
+      },
+      ar: {
+        metaTitle: "عشب ونخيل المرسى | توصيل مجاني - Green Garden",
+        metaDescription:
+          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 275 دينار يُوصَّلان مجاناً إلى المرسى. مثالي للفيلات الساحلية، عرض سعر عبر واتساب.",
+        h1: "عشب ونخيل في المرسى",
+        intro:
+          "تنتمي المرسى إلى تونس الكبرى، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة. تضم هذه الضاحية الساحلية المرغوبة العديد من الفيلات ذات الحدائق المطلة على البحر، حيث يُعد نخيل الزينة خياراً مطلوباً بشكل خاص.",
+        useCase:
+          "نوصل بانتظام إلى كورنيش المرسى ومدينة المرسى والأحياء السكنية القريبة من قرطاج وسيدي بوسعيد، لحدائق الفيلات المعرضة لرذاذ البحر.",
+        distanceNote: "على بعد حوالي 70 كم شمال غرب مستودعنا بنابل",
+        faq: [
+          { q: "هل توصيل العشب والنخيل مجاني في المرسى؟", a: "نعم، تنتمي المرسى إلى تونس الكبرى، إحدى منطقتينا للتوصيل المجاني للعشب الطبيعي ونخيل الزينة." },
+          { q: "هل يتحمل النخيل هواء البحر في المرسى؟", a: "نعم، تتحمل أصناف نخيل الزينة لدينا جيداً التعرض لرذاذ البحر المعتاد على ساحل المرسى. ننصحكم بالعناية المناسبة لحديقة على شاطئ البحر." },
+        ],
+      },
+    },
+  },
 ];
 
 module.exports = { villes };

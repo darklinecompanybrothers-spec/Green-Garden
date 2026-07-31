@@ -20,6 +20,15 @@ function getNav(lang) {
       ],
     },
     {
+      label: t.nav.services,
+      path: localizedPath("/services/", lang),
+      children: [
+        { label: t.servicesMenu.poseGazon, path: localizedPath("/services/pose-gazon/", lang) },
+        { label: t.servicesMenu.plantationPalmier, path: localizedPath("/services/plantation-palmier/", lang) },
+        { label: t.servicesMenu.all, path: localizedPath("/services/", lang) },
+      ],
+    },
+    {
       label: t.nav.delivery,
       path: localizedPath("/livraison/", lang),
       children: [
@@ -122,6 +131,7 @@ function renderFooter(lang) {
         <div class="footer-col">
           <h3>${f.resourcesHeading}</h3>
           <ul class="footer-links">
+            <li><a href="${localizedPath("/services/", lang)}">${f.servicesLink}</a></li>
             <li><a href="${localizedPath("/blog/", lang)}">${f.blogLink}</a></li>
             <li><a href="${localizedPath("/faq/", lang)}">${f.faqLink}</a></li>
             <li><a href="${localizedPath("/a-propos/", lang)}">${f.aboutLink}</a></li>

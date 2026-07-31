@@ -1,7 +1,7 @@
 const { renderPage } = require("./layout");
 const { renderBreadcrumb } = require("./breadcrumb");
 const { renderSections, collectFaqItems } = require("./components");
-const { faqPage, product: productSchema } = require("./schema");
+const { faqPage, product: productSchema, service: serviceSchema } = require("./schema");
 const { localizedPath } = require("../data/i18n");
 const { UI } = require("../data/ui-strings");
 
@@ -27,6 +27,7 @@ function renderContentPage(page) {
   if (faqItems.length) jsonLd.push(faqPage(faqItems));
 
   if (page.product) jsonLd.push(productSchema({ ...page.product, path: localizedBase }));
+  if (page.service) jsonLd.push(serviceSchema({ ...page.service, path: localizedBase }));
 
   const bodyHtml = `
     ${breadcrumbHtml}
