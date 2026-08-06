@@ -18,7 +18,7 @@ const HOME_TEXT = {
     flagshipCards: [
       [`Gazon naturel — ${SITE.products.gazon.priceLabel}`, "Livraison gratuite dans le Grand Tunis et à Nabeul. Pose rapide, rendu immédiat.", "/gazon-tunisie/", "/gazon.jpg"],
       [`Palmier décoratif — ${SITE.products.palmier.priceLabel}`, "Livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs.", "/palmier-tunisie/", "/Palmier éventail.jpeg"],
-      [`Terre végétale — ${SITE.products.terreVegetale.priceLabel}`, "Livraison partout en Tunisie. Idéale pour préparer un sol avant gazon ou plantation.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.jpg"],
+      [`Terre végétale — ${SITE.products.terreVegetale.priceLabel}`, "Livraison partout en Tunisie. Idéale pour préparer un sol avant gazon ou plantation.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.png"],
       ["Plantes d'intérieur", "Une sélection de plantes décoratives robustes et faciles à vivre.", "#plantes", "/Faux philodendron.jpeg"],
       ["Engrais", "Des solutions pour renforcer vos plantes et soutenir une croissance saine.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
     ],
@@ -86,7 +86,7 @@ const HOME_TEXT = {
     flagshipCards: [
       [`Natural lawn — ${SITE.products.gazon.priceLabel}`, "Free delivery in Greater Tunis and Nabeul. Fast laying, instant result.", "/gazon-tunisie/", "/gazon.jpg"],
       [`Decorative palm tree — ${SITE.products.palmier.priceLabel}`, "Free delivery in Greater Tunis and Nabeul, on quote elsewhere.", "/palmier-tunisie/", "/Palmier éventail.jpeg"],
-      [`Topsoil — ${SITE.products.terreVegetale.priceLabel}`, "Delivery across Tunisia. Ideal to prepare soil before lawn or planting.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.jpg"],
+      [`Topsoil — ${SITE.products.terreVegetale.priceLabel}`, "Delivery across Tunisia. Ideal to prepare soil before lawn or planting.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.png"],
       ["Indoor plants", "A selection of sturdy, easy-care decorative plants.", "#plantes", "/Faux philodendron.jpeg"],
       ["Fertilizer", "Solutions to strengthen your plants and support healthy growth.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
     ],
@@ -154,7 +154,7 @@ const HOME_TEXT = {
     flagshipCards: [
       [`عشب طبيعي — ${SITE.products.gazon.priceLabel}`, "توصيل مجاني في تونس الكبرى ونابل. تركيب سريع، نتيجة فورية.", "/gazon-tunisie/", "/gazon.jpg"],
       [`نخيل زينة — ${SITE.products.palmier.priceLabel}`, "توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية تونس.", "/palmier-tunisie/", "/Palmier éventail.jpeg"],
-      [`تربة زراعية — ${SITE.products.terreVegetale.priceLabel}`, "توصيل في كل تونس. مثالية لتحضير التربة قبل العشب أو الغراسة.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.jpg"],
+      [`تربة زراعية — ${SITE.products.terreVegetale.priceLabel}`, "توصيل في كل تونس. مثالية لتحضير التربة قبل العشب أو الغراسة.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.png"],
       ["نباتات داخلية", "مجموعة من النباتات الزخرفية القوية وسهلة العناية.", "#plantes", "/Faux philodendron.jpeg"],
       ["أسمدة", "حلول لتقوية نباتاتكم ودعم نمو صحي.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
     ],

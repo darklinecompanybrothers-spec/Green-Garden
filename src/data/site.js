@@ -83,7 +83,7 @@ const SITE = {
       unit: "m³",
       priceLabel: "70 DT / m³",
       deliveryNote: "Livraison disponible partout en Tunisie, tarif communiqué selon votre région.",
-      image: "/acheter-terre-vegetale-tunisie.jpg",
+      image: "/acheter-terre-vegetale-tunisie.png",
     },
   },
 
