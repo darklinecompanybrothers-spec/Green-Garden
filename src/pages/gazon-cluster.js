@@ -505,6 +505,16 @@ function acheterGazonPage(lang) {
     intro: t.intro,
     heroImage: { src: "/gazon.jpg", alt: t.h1 },
     breadcrumb: t.crumb.map(([label, path]) => ({ label, path: localizedPath(path, lang) })),
+    product: {
+      key: "gazon-naturel",
+      name: SITE.products.gazon.name,
+      price: SITE.products.gazon.price,
+      currency: SITE.products.gazon.currency,
+      unit: SITE.products.gazon.unit,
+      description: t.intro,
+      image: SITE.products.gazon.image,
+      freeShippingRegions: ["Tunis", "Ariana", "Ben Arous", "Manouba", "Nabeul"],
+    },
     sections: [
       { type: "list", h2: t.h2a, ordered: true, items: t.listA },
       { type: "table", h2: t.h2b, headers: t.headersB, rows: t.rowsB },

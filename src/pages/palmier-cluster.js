@@ -244,6 +244,16 @@ function acheterPalmierPage(lang) {
     intro: t.intro,
     heroImage: { src: "/Palmier éventail.jpeg", alt: t.h1 },
     breadcrumb: t.crumb.map(([label, path]) => ({ label, path: localizedPath(path, lang) })),
+    product: {
+      key: "palmier-decoratif",
+      name: SITE.products.palmier.name,
+      price: SITE.products.palmier.price,
+      currency: SITE.products.palmier.currency,
+      unit: SITE.products.palmier.unit,
+      description: t.intro,
+      image: SITE.products.palmier.image,
+      freeShippingRegions: ["Tunis", "Ariana", "Ben Arous", "Manouba", "Nabeul"],
+    },
     sections: [
       { type: "list", h2: t.h2a, ordered: true, items: t.listA },
       { type: "table", h2: t.h2b, headers: t.headersB, rows: t.rowsB },
