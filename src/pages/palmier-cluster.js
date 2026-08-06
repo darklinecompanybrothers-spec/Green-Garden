@@ -154,7 +154,7 @@ function pillarPage(lang) {
     eyebrow: t.eyebrow,
     h1: t.h1,
     intro: t.intro,
-    heroImage: { src: "/Palmier éventail.jpeg", alt: t.h1 },
+    heroImage: { src: "/palmier-eventail.jpeg", alt: t.h1 },
     breadcrumb: [{ label: t.breadcrumbLabel, path: localizedPath("/palmier-tunisie/", lang) }],
     product: {
       key: "palmier-decoratif",
@@ -242,7 +242,7 @@ function acheterPalmierPage(lang) {
     eyebrow: t.eyebrow,
     h1: t.h1,
     intro: t.intro,
-    heroImage: { src: "/Palmier éventail.jpeg", alt: t.h1 },
+    heroImage: { src: "/palmier-eventail.jpeg", alt: t.h1 },
     breadcrumb: t.crumb.map(([label, path]) => ({ label, path: localizedPath(path, lang) })),
     product: {
       key: "palmier-decoratif",
@@ -345,7 +345,7 @@ function palmierJardinPage(lang) {
     eyebrow: t.eyebrow,
     h1: t.h1,
     intro: t.intro,
-    heroImage: { src: "/Arbre du voyageur.jpeg", alt: t.h1 },
+    heroImage: { src: "/arbre-du-voyageur.jpeg", alt: t.h1 },
     breadcrumb: t.crumb.map(([label, path]) => ({ label, path: localizedPath(path, lang) })),
     sections: [
       { type: "text", h2: t.h2a, paragraphs: t.pa },
@@ -427,7 +427,7 @@ function palmierDecoratifPage(lang) {
     eyebrow: t.eyebrow,
     h1: t.h1,
     intro: t.intro,
-    heroImage: { src: "/Palmier nain.jpeg", alt: t.h1 },
+    heroImage: { src: "/palmier-nain.jpeg", alt: t.h1 },
     breadcrumb: t.crumb.map(([label, path]) => ({ label, path: localizedPath(path, lang) })),
     sections: [
       { type: "text", h2: t.h2a, paragraphs: t.pa },

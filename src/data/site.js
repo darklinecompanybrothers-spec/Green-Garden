@@ -5,7 +5,7 @@
 // Incrémenter cette valeur à chaque modification de styles.css / app.js / nav.js /
 // contact.js pour forcer les navigateurs à récupérer la nouvelle version au lieu
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
-const ASSET_VERSION = "9";
+const ASSET_VERSION = "10";
 
 const SITE = {
   name: "Green Garden",
@@ -74,7 +74,7 @@ const SITE = {
       priceLabel: "275 DT",
       freeDeliveryZones: ["Grand Tunis", "Nabeul"],
       deliveryNote: "Livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs en Tunisie.",
-      image: "/Palmier éventail.jpeg",
+      image: "/palmier-eventail.jpeg",
     },
     terreVegetale: {
       name: "Terre végétale",

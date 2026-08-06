@@ -11,7 +11,7 @@ const HUB_TEXT = {
     intro: "En plus de la vente de gazon naturel et de palmiers décoratifs, Green Garden propose également leur installation. Un service pensé pour les clients qui préfèrent confier la pose à une équipe expérimentée plutôt que de s'en charger eux-mêmes.",
     cards: [
       ["Pose de gazon en rouleau", "Préparation du sol et installation par notre équipe.", "/services/pose-gazon/", "/gazon.jpg"],
-      ["Plantation de palmier", "Mise en terre professionnelle de votre palmier décoratif.", "/services/plantation-palmier/", "/Palmier éventail.jpeg"],
+      ["Plantation de palmier", "Mise en terre professionnelle de votre palmier décoratif.", "/services/plantation-palmier/", "/palmier-eventail.jpeg"],
     ],
     relatedH2: "Voir aussi",
     related: [
@@ -29,7 +29,7 @@ const HUB_TEXT = {
     intro: "In addition to selling natural lawn and decorative palm trees, Green Garden also offers to install them. A service designed for clients who prefer to leave the laying to an experienced team rather than doing it themselves.",
     cards: [
       ["Rolled lawn laying", "Soil preparation and installation by our team.", "/services/pose-gazon/", "/gazon.jpg"],
-      ["Palm tree planting", "Professional planting of your decorative palm tree.", "/services/plantation-palmier/", "/Palmier éventail.jpeg"],
+      ["Palm tree planting", "Professional planting of your decorative palm tree.", "/services/plantation-palmier/", "/palmier-eventail.jpeg"],
     ],
     relatedH2: "See also",
     related: [
@@ -47,7 +47,7 @@ const HUB_TEXT = {
     intro: "بالإضافة إلى بيع العشب الطبيعي ونخيل الزينة، تقدم Green Garden أيضاً تركيبها. خدمة مصممة للعملاء الذين يفضلون تكليف فريق ذي خبرة بالتركيب بدلاً من القيام به بأنفسهم.",
     cards: [
       ["تركيب العشب على شكل لفائف", "تحضير التربة والتركيب من طرف فريقنا.", "/services/pose-gazon/", "/gazon.jpg"],
-      ["غرس النخيل", "غرس احترافي لنخلة الزينة الخاصة بكم.", "/services/plantation-palmier/", "/Palmier éventail.jpeg"],
+      ["غرس النخيل", "غرس احترافي لنخلة الزينة الخاصة بكم.", "/services/plantation-palmier/", "/palmier-eventail.jpeg"],
     ],
     relatedH2: "شاهدوا أيضاً",
     related: [
@@ -268,7 +268,7 @@ function plantationPalmierPage(lang) {
     eyebrow: t.eyebrow,
     h1: t.h1,
     intro: t.intro,
-    heroImage: { src: "/Palmier éventail.jpeg", alt: t.h1 },
+    heroImage: { src: "/palmier-eventail.jpeg", alt: t.h1 },
     breadcrumb: t.crumb.map(([label, path]) => ({ label, path: localizedPath(path, lang) })),
     service: {
       name: t.h1,

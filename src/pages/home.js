@@ -17,10 +17,10 @@ const HOME_TEXT = {
     flagshipIntro: "Des références conçues pour transformer un extérieur tunisien rapidement : gazon naturel en rouleau, palmier décoratif et terre végétale.",
     flagshipCards: [
       [`Gazon naturel — ${SITE.products.gazon.priceLabel}`, "Livraison gratuite dans le Grand Tunis et à Nabeul. Pose rapide, rendu immédiat.", "/gazon-tunisie/", "/gazon.jpg"],
-      [`Palmier décoratif — ${SITE.products.palmier.priceLabel}`, "Livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs.", "/palmier-tunisie/", "/Palmier éventail.jpeg"],
+      [`Palmier décoratif — ${SITE.products.palmier.priceLabel}`, "Livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs.", "/palmier-tunisie/", "/palmier-eventail.jpeg"],
       [`Terre végétale — ${SITE.products.terreVegetale.priceLabel}`, "Livraison partout en Tunisie. Idéale pour préparer un sol avant gazon ou plantation.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.jpg"],
-      ["Plantes d'intérieur", "Une sélection de plantes décoratives robustes et faciles à vivre.", "#plantes", "/Faux philodendron.jpeg"],
-      ["Engrais", "Des solutions pour renforcer vos plantes et soutenir une croissance saine.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
+      ["Plantes d'intérieur", "Une sélection de plantes décoratives robustes et faciles à vivre.", "#plantes", "/faux-philodendron.jpeg"],
+      ["Engrais", "Des solutions pour renforcer vos plantes et soutenir une croissance saine.", "/produits/engrais/", "/engrais-bio-organique.jpeg"],
     ],
     collectionsKicker: "Collections",
     collectionsTitle: "Jungles d'intérieur",
@@ -56,13 +56,13 @@ const HOME_TEXT = {
     deliveryCards: [
       ["Grand Tunis", "Gazon et palmier livrés gratuitement.", "/livraison/grand-tunis/", "/123699.jpeg"],
       ["Nabeul", "Gazon et palmier livrés gratuitement.", "/livraison/nabeul/", "/gazon.jpg"],
-      ["Sousse, Sfax, Monastir...", "Livraison sur devis dans toute la Tunisie.", "/livraison/", "/Palmier éventail.jpeg"],
+      ["Sousse, Sfax, Monastir...", "Livraison sur devis dans toute la Tunisie.", "/livraison/", "/palmier-eventail.jpeg"],
     ],
     blogH2: "Conseils de jardinage",
     blogIntro: "Nos derniers articles pour réussir votre gazon, vos palmiers et votre jardin.",
     blogCards: [
       ["Comment poser du gazon en rouleau", "Le guide étape par étape pour une pose réussie.", "/blog/comment-poser-gazon-en-rouleau/", "/gazon.jpg"],
-      ["Quel palmier choisir en Tunisie", "Les variétés les mieux adaptées au climat tunisien.", "/blog/quel-palmier-choisir-tunisie/", "/Palmier éventail.jpeg"],
+      ["Quel palmier choisir en Tunisie", "Les variétés les mieux adaptées au climat tunisien.", "/blog/quel-palmier-choisir-tunisie/", "/palmier-eventail.jpeg"],
       ["Prix du gazon en Tunisie", "Comment le prix au m² est calculé et à quoi s'attendre.", "/blog/prix-gazon-tunisie-m2/", "/123699.jpeg"],
     ],
     blogSeeAll: "Voir tous les articles du blog",
@@ -85,10 +85,10 @@ const HOME_TEXT = {
     flagshipIntro: "References designed to transform a Tunisian outdoor space quickly: natural rolled lawn, decorative palm tree and topsoil.",
     flagshipCards: [
       [`Natural lawn — ${SITE.products.gazon.priceLabel}`, "Free delivery in Greater Tunis and Nabeul. Fast laying, instant result.", "/gazon-tunisie/", "/gazon.jpg"],
-      [`Decorative palm tree — ${SITE.products.palmier.priceLabel}`, "Free delivery in Greater Tunis and Nabeul, on quote elsewhere.", "/palmier-tunisie/", "/Palmier éventail.jpeg"],
+      [`Decorative palm tree — ${SITE.products.palmier.priceLabel}`, "Free delivery in Greater Tunis and Nabeul, on quote elsewhere.", "/palmier-tunisie/", "/palmier-eventail.jpeg"],
       [`Topsoil — ${SITE.products.terreVegetale.priceLabel}`, "Delivery across Tunisia. Ideal to prepare soil before lawn or planting.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.jpg"],
-      ["Indoor plants", "A selection of sturdy, easy-care decorative plants.", "#plantes", "/Faux philodendron.jpeg"],
-      ["Fertilizer", "Solutions to strengthen your plants and support healthy growth.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
+      ["Indoor plants", "A selection of sturdy, easy-care decorative plants.", "#plantes", "/faux-philodendron.jpeg"],
+      ["Fertilizer", "Solutions to strengthen your plants and support healthy growth.", "/produits/engrais/", "/engrais-bio-organique.jpeg"],
     ],
     collectionsKicker: "Collections",
     collectionsTitle: "Indoor jungles",
@@ -124,13 +124,13 @@ const HOME_TEXT = {
     deliveryCards: [
       ["Greater Tunis", "Lawn and palm tree delivered free.", "/livraison/grand-tunis/", "/123699.jpeg"],
       ["Nabeul", "Lawn and palm tree delivered free.", "/livraison/nabeul/", "/gazon.jpg"],
-      ["Sousse, Sfax, Monastir...", "Delivery on quote across Tunisia.", "/livraison/", "/Palmier éventail.jpeg"],
+      ["Sousse, Sfax, Monastir...", "Delivery on quote across Tunisia.", "/livraison/", "/palmier-eventail.jpeg"],
     ],
     blogH2: "Gardening advice",
     blogIntro: "Our latest articles to help your lawn, palm trees and garden thrive.",
     blogCards: [
       ["How to lay rolled lawn", "The step-by-step guide for a successful laying.", "/blog/comment-poser-gazon-en-rouleau/", "/gazon.jpg"],
-      ["Which palm tree to choose in Tunisia", "The varieties best suited to the Tunisian climate.", "/blog/quel-palmier-choisir-tunisie/", "/Palmier éventail.jpeg"],
+      ["Which palm tree to choose in Tunisia", "The varieties best suited to the Tunisian climate.", "/blog/quel-palmier-choisir-tunisie/", "/palmier-eventail.jpeg"],
       ["Lawn prices in Tunisia", "How the price per sqm is calculated and what to expect.", "/blog/prix-gazon-tunisie-m2/", "/123699.jpeg"],
     ],
     blogSeeAll: "See all blog articles",
@@ -153,10 +153,10 @@ const HOME_TEXT = {
     flagshipIntro: "مراجع مصممة لتحويل مساحة خارجية تونسية بسرعة: العشب الطبيعي على شكل لفائف، نخيل الزينة والتربة الزراعية.",
     flagshipCards: [
       [`عشب طبيعي — ${SITE.products.gazon.priceLabel}`, "توصيل مجاني في تونس الكبرى ونابل. تركيب سريع، نتيجة فورية.", "/gazon-tunisie/", "/gazon.jpg"],
-      [`نخيل زينة — ${SITE.products.palmier.priceLabel}`, "توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية تونس.", "/palmier-tunisie/", "/Palmier éventail.jpeg"],
+      [`نخيل زينة — ${SITE.products.palmier.priceLabel}`, "توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية تونس.", "/palmier-tunisie/", "/palmier-eventail.jpeg"],
       [`تربة زراعية — ${SITE.products.terreVegetale.priceLabel}`, "توصيل في كل تونس. مثالية لتحضير التربة قبل العشب أو الغراسة.", "/acheter-terre-vegetale/", "/acheter-terre-vegetale-tunisie.jpg"],
-      ["نباتات داخلية", "مجموعة من النباتات الزخرفية القوية وسهلة العناية.", "#plantes", "/Faux philodendron.jpeg"],
-      ["أسمدة", "حلول لتقوية نباتاتكم ودعم نمو صحي.", "/produits/engrais/", "/engrais bio-organique.jpeg"],
+      ["نباتات داخلية", "مجموعة من النباتات الزخرفية القوية وسهلة العناية.", "#plantes", "/faux-philodendron.jpeg"],
+      ["أسمدة", "حلول لتقوية نباتاتكم ودعم نمو صحي.", "/produits/engrais/", "/engrais-bio-organique.jpeg"],
     ],
     collectionsKicker: "المجموعات",
     collectionsTitle: "غابات داخلية",
@@ -192,13 +192,13 @@ const HOME_TEXT = {
     deliveryCards: [
       ["تونس الكبرى", "عشب ونخلة يُوصَّلان مجاناً.", "/livraison/grand-tunis/", "/123699.jpeg"],
       ["نابل", "عشب ونخلة يُوصَّلان مجاناً.", "/livraison/nabeul/", "/gazon.jpg"],
-      ["سوسة، صفاقس، المنستير...", "توصيل حسب الطلب في كل تونس.", "/livraison/", "/Palmier éventail.jpeg"],
+      ["سوسة، صفاقس، المنستير...", "توصيل حسب الطلب في كل تونس.", "/livraison/", "/palmier-eventail.jpeg"],
     ],
     blogH2: "نصائح البستنة",
     blogIntro: "أحدث مقالاتنا لإنجاح عشبكم ونخيلكم وحديقتكم.",
     blogCards: [
       ["كيف تركبون العشب على شكل لفائف", "الدليل خطوة بخطوة لتركيب ناجح.", "/blog/comment-poser-gazon-en-rouleau/", "/gazon.jpg"],
-      ["أي نخلة تختارون في تونس", "الأصناف الأكثر ملاءمة للمناخ التونسي.", "/blog/quel-palmier-choisir-tunisie/", "/Palmier éventail.jpeg"],
+      ["أي نخلة تختارون في تونس", "الأصناف الأكثر ملاءمة للمناخ التونسي.", "/blog/quel-palmier-choisir-tunisie/", "/palmier-eventail.jpeg"],
       ["سعر العشب في تونس", "كيف يُحسب السعر بالمتر المربع وما يجب توقعه.", "/blog/prix-gazon-tunisie-m2/", "/123699.jpeg"],
     ],
     blogSeeAll: "شاهدوا كل مقالات المدونة",
@@ -329,7 +329,7 @@ function renderHome(lang) {
       </div>
       <div class="feature-media">
         <img
-          src="/engrais bio-organique.jpeg"
+          src="/engrais-bio-organique.jpeg"
           alt="${t.engraisTitle}"
           loading="lazy"
         />
@@ -363,7 +363,7 @@ function renderHome(lang) {
       </div>
       <div class="feature-media">
         <img
-          src="/Palmier éventail.jpeg"
+          src="/palmier-eventail.jpeg"
           alt="${t.palmierTitle}"
           loading="lazy"
         />

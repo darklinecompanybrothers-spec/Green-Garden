@@ -488,7 +488,7 @@ const articles = [
     slug: "entretien-palmier",
     category: "palmiers",
     datePublished: "2026-06-22",
-    heroImage: { src: "/Palmier éventail.jpeg" },
+    heroImage: { src: "/palmier-eventail.jpeg" },
     related: ["quel-palmier-choisir-tunisie", "palmier-pot-ou-pleine-terre"],
     ctaSecondaryPath: "/palmier-tunisie/",
     t: {
@@ -552,7 +552,7 @@ const articles = [
     slug: "quel-palmier-choisir-tunisie",
     category: "palmiers",
     datePublished: "2026-06-29",
-    heroImage: { src: "/Palmier éventail.jpeg" },
+    heroImage: { src: "/palmier-eventail.jpeg" },
     related: ["entretien-palmier", "palmier-pot-ou-pleine-terre", "erreurs-a-eviter-plantation-palmier"],
     ctaSecondaryPath: "/palmier-tunisie/",
     t: {
@@ -613,7 +613,7 @@ const articles = [
     slug: "palmier-pot-ou-pleine-terre",
     category: "palmiers",
     datePublished: "2026-07-06",
-    heroImage: { src: "/Palmier nain.jpeg" },
+    heroImage: { src: "/palmier-nain.jpeg" },
     related: ["quel-palmier-choisir-tunisie", "entretien-palmier"],
     ctaSecondaryPath: "/palmier-decoratif/",
     t: {
@@ -674,7 +674,7 @@ const articles = [
     slug: "erreurs-a-eviter-plantation-palmier",
     category: "palmiers",
     datePublished: "2026-07-13",
-    heroImage: { src: "/Palmier éventail.jpeg" },
+    heroImage: { src: "/palmier-eventail.jpeg" },
     related: ["entretien-palmier", "palmier-pot-ou-pleine-terre"],
     ctaSecondaryPath: "/palmier-tunisie/",
     t: {
@@ -732,7 +732,7 @@ const articles = [
     slug: "meilleurs-arbres-jardin-tunisien",
     category: "amenagement-exterieur",
     datePublished: "2026-07-18",
-    heroImage: { src: "/Arbre du voyageur.jpeg" },
+    heroImage: { src: "/arbre-du-voyageur.jpeg" },
     related: ["idees-amenagement-exterieur-villa-terrasse", "jardin-econome-en-eau-tunisie"],
     ctaSecondaryPath: "/produits/",
     t: {
@@ -991,7 +991,7 @@ const articles = [
     slug: "arbres-a-pousse-rapide-tunisie",
     category: "amenagement-exterieur",
     datePublished: "2026-07-29",
-    heroImage: { src: "/Arbre du voyageur.jpeg" },
+    heroImage: { src: "/arbre-du-voyageur.jpeg" },
     related: ["meilleurs-arbres-jardin-tunisien", "idees-amenagement-exterieur-villa-terrasse"],
     ctaSecondaryPath: "/produits/arbres/",
     t: {
