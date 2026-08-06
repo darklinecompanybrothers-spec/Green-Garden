@@ -51,6 +51,43 @@ function relatedCluster(lang) {
   };
 }
 
+function guidesCluster(lang) {
+  const T = {
+    fr: {
+      h2: "Guides et conseils pour réussir votre gazon",
+      links: [
+        ["Comment poser du gazon en rouleau", "/blog/comment-poser-gazon-en-rouleau/", "Le guide étape par étape"],
+        ["Entretenir son gazon après la pose", "/blog/entretien-gazon-apres-pose/", "Arrosage, tonte et engrais"],
+        ["Quand planter du gazon en Tunisie", "/blog/quand-planter-gazon-tunisie/", "Le calendrier par saison"],
+        ["Terre végétale — 70 DT/m³", "/acheter-terre-vegetale/", "Pour préparer votre sol avant la pose"],
+      ],
+    },
+    en: {
+      h2: "Guides and tips for a successful lawn",
+      links: [
+        ["How to lay rolled lawn", "/blog/comment-poser-gazon-en-rouleau/", "The step-by-step guide"],
+        ["Caring for your lawn after laying", "/blog/entretien-gazon-apres-pose/", "Watering, mowing and fertilizer"],
+        ["When to plant lawn in Tunisia", "/blog/quand-planter-gazon-tunisie/", "The season-by-season calendar"],
+        ["Topsoil — 70 DT/m³", "/acheter-terre-vegetale/", "To prepare your soil before laying"],
+      ],
+    },
+    ar: {
+      h2: "أدلة ونصائح لعشب ناجح",
+      links: [
+        ["كيف تركبون العشب على شكل لفائف", "/blog/comment-poser-gazon-en-rouleau/", "الدليل خطوة بخطوة"],
+        ["العناية بعشبكم بعد التركيب", "/blog/entretien-gazon-apres-pose/", "الري والجزّ والسماد"],
+        ["متى تغرسون العشب في تونس", "/blog/quand-planter-gazon-tunisie/", "التقويم حسب الفصول"],
+        ["تربة زراعية — 70 دينار/م³", "/acheter-terre-vegetale/", "لتحضير تربتكم قبل التركيب"],
+      ],
+    },
+  };
+  const t = T[lang];
+  return {
+    h2: t.h2,
+    links: t.links.map(([label, path, description]) => ({ label, path: localizedPath(path, lang), description })),
+  };
+}
+
 function gazonCta(lang) {
   const T = {
     fr: {
@@ -187,6 +224,7 @@ function pillarPage(lang) {
       { type: "table", h2: t.h2c, headers: t.headersC, rows: t.rowsC },
       { type: "cta", ...gazonCta(lang) },
       { type: "related", ...relatedCluster(lang) },
+      { type: "related", ...guidesCluster(lang) },
       { type: "faq", h2: t.faqH2, items: t.faq.map(([q, a]) => ({ q, a })) },
     ],
   });

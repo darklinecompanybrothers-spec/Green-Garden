@@ -76,6 +76,15 @@ const SITE = {
       deliveryNote: "Livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs en Tunisie.",
       image: "/Palmier éventail.jpeg",
     },
+    terreVegetale: {
+      name: "Terre végétale",
+      price: 70,
+      currency: "TND",
+      unit: "m³",
+      priceLabel: "70 DT / m³",
+      deliveryNote: "Livraison disponible partout en Tunisie, tarif communiqué selon votre région.",
+      image: "/acheter-terre-vegetale-tunisie.jpg",
+    },
   },
 
   credit: {

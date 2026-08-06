@@ -438,6 +438,7 @@ const articles = [
         sections: [
           { type: "list", h2: "Les étapes de préparation", ordered: true, items: ["Désherbez entièrement la parcelle, y compris les racines des mauvaises herbes", "Retirez cailloux, gravats et débris de construction éventuels", "Ameublissez le sol sur 10 à 15 cm avec une bêche ou un motoculteur", "Nivelez soigneusement pour éviter les creux qui retiendraient l'eau", "Apportez un amendement (compost ou terreau) si le sol est pauvre ou très sableux", "Tassez légèrement puis arrosez la veille de la pose pour humidifier le sol"] },
           { type: "text", h2: "Cas particulier des sols argileux ou très sableux", paragraphs: ["Un sol argileux retient trop l'eau et doit être allégé avec du sable grossier et du compost. Un sol très sableux, au contraire, draine trop vite et gagne à recevoir un apport de terreau pour retenir l'humidité nécessaire aux jeunes racines."] },
+          { type: "text", h2: "Un sol trop pauvre ? Ajoutez de la terre végétale", paragraphs: ["Si votre sol manque de matière organique ou est très sableux, un apport de <a href=\"/acheter-terre-vegetale/\">terre végétale</a> (70 DT/m³, livrable partout en Tunisie) permet d'enrichir la surface avant la pose du gazon, pour un enracinement plus rapide."] },
         ],
         ctaHeading: "Votre sol est prêt ? Commandez votre gazon",
         ctaText: "9 DT/m², livraison gratuite dans le Grand Tunis et à Nabeul.",
@@ -455,6 +456,7 @@ const articles = [
         sections: [
           { type: "list", h2: "The preparation steps", ordered: true, items: ["Fully weed the plot, including weed roots", "Remove any stones, rubble and construction debris", "Loosen the soil to 10-15 cm with a spade or tiller", "Level carefully to avoid dips that would hold water", "Add an amendment (compost or potting soil) if the soil is poor or very sandy", "Tamp lightly then water the day before laying to moisten the soil"] },
           { type: "text", h2: "Special case of clay or very sandy soils", paragraphs: ["Clay soil retains too much water and needs to be lightened with coarse sand and compost. Very sandy soil, on the other hand, drains too fast and benefits from added potting soil to retain the moisture young roots need."] },
+          { type: "text", h2: "Soil too poor? Add topsoil", paragraphs: ["If your soil lacks organic matter or is very sandy, adding <a href=\"/en/acheter-terre-vegetale/\">topsoil</a> (70 DT/m³, deliverable across Tunisia) enriches the surface before laying lawn, for faster rooting."] },
         ],
         ctaHeading: "Is your soil ready? Order your lawn",
         ctaText: "9 DT/sqm, free delivery in Greater Tunis and Nabeul.",
@@ -472,6 +474,7 @@ const articles = [
         sections: [
           { type: "list", h2: "خطوات التحضير", ordered: true, items: ["أزيلوا الأعشاب الضارة تماماً من القطعة، بما فيها جذورها", "أزيلوا الحصى والأنقاض ومخلفات البناء المحتملة", "فككوا التربة على عمق 10 إلى 15 سم بمِعزقة أو محراث", "سووا بعناية لتجنب الحفر التي تحتفظ بالماء", "أضيفوا مُحسِّناً (سماد أو تراب) إذا كانت التربة فقيرة أو رملية جداً", "دكوا قليلاً ثم اسقوا عشية التركيب لترطيب التربة"] },
           { type: "text", h2: "حالة خاصة: التربة الطينية أو الرملية جداً", paragraphs: ["تحتفظ التربة الطينية بكمية كبيرة من الماء ويجب تخفيفها برمل خشن وسماد. أما التربة الرملية جداً فتُصرِّف الماء بسرعة كبيرة وتستفيد من إضافة تراب للاحتفاظ بالرطوبة اللازمة للجذور الفتية."] },
+          { type: "text", h2: "تربة فقيرة جداً؟ أضيفوا تربة زراعية", paragraphs: ["إذا كانت تربتكم تفتقر للمواد العضوية أو رملية جداً، فإن إضافة <a href=\"/ar/acheter-terre-vegetale/\">تربة زراعية</a> (70 دينار/م³، قابلة للتوصيل في كل تونس) تُثري السطح قبل تركيب العشب، لتجذر أسرع."] },
         ],
         ctaHeading: "تربتكم جاهزة؟ اطلبوا عشبكم",
         ctaText: "9 دينار/م²، توصيل مجاني في تونس الكبرى ونابل.",
