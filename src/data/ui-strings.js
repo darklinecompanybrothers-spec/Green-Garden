@@ -33,6 +33,7 @@ const UI = {
     navToggleLabel: "Ouvrir le menu",
     langSwitchLabel: "Changer de langue",
     locationLabel: "Localisation Green Garden",
+    hoursLabel: "Tous les jours, 8h - 19h",
   },
   en: {
     nav: { home: "Home", products: "Products", services: "Services", delivery: "Delivery", blog: "Blog", why: "Why choose us", contact: "Contact" },
@@ -65,6 +66,7 @@ const UI = {
     navToggleLabel: "Open menu",
     langSwitchLabel: "Change language",
     locationLabel: "Green Garden location",
+    hoursLabel: "Every day, 8am - 7pm",
   },
   ar: {
     nav: { home: "الرئيسية", products: "منتجاتنا", services: "خدماتنا", delivery: "التوصيل", blog: "المدونة", why: "لماذا نحن", contact: "اتصل بنا" },
@@ -97,6 +99,7 @@ const UI = {
     navToggleLabel: "افتح القائمة",
     langSwitchLabel: "تغيير اللغة",
     locationLabel: "موقع Green Garden",
+    hoursLabel: "كل يوم، من 8 صباحاً إلى 7 مساءً",
   },
 };
 

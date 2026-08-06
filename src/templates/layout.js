@@ -104,7 +104,7 @@ function renderFooter(lang) {
           </a>
           <p>${SITE.address.locality}, ${SITE.country} — ${f.tagline}</p>
           <p><a href="tel:${SITE.phoneE164}">${SITE.phoneDisplay}</a></p>
-          <p>${SITE.hours.label}</p>
+          <p>${t.hoursLabel}</p>
         </div>
 
         <div class="footer-col">

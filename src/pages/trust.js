@@ -202,7 +202,7 @@ const FAQ_TEXT = {
       ["Quels produits vend Green Garden ?", "Green Garden vend du gazon naturel en rouleau (9 DT/m²), des palmiers décoratifs (275 DT), des plantes d'intérieur décoratives et des engrais."],
       ["Dans quelles régions livrez-vous ?", "Le gazon naturel et le palmier décoratif sont livrés gratuitement dans le Grand Tunis et à Nabeul. Ailleurs en Tunisie, les deux produits restent livrables, sur devis selon la distance."],
       ["Comment commander un produit ?", "La commande se fait directement par WhatsApp : indiquez le produit souhaité, la quantité et votre ville de livraison pour recevoir une confirmation rapide."],
-      ["Quels sont vos horaires de disponibilité ?", `Nous sommes disponibles ${SITE.hours.label.toLowerCase()} pour répondre à vos demandes par téléphone ou WhatsApp.`],
+      ["Quels sont vos horaires de disponibilité ?", `Nous sommes disponibles ${UI.fr.hoursLabel.toLowerCase()} pour répondre à vos demandes par téléphone ou WhatsApp.`],
       ["Proposez-vous des conseils d'entretien après l'achat ?", "Oui, nous fournissons des conseils de pose et d'entretien avec chaque commande, et vous pouvez retrouver des guides détaillés sur notre blog."],
       ["Livrez-vous les professionnels (paysagistes, hôtels, entreprises) ?", "Oui, nous fournissons aussi bien des particuliers que des professionnels du paysagisme et des établissements touristiques pour des commandes en volume."],
     ],
@@ -225,7 +225,7 @@ const FAQ_TEXT = {
       ["What products does Green Garden sell?", "Green Garden sells natural rolled lawn (9 DT/sqm), decorative palm trees (275 DT), decorative indoor plants and fertilizer."],
       ["Which regions do you deliver to?", "Natural lawn and the decorative palm tree are delivered free in Greater Tunis and Nabeul. Elsewhere in Tunisia, both products remain deliverable, on quote based on distance."],
       ["How do I order a product?", "Orders are placed directly on WhatsApp: tell us the desired product, quantity and delivery city to receive a quick confirmation."],
-      ["What are your availability hours?", `We are available ${SITE.hours.label.toLowerCase()} to answer your requests by phone or WhatsApp.`],
+      ["What are your availability hours?", `We are available ${UI.en.hoursLabel.toLowerCase()} to answer your requests by phone or WhatsApp.`],
       ["Do you offer care advice after purchase?", "Yes, we provide laying and care advice with every order, and you can find detailed guides on our blog."],
       ["Do you deliver to professionals (landscapers, hotels, businesses)?", "Yes, we supply both individuals and landscaping professionals and tourist establishments for bulk orders."],
     ],
@@ -248,7 +248,7 @@ const FAQ_TEXT = {
       ["ما هي المنتجات التي تبيعها Green Garden؟", "تبيع Green Garden عشباً طبيعياً على شكل لفائف (9 دينار/م²)، نخيل زينة (275 دينار)، نباتات داخلية زخرفية وأسمدة."],
       ["إلى أي جهات توصلون؟", "يُوصَّل العشب الطبيعي ونخيل الزينة مجاناً في تونس الكبرى ونابل. في بقية تونس، يبقى المنتجان قابلين للتوصيل حسب الطلب وحسب المسافة."],
       ["كيف أطلب منتجاً؟", "يتم الطلب مباشرة عبر واتساب: أذكروا المنتج المرغوب والكمية ومدينة التوصيل لتلقي تأكيد سريع."],
-      ["ما هي أوقات توفركم؟", `نحن متوفرون ${SITE.hours.label} للرد على طلباتكم هاتفياً أو عبر واتساب.`],
+      ["ما هي أوقات توفركم؟", `نحن متوفرون ${UI.ar.hoursLabel} للرد على طلباتكم هاتفياً أو عبر واتساب.`],
       ["هل تقدمون نصائح عناية بعد الشراء؟", "نعم، نقدم نصائح تركيب وعناية مع كل طلبية، ويمكنكم الاطلاع على أدلة مفصلة في مدونتنا."],
       ["هل توصلون المهنيين (مهيئي الحدائق، الفنادق، الشركات)؟", "نعم، نزود الأفراد ومهنيي تهيئة الحدائق والمؤسسات السياحية على حد سواء بطلبيات بكميات كبيرة."],
     ],
@@ -400,7 +400,7 @@ function contactPage(lang) {
           <p>📍 ${SITE.address.locality}, ${SITE.country}</p>
           <p>📞 <a href="tel:${SITE.phoneE164}">${SITE.phoneDisplay}</a></p>
           <p>💬 <a href="${SITE.social.whatsapp}" target="_blank" rel="noreferrer">${t.whatsappLink}</a></p>
-          <p>🕐 ${SITE.hours.label}</p>
+          <p>🕐 ${UI[lang].hoursLabel}</p>
         </div>
       </section>
 
