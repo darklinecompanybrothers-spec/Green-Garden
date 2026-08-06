@@ -70,7 +70,7 @@ function renderProducts() {
       return `
         <article class="product-card">
           <div class="product-image">
-            <img src="${product.image}" alt="${localizedName}" loading="lazy" />
+            <img src="/${product.image}" alt="${localizedName}" loading="lazy" />
           </div>
           <div class="product-content">
             <h3>${localizedName}</h3>
