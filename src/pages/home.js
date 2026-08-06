@@ -5,8 +5,8 @@ const { localizedPath } = require("../data/i18n");
 
 const HOME_TEXT = {
   fr: {
-    title: "Green Garden | Gazon naturel & Palmiers en Tunisie",
-    description: "Gazon naturel 9 DT/m² (livraison gratuite Grand Tunis & Nabeul) et palmiers décoratifs 275 DT en Tunisie. Plantes d'intérieur et engrais.",
+    title: "Green Garden Tunisie | Jardinerie, Gazon & Palmiers",
+    description: "Green Garden, votre jardinerie en Tunisie : gazon naturel 9 DT/m², palmiers décoratifs 275 DT, plantes et engrais. Devis rapide sur WhatsApp.",
     heroEyebrow: "Votre jardinerie en Tunisie",
     heroTitle: "Bienvenue chez Green Garden",
     heroCopy: "Green Garden cultive des espaces extérieurs plus verts et plus vivants : gazon naturel en rouleau, palmiers décoratifs, plantes d'intérieur et engrais, livrés partout en Tunisie avec des conseils personnalisés à chaque commande.",
@@ -45,10 +45,12 @@ const HOME_TEXT = {
     gazonTitle: "Gazon naturel Tunisie",
     gazonCopy: "Gazon naturel en rouleau à 9 DT/m², livraison gratuite dans le Grand Tunis et à Nabeul.",
     gazonCta: "Découvrir le gazon",
+    gazonCtaSecondary: "Comment l'acheter",
     palmierKicker: "Extérieur",
     palmierTitle: "Palmier décoratif Tunisie",
     palmierCopy: "Palmier décoratif à 275 DT, livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs en Tunisie.",
     palmierCta: "Découvrir les palmiers",
+    palmierCtaSecondary: "Comment l'acheter",
     deliveryH2: "Livraison partout en Tunisie",
     deliveryIntro: "Gazon livré gratuitement dans le Grand Tunis et à Nabeul, palmier livrable dans toute la Tunisie sur devis.",
     deliveryCards: [
@@ -71,8 +73,8 @@ const HOME_TEXT = {
     aboutLink2: "Pourquoi nous choisir",
   },
   en: {
-    title: "Green Garden | Natural Lawn & Palm Trees in Tunisia",
-    description: "Natural lawn 9 DT/sqm (free delivery Greater Tunis & Nabeul) and decorative palm trees 275 DT in Tunisia. Indoor plants and fertilizer.",
+    title: "Green Garden Tunisia | Garden Center, Lawn & Palms",
+    description: "Green Garden, your garden center in Tunisia: natural lawn 9 DT/sqm, decorative palm trees 275 DT, plants and fertilizer. Fast WhatsApp quote.",
     heroEyebrow: "Your garden center in Tunisia",
     heroTitle: "Welcome to Green Garden",
     heroCopy: "Green Garden grows greener, livelier outdoor spaces: natural rolled lawn, decorative palm trees, indoor plants and fertilizer, delivered across Tunisia with personal advice on every order.",
@@ -111,10 +113,12 @@ const HOME_TEXT = {
     gazonTitle: "Natural Lawn Tunisia",
     gazonCopy: "Natural rolled lawn at 9 DT/sqm, free delivery in Greater Tunis and Nabeul.",
     gazonCta: "Discover our lawn",
+    gazonCtaSecondary: "How to buy it",
     palmierKicker: "Outdoor",
     palmierTitle: "Decorative Palm Tree Tunisia",
     palmierCopy: "Decorative palm tree at 275 DT, free delivery in Greater Tunis and Nabeul, on quote elsewhere in Tunisia.",
     palmierCta: "Discover our palm trees",
+    palmierCtaSecondary: "How to buy it",
     deliveryH2: "Delivery across Tunisia",
     deliveryIntro: "Lawn delivered free in Greater Tunis and Nabeul, palm tree deliverable across Tunisia on quote.",
     deliveryCards: [
@@ -177,10 +181,12 @@ const HOME_TEXT = {
     gazonTitle: "عشب طبيعي تونس",
     gazonCopy: "عشب طبيعي على شكل لفائف بسعر 9 دينار/م²، توصيل مجاني في تونس الكبرى ونابل.",
     gazonCta: "اكتشفوا العشب",
+    gazonCtaSecondary: "كيف تشترونه",
     palmierKicker: "خارجي",
     palmierTitle: "نخيل زينة تونس",
     palmierCopy: "نخلة زينة بسعر 275 دينار، توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية تونس.",
     palmierCta: "اكتشفوا النخيل",
+    palmierCtaSecondary: "كيف تشترونه",
     deliveryH2: "توصيل في كل أنحاء تونس",
     deliveryIntro: "عشب يُوصَّل مجاناً في تونس الكبرى ونابل، نخيل قابل للتوصيل في كل تونس حسب الطلب.",
     deliveryCards: [
@@ -336,6 +342,7 @@ function renderHome(lang) {
         <h2>${t.gazonTitle}</h2>
         <p>${t.gazonCopy}</p>
         <a class="pill-button" href="${p("/gazon-tunisie/")}">${t.gazonCta}</a>
+        <p><a href="${p("/acheter-gazon/")}">${t.gazonCtaSecondary}</a></p>
       </div>
       <div class="feature-media">
         <img
@@ -352,6 +359,7 @@ function renderHome(lang) {
         <h2>${t.palmierTitle}</h2>
         <p>${t.palmierCopy}</p>
         <a class="pill-button" href="${p("/palmier-tunisie/")}">${t.palmierCta}</a>
+        <p><a href="${p("/acheter-palmier/")}">${t.palmierCtaSecondary}</a></p>
       </div>
       <div class="feature-media">
         <img

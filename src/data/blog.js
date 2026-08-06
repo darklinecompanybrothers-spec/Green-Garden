@@ -186,8 +186,8 @@ const articles = [
     t: {
       fr: {
         title: "Quand planter du gazon en Tunisie : calendrier par saison",
-        metaTitle: "Quand planter du gazon en Tunisie ?",
-        metaDescription: "Quelle est la meilleure période pour poser du gazon en Tunisie ? Découvrez notre calendrier saison par saison avec Green Garden.",
+        metaTitle: "Quand Planter son Gazon en Tunisie ? [2026]",
+        metaDescription: "Quel est le meilleur moment pour poser du gazon en Tunisie en 2026 ? Notre calendrier saison par saison avec Green Garden, 9 DT/m².",
         h1: "Quand planter du gazon en Tunisie : calendrier par saison",
         heroAlt: "Calendrier de plantation du gazon en Tunisie",
         intro: "Contrairement au semis, le gazon en rouleau peut être posé presque toute l'année en Tunisie. Certaines saisons restent toutefois plus favorables pour limiter le stress hydrique des jeunes plaques.",
@@ -203,8 +203,8 @@ const articles = [
       },
       en: {
         title: "When to Lay Lawn in Tunisia: Season-by-Season Calendar",
-        metaTitle: "When to lay lawn in Tunisia?",
-        metaDescription: "What is the best time to lay lawn in Tunisia? Discover our season-by-season calendar with Green Garden.",
+        metaTitle: "When to Plant Lawn in Tunisia? [2026]",
+        metaDescription: "What is the best time to lay lawn in Tunisia in 2026? Our season-by-season calendar with Green Garden, 9 DT/sqm.",
         h1: "When to lay lawn in Tunisia: season-by-season calendar",
         heroAlt: "Lawn planting calendar in Tunisia",
         intro: "Unlike seeding, rolled lawn can be laid almost year-round in Tunisia. Some seasons remain more favourable, however, to limit water stress on young slabs.",
@@ -220,8 +220,8 @@ const articles = [
       },
       ar: {
         title: "متى تغرسون العشب في تونس: تقويم حسب الفصول",
-        metaTitle: "متى تغرسون العشب في تونس؟",
-        metaDescription: "ما هي أفضل فترة لتركيب العشب في تونس؟ اكتشفوا تقويمنا حسب الفصول مع Green Garden.",
+        metaTitle: "متى تغرسون عشبكم في تونس؟ [2026]",
+        metaDescription: "ما هي أفضل فترة لتركيب العشب في تونس سنة 2026؟ تقويمنا حسب الفصول مع Green Garden، بسعر 9 دينار/م².",
         h1: "متى تغرسون العشب في تونس: تقويم حسب الفصول",
         heroAlt: "تقويم غرس العشب في تونس",
         intro: "على عكس البذر، يمكن تركيب العشب على شكل لفائف طوال السنة تقريباً في تونس. تبقى بعض الفصول مع ذلك أكثر ملاءمة للحد من إجهاد الري على الألواح الفتية.",

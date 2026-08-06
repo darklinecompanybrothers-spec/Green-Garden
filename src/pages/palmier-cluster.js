@@ -82,8 +82,8 @@ function palmierCta(lang) {
 function pillarPage(lang) {
   const T = {
     fr: {
-      title: "Palmier Tunisie | Palmier décoratif à 275 DT - Green Garden",
-      metaDescription: "Vente de palmier décoratif en Tunisie à 275 DT. Livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs. Commandez sur WhatsApp avec Green Garden.",
+      title: "Palmier Tunisie – 275 DT, Livraison Gratuite | Green Garden",
+      metaDescription: "Palmier décoratif à 275 DT en Tunisie, livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs. Commandez facilement sur WhatsApp.",
       eyebrow: "Palmier décoratif",
       h1: "Palmier Tunisie : palmier décoratif à 275 DT",
       intro: "Green Garden vend et livre des palmiers décoratifs partout en Tunisie, au prix de 275 DT. La livraison est gratuite dans le Grand Tunis et à Nabeul ; ailleurs, elle est organisée sur devis et vous est communiquée avant confirmation de commande.",
@@ -103,8 +103,8 @@ function pillarPage(lang) {
       ],
     },
     en: {
-      title: "Palm Tree Tunisia | Decorative Palm Tree at 275 DT - Green Garden",
-      metaDescription: "Decorative palm tree for sale in Tunisia at 275 DT. Free delivery in Greater Tunis and Nabeul, on quote elsewhere. Order on WhatsApp with Green Garden.",
+      title: "Palm Tree Tunisia – 275 DT, Free Delivery | Green Garden",
+      metaDescription: "Decorative palm tree at 275 DT in Tunisia, free delivery in Greater Tunis and Nabeul, on quote elsewhere. Order easily on WhatsApp.",
       eyebrow: "Decorative palm tree",
       h1: "Palm Tree Tunisia: decorative palm tree at 275 DT",
       intro: "Green Garden sells and delivers decorative palm trees across Tunisia, at 275 DT. Delivery is free in Greater Tunis and Nabeul; elsewhere, it is arranged on quote and communicated to you before order confirmation.",
@@ -124,8 +124,8 @@ function pillarPage(lang) {
       ],
     },
     ar: {
-      title: "نخيل تونس | نخيل زينة بسعر 275 دينار - Green Garden",
-      metaDescription: "بيع نخيل زينة في تونس بسعر 275 دينار. توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية الجهات. اطلبوا عبر واتساب مع Green Garden.",
+      title: "نخيل تونس – 275 دينار، توصيل مجاني | Green Garden",
+      metaDescription: "نخيل زينة بسعر 275 دينار في تونس، توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية الجهات. اطلبوا بسهولة عبر واتساب.",
       eyebrow: "نخيل زينة",
       h1: "نخيل تونس: نخيل زينة بسعر 275 دينار",
       intro: "تبيع Green Garden وتوصل نخيل الزينة في كل تونس، بسعر 275 دينار. التوصيل مجاني في تونس الكبرى ونابل؛ في بقية الجهات، يُنظَّم حسب الطلب ويُبلَّغ لكم قبل تأكيد الطلب.",
