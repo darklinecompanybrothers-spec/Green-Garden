@@ -6,7 +6,7 @@ const { localizedPath } = require("../data/i18n");
 const HOME_TEXT = {
   fr: {
     title: "Green Garden Tunisie | Jardinerie, Gazon & Palmiers",
-    description: "Green Garden, votre jardinerie en Tunisie : gazon naturel 9 DT/m², palmiers décoratifs 275 DT, plantes et engrais. Devis rapide sur WhatsApp.",
+    description: "Green Garden, votre jardinerie en Tunisie : gazon naturel 9 DT/m², palmiers décoratifs 490 DT/m, plantes et engrais. Devis rapide sur WhatsApp.",
     heroEyebrow: "Votre jardinerie en Tunisie",
     heroTitle: "Bienvenue chez Green Garden",
     heroCopy: "Green Garden cultive des espaces extérieurs plus verts et plus vivants : gazon naturel en rouleau, palmiers décoratifs, plantes d'intérieur et engrais, livrés partout en Tunisie avec des conseils personnalisés à chaque commande.",
@@ -48,7 +48,7 @@ const HOME_TEXT = {
     gazonCtaSecondary: "Comment l'acheter",
     palmierKicker: "Extérieur",
     palmierTitle: "Palmier décoratif Tunisie",
-    palmierCopy: "Palmier décoratif à 275 DT, livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs en Tunisie.",
+    palmierCopy: "Palmier décoratif à 490 DT/m, livraison gratuite dans le Grand Tunis et à Nabeul, sur devis ailleurs en Tunisie.",
     palmierCta: "Découvrir les palmiers",
     palmierCtaSecondary: "Comment l'acheter",
     deliveryH2: "Livraison partout en Tunisie",
@@ -74,7 +74,7 @@ const HOME_TEXT = {
   },
   en: {
     title: "Green Garden Tunisia | Garden Center, Lawn & Palms",
-    description: "Green Garden, your garden center in Tunisia: natural lawn 9 DT/sqm, decorative palm trees 275 DT, plants and fertilizer. Fast WhatsApp quote.",
+    description: "Green Garden, your garden center in Tunisia: natural lawn 9 DT/sqm, decorative palm trees 490 DT/m, plants and fertilizer. Fast WhatsApp quote.",
     heroEyebrow: "Your garden center in Tunisia",
     heroTitle: "Welcome to Green Garden",
     heroCopy: "Green Garden grows greener, livelier outdoor spaces: natural rolled lawn, decorative palm trees, indoor plants and fertilizer, delivered across Tunisia with personal advice on every order.",
@@ -116,7 +116,7 @@ const HOME_TEXT = {
     gazonCtaSecondary: "How to buy it",
     palmierKicker: "Outdoor",
     palmierTitle: "Decorative Palm Tree Tunisia",
-    palmierCopy: "Decorative palm tree at 275 DT, free delivery in Greater Tunis and Nabeul, on quote elsewhere in Tunisia.",
+    palmierCopy: "Decorative palm tree at 490 DT/m, free delivery in Greater Tunis and Nabeul, on quote elsewhere in Tunisia.",
     palmierCta: "Discover our palm trees",
     palmierCtaSecondary: "How to buy it",
     deliveryH2: "Delivery across Tunisia",
@@ -142,7 +142,7 @@ const HOME_TEXT = {
   },
   ar: {
     title: "Green Garden | عشب طبيعي ونخيل في تونس",
-    description: "عشب طبيعي بسعر 9 دينار/م² (توصيل مجاني في تونس الكبرى ونابل) ونخيل زينة بسعر 275 دينار في تونس. نباتات داخلية وأسمدة.",
+    description: "عشب طبيعي بسعر 9 دينار/م² (توصيل مجاني في تونس الكبرى ونابل) ونخيل زينة بسعر 490 دينار/م في تونس. نباتات داخلية وأسمدة.",
     heroEyebrow: "مشتلكم في تونس",
     heroTitle: "مرحباً بكم في Green Garden",
     heroCopy: "تصنع Green Garden مساحات خارجية أكثر خضرة وحيوية: عشب طبيعي على شكل لفائف، نخيل زينة، نباتات داخلية وأسمدة، تُوصَّل في كل أنحاء تونس مع نصائح شخصية مع كل طلبية.",
@@ -184,7 +184,7 @@ const HOME_TEXT = {
     gazonCtaSecondary: "كيف تشترونه",
     palmierKicker: "خارجي",
     palmierTitle: "نخيل زينة تونس",
-    palmierCopy: "نخلة زينة بسعر 275 دينار، توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية تونس.",
+    palmierCopy: "نخلة زينة بسعر 490 دينار/م، توصيل مجاني في تونس الكبرى ونابل، حسب الطلب في بقية تونس.",
     palmierCta: "اكتشفوا النخيل",
     palmierCtaSecondary: "كيف تشترونه",
     deliveryH2: "توصيل في كل أنحاء تونس",

@@ -208,7 +208,7 @@ function plantationPalmierPage(lang) {
       faqH2: "Questions fréquentes sur la plantation de palmier",
       faq: [
         ["La plantation est-elle disponible partout en Tunisie ?", "Le service de plantation est organisé au cas par cas selon la localisation du chantier. Contactez-nous par WhatsApp avec votre ville pour vérifier la disponibilité."],
-        ["Le prix de la plantation est-il inclus dans le prix du palmier ?", "Non, la plantation est un service à part, facturé séparément de l'achat du palmier à 275 DT. Le tarif dépend de l'accessibilité du terrain, communiqué après évaluation."],
+        ["Le prix de la plantation est-il inclus dans le prix du palmier ?", "Non, la plantation est un service à part, facturé séparément de l'achat du palmier à 490 DT/m. Le tarif dépend de l'accessibilité du terrain, communiqué après évaluation."],
         ["Quelle est la meilleure période pour planter un palmier ?", "Le printemps et l'automne, aux températures plus douces, sont généralement les plus favorables, mais la plantation reste possible sur une bonne partie de l'année avec un arrosage adapté."],
       ],
     },
@@ -231,7 +231,7 @@ function plantationPalmierPage(lang) {
       faqH2: "Frequently asked questions about palm tree planting",
       faq: [
         ["Is planting available everywhere in Tunisia?", "The planting service is arranged case by case depending on the project's location. Contact us on WhatsApp with your city to check availability."],
-        ["Is the planting price included in the palm tree price?", "No, planting is a separate service, billed apart from buying the palm tree at 275 DT. The rate depends on site accessibility, communicated after assessment."],
+        ["Is the planting price included in the palm tree price?", "No, planting is a separate service, billed apart from buying the palm tree at 490 DT/m. The rate depends on site accessibility, communicated after assessment."],
         ["What is the best time to plant a palm tree?", "Spring and autumn, with milder temperatures, are generally the most favourable, but planting remains possible for much of the year with suitable watering."],
       ],
     },
@@ -254,7 +254,7 @@ function plantationPalmierPage(lang) {
       faqH2: "أسئلة شائعة حول غرس النخيل",
       faq: [
         ["هل الغرس متوفر في كل تونس؟", "تُنظَّم خدمة الغرس حالة بحالة حسب موقع المشروع. تواصلوا معنا عبر واتساب مع مدينتكم للتحقق من التوفر."],
-        ["هل سعر الغرس مشمول في سعر النخلة؟", "لا، الغرس خدمة منفصلة، تُحتسب بشكل منفصل عن شراء النخلة بسعر 275 دينار. تعتمد التعريفة على سهولة الوصول إلى الأرض، وتُبلَّغ بعد التقييم."],
+        ["هل سعر الغرس مشمول في سعر النخلة؟", "لا، الغرس خدمة منفصلة، تُحتسب بشكل منفصل عن شراء النخلة بسعر 490 دينار/م. تعتمد التعريفة على سهولة الوصول إلى الأرض، وتُبلَّغ بعد التقييم."],
         ["ما هي أفضل فترة لغرس نخلة؟", "الربيع والخريف، بدرجات حرارتهما المعتدلة، هما عموماً الأنسب، لكن الغرس يبقى ممكناً في جزء كبير من السنة مع ري مناسب."],
       ],
     },

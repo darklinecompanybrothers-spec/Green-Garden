@@ -32,7 +32,7 @@ function localBusiness({ areaServed } = {}) {
     url: SITE.domain,
     image: absoluteUrl(SITE.defaultOgImage),
     telephone: SITE.phoneE164,
-    priceRange: "9 DT - 275 DT",
+    priceRange: "9 DT - 490 DT",
     address: {
       "@type": "PostalAddress",
       addressLocality: SITE.address.locality,

@@ -16,7 +16,7 @@ const POURQUOI_TEXT = {
     intro: "Un prix clair, une livraison organisée dans toute la Tunisie et des conseils concrets : voici ce qui distingue Green Garden pour votre gazon naturel et vos palmiers décoratifs.",
     label: "Pourquoi nous choisir",
     listH2: "Ce qui nous distingue",
-    list: ["Un prix unique et transparent : 9 DT/m² pour le gazon, 275 DT pour le palmier, sans coût caché", "Une livraison gratuite dans le Grand Tunis et à Nabeul pour le gazon naturel et le palmier décoratif", "Une livraison organisée sur devis dans le reste de la Tunisie", "Une prise de contact rapide et directe par WhatsApp, sans compte à créer", "Des conseils de pose et d'entretien fournis avec chaque commande", "Une offre complète : gazon, palmiers, plantes d'intérieur et engrais"],
+    list: ["Un prix unique et transparent : 9 DT/m² pour le gazon, 490 DT/m pour le palmier, sans coût caché", "Une livraison gratuite dans le Grand Tunis et à Nabeul pour le gazon naturel et le palmier décoratif", "Une livraison organisée sur devis dans le reste de la Tunisie", "Une prise de contact rapide et directe par WhatsApp, sans compte à créer", "Des conseils de pose et d'entretien fournis avec chaque commande", "Une offre complète : gazon, palmiers, plantes d'intérieur et engrais"],
     ctaHeading: "Discutons de votre projet",
     ctaText: "Décrivez-nous votre jardin ou votre projet d'aménagement, nous vous conseillons la meilleure solution.",
     ctaButton: "Contacter Green Garden",
@@ -25,7 +25,7 @@ const POURQUOI_TEXT = {
     relatedH2: "Découvrir nos produits",
     related: [
       ["Gazon Tunisie", "/gazon-tunisie/", "9 DT/m², livraison gratuite Grand Tunis et Nabeul"],
-      ["Palmier Tunisie", "/palmier-tunisie/", "275 DT, livraison gratuite Grand Tunis et Nabeul"],
+      ["Palmier Tunisie", "/palmier-tunisie/", "490 DT/m, livraison gratuite Grand Tunis et Nabeul"],
     ],
   },
   en: {
@@ -36,7 +36,7 @@ const POURQUOI_TEXT = {
     intro: "A clear price, delivery arranged across Tunisia and concrete advice: here is what sets Green Garden apart for your natural lawn and decorative palm trees.",
     label: "Why choose us",
     listH2: "What sets us apart",
-    list: ["A single, transparent price: 9 DT/sqm for lawn, 275 DT for the palm tree, no hidden cost", "Free delivery in Greater Tunis and Nabeul for natural lawn and the decorative palm tree", "Delivery arranged on quote across the rest of Tunisia", "Fast, direct contact via WhatsApp, no account needed", "Laying and care advice provided with every order", "A complete range: lawn, palm trees, indoor plants and fertilizer"],
+    list: ["A single, transparent price: 9 DT/sqm for lawn, 490 DT/m for the palm tree, no hidden cost", "Free delivery in Greater Tunis and Nabeul for natural lawn and the decorative palm tree", "Delivery arranged on quote across the rest of Tunisia", "Fast, direct contact via WhatsApp, no account needed", "Laying and care advice provided with every order", "A complete range: lawn, palm trees, indoor plants and fertilizer"],
     ctaHeading: "Let's discuss your project",
     ctaText: "Tell us about your garden or landscaping project, we will advise you on the best solution.",
     ctaButton: "Contact Green Garden",
@@ -45,7 +45,7 @@ const POURQUOI_TEXT = {
     relatedH2: "Discover our products",
     related: [
       ["Lawn Tunisia", "/gazon-tunisie/", "9 DT/sqm, free delivery in Greater Tunis and Nabeul"],
-      ["Palm Tree Tunisia", "/palmier-tunisie/", "275 DT, free delivery in Greater Tunis and Nabeul"],
+      ["Palm Tree Tunisia", "/palmier-tunisie/", "490 DT/m, free delivery in Greater Tunis and Nabeul"],
     ],
   },
   ar: {
@@ -56,7 +56,7 @@ const POURQUOI_TEXT = {
     intro: "سعر واضح، توصيل مُنظَّم في كل تونس ونصائح ملموسة: إليكم ما يميز Green Garden لعشبكم الطبيعي ونخيلكم الزينة.",
     label: "لماذا نحن",
     listH2: "ما يميزنا",
-    list: ["سعر موحد وشفاف: 9 دينار/م² للعشب، 275 دينار للنخلة، دون تكلفة مخفية", "توصيل مجاني في تونس الكبرى ونابل للعشب الطبيعي ونخيل الزينة", "توصيل مُنظَّم حسب الطلب في بقية تونس", "تواصل سريع ومباشر عبر واتساب، دون حساب يُنشأ", "نصائح تركيب وعناية مع كل طلبية", "عرض كامل: عشب، نخيل، نباتات داخلية وأسمدة"],
+    list: ["سعر موحد وشفاف: 9 دينار/م² للعشب، 490 دينار/م للنخلة، دون تكلفة مخفية", "توصيل مجاني في تونس الكبرى ونابل للعشب الطبيعي ونخيل الزينة", "توصيل مُنظَّم حسب الطلب في بقية تونس", "تواصل سريع ومباشر عبر واتساب، دون حساب يُنشأ", "نصائح تركيب وعناية مع كل طلبية", "عرض كامل: عشب، نخيل، نباتات داخلية وأسمدة"],
     ctaHeading: "لنتحدث عن مشروعكم",
     ctaText: "صفوا لنا حديقتكم أو مشروع التهيئة، وسننصحكم بأفضل حل.",
     ctaButton: "تواصلوا مع Green Garden",
@@ -65,7 +65,7 @@ const POURQUOI_TEXT = {
     relatedH2: "اكتشفوا منتجاتنا",
     related: [
       ["عشب تونس", "/gazon-tunisie/", "9 دينار/م²، توصيل مجاني في تونس الكبرى ونابل"],
-      ["نخيل تونس", "/palmier-tunisie/", "275 دينار، توصيل مجاني في تونس الكبرى ونابل"],
+      ["نخيل تونس", "/palmier-tunisie/", "490 دينار/م، توصيل مجاني في تونس الكبرى ونابل"],
     ],
   },
 };
@@ -199,7 +199,7 @@ const FAQ_TEXT = {
     label: "FAQ",
     generalH2: "Questions générales",
     items: [
-      ["Quels produits vend Green Garden ?", "Green Garden vend du gazon naturel en rouleau (9 DT/m²), des palmiers décoratifs (275 DT), des plantes d'intérieur décoratives et des engrais."],
+      ["Quels produits vend Green Garden ?", "Green Garden vend du gazon naturel en rouleau (9 DT/m²), des palmiers décoratifs (490 DT/m), des plantes d'intérieur décoratives et des engrais."],
       ["Dans quelles régions livrez-vous ?", "Le gazon naturel et le palmier décoratif sont livrés gratuitement dans le Grand Tunis et à Nabeul. Ailleurs en Tunisie, les deux produits restent livrables, sur devis selon la distance."],
       ["Comment commander un produit ?", "La commande se fait directement par WhatsApp : indiquez le produit souhaité, la quantité et votre ville de livraison pour recevoir une confirmation rapide."],
       ["Quels sont vos horaires de disponibilité ?", `Nous sommes disponibles ${UI.fr.hoursLabel.toLowerCase()} pour répondre à vos demandes par téléphone ou WhatsApp.`],
@@ -222,7 +222,7 @@ const FAQ_TEXT = {
     label: "FAQ",
     generalH2: "General questions",
     items: [
-      ["What products does Green Garden sell?", "Green Garden sells natural rolled lawn (9 DT/sqm), decorative palm trees (275 DT), decorative indoor plants and fertilizer."],
+      ["What products does Green Garden sell?", "Green Garden sells natural rolled lawn (9 DT/sqm), decorative palm trees (490 DT/m), decorative indoor plants and fertilizer."],
       ["Which regions do you deliver to?", "Natural lawn and the decorative palm tree are delivered free in Greater Tunis and Nabeul. Elsewhere in Tunisia, both products remain deliverable, on quote based on distance."],
       ["How do I order a product?", "Orders are placed directly on WhatsApp: tell us the desired product, quantity and delivery city to receive a quick confirmation."],
       ["What are your availability hours?", `We are available ${UI.en.hoursLabel.toLowerCase()} to answer your requests by phone or WhatsApp.`],
@@ -245,7 +245,7 @@ const FAQ_TEXT = {
     label: "الأسئلة الشائعة",
     generalH2: "أسئلة عامة",
     items: [
-      ["ما هي المنتجات التي تبيعها Green Garden؟", "تبيع Green Garden عشباً طبيعياً على شكل لفائف (9 دينار/م²)، نخيل زينة (275 دينار)، نباتات داخلية زخرفية وأسمدة."],
+      ["ما هي المنتجات التي تبيعها Green Garden؟", "تبيع Green Garden عشباً طبيعياً على شكل لفائف (9 دينار/م²)، نخيل زينة (490 دينار/م)، نباتات داخلية زخرفية وأسمدة."],
       ["إلى أي جهات توصلون؟", "يُوصَّل العشب الطبيعي ونخيل الزينة مجاناً في تونس الكبرى ونابل. في بقية تونس، يبقى المنتجان قابلين للتوصيل حسب الطلب وحسب المسافة."],
       ["كيف أطلب منتجاً؟", "يتم الطلب مباشرة عبر واتساب: أذكروا المنتج المرغوب والكمية ومدينة التوصيل لتلقي تأكيد سريع."],
       ["ما هي أوقات توفركم؟", `نحن متوفرون ${UI.ar.hoursLabel} للرد على طلباتكم هاتفياً أو عبر واتساب.`],
