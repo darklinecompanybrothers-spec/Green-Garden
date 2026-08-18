@@ -78,7 +78,11 @@ function breadcrumbList(items) {
   };
 }
 
-function product({ key, name, price, currency, unit, description, image, path, freeShippingRegions }) {
+// Aucun shippingDetails n'est émis : les frais de livraison dépendent de l'adresse
+// du client et sont communiqués avant confirmation. Ne jamais réintroduire de
+// shippingRate à 0 ni de montant estimé ici — ce serait une promesse non tenue
+// déclarée à Google.
+function product({ key, name, price, currency, unit, description, image, path }) {
   const offer = {
     "@type": "Offer",
     url: absoluteUrl(path),
@@ -96,25 +100,6 @@ function product({ key, name, price, currency, unit, description, image, path, f
     },
     ...(unit ? { eligibleQuantity: { "@type": "QuantitativeValue", unitText: unit } } : {}),
   };
-
-  // Uniquement pour les zones où la livraison gratuite est réellement garantie
-  // (pas de montant inventé pour les zones facturées sur devis).
-  if (freeShippingRegions && freeShippingRegions.length) {
-    offer.shippingDetails = {
-      "@type": "OfferShippingDetails",
-      shippingRate: { "@type": "MonetaryAmount", value: "0", currency },
-      shippingDestination: {
-        "@type": "DefinedRegion",
-        addressCountry: "TN",
-        addressRegion: freeShippingRegions,
-      },
-      deliveryTime: {
-        "@type": "ShippingDeliveryTime",
-        handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
-        transitTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 2, unitCode: "DAY" },
-      },
-    };
-  }
 
   return {
     "@context": "https://schema.org",

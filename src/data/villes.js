@@ -86,7 +86,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Nabeul | Free Delivery - Green Garden",
+        metaTitle: "Lawn & Palm Tree Nabeul | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Green Garden is based in Nabeul: natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered across the region.",
         h1: "Lawn and palm tree in Nabeul",
@@ -452,7 +452,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Tunis | Free Delivery - Green Garden",
+        metaTitle: "Lawn & Palm Tree Tunis | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to Tunis city. Fast quote on WhatsApp with Green Garden.",
         h1: "Lawn and palm tree in Tunis",
@@ -504,7 +504,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Ariana | Free Delivery - Green Garden",
+        metaTitle: "Lawn & Palm Tree Ariana | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to Ariana. Greater Tunis' garden city, fast quote on WhatsApp.",
         h1: "Lawn and palm tree in Ariana",
@@ -556,7 +556,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree La Marsa | Free Delivery - Green Garden",
+        metaTitle: "Lawn & Palm Tree La Marsa | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to La Marsa. Ideal for seaside villas, quote via WhatsApp.",
         h1: "Lawn and palm tree in La Marsa",
