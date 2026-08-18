@@ -15,10 +15,10 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Grand Tunis - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Grand Tunis - Green Garden",
         metaDescription:
           "Gazon naturel et palmiers décoratifs livrés partout à Grand Tunis (Tunis, Ariana, Ben Arous, Manouba). Gazon 15 ou 9 DT/m² selon la surface, palmier 490 DT/m.",
-        h1: "Gazon et palmier dans le Grand Tunis",
+        h1: "Gazon naturel et palmier dans le Grand Tunis",
         intro:
           "Le Grand Tunis (Tunis, Ariana, Ben Arous et Manouba) est l'une des régions que nous desservons pour le gazon naturel en rouleau. Que vous aménagiez un jardin de villa à La Marsa, un espace vert à Ariana ou les abords d'un local professionnel à Ben Arous, notre équipe organise la livraison et peut vous conseiller sur la pose.",
         useCase:
@@ -31,10 +31,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Greater Tunis - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Greater Tunis - Green Garden",
         metaDescription:
           "Natural lawn and decorative palm trees delivered across Greater Tunis (Tunis, Ariana, Ben Arous, Manouba). Lawn 15 or 9 DT/sqm depending on area, palm tree 490 DT/m.",
-        h1: "Lawn and palm tree in Greater Tunis",
+        h1: "Natural lawn and palm tree in Greater Tunis",
         intro:
           "Greater Tunis (Tunis, Ariana, Ben Arous and Manouba) is one of the regions we serve for natural rolled lawn. Whether you are landscaping a villa garden in La Marsa, a green space in Ariana, or the surroundings of a business premises in Ben Arous, our team organises delivery and can advise you on installation.",
         useCase:
@@ -47,10 +47,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل تونس الكبرى - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل تونس الكبرى - Green Garden",
         metaDescription:
           "عشب طبيعي ونخيل زينة يُوصَّلان في كامل تونس الكبرى (تونس، أريانة، بن عروس، منوبة). عشب بسعر 15 أو 9 دينار/م² حسب المساحة، نخلة بسعر 490 دينار/م.",
-        h1: "عشب ونخيل في تونس الكبرى",
+        h1: "عشب طبيعي ونخيل في تونس الكبرى",
         intro:
           "تُعد تونس الكبرى (تونس، أريانة، بن عروس ومنوبة) إحدى الجهات التي نخدمها للعشب الطبيعي على شكل لفائف. سواء كنتم تُهيّئون حديقة فيلا بالمرسى أو مساحة خضراء بأريانة أو محيط مقر مهني ببن عروس، يتكفل فريقنا بتنظيم التوصيل ويمكنه إرشادكم حول التركيب.",
         useCase:
@@ -70,10 +70,10 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Nabeul | Livraison en Tunisie - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Nabeul | Livraison en Tunisie - Green Garden",
         metaDescription:
           "Green Garden est basé à Nabeul : gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés dans toute la région.",
-        h1: "Gazon et palmier à Nabeul",
+        h1: "Gazon naturel et palmier à Nabeul",
         intro:
           "Nabeul est la région où se trouve notre dépôt Green Garden. C'est ici que nous préparons chaque commande de gazon en rouleau et de palmiers avant expédition, ce qui nous vaut les délais les plus courts de tout notre réseau et les frais de livraison les plus bas de Tunisie.",
         useCase:
@@ -86,10 +86,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Nabeul | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Nabeul | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Green Garden is based in Nabeul: natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered across the region.",
-        h1: "Lawn and palm tree in Nabeul",
+        h1: "Natural lawn and palm tree in Nabeul",
         intro:
           "Nabeul is home to our Green Garden depot. This is where every order of rolled lawn and palm trees is prepared before shipping, which is why we offer the shortest lead times in our entire network and the lowest delivery fees in Tunisia.",
         useCase:
@@ -102,10 +102,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل نابل | التوصيل في تونس - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل نابل | التوصيل في تونس - Green Garden",
         metaDescription:
           "Green Garden مقرها نابل: عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان في كل الجهة.",
-        h1: "عشب ونخيل في نابل",
+        h1: "عشب طبيعي ونخيل في نابل",
         intro:
           "نابل هي المنطقة التي يوجد بها مستودع Green Garden. هنا نُحضّر كل طلبية من العشب الطبيعي والنخيل قبل الشحن، مما يمنحنا أقصر الآجال في كل شبكتنا وأدنى مصاريف توصيل في تونس.",
         useCase:
@@ -125,10 +125,10 @@ const villes = [
     gazonStatus: "quote",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Sousse | Livraison sur devis - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Sousse | Livraison sur devis - Green Garden",
         metaDescription:
           "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Sousse. Livraison organisée sur devis, contactez Green Garden par WhatsApp.",
-        h1: "Gazon et palmier à Sousse",
+        h1: "Gazon naturel et palmier à Sousse",
         intro:
           "Sousse et sa région (Port El Kantaoui, Kalâa Kebira, Hammam Sousse) font partie des zones que nous desservons régulièrement pour le gazon naturel en rouleau et les palmiers décoratifs. La livraison y est organisée sur devis : nous calculons le tarif exact selon votre adresse et le volume de la commande.",
         useCase:
@@ -140,10 +140,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Sousse | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Sousse | Delivery on Quote - Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Sousse. Delivery arranged on quote, contact Green Garden on WhatsApp.",
-        h1: "Lawn and palm tree in Sousse",
+        h1: "Natural lawn and palm tree in Sousse",
         intro:
           "Sousse and its area (Port El Kantaoui, Kalâa Kebira, Hammam Sousse) are among the zones we regularly serve with natural rolled lawn and decorative palm trees. Delivery there is arranged on quote: we calculate the exact rate based on your address and order volume.",
         useCase:
@@ -155,10 +155,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل سوسة | توصيل حسب الطلب - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل سوسة | توصيل حسب الطلب - Green Garden",
         metaDescription:
           "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى سوسة. توصيل مُنظّم حسب الطلب، تواصلوا مع Green Garden عبر واتساب.",
-        h1: "عشب ونخيل في سوسة",
+        h1: "عشب طبيعي ونخيل في سوسة",
         intro:
           "تُعد سوسة وجهتها (بورت الكانتاوي، قلعة كبيرة، حمام سوسة) من بين المناطق التي نخدمها بانتظام بالعشب الطبيعي على شكل لفائف والنخيل الزينة. يُنظَّم التوصيل هناك حسب الطلب: نحسب التعريفة الدقيقة حسب عنوانكم وحجم الطلبية.",
         useCase:
@@ -177,10 +177,10 @@ const villes = [
     gazonStatus: "quote",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Monastir | Livraison sur devis - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Monastir | Livraison sur devis - Green Garden",
         metaDescription:
           "Gazon naturel en rouleau et palmiers décoratifs livrés à Monastir. Devis de livraison rapide par WhatsApp avec Green Garden.",
-        h1: "Gazon et palmier à Monastir",
+        h1: "Gazon naturel et palmier à Monastir",
         intro:
           "Nous livrons régulièrement du gazon naturel et des palmiers décoratifs à Monastir et dans les localités environnantes (Skanes, Ksar Hellal, Ksibet el Mediouni). Comme pour les autres zones hors Grand Tunis et Nabeul, la livraison est organisée sur devis.",
         useCase:
@@ -192,10 +192,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Monastir | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Monastir | Delivery on Quote - Green Garden",
         metaDescription:
           "Natural rolled lawn and decorative palm trees delivered to Monastir. Fast delivery quote on WhatsApp with Green Garden.",
-        h1: "Lawn and palm tree in Monastir",
+        h1: "Natural lawn and palm tree in Monastir",
         intro:
           "We regularly deliver natural lawn and decorative palm trees to Monastir and surrounding towns (Skanes, Ksar Hellal, Ksibet el Mediouni). As with other zones outside Greater Tunis and Nabeul, delivery is arranged on quote.",
         useCase:
@@ -207,10 +207,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل المنستير | توصيل حسب الطلب - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل المنستير | توصيل حسب الطلب - Green Garden",
         metaDescription:
           "عشب طبيعي على شكل لفائف ونخيل زينة يُوصَّلان إلى المنستير. عرض سعر توصيل سريع عبر واتساب مع Green Garden.",
-        h1: "عشب ونخيل في المنستير",
+        h1: "عشب طبيعي ونخيل في المنستير",
         intro:
           "نوصل بانتظام العشب الطبيعي والنخيل الزينة إلى المنستير والمناطق المجاورة (سكانس، قصر هلال، قصيبة المديوني). كما هو الحال في المناطق الأخرى خارج تونس الكبرى ونابل، يُنظَّم التوصيل حسب الطلب.",
         useCase:
@@ -229,10 +229,10 @@ const villes = [
     gazonStatus: "quote",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Sfax | Livraison sur devis - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Sfax | Livraison sur devis - Green Garden",
         metaDescription:
           "Green Garden livre gazon naturel en rouleau et palmiers décoratifs jusqu'à Sfax. Demandez votre devis de livraison par WhatsApp.",
-        h1: "Gazon et palmier à Sfax",
+        h1: "Gazon naturel et palmier à Sfax",
         intro:
           "Sfax est l'une des principales villes du sud vers laquelle nous expédions du gazon naturel et des palmiers décoratifs. La distance étant plus importante, la livraison y est systématiquement organisée sur devis pour vous garantir un tarif transparent.",
         useCase:
@@ -244,10 +244,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Sfax | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Sfax | Delivery on Quote - Green Garden",
         metaDescription:
           "Green Garden delivers natural rolled lawn and decorative palm trees as far as Sfax. Request your delivery quote on WhatsApp.",
-        h1: "Lawn and palm tree in Sfax",
+        h1: "Natural lawn and palm tree in Sfax",
         intro:
           "Sfax is one of the main southern cities we ship natural lawn and decorative palm trees to. Given the greater distance, delivery there is always arranged on quote to guarantee you a transparent rate.",
         useCase:
@@ -259,10 +259,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل صفاقس | توصيل حسب الطلب - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل صفاقس | توصيل حسب الطلب - Green Garden",
         metaDescription:
           "توصل Green Garden العشب الطبيعي على شكل لفائف والنخيل الزينة إلى صفاقس. اطلبوا عرض سعر التوصيل عبر واتساب.",
-        h1: "عشب ونخيل في صفاقس",
+        h1: "عشب طبيعي ونخيل في صفاقس",
         intro:
           "تُعد صفاقس إحدى المدن الجنوبية الرئيسية التي نشحن إليها العشب الطبيعي والنخيل الزينة. نظراً للمسافة الأكبر، يُنظَّم التوصيل هناك دائماً حسب الطلب لضمان تعريفة شفافة لكم.",
         useCase:
@@ -281,10 +281,10 @@ const villes = [
     gazonStatus: "quote",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Bizerte | Livraison sur devis - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Bizerte | Livraison sur devis - Green Garden",
         metaDescription:
           "Gazon naturel et palmiers décoratifs livrés à Bizerte et sa région. Green Garden vous envoie un devis de livraison rapide par WhatsApp.",
-        h1: "Gazon et palmier à Bizerte",
+        h1: "Gazon naturel et palmier à Bizerte",
         intro:
           "Bizerte et ses environs (Menzel Bourguiba, Menzel Jemil, Ras Jebel) sont desservis pour nos deux produits phares : le gazon naturel en rouleau et le palmier décoratif. La livraison y est proposée sur devis, en fonction de la distance depuis notre dépôt de Nabeul via le Grand Tunis.",
         useCase:
@@ -296,10 +296,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Bizerte | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Bizerte | Delivery on Quote - Green Garden",
         metaDescription:
           "Natural lawn and decorative palm trees delivered to Bizerte and its region. Green Garden sends you a fast delivery quote on WhatsApp.",
-        h1: "Lawn and palm tree in Bizerte",
+        h1: "Natural lawn and palm tree in Bizerte",
         intro:
           "Bizerte and its surroundings (Menzel Bourguiba, Menzel Jemil, Ras Jebel) are served for both our flagship products: natural rolled lawn and decorative palm trees. Delivery there is offered on quote, based on the distance from our Nabeul depot via Greater Tunis.",
         useCase:
@@ -311,10 +311,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل بنزرت | توصيل حسب الطلب - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل بنزرت | توصيل حسب الطلب - Green Garden",
         metaDescription:
           "عشب طبيعي ونخيل زينة يُوصَّلان إلى بنزرت وجهتها. ترسل لكم Green Garden عرض سعر توصيل سريع عبر واتساب.",
-        h1: "عشب ونخيل في بنزرت",
+        h1: "عشب طبيعي ونخيل في بنزرت",
         intro:
           "تُخدَم بنزرت ومحيطها (منزل بورقيبة، منزل جميل، رأس الجبل) بمنتجينا الرئيسيين: العشب الطبيعي على شكل لفائف والنخيل الزينة. يُقترح التوصيل هناك حسب الطلب، حسب المسافة من مستودعنا بنابل عبر تونس الكبرى.",
         useCase:
@@ -333,10 +333,10 @@ const villes = [
     gazonStatus: "quote",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Gabès | Livraison sur devis - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Gabès | Livraison sur devis - Green Garden",
         metaDescription:
           "Green Garden livre du gazon naturel en rouleau et des palmiers décoratifs jusqu'à Gabès. Devis de livraison rapide par WhatsApp.",
-        h1: "Gazon et palmier à Gabès",
+        h1: "Gazon naturel et palmier à Gabès",
         intro:
           "Gabès, région historiquement liée à la culture du palmier dattier grâce à son oasis, est aussi l'une des zones où nous livrons nos palmiers décoratifs d'ornement et notre gazon naturel en rouleau, sur devis selon la distance depuis Nabeul.",
         useCase:
@@ -348,10 +348,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Gabes | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Gabes | Delivery on Quote - Green Garden",
         metaDescription:
           "Green Garden delivers natural rolled lawn and decorative palm trees as far as Gabes. Fast delivery quote on WhatsApp.",
-        h1: "Lawn and palm tree in Gabes",
+        h1: "Natural lawn and palm tree in Gabes",
         intro:
           "Gabes, a region historically linked to date palm growing thanks to its oasis, is also one of the zones where we deliver our ornamental decorative palm trees and natural rolled lawn, on quote depending on the distance from Nabeul.",
         useCase:
@@ -363,10 +363,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل قابس | توصيل حسب الطلب - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل قابس | توصيل حسب الطلب - Green Garden",
         metaDescription:
           "توصل Green Garden العشب الطبيعي على شكل لفائف والنخيل الزينة إلى قابس. عرض سعر توصيل سريع عبر واتساب.",
-        h1: "عشب ونخيل في قابس",
+        h1: "عشب طبيعي ونخيل في قابس",
         intro:
           "قابس، الجهة المرتبطة تاريخياً بزراعة نخيل التمر بفضل واحتها، هي أيضاً إحدى المناطق التي نوصل إليها نخيل الزينة والعشب الطبيعي على شكل لفائف، حسب الطلب وحسب المسافة من نابل.",
         useCase:
@@ -385,10 +385,10 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Hammamet - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Hammamet - Green Garden",
         metaDescription:
           "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Hammamet, idéal pour villas et hôtels. Commandez via Green Garden.",
-        h1: "Gazon et palmier à Hammamet",
+        h1: "Gazon naturel et palmier à Hammamet",
         intro:
           "Hammamet fait partie du gouvernorat de Nabeul, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Ville touristique par excellence, Hammamet compte de nombreuses villas, résidences et complexes hôteliers pour lesquels le gazon en rouleau et le palmier décoratif sont des choix d'aménagement très demandés.",
         useCase:
@@ -400,10 +400,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Hammamet - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Hammamet - Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Hammamet, ideal for villas and hotels. Order with Green Garden.",
-        h1: "Lawn and palm tree in Hammamet",
+        h1: "Natural lawn and palm tree in Hammamet",
         intro:
           "Hammamet is part of Nabeul governorate, one of the regions we serve for natural lawn and the decorative palm tree. A quintessential tourist town, Hammamet has many villas, residences and hotel complexes for which rolled lawn and decorative palm trees are highly sought-after landscaping choices.",
         useCase:
@@ -415,10 +415,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل الحمامات - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل الحمامات - Green Garden",
         metaDescription:
           "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى الحمامات، مثالي للفيلات والفنادق. اطلبوا عبر Green Garden.",
-        h1: "عشب ونخيل في الحمامات",
+        h1: "عشب طبيعي ونخيل في الحمامات",
         intro:
           "تنتمي الحمامات إلى ولاية نابل، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. مدينة سياحية بامتياز، تضم الحمامات العديد من الفيلات والمساكن والمجمعات الفندقية التي يُعد فيها العشب على شكل لفائف والنخيل الزينة خيارات تهيئة مطلوبة جداً.",
         useCase:
@@ -437,10 +437,10 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Tunis | Livraison en Tunisie - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Tunis | Livraison en Tunisie - Green Garden",
         metaDescription:
           "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Tunis ville. Devis rapide par WhatsApp avec Green Garden.",
-        h1: "Gazon et palmier à Tunis",
+        h1: "Gazon naturel et palmier à Tunis",
         intro:
           "Tunis ville fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Entre appartements avec terrasse et villas avec jardin, la capitale a des besoins d'aménagement très variés que nous accompagnons au quotidien.",
         useCase:
@@ -452,10 +452,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Tunis | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Tunis | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Tunis city. Fast quote on WhatsApp with Green Garden.",
-        h1: "Lawn and palm tree in Tunis",
+        h1: "Natural lawn and palm tree in Tunis",
         intro:
           "Tunis city is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Between apartments with a terrace and villas with a garden, the capital has very varied landscaping needs that we support daily.",
         useCase:
@@ -467,10 +467,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل تونس | التوصيل في تونس - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل تونس | التوصيل في تونس - Green Garden",
         metaDescription:
           "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى مدينة تونس. عرض سعر سريع عبر واتساب مع Green Garden.",
-        h1: "عشب ونخيل في تونس",
+        h1: "عشب طبيعي ونخيل في تونس",
         intro:
           "تنتمي مدينة تونس إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. بين شقق ذات تراس وفيلات ذات حديقة، تتنوع احتياجات تهيئة العاصمة كثيراً ونرافقها يومياً.",
         useCase:
@@ -489,10 +489,10 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier Ariana | Livraison en Tunisie - Green Garden",
+        metaTitle: "Gazon naturel & Palmier Ariana | Livraison en Tunisie - Green Garden",
         metaDescription:
           "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Ariana. Ville verte du Grand Tunis, devis rapide par WhatsApp.",
-        h1: "Gazon et palmier à Ariana",
+        h1: "Gazon naturel et palmier à Ariana",
         intro:
           "Ariana fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Surnommée historiquement la ville des jardins, Ariana compte de nombreuses villas avec espaces verts pour lesquelles le gazon et le palmier sont des choix d'aménagement naturels.",
         useCase:
@@ -504,10 +504,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree Ariana | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Ariana | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Ariana. Greater Tunis' garden city, fast quote on WhatsApp.",
-        h1: "Lawn and palm tree in Ariana",
+        h1: "Natural lawn and palm tree in Ariana",
         intro:
           "Ariana is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Historically known as the city of gardens, Ariana has many villas with green spaces for which lawn and palm trees are natural landscaping choices.",
         useCase:
@@ -519,10 +519,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل أريانة | التوصيل في تونس - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل أريانة | التوصيل في تونس - Green Garden",
         metaDescription:
           "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى أريانة. مدينة الحدائق في تونس الكبرى، عرض سعر سريع عبر واتساب.",
-        h1: "عشب ونخيل في أريانة",
+        h1: "عشب طبيعي ونخيل في أريانة",
         intro:
           "تنتمي أريانة إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. المعروفة تاريخياً بمدينة الحدائق، تضم أريانة العديد من الفيلات ذات المساحات الخضراء التي يُعد فيها العشب والنخيل خيارات تهيئة طبيعية.",
         useCase:
@@ -541,10 +541,10 @@ const villes = [
     gazonStatus: "free",
     t: {
       fr: {
-        metaTitle: "Gazon & Palmier La Marsa | Livraison en Tunisie - Green Garden",
+        metaTitle: "Gazon naturel & Palmier La Marsa | Livraison en Tunisie - Green Garden",
         metaDescription:
           "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à La Marsa. Idéal pour les villas en bord de mer, devis via WhatsApp.",
-        h1: "Gazon et palmier à La Marsa",
+        h1: "Gazon naturel et palmier à La Marsa",
         intro:
           "La Marsa fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Cette banlieue balnéaire prisée compte de nombreuses villas avec jardins en bord de mer, où le palmier décoratif est un choix d'aménagement particulièrement recherché.",
         useCase:
@@ -556,10 +556,10 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Lawn & Palm Tree La Marsa | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree La Marsa | Delivery in Tunisia - Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to La Marsa. Ideal for seaside villas, quote via WhatsApp.",
-        h1: "Lawn and palm tree in La Marsa",
+        h1: "Natural lawn and palm tree in La Marsa",
         intro:
           "La Marsa is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. This sought-after seaside suburb has many villas with gardens by the sea, where the decorative palm tree is a particularly popular landscaping choice.",
         useCase:
@@ -571,10 +571,10 @@ const villes = [
         ],
       },
       ar: {
-        metaTitle: "عشب ونخيل المرسى | التوصيل في تونس - Green Garden",
+        metaTitle: "عشب طبيعي ونخيل المرسى | التوصيل في تونس - Green Garden",
         metaDescription:
           "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى المرسى. مثالي للفيلات الساحلية، عرض سعر عبر واتساب.",
-        h1: "عشب ونخيل في المرسى",
+        h1: "عشب طبيعي ونخيل في المرسى",
         intro:
           "تنتمي المرسى إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تضم هذه الضاحية الساحلية المرغوبة العديد من الفيلات ذات الحدائق المطلة على البحر، حيث يُعد نخيل الزينة خياراً مطلوباً بشكل خاص.",
         useCase:

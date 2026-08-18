@@ -1401,3 +1401,82 @@ body.rtl .footer-credits {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Calculateur de devis ---------- */
+.quote-calc .quote-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.quote-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--forest);
+}
+
+.quote-field input,
+.quote-field select {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--sage-pale);
+  border-radius: 12px;
+  background: var(--white);
+  font: inherit;
+  color: inherit;
+}
+
+.quote-field input:focus,
+.quote-field select:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+.quote-result {
+  background: var(--cream);
+  border: 1px solid var(--sage-pale);
+  border-radius: 16px;
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.quote-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--sage-pale);
+}
+
+.quote-row:last-of-type {
+  border-bottom: none;
+}
+
+.quote-row-total {
+  margin-top: 0.3rem;
+  padding-top: 0.7rem;
+  border-top: 2px solid var(--sage);
+  border-bottom: none;
+  font-size: 1.08rem;
+  color: var(--forest);
+}
+
+.quote-hint {
+  margin: 0.9rem 0 0;
+  padding: 0.7rem 0.9rem;
+  background: var(--sage-pale);
+  border-radius: 12px;
+  font-size: 0.94rem;
+}
+
+.quote-empty,
+.quote-note {
+  color: var(--forest-soft);
+  font-size: 0.92rem;
+}
+
+.quote-note {
+  margin-top: 0.8rem;
+}

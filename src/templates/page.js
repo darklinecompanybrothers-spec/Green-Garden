@@ -4,6 +4,7 @@ const { renderSections, collectFaqItems } = require("./components");
 const { faqPage, product: productSchema, service: serviceSchema } = require("./schema");
 const { localizedPath } = require("../data/i18n");
 const { UI } = require("../data/ui-strings");
+const { SITE } = require("../data/site");
 
 // Renderer générique utilisé par la quasi-totalité des pages de contenu
 // (piliers gazon/palmier, pages villes, catégories, pages confiance, FAQ).
@@ -48,6 +49,10 @@ function renderContentPage(page) {
     </div>
   `;
 
+  // /quote.js n'est chargé que sur les pages qui portent réellement un
+  // calculateur, pour ne pas alourdir les ~190 autres.
+  const hasQuote = (page.sections || []).some((s) => s.type === "quote");
+
   return renderPage({
     basePath: page.basePath,
     lang,
@@ -56,6 +61,9 @@ function renderContentPage(page) {
     bodyHtml,
     jsonLd,
     ogImage: page.heroImage ? page.heroImage.src : undefined,
+    extraScripts: hasQuote
+      ? `<script src="/quote.js?v=${SITE.assetVersion}" defer></script>`
+      : "",
   });
 }
 

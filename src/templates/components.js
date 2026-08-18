@@ -125,6 +125,45 @@ function renderCards({ h2, intro, cards }) {
     </section>`;
 }
 
+// Calculateur de devis. Toute la tarification et tous les libellés traduits sont
+// sérialisés ici dans un <script type="application/json"> : le script navigateur
+// (/quote.js) ne contient aucun prix ni aucune traduction en dur, il ne fait
+// qu'appliquer la règle. Un changement dans pricing.js se propage donc au
+// calculateur sans qu'on ait à toucher au JavaScript client.
+function renderQuote({ h2, intro, config }) {
+  return `
+    <section class="content-block quote-calc" id="devis">
+      ${h2 ? `<h2>${h2}</h2>` : ""}
+      ${intro ? `<p>${intro}</p>` : ""}
+      <script type="application/json" data-quote-config>${JSON.stringify(config).replace(/</g, "\\u003c")}</script>
+      <form class="quote-form" data-quote novalidate>
+        <label class="quote-field">
+          <span>${config.labels.surface}</span>
+          <input type="number" name="surface" min="1" step="1" inputmode="numeric" placeholder="50" />
+        </label>
+        <label class="quote-field">
+          <span>${config.labels.type}</span>
+          <select name="type">
+            ${config.types.map((t) => `<option value="${t.key}">${t.label}</option>`).join("")}
+          </select>
+        </label>
+        <label class="quote-field">
+          <span>${config.labels.terre}</span>
+          <select name="terre">
+            <option value="">${config.labels.terreNone}</option>
+            ${config.packs.map((p) => `<option value="${p.epaisseurCm}">${p.label}</option>`).join("")}
+          </select>
+        </label>
+      </form>
+      <div class="quote-result" data-quote-result hidden></div>
+      <p class="quote-empty" data-quote-empty>${config.labels.empty}</p>
+      <div class="content-cta-actions">
+        <a class="pill-button" data-quote-cta href="${buildWhatsAppUrl(config.labels.fallbackMessage)}" target="_blank" rel="noreferrer">${config.labels.cta}</a>
+      </div>
+      <p class="quote-note">${config.labels.note}</p>
+    </section>`;
+}
+
 const RENDERERS = {
   text: renderText,
   list: renderList,
@@ -132,6 +171,7 @@ const RENDERERS = {
   cta: renderCta,
   faq: renderFaq,
   related: renderRelated,
+  quote: renderQuote,
   "image-text": renderImageText,
   cards: renderCards,
 };

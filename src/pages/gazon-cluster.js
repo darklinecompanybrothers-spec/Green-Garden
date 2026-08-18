@@ -1,11 +1,12 @@
 const { renderContentPage } = require("../templates/page");
 const { SITE } = require("../data/site");
 const { localizedPath } = require("../data/i18n");
+const { quoteConfig } = require("../data/quote-config");
 
 function relatedCluster(lang) {
   const T = {
     fr: {
-      h2: "Explorez notre offre gazon",
+      h2: "Explorez notre offre de gazon naturel",
       links: [
         ["Gazon Tunisie", "/gazon-tunisie/", "La page de référence : prix, zones, commande"],
         ["Gazon naturel", "/gazon-naturel/", "Naturel vs synthétique, ce qu'il faut savoir"],
@@ -18,7 +19,7 @@ function relatedCluster(lang) {
       ],
     },
     en: {
-      h2: "Explore our lawn range",
+      h2: "Explore our natural lawn range",
       links: [
         ["Lawn Tunisia", "/gazon-tunisie/", "The reference page: price, zones, ordering"],
         ["Natural lawn", "/gazon-naturel/", "Natural vs synthetic, what you need to know"],
@@ -31,7 +32,7 @@ function relatedCluster(lang) {
       ],
     },
     ar: {
-      h2: "اكتشفوا عرضنا من العشب",
+      h2: "اكتشفوا عرضنا من العشب الطبيعي",
       links: [
         ["عشب تونس", "/gazon-tunisie/", "الصفحة المرجعية: السعر، المناطق، الطلب"],
         ["عشب طبيعي", "/gazon-naturel/", "طبيعي مقابل اصطناعي، ما يجب معرفته"],
@@ -54,7 +55,7 @@ function relatedCluster(lang) {
 function guidesCluster(lang) {
   const T = {
     fr: {
-      h2: "Guides et conseils pour réussir votre gazon",
+      h2: "Guides et conseils pour réussir votre gazon naturel",
       links: [
         ["Comment poser du gazon en rouleau", "/blog/comment-poser-gazon-en-rouleau/", "Le guide étape par étape"],
         ["Entretenir son gazon après la pose", "/blog/entretien-gazon-apres-pose/", "Arrosage, tonte et engrais"],
@@ -63,7 +64,7 @@ function guidesCluster(lang) {
       ],
     },
     en: {
-      h2: "Guides and tips for a successful lawn",
+      h2: "Guides and tips for a successful natural lawn",
       links: [
         ["How to lay rolled lawn", "/blog/comment-poser-gazon-en-rouleau/", "The step-by-step guide"],
         ["Caring for your lawn after laying", "/blog/entretien-gazon-apres-pose/", "Watering, mowing and fertilizer"],
@@ -137,6 +138,8 @@ function pillarPage(lang) {
         "Chaque rouleau est cultivé puis découpé et livré rapidement pour garantir une reprise optimale après la pose. Nos clients sont principalement des particuliers qui aménagent leur jardin et des professionnels du paysagisme sur l'ensemble du territoire tunisien."],
       h2b: "Pourquoi choisir notre gazon naturel en rouleau ?",
       listB: ["Un rendu vert et homogène dès la pose, sans semis ni attente", "Une variété adaptée au climat tunisien, chaud et sec une grande partie de l'année", "Un prix clair et dégressif : 15 DT/m² sous 50 m², 9 DT/m² à partir de 50 m², sans surprise", "Une livraison partout en Tunisie, avec des frais annoncés avant confirmation", "Des conseils de pose et d'entretien fournis avec chaque commande"],
+      quoteH2: "Calculez votre devis en direct",
+      quoteIntro: "Indiquez votre surface et l'épaisseur de terre souhaitée : le tarif applicable s'affiche immédiatement, et vous pouvez envoyer le récapitulatif sur WhatsApp.",
       h2types: "Deux types de gazon naturel, au même prix",
       pTypes: ["Green Garden propose deux types de gazon naturel en rouleau : le gazon américain et le gazon Paspalum. Les deux sont vendus au même tarif, 15 DT/m² en dessous de 50 m² et 9 DT/m² à partir de 50 m².", "Le seuil de 50 m² s'applique à la surface totale de votre commande, quel que soit le type choisi. Indiquez-nous votre projet et la surface à couvrir par WhatsApp : nous vous orientons vers le type le mieux adapté et vous confirmons le montant avant toute commande."],
       h2c: "Prix et zones de livraison",
@@ -163,6 +166,8 @@ function pillarPage(lang) {
         "Each roll is grown, cut and delivered quickly to guarantee optimal rooting after laying. Our customers are mainly homeowners landscaping their gardens and landscaping professionals across Tunisia."],
       h2b: "Why choose our natural rolled lawn?",
       listB: ["A green, even result right after laying, no seeding or waiting", "A variety suited to the Tunisian climate, hot and dry for much of the year", "A clear, tapering price: 15 DT/sqm under 50 sqm, 9 DT/sqm from 50 sqm, no surprises", "Delivery anywhere in Tunisia, with fees confirmed before you order", "Laying and care advice provided with every order"],
+      quoteH2: "Work out your quote instantly",
+      quoteIntro: "Enter your area and the soil depth you want: the applicable rate appears straight away, and you can send the summary on WhatsApp.",
       h2types: "Two types of natural lawn, at the same price",
       pTypes: ["Green Garden offers two types of natural rolled lawn: American lawn and Paspalum lawn. Both are sold at the same rate, 15 DT/sqm below 50 sqm and 9 DT/sqm from 50 sqm.", "The 50 sqm threshold applies to the total area of your order, whichever type you choose. Tell us about your project and the area to cover on WhatsApp: we will point you to the type that suits it best and confirm the amount before you order."],
       h2c: "Price and delivery zones",
@@ -189,6 +194,8 @@ function pillarPage(lang) {
         "يُزرع كل لفيف ثم يُقطع ويُوصَّل بسرعة لضمان تجذر مثالي بعد التركيب. عملاؤنا هم بالأساس أفراد يُهيئون حدائقهم ومهنيو تهيئة الحدائق في كل أنحاء تونس."],
       h2b: "لماذا تختارون عشبنا الطبيعي على شكل لفائف؟",
       listB: ["نتيجة خضراء ومتجانسة فور التركيب، دون بذر أو انتظار", "صنف مكيّف مع المناخ التونسي، الحار والجاف معظم أوقات السنة", "سعر واضح ومتناقص: 15 دينار/م² دون 50 م²، 9 دينار/م² ابتداءً من 50 م²، دون مفاجآت", "توصيل في كل تونس، بمصاريف تُبلَّغ قبل التأكيد", "نصائح تركيب وعناية مع كل طلبية"],
+      quoteH2: "احسبوا عرض سعركم مباشرة",
+      quoteIntro: "أدخلوا مساحتكم وسمك التربة المرغوب: تظهر التعريفة المطبقة فوراً، ويمكنكم إرسال الملخص عبر واتساب.",
       h2types: "نوعان من العشب الطبيعي، بنفس السعر",
       pTypes: ["تقترح Green Garden نوعين من العشب الطبيعي على شكل لفائف: العشب الأمريكي وعشب الباسبالوم. يُباع النوعان بنفس التعريفة، 15 دينار/م² دون 50 م² و9 دينار/م² ابتداءً من 50 م².", "تنطبق عتبة 50 م² على المساحة الإجمالية لطلبيتكم، مهما كان النوع المختار. أخبرونا بمشروعكم والمساحة المطلوب تغطيتها عبر واتساب: نوجهكم إلى النوع الأنسب ونؤكد لكم المبلغ قبل أي طلب."],
       h2c: "السعر ومناطق التوصيل",
@@ -228,6 +235,7 @@ function pillarPage(lang) {
       { type: "text", h2: t.h2a, paragraphs: t.pa },
       { type: "list", h2: t.h2b, items: t.listB },
       { type: "text", h2: t.h2types, paragraphs: t.pTypes },
+      { type: "quote", h2: t.quoteH2, intro: t.quoteIntro, config: quoteConfig(lang) },
       { type: "table", h2: t.h2c, headers: t.headersC, rows: t.rowsC },
       { type: "cta", ...gazonCta(lang) },
       { type: "related", ...relatedCluster(lang) },
@@ -444,10 +452,10 @@ function gazonEnRouleauPage(lang) {
 function acheterGazonPage(lang) {
   const T = {
     fr: {
-      title: "Acheter du gazon en Tunisie | Commande en 3 étapes - Green Garden",
+      title: "Acheter du gazon naturel en Tunisie | Commande en 3 étapes - Green Garden",
       metaDescription: "Comment acheter du gazon naturel en Tunisie avec Green Garden : prix, zones de livraison et commande simple par WhatsApp. Gazon à 15 ou 9 DT/m² selon la surface.",
       eyebrow: "Commander",
-      h1: "Acheter du gazon en Tunisie avec Green Garden",
+      h1: "Acheter du gazon naturel en Tunisie avec Green Garden",
       intro: "Commander du gazon naturel en Tunisie n'a jamais été aussi simple : un prix clair au m², des frais de livraison annoncés avant confirmation et une commande finalisée directement par WhatsApp.",
       crumb: [["Gazon Tunisie", "/gazon-tunisie/"], ["Acheter du gazon", "/acheter-gazon/"]],
       h2a: "Comment acheter votre gazon en 3 étapes",
@@ -466,7 +474,7 @@ function acheterGazonPage(lang) {
       title: "Buy Lawn in Tunisia | Order in 3 Steps - Green Garden",
       metaDescription: "How to buy natural lawn in Tunisia with Green Garden: price, delivery zones and simple ordering via WhatsApp. Lawn at 15 or 9 DT/sqm depending on area.",
       eyebrow: "Order",
-      h1: "Buy lawn in Tunisia with Green Garden",
+      h1: "Buy natural lawn in Tunisia with Green Garden",
       intro: "Ordering natural lawn in Tunisia has never been simpler: a clear price per sqm, delivery fees confirmed before you order and an order finalised directly on WhatsApp.",
       crumb: [["Lawn Tunisia", "/gazon-tunisie/"], ["Buy lawn", "/acheter-gazon/"]],
       h2a: "How to buy your lawn in 3 steps",
@@ -485,7 +493,7 @@ function acheterGazonPage(lang) {
       title: "شراء عشب طبيعي تونس – 15 أو 9 دينار/م² | Green Garden",
       metaDescription: "اشتروا عشباً طبيعياً في تونس بسعر 15 أو 9 دينار/م² حسب المساحة، بمصاريف توصيل تُحتسب حسب عنوانكم. طلب بسيط في 3 خطوات عبر واتساب.",
       eyebrow: "الطلب",
-      h1: "شراء العشب في تونس مع Green Garden",
+      h1: "شراء العشب الطبيعي في تونس مع Green Garden",
       intro: "لم يكن طلب العشب الطبيعي في تونس يوماً بهذه البساطة: سعر واضح بالمتر المربع، مصاريف توصيل تُبلَّغ قبل التأكيد وطلب يُنجز مباشرة عبر واتساب.",
       crumb: [["عشب تونس", "/gazon-tunisie/"], ["شراء العشب", "/acheter-gazon/"]],
       h2a: "كيف تشترون عشبكم في 3 خطوات",

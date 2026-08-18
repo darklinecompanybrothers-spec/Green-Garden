@@ -7,7 +7,8 @@
     "build": "node scripts/build.js",
     "verify": "node scripts/verify.js",
     "test:pricing": "node scripts/test-pricing.js",
-    "test": "npm run build && npm run verify && npm run test:pricing"
+    "test": "npm run build && npm run verify && npm run test:pricing && npm run test:quote",
+    "test:quote": "node scripts/test-quote.js"
   },
   "keywords": [],
   "author": "",
