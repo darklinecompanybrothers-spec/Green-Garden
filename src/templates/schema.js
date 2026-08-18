@@ -82,12 +82,18 @@ function breadcrumbList(items) {
 // du client et sont communiqués avant confirmation. Ne jamais réintroduire de
 // shippingRate à 0 ni de montant estimé ici — ce serait une promesse non tenue
 // déclarée à Google.
-function product({ key, name, price, currency, unit, description, image, path }) {
+// `priceHigh` : à passer uniquement pour un produit à tarif dégressif. Le schema
+// devient alors une fourchette (AggregateOffer lowPrice/highPrice) au lieu d'un
+// prix unique — déclarer 9 DT/m² seul serait faux pour une commande sous le seuil.
+function product({ key, name, price, priceHigh, currency, unit, description, image, path }) {
+  const isRange = typeof priceHigh === "number" && priceHigh !== price;
   const offer = {
-    "@type": "Offer",
+    "@type": isRange ? "AggregateOffer" : "Offer",
     url: absoluteUrl(path),
     priceCurrency: currency,
-    price: String(price),
+    ...(isRange
+      ? { lowPrice: String(Math.min(price, priceHigh)), highPrice: String(Math.max(price, priceHigh)) }
+      : { price: String(price) }),
     availability: "https://schema.org/InStock",
     priceValidUntil: "2026-12-31",
     validFrom: "2026-01-01",

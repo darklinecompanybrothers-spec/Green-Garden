@@ -7,6 +7,15 @@
 // de servir un fichier mis en cache (évite un site "cassé" après une mise à jour).
 const ASSET_VERSION = "10";
 
+// Le tarif du gazon vient de src/data/pricing.js, source unique de vérité :
+// aucun prix de gazon ne doit être écrit en dur ailleurs.
+const {
+  GAZON_TIER_THRESHOLD,
+  GAZON_PRICE_BELOW,
+  GAZON_PRICE_FROM,
+  GAZON_TYPES,
+} = require("./pricing");
+
 const SITE = {
   name: "Green Garden",
   assetVersion: ASSET_VERSION,
@@ -59,10 +68,26 @@ const SITE = {
   products: {
     gazon: {
       name: "Gazon naturel",
-      price: 9,
+      // Prix dégressif selon la surface TOTALE commandée, identique pour les
+      // deux types (américain et Paspalum). `price` reste le tarif le plus bas :
+      // c'est celui que le schema.org déclare comme lowPrice.
+      price: GAZON_PRICE_FROM,
+      priceBelow: GAZON_PRICE_BELOW,
+      priceFrom: GAZON_PRICE_FROM,
+      tierThreshold: GAZON_TIER_THRESHOLD,
+      types: GAZON_TYPES,
       currency: "TND",
       unit: "m²",
-      priceLabel: "9 DT / m²",
+      // Étiquette courte, purement numérique, utilisable dans les trois langues.
+      // Ne jamais y mettre de < ou > : cette chaîne est injectée telle quelle dans
+      // le HTML (y compris dans des attributs alt), un chevron casserait le balisage.
+      priceLabel: `${GAZON_PRICE_BELOW} DT/m² (1-${GAZON_TIER_THRESHOLD - 1} m²) · ${GAZON_PRICE_FROM} DT/m² (${GAZON_TIER_THRESHOLD}+ m²)`,
+      // Formulations complètes, une par langue, pour les phrases rédigées.
+      priceLabels: {
+        fr: `${GAZON_PRICE_BELOW} DT/m² sous ${GAZON_TIER_THRESHOLD} m², ${GAZON_PRICE_FROM} DT/m² à partir de ${GAZON_TIER_THRESHOLD} m²`,
+        en: `${GAZON_PRICE_BELOW} DT/sqm under ${GAZON_TIER_THRESHOLD} sqm, ${GAZON_PRICE_FROM} DT/sqm from ${GAZON_TIER_THRESHOLD} sqm`,
+        ar: `${GAZON_PRICE_BELOW} دينار/م² دون ${GAZON_TIER_THRESHOLD} م²، ${GAZON_PRICE_FROM} دينار/م² ابتداءً من ${GAZON_TIER_THRESHOLD} م²`,
+      },
       image: "/gazon.jpg",
     },
     palmier: {
@@ -70,7 +95,7 @@ const SITE = {
       price: 490,
       currency: "TND",
       unit: "m",
-      priceLabel: "490 DT / m",
+      priceLabel: "490 DT / m",
       deliveryNote: "Livraison calculée selon votre adresse, communiquée avant confirmation de commande.",
       image: "/palmier-eventail.jpeg",
     },
@@ -79,7 +104,7 @@ const SITE = {
       price: 100,
       currency: "TND",
       unit: "m³",
-      priceLabel: "100 DT / m³",
+      priceLabel: "100 DT / m³",
       deliveryNote: "Livraison calculée selon votre adresse, communiquée avant confirmation de commande.",
       image: "/acheter-terre-vegetale-tunisie.jpg",
     },

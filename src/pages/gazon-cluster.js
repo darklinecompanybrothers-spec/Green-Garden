@@ -211,11 +211,12 @@ function pillarPage(lang) {
     product: {
       key: "gazon-naturel",
       name: SITE.products.gazon.name,
-      price: SITE.products.gazon.price,
+      price: SITE.products.gazon.priceFrom,
+      priceHigh: SITE.products.gazon.priceBelow,
       currency: SITE.products.gazon.currency,
       unit: SITE.products.gazon.unit,
       description: t.productDescription,
-      image: SITE.products.gazon.image,
+      image: SITE.products.gazon.image,
     },
     sections: [
       { type: "text", h2: t.h2a, paragraphs: t.pa },
@@ -507,11 +508,12 @@ function acheterGazonPage(lang) {
     product: {
       key: "gazon-naturel",
       name: SITE.products.gazon.name,
-      price: SITE.products.gazon.price,
+      price: SITE.products.gazon.priceFrom,
+      priceHigh: SITE.products.gazon.priceBelow,
       currency: SITE.products.gazon.currency,
       unit: SITE.products.gazon.unit,
       description: t.intro,
-      image: SITE.products.gazon.image,
+      image: SITE.products.gazon.image,
     },
     sections: [
       { type: "list", h2: t.h2a, ordered: true, items: t.listA },
