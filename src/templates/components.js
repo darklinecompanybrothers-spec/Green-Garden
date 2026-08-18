@@ -125,11 +125,11 @@ function renderCards({ h2, intro, cards }) {
     </section>`;
 }
 
-// Calculateur de devis. Toute la tarification et tous les libellés traduits sont
-// sérialisés ici dans un <script type="application/json"> : le script navigateur
-// (/quote.js) ne contient aucun prix ni aucune traduction en dur, il ne fait
-// qu'appliquer la règle. Un changement dans pricing.js se propage donc au
-// calculateur sans qu'on ait à toucher au JavaScript client.
+// Formulaire de demande de devis. Il n'affiche AUCUN montant : le client fait
+// son propre calcul à partir des tarifs publiés sur la page, le formulaire ne
+// sert qu'à composer sa demande WhatsApp, que le vendeur chiffre ensuite.
+// Les libellés traduits sont sérialisés dans un <script type="application/json">
+// pour que /quote.js ne contienne aucune traduction en dur.
 function renderQuote({ h2, intro, config }) {
   return `
     <section class="content-block quote-calc" id="devis">
@@ -155,8 +155,6 @@ function renderQuote({ h2, intro, config }) {
           </select>
         </label>
       </form>
-      <div class="quote-result" data-quote-result hidden></div>
-      <p class="quote-empty" data-quote-empty>${config.labels.empty}</p>
       <div class="content-cta-actions">
         <a class="pill-button" data-quote-cta href="${buildWhatsAppUrl(config.labels.fallbackMessage)}" target="_blank" rel="noreferrer">${config.labels.cta}</a>
       </div>

@@ -1,14 +1,14 @@
-// Execute quote.js dans un DOM minimal simule et compare ses resultats
-// a ceux de src/data/pricing.js, la source de verite.
+// Execute quote.js dans un DOM minimal simule.
+//
+// Ce que ce test protege : le formulaire de devis ne doit JAMAIS afficher ni
+// transmettre de montant. Le client calcule seul a partir des tarifs publies,
+// et c'est le vendeur qui chiffre apres reception de la demande. Une
+// reintroduction de prix dans quote.js ou quote-config.js fait echouer ce test.
 const path = require("path");
 const REPO = path.join(__dirname, "..");
 
-const { quote, GAZON_TIER_THRESHOLD } = require(path.join(REPO, "src/data/pricing.js"));
 const { quoteConfig } = require(path.join(REPO, "src/data/quote-config.js"));
 const { SITE } = require(path.join(REPO, "src/data/site.js"));
-
-const cfg = quoteConfig("fr");
-const PRIX_TERRE = SITE.products.terreVegetale.price;
 
 // --- DOM minimal ---------------------------------------------------------
 function el(extra = {}) {
@@ -30,20 +30,21 @@ function el(extra = {}) {
   );
 }
 
+const cfg = quoteConfig("fr");
+
 const surfaceInput = el({ value: "" });
 const terreSelect = el({ value: "" });
-const typeSelect = el({ value: "americain", selectedIndex: 0, options: [{ text: "Gazon américain" }] });
-
-const result = el();
-const empty = el();
+const typeSelect = el({
+  value: "paspalum",
+  selectedIndex: 0,
+  options: [{ text: "Gazon Paspalum" }],
+});
 const cta = el();
 const configEl = el({ textContent: JSON.stringify(cfg) });
 
 const section = {
   querySelector(sel) {
     if (sel === "[data-quote-config]") return configEl;
-    if (sel === "[data-quote-result]") return result;
-    if (sel === "[data-quote-empty]") return empty;
     if (sel === "[data-quote-cta]") return cta;
     return null;
   },
@@ -58,66 +59,94 @@ global.document = { querySelector: (s) => (s === "[data-quote]" ? form : null) }
 
 require(path.join(REPO, "quote.js"));
 
-// --- Comparaison ---------------------------------------------------------
-function nombresDe(html) {
-  // recupere les montants "1 234" ou "1 234,5" affiches
-  return (html.match(/<strong>[^<]*<\/strong>/g) || []).map((s) =>
-    s.replace(/<\/?strong>/g, "").replace(/\u202f|\s/g, "").replace(",", ".")
-  );
+// --- Verifications -------------------------------------------------------
+let echecs = 0;
+
+function ok(label) {
+  console.log(`  ok  ${label}`);
+}
+function ko(label, detail) {
+  console.log(`  ECHEC ${label}${detail ? " -> " + detail : ""}`);
+  echecs++;
 }
 
-let echecs = 0;
-function verifie(surface, epaisseur) {
+function messageEnvoye() {
+  return decodeURIComponent(String(cta.href).split("?text=")[1] || "");
+}
+
+function remplit(surface, epaisseur) {
   surfaceInput.value = String(surface);
   terreSelect.value = epaisseur ? String(epaisseur) : "";
   form.dispatch("input");
-
-  const attendu = quote({ surfaceM2: surface, epaisseurCm: epaisseur || null, prixTerreM3: PRIX_TERRE });
-  const affiches = nombresDe(result.innerHTML);
-  const totalAffiche = parseFloat(affiches[affiches.length - 1]);
-  const gazonAffiche = parseFloat(affiches[0]);
-
-  const okGazon = Math.abs(gazonAffiche - attendu.gazon.total) < 0.01;
-  const okTotal = Math.abs(totalAffiche - attendu.sousTotal) < 0.01;
-  const okLien = cta.href.startsWith("https://wa.me/" + SITE.whatsappNumber);
-
-  const libelle = `${surface} m²${epaisseur ? " + " + epaisseur + " cm" : ""}`;
-  if (okGazon && okTotal && okLien) {
-    console.log(`  ok  ${libelle.padEnd(20)} gazon ${attendu.gazon.total} / total ${attendu.sousTotal}`);
-  } else {
-    console.log(
-      `  ECHEC ${libelle} -> gazon affiche ${gazonAffiche} (attendu ${attendu.gazon.total}), ` +
-        `total affiche ${totalAffiche} (attendu ${attendu.sousTotal}), lien ${okLien ? "ok" : "KO"}`
-    );
-    echecs++;
-  }
 }
 
-console.log("Calculateur navigateur vs pricing.js :");
-[
-  [20, 0], [49, 0], [50, 0], [51, 0], [100, 0], [1, 0],
-  [50, 10], [50, 15], [50, 20], [20, 10], [80, 15], [100, 20],
-].forEach(([s, e]) => verifie(s, e));
+// 1. Aucun montant dans la config serialisee
+const configBrut = JSON.stringify(cfg);
+const MONTANT = /\b\d+\s*(DT|دينار)\b|"(price|prix|total|montant)/i;
+if (MONTANT.test(configBrut)) {
+  ko("config sans montant", configBrut.match(MONTANT)[0]);
+} else {
+  ok("la config serialisee ne contient aucun montant");
+}
 
-// Etat vide : pas de resultat, CTA generique
+// 2. Aucun champ de prix expose
+["threshold", "priceBelow", "priceFrom", "prixTerreM3"].forEach((champ) => {
+  if (Object.prototype.hasOwnProperty.call(cfg, champ)) {
+    ko(`la config ne doit pas exposer "${champ}"`);
+  }
+});
+if (echecs === 0) ok("aucun champ de tarification expose a la page");
+
+// 3. Le message compose reprend la demande, sans aucun chiffrage
+remplit(60, 15);
+const msg = messageEnvoye();
+const attendus = ["60 m²", "Gazon Paspalum", "15 cm"];
+attendus.forEach((frag) => {
+  if (!msg.includes(frag)) ko(`le message doit contenir "${frag}"`, msg);
+});
+if (MONTANT.test(msg)) {
+  ko("le message ne doit contenir aucun montant", msg.match(MONTANT)[0]);
+} else {
+  ok("message avec terre : demande complete, aucun montant");
+}
+
+// 4. Sans terre vegetale, la ligne correspondante disparait
+remplit(30, 0);
+const msgSansTerre = messageEnvoye();
+if (msgSansTerre.includes("cm")) {
+  ko("sans terre, le message ne doit pas mentionner d'epaisseur", msgSansTerre);
+} else if (!msgSansTerre.includes("30 m²")) {
+  ko("sans terre, le message doit garder la surface", msgSansTerre);
+} else {
+  ok("message sans terre : ligne epaisseur absente");
+}
+
+// 5. Sans surface saisie, on retombe sur le message generique
 surfaceInput.value = "";
 form.dispatch("input");
-if (!result.hidden || !cta.href.includes("wa.me")) {
-  console.log("  ECHEC etat vide");
-  echecs++;
+if (!messageEnvoye().startsWith(cfg.labels.fallbackMessage.slice(0, 20))) {
+  ko("etat vide -> message generique", messageEnvoye());
 } else {
-  console.log("  ok  etat vide -> resultat masque, CTA generique conserve");
+  ok("etat vide : message generique conserve");
 }
 
-// Le seuil doit rendre 50 m2 moins cher que 49 m2
-const q49 = quote({ surfaceM2: 49, prixTerreM3: PRIX_TERRE });
-const q50 = quote({ surfaceM2: GAZON_TIER_THRESHOLD, prixTerreM3: PRIX_TERRE });
-if (q50.sousTotal >= q49.sousTotal) {
-  console.log("  ECHEC effet de seuil incoherent");
-  echecs++;
+// 6. Le lien pointe bien vers le WhatsApp de Green Garden
+if (!String(cta.href).startsWith("https://wa.me/" + SITE.whatsappNumber)) {
+  ko("lien WhatsApp", cta.href);
 } else {
-  console.log(`  ok  effet de seuil : 49 m² = ${q49.sousTotal} DT > 50 m² = ${q50.sousTotal} DT`);
+  ok("lien WhatsApp vers le numero du site");
 }
 
-console.log(echecs === 0 ? "\nOK : le calculateur suit pricing.js" : `\nECHEC : ${echecs} cas`);
+// 7. Les trois langues exposent les memes garanties
+["fr", "en", "ar"].forEach((lang) => {
+  const c = JSON.stringify(quoteConfig(lang));
+  if (MONTANT.test(c)) ko(`config ${lang} sans montant`, c.match(MONTANT)[0]);
+});
+ok("les configs fr/en/ar sont toutes sans montant");
+
+console.log(
+  echecs === 0
+    ? "\nOK : le formulaire de devis ne chiffre rien"
+    : `\nECHEC : ${echecs} probleme(s)`
+);
 process.exit(echecs === 0 ? 0 : 1);

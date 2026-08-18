@@ -1434,49 +1434,9 @@ body.rtl .footer-credits {
   outline-offset: 1px;
 }
 
-.quote-result {
-  background: var(--cream);
-  border: 1px solid var(--sage-pale);
-  border-radius: 16px;
-  padding: 1.1rem 1.3rem;
-  margin-bottom: 1rem;
-}
-
-.quote-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid var(--sage-pale);
-}
-
-.quote-row:last-of-type {
-  border-bottom: none;
-}
-
-.quote-row-total {
-  margin-top: 0.3rem;
-  padding-top: 0.7rem;
-  border-top: 2px solid var(--sage);
-  border-bottom: none;
-  font-size: 1.08rem;
-  color: var(--forest);
-}
-
-.quote-hint {
-  margin: 0.9rem 0 0;
-  padding: 0.7rem 0.9rem;
-  background: var(--sage-pale);
-  border-radius: 12px;
-  font-size: 0.94rem;
-}
-
-.quote-empty,
-.quote-note {
-  color: var(--forest-soft);
-  font-size: 0.92rem;
-}
-
+/* Pas de styles de montant ici : le formulaire n'affiche aucun prix. */
 .quote-note {
   margin-top: 0.8rem;
+  color: var(--forest-soft);
+  font-size: 0.92rem;
 }
