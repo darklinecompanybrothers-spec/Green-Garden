@@ -1,141 +1,169 @@
 const { renderContentPage } = require("../templates/page");
 const { SITE } = require("../data/site");
 const { localizedPath } = require("../data/i18n");
+const { PACK_BASE_SURFACE, TERRE_PACKS, quote } = require("../data/pricing");
 
 const HERO_IMAGE = SITE.products.terreVegetale.image;
+const PRIX_TERRE_M3 = SITE.products.terreVegetale.price;
+
+// La terre végétale n'est plus vendue seule : elle n'existe qu'en pack adossé
+// à une commande de gazon. Les montants ci-dessous sont calculés à partir de
+// pricing.js (source unique) et jamais écrits en dur, pour qu'un changement de
+// tarif ne puisse pas laisser cette page en contradiction avec le reste du site.
+const PACKS = TERRE_PACKS.map((pack) => ({
+  ...pack,
+  devis: quote({
+    surfaceM2: PACK_BASE_SURFACE,
+    epaisseurCm: pack.epaisseurCm,
+    prixTerreM3: PRIX_TERRE_M3,
+  }),
+}));
+
+/** 1200 -> "1 200" (espace insécable fine, lisible dans les trois langues). */
+function fmt(n, lang) {
+  const [entier, dec] = String(n).split(".");
+  const groupe = entier.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  if (!dec) return groupe;
+  return groupe + (lang === "fr" ? "," : ".") + dec;
+}
+
+function packRows(lang) {
+  const unit = { fr: "cm", en: "cm", ar: "سم" }[lang];
+  return PACKS.map((p) => [
+    `${p.epaisseurCm} ${unit}`,
+    `${fmt(p.devis.terre.volumeM3, lang)} m³`,
+    `${fmt(p.devis.terre.total, lang)} DT`,
+    `${fmt(p.devis.gazon.total, lang)} DT`,
+    `${fmt(p.devis.sousTotal, lang)} DT`,
+  ]);
+}
 
 const TEXT = {
   fr: {
-    title: "Terre Végétale Tunisie – 100 DT/m³ | Green Garden",
-    metaDescription: "Terre végétale en Tunisie à 100 DT/m³, livrée partout avec des frais selon votre adresse. Idéale pour gazon et plantation. Commandez sur WhatsApp.",
+    title: "Terre Végétale en Pack avec Gazon | Green Garden Tunisie",
+    metaDescription: "La terre végétale Green Garden s'achète en pack avec votre gazon naturel, à 100 DT/m³. Packs 10, 15 ou 20 cm pour 50 m² de gazon, livrés en Tunisie.",
     eyebrow: "Terre végétale",
-    h1: "Acheter de la terre végétale en Tunisie",
-    heroAlt: "acheter terre végétale en Tunisie",
-    intro: "Green Garden vend et livre de la terre végétale partout en Tunisie, au prix clair de 100 DT le mètre cube (m³). Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation. Une base essentielle pour préparer un sol avant la pose de gazon, une plantation ou la création d'un massif.",
-    breadcrumbLabel: "Acheter terre végétale",
-    productDescription: "Terre végétale vendue au m³, livrable dans toute la Tunisie, pour préparer un sol avant gazon, plantation ou création de massif. Frais de livraison calculés selon votre adresse.",
-    priceH2: "Le prix de la terre végétale Green Garden",
-    priceText: "100 DT le mètre cube (m³). Les frais de livraison sont calculés selon votre adresse et la quantité commandée, puis vous sont communiqués avant confirmation de commande.",
-    whatH2: "Qu'est-ce que la terre végétale et pour quoi l'utiliser ?",
-    whatPa: [
-      "La terre végétale est la couche de terre fertile prélevée en surface, riche en matière organique. Contrairement au terreau (souvent allégé et enrichi artificiellement pour les pots), elle sert de base pour préparer un sol en pleine terre avant d'y installer du gazon, des plantations ou un aménagement.",
-      "Elle est particulièrement utile avant la pose d'un gazon en rouleau sur un sol pauvre ou sableux, avant la plantation d'un arbre, d'un arbuste ou d'un palmier, ou encore pour créer ou rehausser un massif de fleurs dans un jardin tunisien.",
+    h1: "Terre végétale : en pack avec votre gazon naturel",
+    heroAlt: "terre végétale livrée avec du gazon naturel en Tunisie",
+    intro: "La terre végétale Green Garden n'est pas vendue seule : elle accompagne une commande de gazon naturel, pour préparer le sol avant la pose. Elle est facturée 100 DT le mètre cube (m³), et les frais de livraison sont calculés selon votre adresse puis communiqués avant confirmation de commande.",
+    breadcrumbLabel: "Terre végétale",
+    packH2: "Nos packs terre végétale + gazon naturel",
+    packIntro: `Les packs de référence ci-dessous couvrent ${PACK_BASE_SURFACE} m² de gazon naturel. Le volume de terre dépend de l'épaisseur que vous souhaitez apporter :`,
+    packHeaders: [`Épaisseur de terre (pour ${PACK_BASE_SURFACE} m² de gazon)`, "Volume de terre", "Terre végétale", "Gazon naturel", "Total hors livraison"],
+    packNote: "Les totaux n'incluent pas la livraison, qui dépend de votre adresse et vous est communiquée avant toute confirmation de commande.",
+    otherH2: "Pour une autre surface que 50 m²",
+    otherPa: [
+      "Le volume de terre se calcule simplement : surface à couvrir multipliée par l'épaisseur souhaitée. Pour 80 m² en 15 cm, comptez par exemple 80 × 0,15 = 12 m³ de terre végétale.",
+      "Le gazon, lui, suit son tarif dégressif : 15 DT/m² en dessous de 50 m², 9 DT/m² à partir de 50 m². Indiquez-nous votre surface et l'épaisseur souhaitée par WhatsApp, nous vous établissons le devis complet.",
     ],
-    quantityH2: "Quelle quantité de terre végétale commander ?",
-    quantityIntro: "La quantité nécessaire dépend de la surface à couvrir et de l'épaisseur de terre souhaitée. À titre indicatif :",
-    quantityHeaders: ["Épaisseur de terre", "Surface couverte par 1 m³"],
-    quantityRows: [
-      ["5 cm", "~20 m²"],
-      ["10 cm", "~10 m²"],
-      ["15 cm", "~6,7 m²"],
-      ["20 cm", "~5 m²"],
+    whatH2: "Qu'est-ce que la terre végétale et pourquoi l'ajouter sous un gazon ?",
+    whatPa: [
+      "La terre végétale est la couche de terre fertile prélevée en surface, riche en matière organique. Contrairement au terreau (souvent allégé et enrichi artificiellement pour les pots), elle sert de base pour préparer un sol en pleine terre avant d'y installer du gazon.",
+      "Elle est particulièrement utile avant la pose d'un gazon en rouleau sur un sol pauvre ou sableux : elle donne aux racines une épaisseur meuble et nourrissante dans laquelle s'installer, ce qui améliore nettement la reprise après la pose.",
     ],
     deliveryH2: "Livraison dans toute la Tunisie",
     deliveryPa: [
-      "La terre végétale est livrable partout en Tunisie — Grand Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet et autres régions. Le tarif de livraison est calculé selon la distance depuis notre dépôt de Nabeul et la quantité commandée, puis communiqué avant confirmation de commande.",
+      "Les packs sont livrables partout en Tunisie — Grand Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabès, Hammamet et autres régions. Le tarif de livraison est calculé selon la distance depuis notre dépôt de Nabeul et le volume commandé, puis communiqué avant confirmation de commande.",
     ],
-    ctaHeading: "Commandez votre terre végétale",
-    ctaText: "100 DT/m³, livraison calculée selon votre adresse. Indiquez-nous la quantité souhaitée et votre ville.",
-    ctaButton: "Commander sur WhatsApp",
-    ctaMessage: "Bonjour, je souhaite commander de la terre végétale (100 DT/m³). Voici la quantité souhaitée : ",
-    ctaSecondary: "Voir la catégorie Terre végétale",
+    ctaHeading: "Demandez votre pack terre végétale + gazon",
+    ctaText: "Indiquez-nous la surface de gazon et l'épaisseur de terre souhaitée : nous calculons votre devis complet.",
+    ctaButton: "Demander mon devis",
+    ctaMessage: "Bonjour, je souhaite un pack gazon naturel + terre végétale. Voici ma surface et l'épaisseur souhaitée : ",
+    ctaSecondary: "Voir le gazon naturel",
     faqH2: "Questions fréquentes sur la terre végétale",
     faq: [
-      ["Quel est le prix de la terre végétale en Tunisie ?", "La terre végétale Green Garden est vendue 100 DT le mètre cube (m³). Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation de commande."],
-      ["Y a-t-il une quantité minimum de commande ?", "Non, il n'y a pas de minimum imposé : vous commandez le volume exact dont vous avez besoin, calculé au m³."],
-      ["Comment se passe la livraison ?", "Contactez-nous par WhatsApp avec votre ville et la quantité souhaitée. Le tarif de livraison vous est communiqué avant toute confirmation de commande."],
+      ["Puis-je acheter de la terre végétale seule ?", "Non. La terre végétale Green Garden est proposée uniquement en complément d'une commande de gazon naturel, pour préparer le sol avant la pose. Si vous souhaitez du gazon et de la terre, indiquez-nous la surface et l'épaisseur souhaitée : nous vous établissons un devis complet."],
+      ["Quel est le prix de la terre végétale ?", "Elle est facturée 100 DT le mètre cube (m³), en complément du gazon. Pour 50 m² de gazon, un pack de 10 cm représente 5 m³ de terre, soit 500 DT, auxquels s'ajoute le prix du gazon."],
+      ["Quelle épaisseur de terre choisir ?", "Cela dépend de l'état de votre sol. Nous proposons trois épaisseurs de référence — 10, 15 et 20 cm. Décrivez-nous votre terrain par WhatsApp, nous vous orientons vers l'épaisseur adaptée."],
       ["Quelle différence entre terre végétale et terreau ?", "La terre végétale est une terre naturelle de pleine terre, utilisée pour préparer un sol de jardin en grande quantité. Le terreau est un substrat plus léger, souvent enrichi, conçu pour la culture en pot ou en jardinière."],
-      ["La terre végétale convient-elle avant la pose de gazon ?", "Oui, elle est particulièrement recommandée sur un sol pauvre ou sableux pour enrichir la surface avant la pose d'un gazon en rouleau."],
+      ["Comment se passe la livraison ?", "Contactez-nous par WhatsApp avec votre ville, la surface de gazon et l'épaisseur de terre souhaitée. Le tarif de livraison vous est communiqué avant toute confirmation de commande."],
     ],
   },
   en: {
-    title: "Topsoil Tunisia – 100 DT/m³ Fast Delivery | Green Garden",
-    metaDescription: "Topsoil in Tunisia at 100 DT/m³, delivered nationwide with fees quoted by address. Ideal for lawn and planting. Order on WhatsApp with Green Garden.",
+    title: "Topsoil in a Pack with Lawn | Green Garden Tunisia",
+    metaDescription: "Green Garden topsoil comes as a pack with your natural lawn, at 100 DT/m³. Packs of 10, 15 or 20 cm for 50 sqm of lawn, delivered across Tunisia.",
     eyebrow: "Topsoil",
-    h1: "Buy topsoil in Tunisia",
-    heroAlt: "buy topsoil in Tunisia",
-    intro: "Green Garden sells and delivers topsoil across Tunisia, at the clear price of 100 DT per cubic metre (m³). Delivery fees are calculated for your address and confirmed before you order. An essential base for preparing soil before laying lawn, planting, or creating a flower bed.",
-    breadcrumbLabel: "Buy topsoil",
-    productDescription: "Topsoil sold per m³, deliverable across Tunisia, to prepare soil before lawn, planting or a flower bed. Delivery fees calculated for your address.",
-    priceH2: "The price of Green Garden topsoil",
-    priceText: "100 DT per cubic metre (m³). Delivery fees are calculated for your address and the quantity ordered, then confirmed before you place your order.",
-    whatH2: "What is topsoil and what is it used for?",
-    whatPa: [
-      "Topsoil is the fertile surface layer of soil, rich in organic matter. Unlike potting soil (usually lighter and artificially enriched for containers), it is used as a base to prepare open ground before installing lawn, plantings or landscaping.",
-      "It is especially useful before laying rolled lawn on poor or sandy soil, before planting a tree, shrub or palm tree, or to create or raise a flower bed in a Tunisian garden.",
+    h1: "Topsoil: in a pack with your natural lawn",
+    heroAlt: "topsoil delivered with natural lawn in Tunisia",
+    intro: "Green Garden topsoil is not sold on its own: it comes with a natural lawn order, to prepare the ground before laying. It is charged at 100 DT per cubic metre (m³), and delivery fees are calculated for your address and confirmed before you place your order.",
+    breadcrumbLabel: "Topsoil",
+    packH2: "Our topsoil + natural lawn packs",
+    packIntro: `The reference packs below cover ${PACK_BASE_SURFACE} sqm of natural lawn. The soil volume depends on the depth you want to add:`,
+    packHeaders: [`Soil depth (for ${PACK_BASE_SURFACE} sqm of lawn)`, "Soil volume", "Topsoil", "Natural lawn", "Total excluding delivery"],
+    packNote: "Totals exclude delivery, which depends on your address and is confirmed before you place your order.",
+    otherH2: "For an area other than 50 sqm",
+    otherPa: [
+      "The soil volume is a simple calculation: the area to cover multiplied by the depth you want. For 80 sqm at 15 cm, that is 80 × 0.15 = 12 m³ of topsoil.",
+      "The lawn follows its tapering rate: 15 DT/sqm below 50 sqm, 9 DT/sqm from 50 sqm. Send us your area and the depth you want on WhatsApp and we will put together the full quote.",
     ],
-    quantityH2: "How much topsoil should you order?",
-    quantityIntro: "The quantity needed depends on the area to cover and the desired soil depth. As a guide:",
-    quantityHeaders: ["Soil depth", "Area covered by 1 m³"],
-    quantityRows: [
-      ["5 cm", "~20 sqm"],
-      ["10 cm", "~10 sqm"],
-      ["15 cm", "~6.7 sqm"],
-      ["20 cm", "~5 sqm"],
+    whatH2: "What is topsoil and why add it under a lawn?",
+    whatPa: [
+      "Topsoil is the fertile surface layer of soil, rich in organic matter. Unlike potting soil (usually lighter and artificially enriched for containers), it is used as a base to prepare open ground before installing lawn.",
+      "It is especially useful before laying rolled lawn on poor or sandy soil: it gives the roots a loose, nourishing layer to settle into, which markedly improves how well the lawn takes after laying.",
     ],
     deliveryH2: "Delivery across Tunisia",
     deliveryPa: [
-      "Topsoil can be delivered anywhere in Tunisia — Greater Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabes, Hammamet and other regions. The delivery rate is based on the distance from our Nabeul depot and the quantity ordered, and is given before you confirm your order.",
+      "Packs can be delivered anywhere in Tunisia — Greater Tunis, Nabeul, Sousse, Monastir, Sfax, Bizerte, Gabes, Hammamet and other regions. The delivery rate is based on the distance from our Nabeul depot and the volume ordered, and is given before you confirm your order.",
     ],
-    ctaHeading: "Order your topsoil",
-    ctaText: "100 DT/m³, delivery quoted by address. Tell us the quantity you need and your city.",
-    ctaButton: "Order on WhatsApp",
-    ctaMessage: "Hello, I would like to order topsoil (100 DT/m³). Here is the quantity I need: ",
-    ctaSecondary: "See the Topsoil category",
+    ctaHeading: "Request your topsoil + lawn pack",
+    ctaText: "Tell us your lawn area and the soil depth you want: we will work out your full quote.",
+    ctaButton: "Request my quote",
+    ctaMessage: "Hello, I would like a natural lawn + topsoil pack. Here is my area and the depth I want: ",
+    ctaSecondary: "See natural lawn",
     faqH2: "Frequently asked questions about topsoil",
     faq: [
-      ["What is the price of topsoil in Tunisia?", "Green Garden topsoil is sold at 100 DT per cubic metre (m³). Delivery fees are calculated for your address and confirmed before you place your order."],
-      ["Is there a minimum order quantity?", "No, there is no imposed minimum: you order the exact volume you need, calculated per m³."],
-      ["How does delivery work?", "Contact us on WhatsApp with your city and the quantity needed. The delivery rate is given before you confirm your order."],
+      ["Can I buy topsoil on its own?", "No. Green Garden topsoil is offered only alongside a natural lawn order, to prepare the ground before laying. If you want both lawn and soil, tell us the area and the depth you want and we will put together a full quote."],
+      ["What is the price of topsoil?", "It is charged at 100 DT per cubic metre (m³), in addition to the lawn. For 50 sqm of lawn, a 10 cm pack means 5 m³ of soil, so 500 DT, on top of the price of the lawn."],
+      ["Which soil depth should I choose?", "It depends on the state of your ground. We offer three reference depths — 10, 15 and 20 cm. Describe your plot on WhatsApp and we will point you to the right depth."],
       ["What is the difference between topsoil and potting soil?", "Topsoil is natural open-ground soil, used to prepare a garden's soil in large quantities. Potting soil is a lighter, often enriched substrate designed for growing in pots or planters."],
-      ["Is topsoil suitable before laying lawn?", "Yes, it is especially recommended on poor or sandy soil to enrich the surface before laying rolled lawn."],
+      ["How does delivery work?", "Contact us on WhatsApp with your city, the lawn area and the soil depth you want. The delivery rate is given before you confirm your order."],
     ],
   },
   ar: {
-    title: "شراء التربة الزراعية تونس – 100 دينار/م³ | Green Garden",
-    metaDescription: "تربة زراعية في تونس بسعر 100 دينار/م³، تُوصَّل في كل الجهات بمصاريف حسب عنوانكم. مثالية للعشب والغراسة. اطلبوا عبر واتساب مع Green Garden.",
+    title: "التربة الزراعية ضمن باقة مع العشب | Green Garden تونس",
+    metaDescription: "تُقتنى التربة الزراعية من Green Garden ضمن باقة مع عشبكم الطبيعي، بسعر 100 دينار/م³. باقات 10 أو 15 أو 20 سم لـ 50 م² من العشب.",
     eyebrow: "التربة الزراعية",
-    h1: "شراء التربة في تونس",
-    heroAlt: "شراء التربة في تونس",
-    intro: "تبيع Green Garden وتوصل التربة الزراعية في كل تونس، بسعر واضح قدره 100 دينار للمتر المكعب (م³). تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب. أساس ضروري لتحضير التربة قبل تركيب العشب أو الغراسة أو إنشاء حوض زهور.",
-    breadcrumbLabel: "شراء التربة الزراعية",
-    productDescription: "تربة زراعية تُباع بالمتر المكعب، قابلة للتوصيل في كل تونس، لتحضير التربة قبل العشب أو الغراسة أو إنشاء حوض. تُحتسب مصاريف التوصيل حسب عنوانكم.",
-    priceH2: "سعر التربة الزراعية من Green Garden",
-    priceText: "100 دينار للمتر المكعب (م³). تُحتسب مصاريف التوصيل حسب عنوانكم والكمية المطلوبة، وتُبلَّغ قبل تأكيد الطلب.",
-    whatH2: "ما هي التربة الزراعية ولماذا نستعملها؟",
-    whatPa: [
-      "التربة الزراعية هي الطبقة السطحية الخصبة من التربة، الغنية بالمواد العضوية. على عكس التراب الجاهز (الأخف وزناً والمُثرى صناعياً للأصص عادة)، تُستعمل كأساس لتحضير تربة مفتوحة قبل تركيب العشب أو الغراسة أو التهيئة.",
-      "تُعد مفيدة بشكل خاص قبل تركيب العشب على شكل لفائف على تربة فقيرة أو رملية، أو قبل غرس شجرة أو شجيرة أو نخلة، أو لإنشاء أو رفع حوض زهور في حديقة تونسية.",
+    h1: "التربة الزراعية: ضمن باقة مع عشبكم الطبيعي",
+    heroAlt: "تربة زراعية تُوصَّل مع العشب الطبيعي في تونس",
+    intro: "لا تُباع التربة الزراعية من Green Garden بمفردها: فهي ترافق طلبية عشب طبيعي، لتحضير التربة قبل التركيب. تُحتسب بسعر 100 دينار للمتر المكعب (م³)، وتُحسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب.",
+    breadcrumbLabel: "التربة الزراعية",
+    packH2: "باقاتنا: تربة زراعية + عشب طبيعي",
+    packIntro: `تغطي الباقات المرجعية أدناه ${PACK_BASE_SURFACE} م² من العشب الطبيعي. يعتمد حجم التربة على السمك الذي ترغبون في إضافته:`,
+    packHeaders: [`سمك التربة (لـ ${PACK_BASE_SURFACE} م² من العشب)`, "حجم التربة", "التربة الزراعية", "العشب الطبيعي", "المجموع دون التوصيل"],
+    packNote: "لا تشمل المجاميع مصاريف التوصيل، التي تعتمد على عنوانكم وتُبلَّغ قبل تأكيد أي طلب.",
+    otherH2: "لمساحة غير 50 م²",
+    otherPa: [
+      "يُحسب حجم التربة ببساطة: المساحة المطلوب تغطيتها مضروبة في السمك المرغوب. فلـ 80 م² بسمك 15 سم، احسبوا 80 × 0.15 = 12 م³ من التربة الزراعية.",
+      "أما العشب فيتبع تعريفته المتناقصة: 15 دينار/م² دون 50 م²، و9 دينار/م² ابتداءً من 50 م². أرسلوا لنا مساحتكم والسمك المرغوب عبر واتساب، ونُعدّ لكم عرض السعر الكامل.",
     ],
-    quantityH2: "ما هي كمية التربة الزراعية الواجب طلبها؟",
-    quantityIntro: "تعتمد الكمية اللازمة على المساحة الواجب تغطيتها وسمك التربة المرغوب. على سبيل التوضيح:",
-    quantityHeaders: ["سمك التربة", "المساحة المُغطاة بـ 1 م³"],
-    quantityRows: [
-      ["5 سم", "~20 م²"],
-      ["10 سم", "~10 م²"],
-      ["15 سم", "~6.7 م²"],
-      ["20 سم", "~5 م²"],
+    whatH2: "ما هي التربة الزراعية ولماذا تُضاف تحت العشب؟",
+    whatPa: [
+      "التربة الزراعية هي الطبقة السطحية الخصبة من التربة، الغنية بالمواد العضوية. على عكس التراب الجاهز (الأخف وزناً والمُثرى صناعياً للأصص عادة)، تُستعمل كأساس لتحضير تربة مفتوحة قبل تركيب العشب.",
+      "تُعد مفيدة بشكل خاص قبل تركيب العشب على شكل لفائف على تربة فقيرة أو رملية: فهي تمنح الجذور طبقة هشة ومغذية تستقر فيها، مما يحسّن بوضوح التصاق العشب بعد التركيب.",
     ],
     deliveryH2: "توصيل في كل تونس",
     deliveryPa: [
-      "التربة الزراعية قابلة للتوصيل في كل تونس — تونس الكبرى، نابل، سوسة، المنستير، صفاقس، بنزرت، قابس، الحمامات وجهات أخرى. تُحسب تعريفة التوصيل حسب المسافة من مستودعنا بنابل والكمية المطلوبة، وتُبلَّغ قبل تأكيد الطلب.",
+      "الباقات قابلة للتوصيل في كل تونس — تونس الكبرى، نابل، سوسة، المنستير، صفاقس، بنزرت، قابس، الحمامات وجهات أخرى. تُحسب تعريفة التوصيل حسب المسافة من مستودعنا بنابل والحجم المطلوب، وتُبلَّغ قبل تأكيد الطلب.",
     ],
-    ctaHeading: "اطلبوا ترابكم الزراعي",
-    ctaText: "100 دينار/م³، توصيل يُحتسب حسب عنوانكم. أذكروا لنا الكمية المرغوبة ومدينتكم.",
-    ctaButton: "اطلبوا عبر واتساب",
-    ctaMessage: "مرحباً، أود طلب تربة زراعية (100 دينار/م³). إليكم الكمية المرغوبة: ",
-    ctaSecondary: "شاهدوا فئة التربة الزراعية",
+    ctaHeading: "اطلبوا باقتكم: تربة زراعية + عشب",
+    ctaText: "أذكروا لنا مساحة العشب وسمك التربة المرغوب: نحسب لكم عرض السعر الكامل.",
+    ctaButton: "اطلبوا عرض سعري",
+    ctaMessage: "مرحباً، أود باقة عشب طبيعي + تربة زراعية. إليكم مساحتي والسمك المرغوب: ",
+    ctaSecondary: "شاهدوا العشب الطبيعي",
     faqH2: "أسئلة شائعة حول التربة الزراعية",
     faq: [
-      ["ما هو سعر التربة الزراعية في تونس؟", "تُباع تربة Green Garden الزراعية بسعر 100 دينار للمتر المكعب (م³). تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب."],
-      ["هل توجد كمية دنيا للطلب؟", "لا، لا يوجد حد أدنى مفروض: تطلبون الحجم الدقيق الذي تحتاجونه، محسوباً بالمتر المكعب."],
-      ["كيف يتم التوصيل؟", "تواصلوا معنا عبر واتساب مع مدينتكم والكمية المرغوبة. تُبلَّغ تعريفة التوصيل قبل تأكيد أي طلب."],
+      ["هل يمكنني شراء التربة الزراعية بمفردها؟", "لا. تُقترح التربة الزراعية من Green Garden فقط كمكمّل لطلبية عشب طبيعي، لتحضير التربة قبل التركيب. إذا رغبتم في العشب والتربة معاً، أذكروا لنا المساحة والسمك المرغوب: نُعدّ لكم عرض سعر كاملاً."],
+      ["ما هو سعر التربة الزراعية؟", "تُحتسب بسعر 100 دينار للمتر المكعب (م³)، إضافة إلى العشب. فلـ 50 م² من العشب، تمثل باقة 10 سم حجماً قدره 5 م³ من التربة، أي 500 دينار، يُضاف إليها سعر العشب."],
+      ["أي سمك تربة أختار؟", "يعتمد ذلك على حالة تربتكم. نقترح ثلاثة أسماك مرجعية — 10 و15 و20 سم. صفوا لنا أرضكم عبر واتساب، ونوجهكم إلى السمك المناسب."],
       ["ما الفرق بين التربة الزراعية والتراب الجاهز؟", "التربة الزراعية تربة طبيعية من الأرض المفتوحة، تُستعمل لتحضير تربة الحديقة بكميات كبيرة. أما التراب الجاهز فهو ركيزة أخف وزناً ومُثراة غالباً، مصممة للزراعة في أصص أو صناديق."],
-      ["هل تناسب التربة الزراعية قبل تركيب العشب؟", "نعم، يُنصح بها بشكل خاص على تربة فقيرة أو رملية لإثراء السطح قبل تركيب العشب على شكل لفائف."],
+      ["كيف يتم التوصيل؟", "تواصلوا معنا عبر واتساب مع مدينتكم ومساحة العشب وسمك التربة المرغوب. تُبلَّغ تعريفة التوصيل قبل تأكيد أي طلب."],
     ],
   },
 };
 
+// Pas de bloc `product:` ici : la terre végétale n'ayant plus d'existence
+// commerciale autonome, déclarer une Offer schema.org pour elle laisserait
+// Google proposer un produit qu'on ne vend pas seul.
 function acheterTerreVegetalePage(lang) {
   const t = TEXT[lang];
   return renderContentPage({
@@ -148,19 +176,12 @@ function acheterTerreVegetalePage(lang) {
     intro: t.intro,
     heroImage: { src: HERO_IMAGE, alt: t.heroAlt },
     breadcrumb: [{ label: t.breadcrumbLabel, path: localizedPath("/acheter-terre-vegetale/", lang) }],
-    product: {
-      key: "terre-vegetale",
-      name: SITE.products.terreVegetale.name,
-      price: SITE.products.terreVegetale.price,
-      currency: SITE.products.terreVegetale.currency,
-      unit: SITE.products.terreVegetale.unit,
-      description: t.productDescription,
-      image: SITE.products.terreVegetale.image,
-    },
     sections: [
-      { type: "text", h2: t.priceH2, paragraphs: [t.priceText] },
+      { type: "text", h2: t.packH2, paragraphs: [t.packIntro] },
+      { type: "table", headers: t.packHeaders, rows: packRows(lang) },
+      { type: "text", paragraphs: [t.packNote] },
+      { type: "text", h2: t.otherH2, paragraphs: t.otherPa },
       { type: "text", h2: t.whatH2, paragraphs: t.whatPa },
-      { type: "table", h2: t.quantityH2, headers: t.quantityHeaders, rows: t.quantityRows },
       { type: "text", h2: t.deliveryH2, paragraphs: t.deliveryPa },
       {
         type: "cta",
@@ -168,7 +189,7 @@ function acheterTerreVegetalePage(lang) {
         text: t.ctaText,
         buttonLabel: t.ctaButton,
         whatsappMessage: t.ctaMessage,
-        secondary: { label: t.ctaSecondary, path: localizedPath("/produits/terre-vegetale/", lang) },
+        secondary: { label: t.ctaSecondary, path: localizedPath("/gazon-tunisie/", lang) },
       },
       { type: "faq", h2: t.faqH2, items: t.faq.map(([q, a]) => ({ q, a })) },
     ],
