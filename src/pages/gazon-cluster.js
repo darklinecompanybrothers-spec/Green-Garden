@@ -215,8 +215,7 @@ function pillarPage(lang) {
       currency: SITE.products.gazon.currency,
       unit: SITE.products.gazon.unit,
       description: t.productDescription,
-      image: SITE.products.gazon.image,
-      freeShippingRegions: ["Tunis", "Ariana", "Ben Arous", "Manouba", "Nabeul"],
+      image: SITE.products.gazon.image,
     },
     sections: [
       { type: "text", h2: t.h2a, paragraphs: t.pa },
@@ -512,8 +511,7 @@ function acheterGazonPage(lang) {
       currency: SITE.products.gazon.currency,
       unit: SITE.products.gazon.unit,
       description: t.intro,
-      image: SITE.products.gazon.image,
-      freeShippingRegions: ["Tunis", "Ariana", "Ben Arous", "Manouba", "Nabeul"],
+      image: SITE.products.gazon.image,
     },
     sections: [
       { type: "list", h2: t.h2a, ordered: true, items: t.listA },

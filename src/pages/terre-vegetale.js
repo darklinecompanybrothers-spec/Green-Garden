@@ -155,8 +155,7 @@ function acheterTerreVegetalePage(lang) {
       currency: SITE.products.terreVegetale.currency,
       unit: SITE.products.terreVegetale.unit,
       description: t.productDescription,
-      image: SITE.products.terreVegetale.image,
-      freeShippingRegions: ["Tunis", "Ariana", "Ben Arous", "Manouba", "Nabeul"],
+      image: SITE.products.terreVegetale.image,
     },
     sections: [
       { type: "text", h2: t.priceH2, paragraphs: [t.priceText] },
