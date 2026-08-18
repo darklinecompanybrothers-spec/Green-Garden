@@ -11,7 +11,7 @@ const HUB_TEXT = {
     h1: "Nos produits",
     intro: "Green Garden propose une offre complète pour aménager un extérieur ou un intérieur tunisien : gazon naturel, palmiers décoratifs, plantes d'intérieur et engrais.",
     cards: [
-      ["Gazon naturel — 9 DT/m²", "Livraison calculée selon votre adresse.", "/produits/gazon/", "/gazon.jpg"],
+      ["Gazon naturel — 15 ou 9 DT/m² selon la surface", "Livraison calculée selon votre adresse.", "/produits/gazon/", "/gazon.jpg"],
       ["Palmiers décoratifs — 490 DT/m", "Livraison calculée selon votre adresse.", "/produits/palmiers/", "/palmier-eventail.jpeg"],
       ["Plantes d'intérieur", "Une vingtaine de variétés décoratives.", "/produits/plantes-interieur/", "/faux-philodendron.jpeg"],
       ["Engrais", "Pour renforcer vos plantes et votre jardin.", "/produits/engrais/", "/engrais-bio-organique.jpeg"],
@@ -36,7 +36,7 @@ const HUB_TEXT = {
     h1: "Our products",
     intro: "Green Garden offers a complete range to landscape a Tunisian outdoor or indoor space: natural lawn, decorative palm trees, indoor plants and fertilizer.",
     cards: [
-      ["Natural lawn — 9 DT/sqm", "Delivery quoted by address.", "/produits/gazon/", "/gazon.jpg"],
+      ["Natural lawn — 15 or 9 DT/sqm depending on area", "Delivery quoted by address.", "/produits/gazon/", "/gazon.jpg"],
       ["Decorative palm trees — 490 DT/m", "Delivery quoted by address.", "/produits/palmiers/", "/palmier-eventail.jpeg"],
       ["Indoor plants", "About twenty decorative varieties.", "/produits/plantes-interieur/", "/faux-philodendron.jpeg"],
       ["Fertilizer", "To strengthen your plants and garden.", "/produits/engrais/", "/engrais-bio-organique.jpeg"],
@@ -61,7 +61,7 @@ const HUB_TEXT = {
     h1: "منتجاتنا",
     intro: "تقدم Green Garden عرضاً كاملاً لتهيئة مساحة خارجية أو داخلية تونسية: عشب طبيعي، نخيل زينة، نباتات داخلية وأسمدة.",
     cards: [
-      ["عشب طبيعي — 9 دينار/م²", "توصيل حسب عنوانكم.", "/produits/gazon/", "/gazon.jpg"],
+      ["عشب طبيعي — 15 أو 9 دينار/م² حسب المساحة", "توصيل حسب عنوانكم.", "/produits/gazon/", "/gazon.jpg"],
       ["نخيل زينة — 490 دينار/م", "توصيل حسب عنوانكم.", "/produits/palmiers/", "/palmier-eventail.jpeg"],
       ["نباتات داخلية", "حوالي عشرين صنفاً زخرفياً.", "/produits/plantes-interieur/", "/faux-philodendron.jpeg"],
       ["أسمدة", "لتقوية نباتاتكم وحديقتكم.", "/produits/engrais/", "/engrais-bio-organique.jpeg"],
@@ -109,10 +109,10 @@ const CATEGORY_TEXT = {
   gazon: {
     fr: {
       title: "Gazon naturel | Catégorie produit - Green Garden",
-      metaDescription: "La catégorie gazon naturel de Green Garden : gazon en rouleau à 9 DT/m², livré partout en Tunisie avec des frais selon votre adresse.",
+      metaDescription: "La catégorie gazon naturel de Green Garden : gazon en rouleau à 15 ou 9 DT/m² selon la surface, livré partout en Tunisie avec des frais selon votre adresse.",
       eyebrow: "Catégorie",
       h1: "Gazon naturel",
-      intro: "Notre catégorie gazon regroupe le gazon naturel en rouleau, vendu 9 DT/m² partout en Tunisie. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation.",
+      intro: "Notre catégorie gazon regroupe le gazon naturel en rouleau, vendu 15 DT/m² sous 50 m² et 9 DT/m² à partir de 50 m², partout en Tunisie. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation.",
       label: "Gazon",
       relatedH2: "Voir aussi",
       related: [
@@ -124,10 +124,10 @@ const CATEGORY_TEXT = {
     },
     en: {
       title: "Natural Lawn | Product Category - Green Garden",
-      metaDescription: "Green Garden's natural lawn category: rolled lawn at 9 DT/sqm, delivered across Tunisia with fees quoted by address.",
+      metaDescription: "Green Garden's natural lawn category: rolled lawn at 15 or 9 DT/sqm depending on area, delivered across Tunisia with fees quoted by address.",
       eyebrow: "Category",
       h1: "Natural lawn",
-      intro: "Our lawn category covers natural rolled lawn, sold at 9 DT/sqm across Tunisia. Delivery fees are calculated for your address and confirmed before you order.",
+      intro: "Our lawn category covers natural rolled lawn, sold at 15 DT/sqm under 50 sqm and 9 DT/sqm from 50 sqm, across Tunisia. Delivery fees are calculated for your address and confirmed before you order.",
       label: "Lawn",
       relatedH2: "See also",
       related: [
@@ -139,10 +139,10 @@ const CATEGORY_TEXT = {
     },
     ar: {
       title: "عشب طبيعي | فئة المنتج - Green Garden",
-      metaDescription: "فئة العشب الطبيعي من Green Garden: عشب على شكل لفائف بسعر 9 دينار/م²، يُوصَّل في كل تونس بمصاريف حسب عنوانكم.",
+      metaDescription: "فئة العشب الطبيعي من Green Garden: عشب على شكل لفائف بسعر 15 أو 9 دينار/م² حسب المساحة، يُوصَّل في كل تونس بمصاريف حسب عنوانكم.",
       eyebrow: "الفئة",
       h1: "عشب طبيعي",
-      intro: "تضم فئة العشب لدينا العشب الطبيعي على شكل لفائف، يُباع بسعر 9 دينار/م² في كل تونس. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب.",
+      intro: "تضم فئة العشب لدينا العشب الطبيعي على شكل لفائف، يُباع بسعر 15 دينار/م² دون 50 م² و9 دينار/م² ابتداءً من 50 م²، في كل تونس. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب.",
       label: "العشب",
       relatedH2: "شاهدوا أيضاً",
       related: [

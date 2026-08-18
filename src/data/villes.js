@@ -17,7 +17,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Grand Tunis - Green Garden",
         metaDescription:
-          "Gazon naturel et palmiers décoratifs livrés partout à Grand Tunis (Tunis, Ariana, Ben Arous, Manouba). Gazon à 9 DT/m², palmier à 490 DT/m.",
+          "Gazon naturel et palmiers décoratifs livrés partout à Grand Tunis (Tunis, Ariana, Ben Arous, Manouba). Gazon 15 ou 9 DT/m² selon la surface, palmier 490 DT/m.",
         h1: "Gazon et palmier dans le Grand Tunis",
         intro:
           "Le Grand Tunis (Tunis, Ariana, Ben Arous et Manouba) est l'une des régions que nous desservons pour le gazon naturel en rouleau. Que vous aménagiez un jardin de villa à La Marsa, un espace vert à Ariana ou les abords d'un local professionnel à Ben Arous, notre équipe organise la livraison et peut vous conseiller sur la pose.",
@@ -25,7 +25,7 @@ const villes = [
           "Nous livrons régulièrement des particuliers et des professionnels du paysagisme dans les banlieues nord (La Marsa, Carthage, Sidi Bou Said), le centre de Tunis et les zones résidentielles d'Ariana et de Ben Arous.",
         distanceNote: "à environ 65 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à Grand Tunis ?", a: "Oui. Le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba) fait partie de les régions que nous desservons pour le gazon naturel, au prix de 9 DT/m², sans minimum de commande caché." },
+          { q: "Comment sont calculés les frais de livraison à Grand Tunis ?", a: "Le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba) fait partie des régions que nous desservons le plus souvent pour le gazon naturel. Les frais dépendent de votre adresse exacte et du volume commandé, et vous sont communiqués avant confirmation, sans minimum de commande caché." },
           { q: "Peut-on commander un palmier pour une adresse dans le Grand Tunis ?", a: "Oui. Les frais de livraison du palmier décoratif à 490 DT/m sont calculés selon votre adresse dans le Grand Tunis et communiqués avant confirmation, comme pour le gazon naturel." },
           { q: "Sous quel délai la livraison est-elle effectuée ?", a: "En général sous 24 à 72h ouvrées selon la disponibilité du stock et votre secteur précis dans le Grand Tunis. Le délai exact est confirmé par WhatsApp lors de la prise de commande." },
         ],
@@ -33,7 +33,7 @@ const villes = [
       en: {
         metaTitle: "Lawn & Palm Tree Greater Tunis - Green Garden",
         metaDescription:
-          "Natural lawn and decorative palm trees delivered across Greater Tunis (Tunis, Ariana, Ben Arous, Manouba). Lawn at 9 DT/sqm, palm tree at 490 DT/m.",
+          "Natural lawn and decorative palm trees delivered across Greater Tunis (Tunis, Ariana, Ben Arous, Manouba). Lawn 15 or 9 DT/sqm depending on area, palm tree 490 DT/m.",
         h1: "Lawn and palm tree in Greater Tunis",
         intro:
           "Greater Tunis (Tunis, Ariana, Ben Arous and Manouba) is one of the regions we serve for natural rolled lawn. Whether you are landscaping a villa garden in La Marsa, a green space in Ariana, or the surroundings of a business premises in Ben Arous, our team organises delivery and can advise you on installation.",
@@ -41,7 +41,7 @@ const villes = [
           "We regularly deliver to individuals and landscaping professionals in the northern suburbs (La Marsa, Carthage, Sidi Bou Said), central Tunis, and the residential areas of Ariana and Ben Arous.",
         distanceNote: "about 65 km north-west of our Nabeul depot",
         faq: [
-          { q: "Is lawn delivery really free across all of Greater Tunis?", a: "Yes. Greater Tunis (Tunis, Ariana, Ben Arous, Manouba) is one of the regions we serve for natural lawn, priced at 9 DT/sqm, with no hidden minimum order." },
+          { q: "How are delivery fees calculated in Greater Tunis?", a: "Greater Tunis (Tunis, Ariana, Ben Arous, Manouba) is one of the regions we serve most often for natural lawn. Fees depend on your exact address and the volume ordered, and are confirmed before you order, with no hidden minimum." },
           { q: "Can I order a palm tree for an address in Greater Tunis?", a: "Yes. Delivery fees for the decorative palm tree at 490 DT/m are calculated for your address in Greater Tunis and confirmed before you order, just like natural lawn." },
           { q: "What is the delivery timeframe?", a: "Generally within 24 to 72 business hours depending on stock availability and your specific area in Greater Tunis. The exact timeframe is confirmed via WhatsApp when you place your order." },
         ],
@@ -49,7 +49,7 @@ const villes = [
       ar: {
         metaTitle: "عشب ونخيل تونس الكبرى - Green Garden",
         metaDescription:
-          "عشب طبيعي ونخيل زينة يُوصَّلان في كامل تونس الكبرى (تونس، أريانة، بن عروس، منوبة). عشب بسعر 9 دينار/م²، نخلة بسعر 490 دينار/م.",
+          "عشب طبيعي ونخيل زينة يُوصَّلان في كامل تونس الكبرى (تونس، أريانة، بن عروس، منوبة). عشب بسعر 15 أو 9 دينار/م² حسب المساحة، نخلة بسعر 490 دينار/م.",
         h1: "عشب ونخيل في تونس الكبرى",
         intro:
           "تُعد تونس الكبرى (تونس، أريانة، بن عروس ومنوبة) إحدى الجهات التي نخدمها للعشب الطبيعي على شكل لفائف. سواء كنتم تُهيّئون حديقة فيلا بالمرسى أو مساحة خضراء بأريانة أو محيط مقر مهني ببن عروس، يتكفل فريقنا بتنظيم التوصيل ويمكنه إرشادكم حول التركيب.",
@@ -57,7 +57,7 @@ const villes = [
           "نوصل بانتظام إلى الأفراد ومهنيي تهيئة الحدائق في الضواحي الشمالية (المرسى، قرطاج، سيدي بوسعيد)، وسط تونس، والمناطق السكنية بأريانة وبن عروس.",
         distanceNote: "على بعد حوالي 65 كم شمال غرب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف التوصيل في تونس الكبرى؟", a: "نعم، تونس الكبرى (تونس، أريانة، بن عروس، منوبة) هي إحدى الجهات التي نخدمها للعشب الطبيعي بسعر 9 دينار/م²، دون أي حد أدنى مخفي للطلب." },
+          { q: "كيف تُحتسب مصاريف التوصيل في تونس الكبرى؟", a: "تونس الكبرى (تونس، أريانة، بن عروس، منوبة) من أكثر الجهات التي نخدمها للعشب الطبيعي. تعتمد المصاريف على عنوانكم الدقيق والكمية المطلوبة، وتُبلَّغ قبل التأكيد، دون أي حد أدنى مخفي للطلب." },
           { q: "هل يمكن طلب نخلة لعنوان في تونس الكبرى؟", a: "نعم. تُحتسب مصاريف توصيل نخلة الزينة بسعر 490 دينار/م حسب عنوانكم في تونس الكبرى وتُبلَّغ قبل تأكيد الطلب، تماماً مثل العشب الطبيعي." },
           { q: "ما هي مدة التوصيل؟", a: "عادة بين 24 و72 ساعة عمل حسب توفر المخزون ومنطقتكم الدقيقة في تونس الكبرى. تُؤكَّد المدة الدقيقة عبر واتساب عند تأكيد الطلب." },
         ],
@@ -72,7 +72,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Nabeul | Livraison en Tunisie - Green Garden",
         metaDescription:
-          "Green Garden est basé à Nabeul : gazon naturel à 9 DT/m² et palmiers décoratifs à 490 DT/m livrés dans toute la région.",
+          "Green Garden est basé à Nabeul : gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés dans toute la région.",
         h1: "Gazon et palmier à Nabeul",
         intro:
           "Nabeul est la région où se trouve notre dépôt Green Garden. C'est ici que nous préparons chaque commande de gazon en rouleau et de palmiers avant expédition, ce qui nous vaut les délais les plus courts de tout notre réseau et les frais de livraison les plus bas de Tunisie.",
@@ -88,7 +88,7 @@ const villes = [
       en: {
         metaTitle: "Lawn & Palm Tree Nabeul | Delivery in Tunisia - Green Garden",
         metaDescription:
-          "Green Garden is based in Nabeul: natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered across the region.",
+          "Green Garden is based in Nabeul: natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered across the region.",
         h1: "Lawn and palm tree in Nabeul",
         intro:
           "Nabeul is home to our Green Garden depot. This is where every order of rolled lawn and palm trees is prepared before shipping, which is why we offer the shortest lead times in our entire network and the lowest delivery fees in Tunisia.",
@@ -96,7 +96,7 @@ const villes = [
           "We support many villa garden projects, riads and hotel green spaces in the Nabeul, Hammamet, Dar Chaabane and Béni Khiar area.",
         distanceNote: "our home base",
         faq: [
-          { q: "Do you deliver lawn for free in Nabeul?", a: "As Nabeul is our home base, delivery fees there are the lowest in our entire network. The exact amount is confirmed before you place your order." },
+          { q: "How are delivery fees calculated in Nabeul?", a: "As Nabeul is our home base, delivery fees there are the lowest in our entire network. The exact amount is confirmed before you place your order." },
           { q: "Can the palm tree also be delivered to Nabeul?", a: "Yes, like lawn, the decorative palm tree at 490 DT/m is delivered anywhere in the Nabeul region, with fees calculated for your address." },
           { q: "What is the delivery timeframe in Nabeul?", a: "As our home base, orders in Nabeul are generally delivered within 24 to 48 business hours." },
         ],
@@ -104,7 +104,7 @@ const villes = [
       ar: {
         metaTitle: "عشب ونخيل نابل | التوصيل في تونس - Green Garden",
         metaDescription:
-          "Green Garden مقرها نابل: عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 490 دينار/م يُوصَّلان في كل الجهة.",
+          "Green Garden مقرها نابل: عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان في كل الجهة.",
         h1: "عشب ونخيل في نابل",
         intro:
           "نابل هي المنطقة التي يوجد بها مستودع Green Garden. هنا نُحضّر كل طلبية من العشب الطبيعي والنخيل قبل الشحن، مما يمنحنا أقصر الآجال في كل شبكتنا وأدنى مصاريف توصيل في تونس.",
@@ -127,7 +127,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Sousse | Livraison sur devis - Green Garden",
         metaDescription:
-          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 490 DT/m livrés à Sousse. Livraison organisée sur devis, contactez Green Garden par WhatsApp.",
+          "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Sousse. Livraison organisée sur devis, contactez Green Garden par WhatsApp.",
         h1: "Gazon et palmier à Sousse",
         intro:
           "Sousse et sa région (Port El Kantaoui, Kalâa Kebira, Hammam Sousse) font partie des zones que nous desservons régulièrement pour le gazon naturel en rouleau et les palmiers décoratifs. La livraison y est organisée sur devis : nous calculons le tarif exact selon votre adresse et le volume de la commande.",
@@ -142,7 +142,7 @@ const villes = [
       en: {
         metaTitle: "Lawn & Palm Tree Sousse | Delivery on Quote - Green Garden",
         metaDescription:
-          "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to Sousse. Delivery arranged on quote, contact Green Garden on WhatsApp.",
+          "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Sousse. Delivery arranged on quote, contact Green Garden on WhatsApp.",
         h1: "Lawn and palm tree in Sousse",
         intro:
           "Sousse and its area (Port El Kantaoui, Kalâa Kebira, Hammam Sousse) are among the zones we regularly serve with natural rolled lawn and decorative palm trees. Delivery there is arranged on quote: we calculate the exact rate based on your address and order volume.",
@@ -150,14 +150,14 @@ const villes = [
           "Many of our orders to Sousse are for villa gardens, residential complexes and landscaping around coastal tourist areas.",
         distanceNote: "about 90 km south of our Nabeul depot",
         faq: [
-          { q: "Can lawn be delivered as far as Sousse?", a: "Yes. Green Garden natural lawn can be delivered to Sousse. Delivery is not free in this zone (reserved for Greater Tunis and Nabeul), but we give you a clear transport rate before any order." },
+          { q: "Can lawn be delivered as far as Sousse?", a: "Yes. Green Garden natural lawn can be delivered to Sousse. The transport rate is calculated based on the distance from our Nabeul depot and the volume ordered, and is given to you clearly before any order." },
           { q: "How much does palm tree delivery to Sousse cost?", a: "The rate depends on the exact distance and volume to transport. Send us your address on WhatsApp to receive an accurate quote within a few hours." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل سوسة | توصيل حسب الطلب - Green Garden",
         metaDescription:
-          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى سوسة. توصيل مُنظّم حسب الطلب، تواصلوا مع Green Garden عبر واتساب.",
+          "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى سوسة. توصيل مُنظّم حسب الطلب، تواصلوا مع Green Garden عبر واتساب.",
         h1: "عشب ونخيل في سوسة",
         intro:
           "تُعد سوسة وجهتها (بورت الكانتاوي، قلعة كبيرة، حمام سوسة) من بين المناطق التي نخدمها بانتظام بالعشب الطبيعي على شكل لفائف والنخيل الزينة. يُنظَّم التوصيل هناك حسب الطلب: نحسب التعريفة الدقيقة حسب عنوانكم وحجم الطلبية.",
@@ -358,7 +358,7 @@ const villes = [
           "Our deliveries to Gabes involve both private gardens and green-space landscaping alongside the local palm grove.",
         distanceNote: "about 320 km south of our Nabeul depot",
         faq: [
-          { q: "Why isn't delivery free in Gabes?", a: "As Gabes is one of the regions furthest from our Nabeul depot, the transport rate is calculated based on distance and the volume ordered, then communicated before order confirmation." },
+          { q: "How are delivery fees calculated in Gabes?", a: "As Gabes is one of the regions furthest from our Nabeul depot, the transport rate is calculated based on distance and the volume ordered, then communicated before order confirmation." },
           { q: "Do you also sell date palms in Gabes?", a: "Our offer is for the ornamental decorative palm tree at 490 DT/m for garden landscaping, not for date palm production intended for agricultural use." },
         ],
       },
@@ -387,7 +387,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Hammamet - Green Garden",
         metaDescription:
-          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 490 DT/m livrés à Hammamet, idéal pour villas et hôtels. Commandez via Green Garden.",
+          "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Hammamet, idéal pour villas et hôtels. Commandez via Green Garden.",
         h1: "Gazon et palmier à Hammamet",
         intro:
           "Hammamet fait partie du gouvernorat de Nabeul, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Ville touristique par excellence, Hammamet compte de nombreuses villas, résidences et complexes hôteliers pour lesquels le gazon en rouleau et le palmier décoratif sont des choix d'aménagement très demandés.",
@@ -395,14 +395,14 @@ const villes = [
           "Nous livrons régulièrement à Hammamet Nord, Hammamet Sud et Yasmine Hammamet pour des projets de jardins de villas et d'espaces verts hôteliers, où le palmier décoratif est particulièrement recherché pour son effet visuel.",
         distanceNote: "à environ 15 km au sud de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à Hammamet ?", a: "Oui, Hammamet fait partie du gouvernorat de Nabeul, l'une des régions que nous desservons pour le gazon naturel à 9 DT/m²." },
+          { q: "Comment sont calculés les frais de livraison à Hammamet ?", a: "Hammamet fait partie du gouvernorat de Nabeul, où se trouve notre dépôt : les frais de livraison y sont parmi les plus bas de notre réseau. Le montant exact est calculé selon votre adresse et communiqué avant confirmation." },
           { q: "Proposez-vous des palmiers adaptés aux hôtels et complexes touristiques ?", a: "Oui, le palmier décoratif Green Garden à 490 DT/m est un choix courant pour les allées, piscines et jardins de complexes touristiques à Hammamet, et ses frais de livraison y sont calculés selon votre adresse, y compris pour les commandes en volume." },
         ],
       },
       en: {
         metaTitle: "Lawn & Palm Tree Hammamet - Green Garden",
         metaDescription:
-          "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to Hammamet, ideal for villas and hotels. Order with Green Garden.",
+          "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Hammamet, ideal for villas and hotels. Order with Green Garden.",
         h1: "Lawn and palm tree in Hammamet",
         intro:
           "Hammamet is part of Nabeul governorate, one of the regions we serve for natural lawn and the decorative palm tree. A quintessential tourist town, Hammamet has many villas, residences and hotel complexes for which rolled lawn and decorative palm trees are highly sought-after landscaping choices.",
@@ -410,14 +410,14 @@ const villes = [
           "We regularly deliver to Hammamet North, Hammamet South and Yasmine Hammamet for villa garden projects and hotel green spaces, where the decorative palm tree is especially popular for its visual impact.",
         distanceNote: "about 15 km south of our Nabeul depot",
         faq: [
-          { q: "Is lawn delivery free in Hammamet?", a: "Yes, Hammamet is part of Nabeul governorate, one of the regions we serve for natural lawn at 9 DT/sqm." },
+          { q: "How are delivery fees calculated in Hammamet?", a: "Hammamet is part of Nabeul governorate, where our depot is located: delivery fees there are among the lowest in our network. The exact amount is calculated for your address and confirmed before you order." },
           { q: "Do you offer palm trees suited to hotels and tourist complexes?", a: "Yes, the Green Garden decorative palm tree at 490 DT/m is a common choice for driveways, pools and gardens of tourist complexes in Hammamet, and delivery fees there are calculated for your address, including for bulk orders." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل الحمامات - Green Garden",
         metaDescription:
-          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى الحمامات، مثالي للفيلات والفنادق. اطلبوا عبر Green Garden.",
+          "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى الحمامات، مثالي للفيلات والفنادق. اطلبوا عبر Green Garden.",
         h1: "عشب ونخيل في الحمامات",
         intro:
           "تنتمي الحمامات إلى ولاية نابل، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. مدينة سياحية بامتياز، تضم الحمامات العديد من الفيلات والمساكن والمجمعات الفندقية التي يُعد فيها العشب على شكل لفائف والنخيل الزينة خيارات تهيئة مطلوبة جداً.",
@@ -425,7 +425,7 @@ const villes = [
           "نوصل بانتظام إلى الحمامات الشمالية والحمامات الجنوبية وياسمين الحمامات لمشاريع حدائق الفيلات والمساحات الخضراء الفندقية، حيث يُطلب النخيل الزينة بشكل خاص لتأثيره البصري.",
         distanceNote: "على بعد حوالي 15 كم جنوب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف التوصيل في الحمامات؟", a: "نعم، تنتمي الحمامات إلى ولاية نابل، إحدى الجهات التي نخدمها للعشب الطبيعي بسعر 9 دينار/م²." },
+          { q: "كيف تُحتسب مصاريف التوصيل في الحمامات؟", a: "تنتمي الحمامات إلى ولاية نابل حيث يوجد مستودعنا: مصاريف التوصيل بها من الأدنى في شبكتنا. يُحتسب المبلغ الدقيق حسب عنوانكم ويُبلَّغ قبل التأكيد." },
           { q: "هل تقدمون نخيلاً مناسباً للفنادق والمجمعات السياحية؟", a: "نعم، نخيل الزينة من Green Garden بسعر 490 دينار/م خيار شائع للممرات والمسابح وحدائق المجمعات السياحية بالحمامات، وتُحتسب مصاريف توصيله هناك حسب عنوانكم، حتى للطلبيات الكبيرة." },
         ],
       },
@@ -439,7 +439,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Tunis | Livraison en Tunisie - Green Garden",
         metaDescription:
-          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 490 DT/m livrés à Tunis ville. Devis rapide par WhatsApp avec Green Garden.",
+          "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Tunis ville. Devis rapide par WhatsApp avec Green Garden.",
         h1: "Gazon et palmier à Tunis",
         intro:
           "Tunis ville fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Entre appartements avec terrasse et villas avec jardin, la capitale a des besoins d'aménagement très variés que nous accompagnons au quotidien.",
@@ -447,14 +447,14 @@ const villes = [
           "Nous livrons régulièrement le centre-ville, Le Bardo, Le Belvédère, Le Menzah, El Manar et Ennasr, aussi bien pour des jardins de villas que pour des palmiers en pot sur des terrasses et balcons.",
         distanceNote: "à environ 65 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à Tunis ville ?", a: "Oui, Tunis ville fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif, sans minimum de commande." },
+          { q: "Comment sont calculés les frais de livraison à Tunis ville ?", a: "Tunis ville fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation, sans minimum de commande." },
           { q: "Proposez-vous des palmiers adaptés aux petites terrasses en centre-ville ?", a: "Oui, certaines variétés compactes de notre palmier décoratif conviennent très bien à une terrasse ou un balcon urbain. Contactez-nous pour un conseil adapté à votre espace." },
         ],
       },
       en: {
         metaTitle: "Lawn & Palm Tree Tunis | Delivery in Tunisia - Green Garden",
         metaDescription:
-          "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to Tunis city. Fast quote on WhatsApp with Green Garden.",
+          "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Tunis city. Fast quote on WhatsApp with Green Garden.",
         h1: "Lawn and palm tree in Tunis",
         intro:
           "Tunis city is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Between apartments with a terrace and villas with a garden, the capital has very varied landscaping needs that we support daily.",
@@ -462,14 +462,14 @@ const villes = [
           "We regularly deliver to the city centre, Le Bardo, Le Belvédère, Le Menzah, El Manar and Ennasr, for both villa gardens and potted palm trees on terraces and balconies.",
         distanceNote: "about 65 km north-west of our Nabeul depot",
         faq: [
-          { q: "Is delivery free everywhere in Tunis city?", a: "Yes, Tunis city is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree, with no minimum order." },
+          { q: "How are delivery fees calculated in Tunis city?", a: "Tunis city is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Delivery fees are calculated for your address and confirmed before you order, with no minimum order." },
           { q: "Do you offer palm trees suited to small city-centre terraces?", a: "Yes, some compact varieties of our decorative palm tree suit an urban terrace or balcony very well. Contact us for advice suited to your space." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل تونس | التوصيل في تونس - Green Garden",
         metaDescription:
-          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى مدينة تونس. عرض سعر سريع عبر واتساب مع Green Garden.",
+          "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى مدينة تونس. عرض سعر سريع عبر واتساب مع Green Garden.",
         h1: "عشب ونخيل في تونس",
         intro:
           "تنتمي مدينة تونس إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. بين شقق ذات تراس وفيلات ذات حديقة، تتنوع احتياجات تهيئة العاصمة كثيراً ونرافقها يومياً.",
@@ -477,7 +477,7 @@ const villes = [
           "نوصل بانتظام إلى وسط المدينة والباردو والبلفيدير والمنزه والمنار والنصر، سواء لحدائق الفيلات أو لنخيل في أصص على التراسات والشرفات.",
         distanceNote: "على بعد حوالي 65 كم شمال غرب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف التوصيل في مدينة تونس؟", a: "نعم، تنتمي مدينة تونس إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة، دون حد أدنى للطلب." },
+          { q: "كيف تُحتسب مصاريف التوصيل في مدينة تونس؟", a: "تنتمي مدينة تونس إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل التأكيد، دون حد أدنى للطلب." },
           { q: "هل تقدمون نخيلاً مناسباً للتراسات الصغيرة في وسط المدينة؟", a: "نعم، بعض الأصناف المدمجة من نخيل الزينة لدينا تناسب جيداً تراساً حضرياً أو شرفة. تواصلوا معنا لنصيحة مناسبة لمساحتكم." },
         ],
       },
@@ -491,7 +491,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier Ariana | Livraison en Tunisie - Green Garden",
         metaDescription:
-          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 490 DT/m livrés à Ariana. Ville verte du Grand Tunis, devis rapide par WhatsApp.",
+          "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à Ariana. Ville verte du Grand Tunis, devis rapide par WhatsApp.",
         h1: "Gazon et palmier à Ariana",
         intro:
           "Ariana fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Surnommée historiquement la ville des jardins, Ariana compte de nombreuses villas avec espaces verts pour lesquelles le gazon et le palmier sont des choix d'aménagement naturels.",
@@ -499,14 +499,14 @@ const villes = [
           "Nous livrons régulièrement Ariana ville, La Soukra et Raoued pour des jardins de villas, ainsi que des espaces verts résidentiels et de petits commerces le long des grands axes.",
         distanceNote: "à environ 60 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à Ariana ?", a: "Oui, Ariana fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif." },
+          { q: "Comment sont calculés les frais de livraison à Ariana ?", a: "Ariana fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation." },
           { q: "Le palmier convient-il aux jardins d'Ariana ?", a: "Tout à fait, Ariana étant historiquement une ville de jardins, le climat et les sols y sont favorables au palmier décoratif comme au gazon naturel." },
         ],
       },
       en: {
         metaTitle: "Lawn & Palm Tree Ariana | Delivery in Tunisia - Green Garden",
         metaDescription:
-          "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to Ariana. Greater Tunis' garden city, fast quote on WhatsApp.",
+          "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Ariana. Greater Tunis' garden city, fast quote on WhatsApp.",
         h1: "Lawn and palm tree in Ariana",
         intro:
           "Ariana is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Historically known as the city of gardens, Ariana has many villas with green spaces for which lawn and palm trees are natural landscaping choices.",
@@ -514,14 +514,14 @@ const villes = [
           "We regularly deliver to Ariana city, La Soukra and Raoued for villa gardens, as well as residential green spaces and small businesses along the main roads.",
         distanceNote: "about 60 km north-west of our Nabeul depot",
         faq: [
-          { q: "Is lawn delivery free in Ariana?", a: "Yes, Ariana is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree." },
+          { q: "How are lawn delivery fees calculated in Ariana?", a: "Ariana is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Delivery fees are calculated for your address and confirmed before you order." },
           { q: "Does the palm tree suit gardens in Ariana?", a: "Absolutely, as Ariana is historically a city of gardens, the climate and soil there are favourable to both the decorative palm tree and natural lawn." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل أريانة | التوصيل في تونس - Green Garden",
         metaDescription:
-          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى أريانة. مدينة الحدائق في تونس الكبرى، عرض سعر سريع عبر واتساب.",
+          "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى أريانة. مدينة الحدائق في تونس الكبرى، عرض سعر سريع عبر واتساب.",
         h1: "عشب ونخيل في أريانة",
         intro:
           "تنتمي أريانة إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. المعروفة تاريخياً بمدينة الحدائق، تضم أريانة العديد من الفيلات ذات المساحات الخضراء التي يُعد فيها العشب والنخيل خيارات تهيئة طبيعية.",
@@ -529,7 +529,7 @@ const villes = [
           "نوصل بانتظام إلى مدينة أريانة والسوقرة ورواد لحدائق الفيلات، وكذلك المساحات الخضراء السكنية والمحلات التجارية الصغيرة على طول الطرق الرئيسية.",
         distanceNote: "على بعد حوالي 60 كم شمال غرب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف توصيل العشب في أريانة؟", a: "نعم، تنتمي أريانة إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة." },
+          { q: "كيف تُحتسب مصاريف توصيل العشب في أريانة؟", a: "تنتمي أريانة إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل التأكيد." },
           { q: "هل يناسب النخيل حدائق أريانة؟", a: "بالتأكيد، بما أن أريانة تاريخياً مدينة الحدائق، فإن المناخ والتربة هناك مناسبان لنخيل الزينة والعشب الطبيعي." },
         ],
       },
@@ -543,7 +543,7 @@ const villes = [
       fr: {
         metaTitle: "Gazon & Palmier La Marsa | Livraison en Tunisie - Green Garden",
         metaDescription:
-          "Gazon naturel à 9 DT/m² et palmiers décoratifs à 490 DT/m livrés à La Marsa. Idéal pour les villas en bord de mer, devis via WhatsApp.",
+          "Gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, livrés à La Marsa. Idéal pour les villas en bord de mer, devis via WhatsApp.",
         h1: "Gazon et palmier à La Marsa",
         intro:
           "La Marsa fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Cette banlieue balnéaire prisée compte de nombreuses villas avec jardins en bord de mer, où le palmier décoratif est un choix d'aménagement particulièrement recherché.",
@@ -551,14 +551,14 @@ const villes = [
           "Nous livrons régulièrement La Marsa Corniche, La Marsa Ville et les quartiers résidentiels proches de Carthage et Sidi Bou Said, pour des jardins de villas exposés aux embruns marins.",
         distanceNote: "à environ 70 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à La Marsa ?", a: "Oui, La Marsa fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif." },
+          { q: "Comment sont calculés les frais de livraison à La Marsa ?", a: "La Marsa fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation." },
           { q: "Le palmier résiste-t-il à l'air marin de La Marsa ?", a: "Oui, nos variétés de palmier décoratif tolèrent bien l'exposition aux embruns typique du littoral de La Marsa. Nous vous conseillons sur l'entretien adapté à un jardin en bord de mer." },
         ],
       },
       en: {
         metaTitle: "Lawn & Palm Tree La Marsa | Delivery in Tunisia - Green Garden",
         metaDescription:
-          "Natural lawn at 9 DT/sqm and decorative palm trees at 490 DT/m delivered to La Marsa. Ideal for seaside villas, quote via WhatsApp.",
+          "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to La Marsa. Ideal for seaside villas, quote via WhatsApp.",
         h1: "Lawn and palm tree in La Marsa",
         intro:
           "La Marsa is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. This sought-after seaside suburb has many villas with gardens by the sea, where the decorative palm tree is a particularly popular landscaping choice.",
@@ -566,14 +566,14 @@ const villes = [
           "We regularly deliver to La Marsa Corniche, La Marsa town and the residential areas near Carthage and Sidi Bou Said, for villa gardens exposed to sea spray.",
         distanceNote: "about 70 km north-west of our Nabeul depot",
         faq: [
-          { q: "Is lawn and palm tree delivery free in La Marsa?", a: "Yes, La Marsa is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree." },
+          { q: "How are lawn and palm tree delivery fees calculated in La Marsa?", a: "La Marsa is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Delivery fees are calculated for your address and confirmed before you order." },
           { q: "Does the palm tree withstand the sea air in La Marsa?", a: "Yes, our decorative palm tree varieties tolerate the sea spray exposure typical of the La Marsa coastline well. We advise you on care suited to a seaside garden." },
         ],
       },
       ar: {
         metaTitle: "عشب ونخيل المرسى | التوصيل في تونس - Green Garden",
         metaDescription:
-          "عشب طبيعي بسعر 9 دينار/م² ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى المرسى. مثالي للفيلات الساحلية، عرض سعر عبر واتساب.",
+          "عشب طبيعي بسعر 15 أو 9 دينار/م² حسب المساحة ونخيل زينة بسعر 490 دينار/م يُوصَّلان إلى المرسى. مثالي للفيلات الساحلية، عرض سعر عبر واتساب.",
         h1: "عشب ونخيل في المرسى",
         intro:
           "تنتمي المرسى إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تضم هذه الضاحية الساحلية المرغوبة العديد من الفيلات ذات الحدائق المطلة على البحر، حيث يُعد نخيل الزينة خياراً مطلوباً بشكل خاص.",
@@ -581,7 +581,7 @@ const villes = [
           "نوصل بانتظام إلى كورنيش المرسى ومدينة المرسى والأحياء السكنية القريبة من قرطاج وسيدي بوسعيد، لحدائق الفيلات المعرضة لرذاذ البحر.",
         distanceNote: "على بعد حوالي 70 كم شمال غرب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف توصيل العشب والنخيل في المرسى؟", a: "نعم، تنتمي المرسى إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة." },
+          { q: "كيف تُحتسب مصاريف توصيل العشب والنخيل في المرسى؟", a: "تنتمي المرسى إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل التأكيد." },
           { q: "هل يتحمل النخيل هواء البحر في المرسى؟", a: "نعم، تتحمل أصناف نخيل الزينة لدينا جيداً التعرض لرذاذ البحر المعتاد على ساحل المرسى. ننصحكم بالعناية المناسبة لحديقة على شاطئ البحر." },
         ],
       },
