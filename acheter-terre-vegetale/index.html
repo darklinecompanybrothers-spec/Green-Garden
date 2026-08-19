@@ -29,8 +29,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=15" />
+    <!-- Police variable : un seul fichier couvre 400 a 900. L'ancienne requete
+         chargeait cinq graisses figees dont la 300, jamais utilisee, et omettait
+         les 800 et 900 pourtant presentes dans styles.css : le navigateur les
+         fabriquait en faux-gras. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=16" />
     <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://greengardentn.shop/#organization","name":"Green Garden","url":"https://greengardentn.shop","logo":"https://greengardentn.shop/logo.png","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","email":"contact@greengardentn.shop","sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"GardenStore","@id":"https://greengardentn.shop/#localbusiness","name":"Green Garden","url":"https://greengardentn.shop","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","priceRange":"9 DT - 490 DT","address":{"@type":"PostalAddress","addressLocality":"Nabeul","addressRegion":"Nabeul","addressCountry":"TN"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"19:00"},"areaServed":[{"@type":"AdministrativeArea","name":"Grand Tunis"},{"@type":"AdministrativeArea","name":"Nabeul"},{"@type":"AdministrativeArea","name":"Tunisie"}],"sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"WebSite","@id":"https://greengardentn.shop/#website","url":"https://greengardentn.shop","name":"Green Garden","inLanguage":"fr-TN","publisher":{"@id":"https://greengardentn.shop/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://greengardentn.shop/"},{"@type":"ListItem","position":2,"name":"Terre végétale","item":"https://greengardentn.shop/acheter-terre-vegetale/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Puis-je acheter de la terre végétale seule ?","acceptedAnswer":{"@type":"Answer","text":"Non. La terre végétale Green Garden est proposée uniquement en complément d'une commande de gazon naturel, pour préparer le sol avant la pose. Si vous souhaitez du gazon et de la terre, indiquez-nous la surface et l'épaisseur souhaitée : nous vous établissons un devis complet."}},{"@type":"Question","name":"Quel est le prix de la terre végétale ?","acceptedAnswer":{"@type":"Answer","text":"Elle est facturée 100 DT le mètre cube (m³), en complément du gazon. Pour 50 m² de gazon, un pack de 10 cm représente 5 m³ de terre, soit 500 DT, auxquels s'ajoute le prix du gazon."}},{"@type":"Question","name":"Quelle épaisseur de terre choisir ?","acceptedAnswer":{"@type":"Answer","text":"Cela dépend de l'état de votre sol. Nous proposons trois épaisseurs de référence — 10, 15 et 20 cm. Décrivez-nous votre terrain par WhatsApp, nous vous orientons vers l'épaisseur adaptée."}},{"@type":"Question","name":"Quelle différence entre terre végétale et terreau ?","acceptedAnswer":{"@type":"Answer","text":"La terre végétale est une terre naturelle de pleine terre, utilisée pour préparer un sol de jardin en grande quantité. Le terreau est un substrat plus léger, souvent enrichi, conçu pour la culture en pot ou en jardinière."}},{"@type":"Question","name":"Comment se passe la livraison ?","acceptedAnswer":{"@type":"Answer","text":"Contactez-nous par WhatsApp avec votre ville, la surface de gazon et l'épaisseur de terre souhaitée. Le tarif de livraison vous est communiqué avant toute confirmation de commande."}}]}]</script>
   </head>
   <body class="">
@@ -91,7 +95,7 @@
         <h1>Terre végétale : en pack avec votre gazon naturel</h1>
         <p class="hero-copy">La terre végétale Green Garden n'est pas vendue seule : elle accompagne une commande de gazon naturel, pour préparer le sol avant la pose. Elle est facturée 100 DT le mètre cube (m³), et les frais de livraison sont calculés selon votre adresse puis communiqués avant confirmation de commande.</p>
       </div>
-      <div class="page-hero-media"><img src="/acheter-terre-vegetale-tunisie.jpg" alt="terre végétale livrée avec du gazon naturel en Tunisie" loading="eager" /></div>
+      <div class="page-hero-media"><img src="/acheter-terre-vegetale-tunisie.jpg" alt="terre végétale livrée avec du gazon naturel en Tunisie" loading="eager" fetchpriority="high" decoding="async" width="630" height="418" /></div>
     </section>
     <div class="section-shell content-sections">
       
@@ -248,7 +252,7 @@
       <span>WhatsApp</span>
     </a>
 
-    <script src="/nav.js?v=15" defer></script>
+    <script src="/nav.js?v=16" defer></script>
     
   </body>
 </html>

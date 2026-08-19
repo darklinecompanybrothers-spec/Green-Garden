@@ -1,4 +1,5 @@
 const { buildWhatsAppUrl } = require("../data/site");
+const { sizeAttrs } = require("../data/image-size");
 
 function renderCta({ heading, text, buttonLabel, whatsappMessage, secondary }) {
   return `
@@ -98,7 +99,7 @@ function renderImageText({ h2, paragraphs, image, reverse, cta }) {
         }
       </div>
       <div class="feature-media">
-        <img src="${image.src}" alt="${image.alt}" loading="lazy" />
+        <img src="${image.src}" alt="${image.alt}" loading="lazy" decoding="async"${sizeAttrs(image.src)} />
       </div>
     </section>`;
 }
@@ -113,7 +114,7 @@ function renderCards({ h2, intro, cards }) {
           .map(
             (card) => `
           <a class="info-card" href="${card.path}">
-            ${card.image ? `<div class="info-card-image"><img src="${card.image}" alt="${card.title}" loading="lazy" /></div>` : ""}
+            ${card.image ? `<div class="info-card-image"><img src="${card.image}" alt="${card.title}" loading="lazy" decoding="async"${sizeAttrs(card.image)} /></div>` : ""}
             <div class="info-card-body">
               <h3>${card.title}</h3>
               <p>${card.text}</p>

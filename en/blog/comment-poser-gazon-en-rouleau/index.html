@@ -29,8 +29,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=15" />
+    <!-- Police variable : un seul fichier couvre 400 a 900. L'ancienne requete
+         chargeait cinq graisses figees dont la 300, jamais utilisee, et omettait
+         les 800 et 900 pourtant presentes dans styles.css : le navigateur les
+         fabriquait en faux-gras. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=16" />
     <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://greengardentn.shop/#organization","name":"Green Garden","url":"https://greengardentn.shop","logo":"https://greengardentn.shop/logo.png","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","email":"contact@greengardentn.shop","sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"GardenStore","@id":"https://greengardentn.shop/#localbusiness","name":"Green Garden","url":"https://greengardentn.shop","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","priceRange":"9 DT - 490 DT","address":{"@type":"PostalAddress","addressLocality":"Nabeul","addressRegion":"Nabeul","addressCountry":"TN"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"19:00"},"areaServed":[{"@type":"AdministrativeArea","name":"Grand Tunis"},{"@type":"AdministrativeArea","name":"Nabeul"},{"@type":"AdministrativeArea","name":"Tunisie"}],"sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"WebSite","@id":"https://greengardentn.shop/#website","url":"https://greengardentn.shop","name":"Green Garden","inLanguage":"fr-TN","publisher":{"@id":"https://greengardentn.shop/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://greengardentn.shop/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://greengardentn.shop/en/blog/"},{"@type":"ListItem","position":3,"name":"Lawn","item":"https://greengardentn.shop/en/blog/categorie/gazon/"},{"@type":"ListItem","position":4,"name":"How to Lay Rolled Lawn: Step-by-Step Guide","item":"https://greengardentn.shop/en/blog/comment-poser-gazon-en-rouleau/"}]},{"@context":"https://schema.org","@type":"Article","headline":"How to Lay Rolled Lawn: Step-by-Step Guide","description":"Complete guide to laying rolled lawn in Tunisia: soil preparation, laying, watering. Green Garden advice for a successful lawn.","image":"https://greengardentn.shop/gazon.jpg","datePublished":"2026-05-04","dateModified":"2026-05-04","author":{"@id":"https://greengardentn.shop/#organization"},"publisher":{"@id":"https://greengardentn.shop/#organization"},"mainEntityOfPage":"https://greengardentn.shop/en/blog/comment-poser-gazon-en-rouleau/"},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long after delivery should the lawn be laid?","acceptedAnswer":{"@type":"Answer","text":"Ideally within 24 to 48 hours, to prevent the slabs from yellowing or drying out before laying."}},{"@type":"Question","name":"Should I water every day after laying?","acceptedAnswer":{"@type":"Answer","text":"Yes, daily watering is recommended for the first two weeks, while the roots settle into the soil."}}]}]</script>
   </head>
   <body class="">
@@ -93,7 +97,7 @@
         <p class="hero-copy">Laying rolled lawn gives you a dense lawn in one day, provided you follow a few key steps. Here is how to proceed from start to finish.</p>
       </div>
       <div class="page-hero-media">
-        <img src="/gazon.jpg" alt="Laying rolled lawn step by step" loading="eager" />
+        <img src="/gazon.jpg" alt="Laying rolled lawn step by step" loading="eager" fetchpriority="high" decoding="async" width="1200" height="800" />
       </div>
     </section>
     <div class="section-shell content-sections">
@@ -242,7 +246,7 @@
       <span>WhatsApp</span>
     </a>
 
-    <script src="/nav.js?v=15" defer></script>
+    <script src="/nav.js?v=16" defer></script>
     
   </body>
 </html>

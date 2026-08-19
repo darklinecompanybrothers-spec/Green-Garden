@@ -5,6 +5,7 @@ const { faqPage, product: productSchema, service: serviceSchema } = require("./s
 const { localizedPath } = require("../data/i18n");
 const { UI } = require("../data/ui-strings");
 const { SITE } = require("../data/site");
+const { sizeAttrs } = require("../data/image-size");
 
 // Renderer générique utilisé par la quasi-totalité des pages de contenu
 // (piliers gazon/palmier, pages villes, catégories, pages confiance, FAQ).
@@ -40,7 +41,7 @@ function renderContentPage(page) {
       </div>
       ${
         page.heroImage
-          ? `<div class="page-hero-media"><img src="${page.heroImage.src}" alt="${page.heroImage.alt}" loading="eager" /></div>`
+          ? `<div class="page-hero-media"><img src="${page.heroImage.src}" alt="${page.heroImage.alt}" loading="eager" fetchpriority="high" decoding="async"${sizeAttrs(page.heroImage.src)} /></div>`
           : ""
       }
     </section>

@@ -29,8 +29,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=15" />
+    <!-- Police variable : un seul fichier couvre 400 a 900. L'ancienne requete
+         chargeait cinq graisses figees dont la 300, jamais utilisee, et omettait
+         les 800 et 900 pourtant presentes dans styles.css : le navigateur les
+         fabriquait en faux-gras. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=16" />
     <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://greengardentn.shop/#organization","name":"Green Garden","url":"https://greengardentn.shop","logo":"https://greengardentn.shop/logo.png","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","email":"contact@greengardentn.shop","sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"GardenStore","@id":"https://greengardentn.shop/#localbusiness","name":"Green Garden","url":"https://greengardentn.shop","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","priceRange":"9 DT - 490 DT","address":{"@type":"PostalAddress","addressLocality":"Nabeul","addressRegion":"Nabeul","addressCountry":"TN"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"19:00"},"areaServed":[{"@type":"AdministrativeArea","name":"Grand Tunis"},{"@type":"AdministrativeArea","name":"Nabeul"},{"@type":"AdministrativeArea","name":"Tunisie"}],"sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"WebSite","@id":"https://greengardentn.shop/#website","url":"https://greengardentn.shop","name":"Green Garden","inLanguage":"fr-TN","publisher":{"@id":"https://greengardentn.shop/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://greengardentn.shop/en/"},{"@type":"ListItem","position":2,"name":"FAQ","item":"https://greengardentn.shop/en/faq/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What products does Green Garden sell?","acceptedAnswer":{"@type":"Answer","text":"Green Garden sells natural rolled lawn (15 DT/sqm under 50 sqm, 9 DT/sqm from 50 sqm), decorative palm trees (490 DT/m), decorative indoor plants and fertilizer."}},{"@type":"Question","name":"Which regions do you deliver to?","acceptedAnswer":{"@type":"Answer","text":"Natural lawn and the decorative palm tree can be delivered anywhere in Tunisia. Delivery fees depend on your address and are confirmed before you place your order."}},{"@type":"Question","name":"How do I order a product?","acceptedAnswer":{"@type":"Answer","text":"Orders are placed directly on WhatsApp: tell us the desired product, quantity and delivery city to receive a quick confirmation."}},{"@type":"Question","name":"What are your availability hours?","acceptedAnswer":{"@type":"Answer","text":"We are available every day, 8am - 7pm to answer your requests by phone or WhatsApp."}},{"@type":"Question","name":"Do you offer care advice after purchase?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide laying and care advice with every order, and you can find detailed guides on our blog."}},{"@type":"Question","name":"Do you deliver to professionals (landscapers, hotels, businesses)?","acceptedAnswer":{"@type":"Answer","text":"Yes, we supply both individuals and landscaping professionals and tourist establishments for bulk orders."}}]}]</script>
   </head>
   <body class="">
@@ -222,7 +226,7 @@
       <span>WhatsApp</span>
     </a>
 
-    <script src="/nav.js?v=15" defer></script>
+    <script src="/nav.js?v=16" defer></script>
     
   </body>
 </html>

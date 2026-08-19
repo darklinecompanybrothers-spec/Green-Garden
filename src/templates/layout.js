@@ -235,7 +235,11 @@ function renderPage({
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Police variable : un seul fichier couvre 400 a 900. L'ancienne requete
+         chargeait cinq graisses figees dont la 300, jamais utilisee, et omettait
+         les 800 et 900 pourtant presentes dans styles.css : le navigateur les
+         fabriquait en faux-gras. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}" />
     ${jsonLdScript(schemas)}
   </head>

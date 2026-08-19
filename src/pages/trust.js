@@ -303,8 +303,8 @@ function faqPageContent(lang) {
 
 const CONTACT_TEXT = {
   fr: {
-    title: "Contact | Green Garden",
-    description: (p) => `Contactez Green Garden par téléphone (${p}), WhatsApp ou via notre formulaire de devis. Basé à ${SITE.address.locality}.`,
+    title: "Contact Green Garden | Jardinerie à Nabeul, Tunisie",
+    description: (p) => `Contactez Green Garden par téléphone (${p}), WhatsApp ou via notre formulaire de devis. Jardinerie basée à ${SITE.address.locality}, livraison dans toute la Tunisie.`,
     eyebrow: "Contact",
     h1: "Contactez Green Garden",
     intro: "Par téléphone, WhatsApp ou via le formulaire de devis ci-dessous.",
@@ -327,8 +327,8 @@ const CONTACT_TEXT = {
     ],
   },
   en: {
-    title: "Contact | Green Garden",
-    description: (p) => `Contact Green Garden by phone (${p}), WhatsApp or via our quote form. Based in ${SITE.address.locality}.`,
+    title: "Contact Green Garden | Garden Centre in Nabeul, Tunisia",
+    description: (p) => `Contact Green Garden by phone (${p}), WhatsApp or via our quote form. Garden centre based in ${SITE.address.locality}, delivering across Tunisia.`,
     eyebrow: "Contact",
     h1: "Contact Green Garden",
     intro: "By phone, WhatsApp or via the quote form below.",
@@ -351,7 +351,7 @@ const CONTACT_TEXT = {
     ],
   },
   ar: {
-    title: "اتصل بنا | Green Garden",
+    title: "اتصل بـ Green Garden | مشتل في نابل، تونس",
     description: (p) => `تواصلوا مع Green Garden هاتفياً (${p})، عبر واتساب أو عبر نموذج طلب عرض السعر. مقرنا ${SITE.address.locality}.`,
     eyebrow: "اتصل بنا",
     h1: "تواصلوا مع Green Garden",

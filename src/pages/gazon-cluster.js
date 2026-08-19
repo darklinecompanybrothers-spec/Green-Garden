@@ -452,8 +452,8 @@ function gazonEnRouleauPage(lang) {
 function acheterGazonPage(lang) {
   const T = {
     fr: {
-      title: "Acheter du gazon naturel en Tunisie | Commande en 3 étapes - Green Garden",
-      metaDescription: "Comment acheter du gazon naturel en Tunisie avec Green Garden : prix, zones de livraison et commande simple par WhatsApp. Gazon à 15 ou 9 DT/m² selon la surface.",
+      title: "Acheter du gazon naturel en Tunisie | Green Garden",
+      metaDescription: "Acheter du gazon naturel en Tunisie : 15 ou 9 DT/m² selon la surface, livraison partout, commande simple par WhatsApp en 3 étapes.",
       eyebrow: "Commander",
       h1: "Acheter du gazon naturel en Tunisie avec Green Garden",
       intro: "Commander du gazon naturel en Tunisie n'a jamais été aussi simple : un prix clair au m², des frais de livraison annoncés avant confirmation et une commande finalisée directement par WhatsApp.",

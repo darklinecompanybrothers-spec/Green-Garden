@@ -86,7 +86,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Nabeul | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Nabeul | Green Garden",
         metaDescription:
           "Green Garden is based in Nabeul: natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered across the region.",
         h1: "Natural lawn and palm tree in Nabeul",
@@ -140,7 +140,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Sousse | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Sousse | Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Sousse. Delivery arranged on quote, contact Green Garden on WhatsApp.",
         h1: "Natural lawn and palm tree in Sousse",
@@ -192,7 +192,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Monastir | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Monastir | Green Garden",
         metaDescription:
           "Natural rolled lawn and decorative palm trees delivered to Monastir. Fast delivery quote on WhatsApp with Green Garden.",
         h1: "Natural lawn and palm tree in Monastir",
@@ -244,7 +244,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Sfax | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Sfax | Green Garden",
         metaDescription:
           "Green Garden delivers natural rolled lawn and decorative palm trees as far as Sfax. Request your delivery quote on WhatsApp.",
         h1: "Natural lawn and palm tree in Sfax",
@@ -296,7 +296,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Bizerte | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Bizerte | Green Garden",
         metaDescription:
           "Natural lawn and decorative palm trees delivered to Bizerte and its region. Green Garden sends you a fast delivery quote on WhatsApp.",
         h1: "Natural lawn and palm tree in Bizerte",
@@ -348,7 +348,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Gabes | Delivery on Quote - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Gabes | Green Garden",
         metaDescription:
           "Green Garden delivers natural rolled lawn and decorative palm trees as far as Gabes. Fast delivery quote on WhatsApp.",
         h1: "Natural lawn and palm tree in Gabes",
@@ -452,7 +452,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Tunis | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Tunis | Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Tunis city. Fast quote on WhatsApp with Green Garden.",
         h1: "Natural lawn and palm tree in Tunis",
@@ -504,7 +504,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree Ariana | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree Ariana | Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to Ariana. Greater Tunis' garden city, fast quote on WhatsApp.",
         h1: "Natural lawn and palm tree in Ariana",
@@ -556,7 +556,7 @@ const villes = [
         ],
       },
       en: {
-        metaTitle: "Natural Lawn & Palm Tree La Marsa | Delivery in Tunisia - Green Garden",
+        metaTitle: "Natural Lawn & Palm Tree La Marsa | Green Garden",
         metaDescription:
           "Natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, delivered to La Marsa. Ideal for seaside villas, quote via WhatsApp.",
         h1: "Natural lawn and palm tree in La Marsa",

@@ -1,12 +1,13 @@
 const { renderPage } = require("../templates/layout");
 const { renderCards } = require("../templates/components");
 const { SITE } = require("../data/site");
+const { sizeAttrs } = require("../data/image-size");
 const { localizedPath } = require("../data/i18n");
 
 const HOME_TEXT = {
   fr: {
     title: "Green Garden Tunisie | Jardinerie, Gazon & Palmiers",
-    description: "Green Garden, votre jardinerie en Tunisie : gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, plantes et engrais. Devis rapide sur WhatsApp.",
+    description: "Jardinerie en Tunisie : gazon naturel 15 ou 9 DT/m² selon la surface, palmiers décoratifs 490 DT/m, plantes et engrais. Devis rapide sur WhatsApp.",
     heroEyebrow: "Votre jardinerie en Tunisie",
     heroTitle: "Bienvenue chez Green Garden",
     heroCopy: "Green Garden cultive des espaces extérieurs plus verts et plus vivants : gazon naturel en rouleau, palmiers décoratifs, plantes d'intérieur et engrais, livrés partout en Tunisie avec des conseils personnalisés à chaque commande.",
@@ -74,7 +75,7 @@ const HOME_TEXT = {
   },
   en: {
     title: "Green Garden Tunisia | Garden Center, Lawn & Palms",
-    description: "Green Garden, your garden center in Tunisia: natural lawn 15 or 9 DT/sqm depending on area, decorative palm trees 490 DT/m, plants and fertilizer. Fast WhatsApp quote.",
+    description: "Garden centre in Tunisia: natural lawn 15 or 9 DT/sqm by area, decorative palm trees 490 DT/m, plants and fertilizer. Fast quote on WhatsApp.",
     heroEyebrow: "Your garden center in Tunisia",
     heroTitle: "Welcome to Green Garden",
     heroCopy: "Green Garden grows greener, livelier outdoor spaces: natural rolled lawn, decorative palm trees, indoor plants and fertilizer, delivered across Tunisia with personal advice on every order.",
@@ -226,7 +227,7 @@ function renderHome(lang) {
         </div>
       </div>
       <div class="hero-media">
-        <img src="/123699.jpeg" alt="${t.heroImgAlt}" loading="lazy" />
+        <img src="/123699.jpeg" alt="${t.heroImgAlt}" loading="eager" fetchpriority="high" decoding="async"${sizeAttrs("/123699.jpeg")} />
       </div>
     </section>
 
@@ -328,11 +329,7 @@ function renderHome(lang) {
         <p><a href="${p("/produits/engrais/")}">${t.engraisLink}</a></p>
       </div>
       <div class="feature-media">
-        <img
-          src="/engrais-bio-organique.jpeg"
-          alt="${t.engraisTitle}"
-          loading="lazy"
-        />
+        <img src="/engrais-bio-organique.jpeg" alt="${t.engraisTitle}" loading="lazy" decoding="async"${sizeAttrs("/engrais-bio-organique.jpeg")} />
       </div>
     </section>
 
@@ -345,11 +342,7 @@ function renderHome(lang) {
         <p><a href="${p("/acheter-gazon/")}">${t.gazonCtaSecondary}</a></p>
       </div>
       <div class="feature-media">
-        <img
-          src="/gazon.jpg"
-          alt="${t.gazonTitle}"
-          loading="lazy"
-        />
+        <img src="/gazon.jpg" alt="${t.gazonTitle}" loading="lazy" decoding="async"${sizeAttrs("/gazon.jpg")} />
       </div>
     </section>
 
@@ -362,11 +355,7 @@ function renderHome(lang) {
         <p><a href="${p("/acheter-palmier/")}">${t.palmierCtaSecondary}</a></p>
       </div>
       <div class="feature-media">
-        <img
-          src="/palmier-eventail.jpeg"
-          alt="${t.palmierTitle}"
-          loading="lazy"
-        />
+        <img src="/palmier-eventail.jpeg" alt="${t.palmierTitle}" loading="lazy" decoding="async"${sizeAttrs("/palmier-eventail.jpeg")} />
       </div>
     </section>
 

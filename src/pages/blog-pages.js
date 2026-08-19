@@ -1,3 +1,4 @@
+const { sizeAttrs } = require("../data/image-size");
 const { renderPage } = require("../templates/layout");
 const { renderBreadcrumb } = require("../templates/breadcrumb");
 const { renderSections, renderCards } = require("../templates/components");
@@ -246,7 +247,7 @@ function articlePage(a, lang) {
         <p class="hero-copy">${at.intro}</p>
       </div>
       <div class="page-hero-media">
-        <img src="${a.heroImage.src}" alt="${at.heroAlt}" loading="eager" />
+        <img src="${a.heroImage.src}" alt="${at.heroAlt}" loading="eager" fetchpriority="high" decoding="async"${sizeAttrs(a.heroImage.src)} />
       </div>
     </section>
     <div class="section-shell content-sections">

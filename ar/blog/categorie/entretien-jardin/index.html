@@ -29,8 +29,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css?v=15" />
+    <!-- Police variable : un seul fichier couvre 400 a 900. L'ancienne requete
+         chargeait cinq graisses figees dont la 300, jamais utilisee, et omettait
+         les 800 et 900 pourtant presentes dans styles.css : le navigateur les
+         fabriquait en faux-gras. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=16" />
     <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://greengardentn.shop/#organization","name":"Green Garden","url":"https://greengardentn.shop","logo":"https://greengardentn.shop/logo.png","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","email":"contact@greengardentn.shop","sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"GardenStore","@id":"https://greengardentn.shop/#localbusiness","name":"Green Garden","url":"https://greengardentn.shop","image":"https://greengardentn.shop/123699.jpeg","telephone":"+21658233020","priceRange":"9 DT - 490 DT","address":{"@type":"PostalAddress","addressLocality":"Nabeul","addressRegion":"Nabeul","addressCountry":"TN"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"19:00"},"areaServed":[{"@type":"AdministrativeArea","name":"Grand Tunis"},{"@type":"AdministrativeArea","name":"Nabeul"},{"@type":"AdministrativeArea","name":"Tunisie"}],"sameAs":["https://www.instagram.com/greengardentnshop/","https://www.facebook.com/jardinerie.green.garden/?locale=fr_FR","https://wa.me/21658233020"]},{"@context":"https://schema.org","@type":"WebSite","@id":"https://greengardentn.shop/#website","url":"https://greengardentn.shop","name":"Green Garden","inLanguage":"fr-TN","publisher":{"@id":"https://greengardentn.shop/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://greengardentn.shop/ar/"},{"@type":"ListItem","position":2,"name":"المدونة","item":"https://greengardentn.shop/ar/blog/"},{"@type":"ListItem","position":3,"name":"العناية بالحديقة","item":"https://greengardentn.shop/ar/blog/categorie/entretien-jardin/"}]}]</script>
   </head>
   <body class="rtl">
@@ -100,21 +104,21 @@
       <div class="card-grid">
         
           <a class="info-card" href="/ar/blog/entretien-gazon-apres-pose/">
-            <div class="info-card-image"><img src="/gazon.jpg" alt="كيف تعتنون بعشبكم بعد التركيب" loading="lazy" /></div>
+            <div class="info-card-image"><img src="/gazon.jpg" alt="كيف تعتنون بعشبكم بعد التركيب" loading="lazy" decoding="async" width="1200" height="800" /></div>
             <div class="info-card-body">
               <h3>كيف تعتنون بعشبكم بعد التركيب</h3>
               <p>8 جوان 2026</p>
             </div>
           </a>
           <a class="info-card" href="/ar/blog/preparer-sol-avant-gazon/">
-            <div class="info-card-image"><img src="/gazon.jpg" alt="تحضير التربة قبل تركيب العشب: الخطوات الأساسية" loading="lazy" /></div>
+            <div class="info-card-image"><img src="/gazon.jpg" alt="تحضير التربة قبل تركيب العشب: الخطوات الأساسية" loading="lazy" decoding="async" width="1200" height="800" /></div>
             <div class="info-card-body">
               <h3>تحضير التربة قبل تركيب العشب: الخطوات الأساسية</h3>
               <p>15 جوان 2026</p>
             </div>
           </a>
           <a class="info-card" href="/ar/blog/bien-arroser-son-jardin-tunisie/">
-            <div class="info-card-image"><img src="/gazon.jpg" alt="الري الجيد لحديقتكم في تونس: الوتيرة والطرق حسب النباتات" loading="lazy" /></div>
+            <div class="info-card-image"><img src="/gazon.jpg" alt="الري الجيد لحديقتكم في تونس: الوتيرة والطرق حسب النباتات" loading="lazy" decoding="async" width="1200" height="800" /></div>
             <div class="info-card-body">
               <h3>الري الجيد لحديقتكم في تونس: الوتيرة والطرق حسب النباتات</h3>
               <p>27 جويلية 2026</p>
@@ -220,7 +224,7 @@
       <span>واتساب</span>
     </a>
 
-    <script src="/nav.js?v=15" defer></script>
+    <script src="/nav.js?v=16" defer></script>
     
   </body>
 </html>
