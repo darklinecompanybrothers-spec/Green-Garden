@@ -25,7 +25,7 @@ const villes = [
           "Nous livrons régulièrement des particuliers et des professionnels du paysagisme dans les banlieues nord (La Marsa, Carthage, Sidi Bou Said), le centre de Tunis et les zones résidentielles d'Ariana et de Ben Arous.",
         distanceNote: "à environ 65 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à Grand Tunis ?", a: "Le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba) fait partie des régions que nous desservons le plus souvent pour le gazon naturel. Les frais dépendent de votre adresse exacte et du volume commandé, et vous sont communiqués avant confirmation, sans minimum de commande caché." },
+          { q: "Comment sont calculés les frais de livraison à Grand Tunis ?", a: "Le Grand Tunis (Tunis, Ariana, Ben Arous, Manouba) fait partie des régions que nous desservons le plus souvent pour le gazon naturel. Les frais dépendent de votre adresse exacte et du volume commandé, et vous sont communiqués avant confirmation." },
           { q: "Peut-on commander un palmier pour une adresse dans le Grand Tunis ?", a: "Oui. Les frais de livraison du palmier décoratif à 490 DT/m sont calculés selon votre adresse dans le Grand Tunis et communiqués avant confirmation, comme pour le gazon naturel." },
           { q: "Sous quel délai la livraison est-elle effectuée ?", a: "En général sous 24 à 72h ouvrées selon la disponibilité du stock et votre secteur précis dans le Grand Tunis. Le délai exact est confirmé par WhatsApp lors de la prise de commande." },
         ],
@@ -57,7 +57,7 @@ const villes = [
           "نوصل بانتظام إلى الأفراد ومهنيي تهيئة الحدائق في الضواحي الشمالية (المرسى، قرطاج، سيدي بوسعيد)، وسط تونس، والمناطق السكنية بأريانة وبن عروس.",
         distanceNote: "على بعد حوالي 65 كم شمال غرب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف التوصيل في تونس الكبرى؟", a: "تونس الكبرى (تونس، أريانة، بن عروس، منوبة) من أكثر الجهات التي نخدمها للعشب الطبيعي. تعتمد المصاريف على عنوانكم الدقيق والكمية المطلوبة، وتُبلَّغ قبل التأكيد، دون أي حد أدنى مخفي للطلب." },
+          { q: "كيف تُحتسب مصاريف التوصيل في تونس الكبرى؟", a: "تونس الكبرى (تونس، أريانة، بن عروس، منوبة) من أكثر الجهات التي نخدمها للعشب الطبيعي. تعتمد المصاريف على عنوانكم الدقيق والكمية المطلوبة، وتُبلَّغ قبل التأكيد." },
           { q: "هل يمكن طلب نخلة لعنوان في تونس الكبرى؟", a: "نعم. تُحتسب مصاريف توصيل نخلة الزينة بسعر 490 دينار/م حسب عنوانكم في تونس الكبرى وتُبلَّغ قبل تأكيد الطلب، تماماً مثل العشب الطبيعي." },
           { q: "ما هي مدة التوصيل؟", a: "عادة بين 24 و72 ساعة عمل حسب توفر المخزون ومنطقتكم الدقيقة في تونس الكبرى. تُؤكَّد المدة الدقيقة عبر واتساب عند تأكيد الطلب." },
         ],
@@ -447,7 +447,7 @@ const villes = [
           "Nous livrons régulièrement le centre-ville, Le Bardo, Le Belvédère, Le Menzah, El Manar et Ennasr, aussi bien pour des jardins de villas que pour des palmiers en pot sur des terrasses et balcons.",
         distanceNote: "à environ 65 km au nord-ouest de notre dépôt de Nabeul",
         faq: [
-          { q: "Comment sont calculés les frais de livraison à Tunis ville ?", a: "Tunis ville fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation, sans minimum de commande." },
+          { q: "Comment sont calculés les frais de livraison à Tunis ville ?", a: "Tunis ville fait partie du Grand Tunis, l'une des régions que nous desservons pour le gazon naturel et le palmier décoratif. Les frais de livraison sont calculés selon votre adresse et communiqués avant confirmation." },
           { q: "Proposez-vous des palmiers adaptés aux petites terrasses en centre-ville ?", a: "Oui, certaines variétés compactes de notre palmier décoratif conviennent très bien à une terrasse ou un balcon urbain. Contactez-nous pour un conseil adapté à votre espace." },
         ],
       },
@@ -462,7 +462,7 @@ const villes = [
           "We regularly deliver to the city centre, Le Bardo, Le Belvédère, Le Menzah, El Manar and Ennasr, for both villa gardens and potted palm trees on terraces and balconies.",
         distanceNote: "about 65 km north-west of our Nabeul depot",
         faq: [
-          { q: "How are delivery fees calculated in Tunis city?", a: "Tunis city is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Delivery fees are calculated for your address and confirmed before you order, with no minimum order." },
+          { q: "How are delivery fees calculated in Tunis city?", a: "Tunis city is part of Greater Tunis, one of the regions we serve for natural lawn and the decorative palm tree. Delivery fees are calculated for your address and confirmed before you order." },
           { q: "Do you offer palm trees suited to small city-centre terraces?", a: "Yes, some compact varieties of our decorative palm tree suit an urban terrace or balcony very well. Contact us for advice suited to your space." },
         ],
       },
@@ -477,7 +477,7 @@ const villes = [
           "نوصل بانتظام إلى وسط المدينة والباردو والبلفيدير والمنزه والمنار والنصر، سواء لحدائق الفيلات أو لنخيل في أصص على التراسات والشرفات.",
         distanceNote: "على بعد حوالي 65 كم شمال غرب مستودعنا بنابل",
         faq: [
-          { q: "كيف تُحتسب مصاريف التوصيل في مدينة تونس؟", a: "تنتمي مدينة تونس إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل التأكيد، دون حد أدنى للطلب." },
+          { q: "كيف تُحتسب مصاريف التوصيل في مدينة تونس؟", a: "تنتمي مدينة تونس إلى تونس الكبرى، إحدى الجهات التي نخدمها للعشب الطبيعي ونخيل الزينة. تُحتسب مصاريف التوصيل حسب عنوانكم وتُبلَّغ قبل التأكيد." },
           { q: "هل تقدمون نخيلاً مناسباً للتراسات الصغيرة في وسط المدينة؟", a: "نعم، بعض الأصناف المدمجة من نخيل الزينة لدينا تناسب جيداً تراساً حضرياً أو شرفة. تواصلوا معنا لنصيحة مناسبة لمساحتكم." },
         ],
       },

@@ -15,10 +15,18 @@ const GAZON_TYPES = [
   { key: "paspalum", t: { fr: "Gazon Paspalum", en: "Paspalum lawn", ar: "عشب باسبالوم" } },
 ];
 
+// Surface minimum commandable (m²). En dessous, la commande n'est pas prise.
+const GAZON_MIN_SURFACE = 50;
+
 // Seuil (en m²) à partir duquel le tarif dégressif s'applique.
 const GAZON_TIER_THRESHOLD = 50;
 const GAZON_PRICE_BELOW = 15; // DT/m² pour une surface < 50 m²
 const GAZON_PRICE_FROM = 9; // DT/m² pour une surface >= 50 m²
+
+/** Une surface est-elle commandable ? */
+function isOrderableSurface(surfaceM2) {
+  return typeof surfaceM2 === "number" && isFinite(surfaceM2) && surfaceM2 >= GAZON_MIN_SURFACE;
+}
 
 // Packs terre végétale : la terre n'est jamais vendue seule, uniquement
 // adossée à une surface de gazon. Volume = surface x épaisseur.
@@ -85,6 +93,8 @@ function round2(n) {
 
 module.exports = {
   GAZON_TYPES,
+  GAZON_MIN_SURFACE,
+  isOrderableSurface,
   GAZON_TIER_THRESHOLD,
   GAZON_PRICE_BELOW,
   GAZON_PRICE_FROM,

@@ -18,6 +18,7 @@
   var section = form.closest(".quote-calc");
   var configEl = section.querySelector("[data-quote-config]");
   var ctaEl = section.querySelector("[data-quote-cta]");
+  var errorEl = section.querySelector("[data-quote-error]");
 
   var cfg;
   try {
@@ -37,22 +38,50 @@
     return "https://wa.me/" + cfg.whatsappNumber + "?text=" + encodeURIComponent(message);
   }
 
+  /* Desactive le bouton sans le retirer du flux : il reste lisible et
+     annonce par les lecteurs d'ecran, mais n'est plus actionnable. */
+  function bloque(actif) {
+    if (actif) {
+      ctaEl.setAttribute("aria-disabled", "true");
+      ctaEl.setAttribute("tabindex", "-1");
+      ctaEl.classList.add("is-disabled");
+    } else {
+      ctaEl.removeAttribute("aria-disabled");
+      ctaEl.removeAttribute("tabindex");
+      ctaEl.classList.remove("is-disabled");
+    }
+  }
+
   function render() {
-    var surface = form.elements.surface.value.trim();
+    var brut = form.elements.surface.value.trim();
+    var surface = parseFloat(brut);
     var epaisseur = form.elements.terre.value;
     var typeSelect = form.elements.type;
     var typeLabel = typeSelect.options[typeSelect.selectedIndex].text;
 
     /* Sans surface saisie, on garde le message generique : le client peut
        toujours ecrire au vendeur sans passer par le formulaire. */
-    if (!surface) {
+    if (!brut) {
+      errorEl.hidden = true;
+      bloque(false);
       ctaEl.href = waUrl(L.fallbackMessage);
       return;
     }
 
+    /* Sous le minimum commandable, la demande n'est pas envoyable. */
+    if (!isFinite(surface) || surface < cfg.minSurface) {
+      errorEl.textContent = L.minError;
+      errorEl.hidden = false;
+      bloque(true);
+      ctaEl.removeAttribute("href");
+      return;
+    }
+
+    errorEl.hidden = true;
+    bloque(false);
     ctaEl.href = waUrl(
       fill(epaisseur ? L.message : L.messageNoTerre, {
-        surface: surface,
+        surface: brut,
         type: typeLabel,
         terre: epaisseur
       })
@@ -63,6 +92,11 @@
   form.addEventListener("change", render);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+  });
+  /* Un lien desactive reste cliquable au clavier et a la souris tant qu'on
+     n'intercepte pas l'evenement. */
+  ctaEl.addEventListener("click", function (e) {
+    if (ctaEl.getAttribute("aria-disabled") === "true") e.preventDefault();
   });
   render();
 })();

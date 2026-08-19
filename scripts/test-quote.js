@@ -39,13 +39,21 @@ const typeSelect = el({
   selectedIndex: 0,
   options: [{ text: "Gazon Paspalum" }],
 });
-const cta = el();
+const cta = el({
+  _attrs: {},
+  classList: { _c: {}, add(c) { this._c[c] = true; }, remove(c) { delete this._c[c]; }, contains(c) { return !!this._c[c]; } },
+  setAttribute(k, v) { this._attrs[k] = v; },
+  getAttribute(k) { return Object.prototype.hasOwnProperty.call(this._attrs, k) ? this._attrs[k] : null; },
+  removeAttribute(k) { delete this._attrs[k]; if (k === "href") this.href = ""; },
+});
+const errorEl = el({ hidden: true });
 const configEl = el({ textContent: JSON.stringify(cfg) });
 
 const section = {
   querySelector(sel) {
     if (sel === "[data-quote-config]") return configEl;
     if (sel === "[data-quote-cta]") return cta;
+    if (sel === "[data-quote-error]") return errorEl;
     return null;
   },
 };
@@ -97,6 +105,25 @@ if (MONTANT.test(configBrut)) {
 });
 if (echecs === 0) ok("aucun champ de tarification expose a la page");
 
+// 2 bis. La commande minimum est respectee : sous le seuil, rien n'est envoyable
+const MIN = cfg.minSurface;
+[1, 20, 30, 49, MIN - 0.5].forEach((s) => {
+  remplit(s, 0);
+  const bloque = cta.getAttribute("aria-disabled") === "true";
+  if (!bloque || errorEl.hidden || cta.href) {
+    ko(`${s} m² doit etre refuse (minimum ${MIN})`, `bloque=${bloque} erreur=${!errorEl.hidden} href="${cta.href}"`);
+  }
+});
+if (echecs === 0) ok(`toute surface sous ${MIN} m² est refusee, bouton desactive et message d'erreur affiche`);
+
+// La surface minimum exacte, elle, doit passer
+remplit(MIN, 0);
+if (cta.getAttribute("aria-disabled") === "true" || !cta.href) {
+  ko(`${MIN} m² doit etre accepte`);
+} else {
+  ok(`${MIN} m² exactement est accepte`);
+}
+
 // 3. Le message compose reprend la demande, sans aucun chiffrage
 remplit(60, 15);
 const msg = messageEnvoye();
@@ -111,11 +138,11 @@ if (MONTANT.test(msg)) {
 }
 
 // 4. Sans terre vegetale, la ligne correspondante disparait
-remplit(30, 0);
+remplit(80, 0);
 const msgSansTerre = messageEnvoye();
 if (msgSansTerre.includes("cm")) {
   ko("sans terre, le message ne doit pas mentionner d'epaisseur", msgSansTerre);
-} else if (!msgSansTerre.includes("30 m²")) {
+} else if (!msgSansTerre.includes("80 m²")) {
   ko("sans terre, le message doit garder la surface", msgSansTerre);
 } else {
   ok("message sans terre : ligne epaisseur absente");

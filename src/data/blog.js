@@ -253,7 +253,7 @@ const articles = [
         heroAlt: "Calcul du prix du gazon naturel au m² en Tunisie",
         intro: "Le prix du gazon naturel dépend principalement de la surface à couvrir et de la zone de livraison. Voici comment Green Garden calcule son tarif, simple et transparent.",
         sections: [
-          { type: "list", h2: "Ce qui compose le prix final", items: ["Le prix du gazon lui-même, dégressif selon la surface totale : 15 DT/m² en dessous de 50 m², 9 DT/m² à partir de 50 m²", "Le seuil s'applique à la surface totale commandée, quel que soit le type de gazon choisi", "Les frais de livraison : calculés selon votre adresse et communiqués avant confirmation", "Aucun frais caché : ni frais de découpe, ni minimum de commande imposé"] },
+          { type: "list", h2: "Ce qui compose le prix final", items: ["Le prix du gazon lui-même, dégressif selon la surface totale : 15 DT/m² en dessous de 50 m², 9 DT/m² à partir de 50 m²", "Le seuil s'applique à la surface totale commandée, quel que soit le type de gazon choisi", "Les frais de livraison : calculés selon votre adresse et communiqués avant confirmation", "Aucun frais caché : ni frais de découpe, ni supplément de dernière minute"] },
           { type: "table", h2: "Exemples de budget selon la surface", headers: ["Surface", "Tarif au m²", "Prix du gazon", "Livraison"], rows: [["20 m²", "15 DT/m²", "300 DT", "Selon votre adresse"], ["49 m²", "15 DT/m²", "735 DT", "Selon votre adresse"], ["50 m²", "9 DT/m²", "450 DT", "Selon votre adresse"], ["100 m²", "9 DT/m²", "900 DT", "Selon votre adresse"]] },
         ],
         ctaHeading: "Recevez un devis précis pour votre surface",
@@ -270,7 +270,7 @@ const articles = [
         heroAlt: "Calculating the price of natural lawn per sqm in Tunisia",
         intro: "The price of natural lawn mainly depends on the area to cover and the delivery zone. Here is how Green Garden calculates its simple, transparent rate.",
         sections: [
-          { type: "list", h2: "What makes up the final price", items: ["The price of the lawn itself, tapering with the total area: 15 DT/sqm below 50 sqm, 9 DT/sqm from 50 sqm", "The threshold applies to the total area ordered, whichever lawn type you choose", "Delivery fees: calculated for your address and confirmed before you order", "No hidden fees: no cutting fees, no imposed minimum order"] },
+          { type: "list", h2: "What makes up the final price", items: ["The price of the lawn itself, tapering with the total area: 15 DT/sqm below 50 sqm, 9 DT/sqm from 50 sqm", "The threshold applies to the total area ordered, whichever lawn type you choose", "Delivery fees: calculated for your address and confirmed before you order", "No hidden fees: no cutting fees, no last-minute surcharge"] },
           { type: "table", h2: "Budget examples by area", headers: ["Area", "Rate per sqm", "Lawn price", "Delivery"], rows: [["20 sqm", "15 DT/sqm", "300 DT", "Quoted by address"], ["49 sqm", "15 DT/sqm", "735 DT", "Quoted by address"], ["50 sqm", "9 DT/sqm", "450 DT", "Quoted by address"], ["100 sqm", "9 DT/sqm", "900 DT", "Quoted by address"]] },
         ],
         ctaHeading: "Get an accurate quote for your area",
@@ -287,7 +287,7 @@ const articles = [
         heroAlt: "حساب سعر العشب الطبيعي بالمتر المربع في تونس",
         intro: "يعتمد سعر العشب الطبيعي بالأساس على المساحة الواجب تغطيتها ومنطقة التوصيل. إليكم كيف تحسب Green Garden تعريفتها البسيطة والشفافة.",
         sections: [
-          { type: "list", h2: "ما يُكوِّن السعر النهائي", items: ["سعر العشب نفسه، متناقص حسب المساحة الإجمالية: 15 دينار/م² دون 50 م²، 9 دينار/م² ابتداءً من 50 م²", "تنطبق العتبة على المساحة الإجمالية المطلوبة، مهما كان نوع العشب المختار", "مصاريف التوصيل: تُحتسب حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب", "لا مصاريف مخفية: لا مصاريف قطع، ولا حد أدنى مفروض للطلب"] },
+          { type: "list", h2: "ما يُكوِّن السعر النهائي", items: ["سعر العشب نفسه، متناقص حسب المساحة الإجمالية: 15 دينار/م² دون 50 م²، 9 دينار/م² ابتداءً من 50 م²", "تنطبق العتبة على المساحة الإجمالية المطلوبة، مهما كان نوع العشب المختار", "مصاريف التوصيل: تُحتسب حسب عنوانكم وتُبلَّغ قبل تأكيد الطلب", "لا مصاريف مخفية: لا مصاريف قطع، ولا زيادات في اللحظة الأخيرة"] },
           { type: "table", h2: "أمثلة ميزانية حسب المساحة", headers: ["المساحة", "التعريفة للم²", "سعر العشب", "التوصيل"], rows: [["20 م²", "15 دينار/م²", "300 دينار", "حسب عنوانكم"], ["49 م²", "15 دينار/م²", "735 دينار", "حسب عنوانكم"], ["50 م²", "9 دينار/م²", "450 دينار", "حسب عنوانكم"], ["100 م²", "9 دينار/م²", "900 دينار", "حسب عنوانكم"]] },
         ],
         ctaHeading: "احصلوا على عرض سعر دقيق لمساحتكم",

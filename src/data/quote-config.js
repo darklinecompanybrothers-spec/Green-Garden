@@ -7,17 +7,18 @@
 // réintroduire de prix, de total ni de sous-total : c'est le vendeur qui
 // chiffre, après réception de la demande.
 const { SITE } = require("./site");
-const { GAZON_TYPES, TERRE_PACKS } = require("./pricing");
+const { GAZON_TYPES, TERRE_PACKS, GAZON_MIN_SURFACE } = require("./pricing");
 
 const LABELS = {
   fr: {
-    surface: "Surface de gazon à couvrir (m²)",
+    surface: `Surface de gazon à couvrir (m², minimum ${GAZON_MIN_SURFACE})`,
+    minError: `La commande minimum est de ${GAZON_MIN_SURFACE} m². Indiquez une surface d'au moins ${GAZON_MIN_SURFACE} m² pour envoyer votre demande.`,
     type: "Type de gazon naturel",
     terre: "Terre végétale (épaisseur)",
     terreNone: "Sans terre végétale",
     terreOption: (cm) => `${cm} cm d'épaisseur`,
     cta: "Envoyer ma demande sur WhatsApp",
-    note: "Le prix et les frais de livraison vous sont communiqués par WhatsApp avant toute confirmation de commande.",
+    note: `Commande minimum : ${GAZON_MIN_SURFACE} m². Le prix et les frais de livraison vous sont communiqués par WhatsApp avant toute confirmation de commande.`,
     fallbackMessage: "Bonjour, je souhaite un devis pour du gazon naturel. Voici ma surface : ",
     message: ({ surface, type, terre }) =>
       `Bonjour, je souhaite un devis Green Garden.\n` +
@@ -27,13 +28,14 @@ const LABELS = {
       `Pouvez-vous me communiquer le prix et les frais de livraison ?`,
   },
   en: {
-    surface: "Lawn area to cover (sqm)",
+    surface: `Lawn area to cover (sqm, minimum ${GAZON_MIN_SURFACE})`,
+    minError: `The minimum order is ${GAZON_MIN_SURFACE} sqm. Enter an area of at least ${GAZON_MIN_SURFACE} sqm to send your request.`,
     type: "Type of natural lawn",
     terre: "Topsoil (depth)",
     terreNone: "No topsoil",
     terreOption: (cm) => `${cm} cm deep`,
     cta: "Send my request on WhatsApp",
-    note: "The price and delivery fees are confirmed on WhatsApp before you place your order.",
+    note: `Minimum order: ${GAZON_MIN_SURFACE} sqm. The price and delivery fees are confirmed on WhatsApp before you place your order.`,
     fallbackMessage: "Hello, I would like a quote for natural lawn. Here is my area: ",
     message: ({ surface, type, terre }) =>
       `Hello, I would like a Green Garden quote.\n` +
@@ -43,13 +45,14 @@ const LABELS = {
       `Could you confirm the price and the delivery fees?`,
   },
   ar: {
-    surface: "مساحة العشب المطلوب تغطيتها (م²)",
+    surface: `مساحة العشب المطلوب تغطيتها (م²، الحد الأدنى ${GAZON_MIN_SURFACE})`,
+    minError: `الحد الأدنى للطلب هو ${GAZON_MIN_SURFACE} م². أدخلوا مساحة لا تقل عن ${GAZON_MIN_SURFACE} م² لإرسال طلبكم.`,
     type: "نوع العشب الطبيعي",
     terre: "التربة الزراعية (السمك)",
     terreNone: "دون تربة زراعية",
     terreOption: (cm) => `سمك ${cm} سم`,
     cta: "أرسلوا طلبي عبر واتساب",
-    note: "يُبلَّغ السعر ومصاريف التوصيل عبر واتساب قبل تأكيد أي طلب.",
+    note: `الحد الأدنى للطلب: ${GAZON_MIN_SURFACE} م². يُبلَّغ السعر ومصاريف التوصيل عبر واتساب قبل تأكيد أي طلب.`,
     fallbackMessage: "مرحباً، أود عرض سعر لعشب طبيعي. إليكم مساحتي: ",
     message: ({ surface, type, terre }) =>
       `مرحباً، أود عرض سعر من Green Garden.\n` +
@@ -66,6 +69,7 @@ function quoteConfig(lang) {
   const L = LABELS[lang];
   return {
     lang,
+    minSurface: GAZON_MIN_SURFACE,
     whatsappNumber: SITE.whatsappNumber,
     types: GAZON_TYPES.map((t) => ({ key: t.key, label: t.t[lang] })),
     packs: TERRE_PACKS.map((p) => ({
@@ -74,6 +78,7 @@ function quoteConfig(lang) {
     })),
     labels: {
       surface: L.surface,
+      minError: L.minError,
       type: L.type,
       terre: L.terre,
       terreNone: L.terreNone,
