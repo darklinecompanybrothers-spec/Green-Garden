@@ -105,24 +105,17 @@ if (MONTANT.test(configBrut)) {
 });
 if (echecs === 0) ok("aucun champ de tarification expose a la page");
 
-// 2 bis. La commande minimum est respectee : sous le seuil, rien n'est envoyable
-const MIN = cfg.minSurface;
-[1, 20, 30, 49, MIN - 0.5].forEach((s) => {
-  remplit(s, 0);
-  const bloque = cta.getAttribute("aria-disabled") === "true";
-  if (!bloque || errorEl.hidden || cta.href) {
-    ko(`${s} m² doit etre refuse (minimum ${MIN})`, `bloque=${bloque} erreur=${!errorEl.hidden} href="${cta.href}"`);
+// 2 bis. Toute surface est commandable : sous 50 m2 le tarif differe, mais
+// la demande doit pouvoir partir. Un blocage ici serait une regression.
+[1, 20, 30, 49, 50, 200].forEach((surface) => {
+  remplit(surface, 0);
+  if (cta.getAttribute("aria-disabled") === "true" || !cta.href) {
+    ko(`${surface} m² doit rester commandable`, `href="${cta.href}"`);
+  } else if (!messageEnvoye().includes(`${surface} m²`)) {
+    ko(`le message doit reprendre ${surface} m²`, messageEnvoye());
   }
 });
-if (echecs === 0) ok(`toute surface sous ${MIN} m² est refusee, bouton desactive et message d'erreur affiche`);
-
-// La surface minimum exacte, elle, doit passer
-remplit(MIN, 0);
-if (cta.getAttribute("aria-disabled") === "true" || !cta.href) {
-  ko(`${MIN} m² doit etre accepte`);
-} else {
-  ok(`${MIN} m² exactement est accepte`);
-}
+if (echecs === 0) ok("toute surface reste commandable, sous comme au-dessus de 50 m²");
 
 // 3. Le message compose reprend la demande, sans aucun chiffrage
 remplit(60, 15);

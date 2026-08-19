@@ -139,7 +139,7 @@ function renderQuote({ h2, intro, config }) {
       <form class="quote-form" data-quote novalidate>
         <label class="quote-field">
           <span>${config.labels.surface}</span>
-          <input type="number" name="surface" min="${config.minSurface}" step="1" inputmode="numeric" placeholder="${config.minSurface}" aria-describedby="devis-erreur" />
+          <input type="number" name="surface" min="1" step="1" inputmode="numeric" placeholder="50" />
         </label>
         <label class="quote-field">
           <span>${config.labels.type}</span>
@@ -155,7 +155,6 @@ function renderQuote({ h2, intro, config }) {
           </select>
         </label>
       </form>
-      <p class="quote-error" id="devis-erreur" data-quote-error role="alert" hidden></p>
       <div class="content-cta-actions">
         <a class="pill-button" data-quote-cta href="${buildWhatsAppUrl(config.labels.fallbackMessage)}" target="_blank" rel="noreferrer">${config.labels.cta}</a>
       </div>
