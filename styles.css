@@ -1441,3 +1441,78 @@ body.rtl .footer-credits {
   font-size: 0.92rem;
 }
 
+
+/* ---------- Correctifs mobile ---------- */
+
+/* Les blocs de contenu sont des elements de grille. Sans min-width:0 ils
+   refusent de retrecir sous la largeur intrinseque de leur contenu : un
+   tableau large elargissait alors toute la page au lieu de defiler dans son
+   propre cadre, et le site debordait horizontalement sur telephone. */
+.content-sections {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.content-sections > * {
+  min-width: 0;
+}
+
+.table-wrap {
+  max-width: 100%;
+}
+
+/* Aucun mot ne doit pousser la page plus large que l'ecran. */
+.content-block h1,
+.content-block h2,
+.content-block h3,
+.content-block p,
+.content-block li,
+.page-hero h1,
+.page-hero p {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 680px) {
+  /* Les en-tetes peuvent revenir a la ligne : le tableau reste defilable
+     mais devient beaucoup moins large a parcourir. */
+  .content-table th {
+    white-space: normal;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 12px 14px;
+  }
+
+  .quote-calc .quote-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Les ancres internes (#devis...) ne doivent pas atterrir sous l'en-tete
+   collant, sinon le titre vise reste cache sur telephone. */
+[id] {
+  scroll-margin-top: 104px;
+}
+
+@media (max-width: 480px) {
+  /* Sur les ecrans etroits, le nom de marque passait sur deux lignes et
+     rehaussait tout l'en-tete. */
+  .brand {
+    gap: 8px;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .site-header {
+    padding: 14px 0;
+  }
+
+  [id] {
+    scroll-margin-top: 88px;
+  }
+}
